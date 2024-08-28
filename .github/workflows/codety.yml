@@ -32,6 +32,7 @@ jobs:
           SLACK_OAUTH_TOKEN: ${{ secrets.SLACK_OAUTH_TOKEN_TEST_INTEGRATION }}
           SLACK_CONVERSATION_ID: ${{ vars.SLACK_CONVERSATION_ID }}
 
+
       - name: Upload SARIF results file
         uses: github/codeql-action/upload-sarif@v3
         with:
