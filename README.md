@@ -28,6 +28,6 @@
 Check document [Codety Scanner Quickstart](https://docs.codety.io/docs/quickstart/index)
 
 #### License:
-Codety Scanner currently uses GNU GLPv3 license.
+Please check the LICENSE.txt
 
  
