@@ -1,0 +1,29 @@
+plugins {
+    id 'java-library'
+}
+
+group = 'io.codety'
+version = 'unspecified'
+
+dependencies {
+
+
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+
+test {
+    useJUnitPlatform()
+}
+
+
+jar {
+    enabled = true
+    archiveClassifier = '' //use empty string
+    version = null
+}

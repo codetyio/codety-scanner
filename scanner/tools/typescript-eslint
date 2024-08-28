@@ -1,0 +1,19 @@
+import tsPlugin from '@typescript-eslint/eslint-plugin';
+import tsParser from '@typescript-eslint/parser';
+
+export default (
+{
+    plugins: { //required
+      "currentRule": tsPlugin,
+    },
+    languageOptions: { //required
+      parser: tsParser,
+      parserOptions : { project:true },
+    },
+    files: ['**/*.{ts,tsx,mts,cts}'],
+    rules: {
+        //CODETY
+    }
+}
+
+);

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="2.14.2"/>
+    <errors>
+        <error id="uninitvar" severity="warning" msg="Uninitialized variable: position" verbose="Uninitialized variable: position" cwe="457" file0="analyzer/src/test/resources/cppcheck/cpp-code-with-issues/deleting.cpp">
+            <location file="analyzer/src/test/resources/cppcheck/cpp-code-with-issues/deleting.cpp" line="23" column="15"/>
+            <location file="analyzer/src/test/resources/cppcheck/cpp-code-with-issues/deleting.cpp" line="20" column="13" info="Assuming condition is false"/>
+            <symbol>position</symbol>
+        </error>
+    </errors>
+</results>

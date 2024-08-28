@@ -1,0 +1,12 @@
+//v9
+import js from "@eslint/js";
+export default [
+    {
+        plugins: {
+            js,
+        },
+        rules: {
+//CODETY
+        }
+    }
+];

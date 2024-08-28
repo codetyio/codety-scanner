@@ -1,0 +1,1242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="7.2.0" timestamp="2024-06-23T12:10:46.154">
+<file name="/Users/user/git/codeanalysis/api/src/main/java/io/codety/api/ServiceApplication.java">
+<violation beginline="11" endline="11" begincolumn="8" endcolumn="13" rule="UseUtilityClass" ruleset="Design" package="io.codety.api" class="ServiceApplication" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_design.html#useutilityclass" priority="3">
+This utility class has a non-private constructor
+</violation>
+</file>
+<file name="/Users/user/git/codeanalysis/api/src/main/java/io/codety/api/controller/SourceControlProviderWebhookController.java">
+<violation beginline="5" endline="5" begincolumn="1" endcolumn="49" rule="UnnecessaryImport" ruleset="Code Style" package="io.codety.api.controller" class="SourceControlProviderWebhookController" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'jakarta.servlet.http.HttpServletResponse'
+</violation>
+<violation beginline="9" endline="9" begincolumn="1" endcolumn="50" rule="UnnecessaryImport" ruleset="Code Style" package="io.codety.api.controller" class="SourceControlProviderWebhookController" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'org.springframework.web.bind.annotation.*'
+</violation>
+</file>
+<file name="/Users/user/git/codeanalysis/api/src/main/java/io/codety/api/dto/github/GithubWebHookPostInstallation.java">
+<violation beginline="13" endline="13" begincolumn="17" endcolumn="27" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostInstallation" method="getNode_id" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getNode_id' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="23" endline="23" begincolumn="15" endcolumn="25" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostInstallation" method="setNode_id" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setNode_id' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="23" endline="23" begincolumn="34" endcolumn="41" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostInstallation" method="setNode_id" variable="node_id" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'node_id' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+</file>
+<file name="/Users/user/git/codeanalysis/api/src/main/java/io/codety/api/dto/github/GithubWebHookPostPullRequest.java">
+<violation beginline="25" endline="25" begincolumn="3" endcolumn="20" rule="LooseCoupling" ruleset="Best Practices" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_bestpractices.html#loosecoupling" priority="3">
+Avoid using implementation types like 'ArrayList'; use the interface instead
+</violation>
+<violation beginline="26" endline="26" begincolumn="3" endcolumn="20" rule="LooseCoupling" ruleset="Best Practices" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_bestpractices.html#loosecoupling" priority="3">
+Avoid using implementation types like 'ArrayList'; use the interface instead
+</violation>
+<violation beginline="27" endline="27" begincolumn="3" endcolumn="20" rule="LooseCoupling" ruleset="Best Practices" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_bestpractices.html#loosecoupling" priority="3">
+Avoid using implementation types like 'ArrayList'; use the interface instead
+</violation>
+<violation beginline="28" endline="28" begincolumn="3" endcolumn="20" rule="LooseCoupling" ruleset="Best Practices" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_bestpractices.html#loosecoupling" priority="3">
+Avoid using implementation types like 'ArrayList'; use the interface instead
+</violation>
+<violation beginline="66" endline="66" begincolumn="17" endcolumn="27" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="getNode_id" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getNode_id' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="70" endline="70" begincolumn="17" endcolumn="28" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="getHtml_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getHtml_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="74" endline="74" begincolumn="17" endcolumn="28" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="getDiff_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getDiff_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="78" endline="78" begincolumn="17" endcolumn="29" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="getPatch_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getPatch_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="82" endline="82" begincolumn="17" endcolumn="29" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="getIssue_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getIssue_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="110" endline="110" begincolumn="17" endcolumn="30" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="getCreated_at" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getCreated_at' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="114" endline="114" begincolumn="17" endcolumn="30" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="getUpdated_at" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getUpdated_at' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="118" endline="118" begincolumn="17" endcolumn="29" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="getClosed_at" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getClosed_at' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="122" endline="122" begincolumn="17" endcolumn="29" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="getMerged_at" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getMerged_at' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="126" endline="126" begincolumn="17" endcolumn="36" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="getMerge_commit_sha" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getMerge_commit_sha' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="142" endline="142" begincolumn="17" endcolumn="31" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="getCommits_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getCommits_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="146" endline="146" begincolumn="17" endcolumn="39" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="getReview_comments_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getReview_comments_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="150" endline="150" begincolumn="17" endcolumn="38" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="getReview_comment_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getReview_comment_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="154" endline="154" begincolumn="17" endcolumn="32" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="getComments_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getComments_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="158" endline="158" begincolumn="17" endcolumn="32" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="getStatuses_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getStatuses_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="163" endline="163" begincolumn="17" endcolumn="38" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="getAuthor_association" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getAuthor_association' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="167" endline="167" begincolumn="17" endcolumn="30" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="getAuto_merge" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getAuto_merge' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="171" endline="171" begincolumn="17" endcolumn="38" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="getActive_lock_reason" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getActive_lock_reason' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="187" endline="187" begincolumn="17" endcolumn="35" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="getMergeable_state" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getMergeable_state' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="191" endline="191" begincolumn="17" endcolumn="29" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="getMerged_by" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getMerged_by' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="199" endline="199" begincolumn="15" endcolumn="33" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="getReview_comments" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getReview_comments' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="203" endline="203" begincolumn="18" endcolumn="42" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="getMaintainer_can_modify" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getMaintainer_can_modify' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="219" endline="219" begincolumn="15" endcolumn="31" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="getChanged_files" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getChanged_files' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="233" endline="233" begincolumn="15" endcolumn="25" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setNode_id" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setNode_id' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="233" endline="233" begincolumn="34" endcolumn="41" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setNode_id" variable="node_id" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'node_id' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="237" endline="237" begincolumn="15" endcolumn="26" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setHtml_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setHtml_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="237" endline="237" begincolumn="35" endcolumn="43" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setHtml_url" variable="html_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'html_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="241" endline="241" begincolumn="15" endcolumn="26" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setDiff_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setDiff_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="241" endline="241" begincolumn="35" endcolumn="43" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setDiff_url" variable="diff_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'diff_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="245" endline="245" begincolumn="15" endcolumn="27" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setPatch_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setPatch_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="245" endline="245" begincolumn="36" endcolumn="45" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setPatch_url" variable="patch_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'patch_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="249" endline="249" begincolumn="15" endcolumn="27" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setIssue_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setIssue_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="249" endline="249" begincolumn="36" endcolumn="45" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setIssue_url" variable="issue_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'issue_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="277" endline="277" begincolumn="15" endcolumn="28" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setCreated_at" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setCreated_at' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="277" endline="277" begincolumn="37" endcolumn="47" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setCreated_at" variable="created_at" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'created_at' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="281" endline="281" begincolumn="15" endcolumn="28" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setUpdated_at" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setUpdated_at' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="281" endline="281" begincolumn="37" endcolumn="47" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setUpdated_at" variable="updated_at" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'updated_at' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="285" endline="285" begincolumn="15" endcolumn="27" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setClosed_at" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setClosed_at' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="285" endline="285" begincolumn="36" endcolumn="45" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setClosed_at" variable="closed_at" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'closed_at' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="289" endline="289" begincolumn="15" endcolumn="27" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setMerged_at" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setMerged_at' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="289" endline="289" begincolumn="36" endcolumn="45" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setMerged_at" variable="merged_at" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'merged_at' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="293" endline="293" begincolumn="15" endcolumn="34" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setMerge_commit_sha" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setMerge_commit_sha' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="293" endline="293" begincolumn="43" endcolumn="59" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setMerge_commit_sha" variable="merge_commit_sha" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'merge_commit_sha' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="309" endline="309" begincolumn="15" endcolumn="29" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setCommits_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setCommits_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="309" endline="309" begincolumn="38" endcolumn="49" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setCommits_url" variable="commits_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'commits_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="325" endline="325" begincolumn="15" endcolumn="37" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setReview_comments_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setReview_comments_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="325" endline="325" begincolumn="45" endcolumn="64" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setReview_comments_url" variable="review_comments_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'review_comments_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="329" endline="329" begincolumn="15" endcolumn="36" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setReview_comment_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setReview_comment_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="329" endline="329" begincolumn="45" endcolumn="63" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setReview_comment_url" variable="review_comment_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'review_comment_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="333" endline="333" begincolumn="15" endcolumn="30" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setComments_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setComments_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="333" endline="333" begincolumn="39" endcolumn="51" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setComments_url" variable="comments_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'comments_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="337" endline="337" begincolumn="15" endcolumn="30" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setStatuses_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setStatuses_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="337" endline="337" begincolumn="39" endcolumn="51" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setStatuses_url" variable="statuses_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'statuses_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="341" endline="341" begincolumn="15" endcolumn="36" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setAuthor_association" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setAuthor_association' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="341" endline="341" begincolumn="45" endcolumn="63" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setAuthor_association" variable="author_association" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'author_association' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="345" endline="345" begincolumn="15" endcolumn="28" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setAuto_merge" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setAuto_merge' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="345" endline="345" begincolumn="37" endcolumn="47" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setAuto_merge" variable="auto_merge" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'auto_merge' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="349" endline="349" begincolumn="15" endcolumn="36" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setActive_lock_reason" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setActive_lock_reason' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="349" endline="349" begincolumn="45" endcolumn="63" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setActive_lock_reason" variable="active_lock_reason" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'active_lock_reason' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="365" endline="365" begincolumn="15" endcolumn="33" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setMergeable_state" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setMergeable_state' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="365" endline="365" begincolumn="42" endcolumn="57" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setMergeable_state" variable="mergeable_state" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'mergeable_state' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="369" endline="369" begincolumn="15" endcolumn="27" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setMerged_by" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setMerged_by' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="369" endline="369" begincolumn="36" endcolumn="45" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setMerged_by" variable="merged_by" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'merged_by' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="377" endline="377" begincolumn="15" endcolumn="33" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setReview_comments" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setReview_comments' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="377" endline="377" begincolumn="40" endcolumn="55" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setReview_comments" variable="review_comments" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'review_comments' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="381" endline="381" begincolumn="15" endcolumn="39" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setMaintainer_can_modify" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setMaintainer_can_modify' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="381" endline="381" begincolumn="49" endcolumn="70" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setMaintainer_can_modify" variable="maintainer_can_modify" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'maintainer_can_modify' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="397" endline="397" begincolumn="15" endcolumn="31" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setChanged_files" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setChanged_files' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="397" endline="397" begincolumn="38" endcolumn="51" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostPullRequest" method="setChanged_files" variable="changed_files" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'changed_files' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+</file>
+<file name="/Users/user/git/codeanalysis/api/src/main/java/io/codety/api/dto/github/GithubWebHookPostRepository.java">
+<violation beginline="78" endline="78" begincolumn="3" endcolumn="20" rule="LooseCoupling" ruleset="Best Practices" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_bestpractices.html#loosecoupling" priority="3">
+Avoid using implementation types like 'ArrayList'; use the interface instead
+</violation>
+<violation beginline="92" endline="92" begincolumn="17" endcolumn="27" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getNode_id" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getNode_id' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="100" endline="100" begincolumn="17" endcolumn="29" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getFull_name" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getFull_name' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="104" endline="104" begincolumn="17" endcolumn="28" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getHtml_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getHtml_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="120" endline="120" begincolumn="17" endcolumn="29" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getForks_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getForks_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="124" endline="124" begincolumn="17" endcolumn="28" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getKeys_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getKeys_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="128" endline="128" begincolumn="17" endcolumn="37" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getCollaborators_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getCollaborators_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="132" endline="132" begincolumn="17" endcolumn="29" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getTeams_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getTeams_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="136" endline="136" begincolumn="17" endcolumn="29" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getHooks_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getHooks_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="140" endline="140" begincolumn="17" endcolumn="36" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getIssue_events_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getIssue_events_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="144" endline="144" begincolumn="17" endcolumn="30" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getEvents_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getEvents_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="148" endline="148" begincolumn="17" endcolumn="33" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getAssignees_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getAssignees_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="152" endline="152" begincolumn="17" endcolumn="32" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getBranches_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getBranches_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="156" endline="156" begincolumn="17" endcolumn="28" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getTags_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getTags_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="160" endline="160" begincolumn="17" endcolumn="29" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getBlobs_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getBlobs_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="164" endline="164" begincolumn="17" endcolumn="32" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getGit_tags_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getGit_tags_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="168" endline="168" begincolumn="17" endcolumn="32" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getGit_refs_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getGit_refs_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="172" endline="172" begincolumn="17" endcolumn="29" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getTrees_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getTrees_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="176" endline="176" begincolumn="17" endcolumn="32" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getStatuses_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getStatuses_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="180" endline="180" begincolumn="17" endcolumn="33" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getLanguages_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getLanguages_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="184" endline="184" begincolumn="17" endcolumn="34" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getStargazers_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getStargazers_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="188" endline="188" begincolumn="17" endcolumn="36" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getContributors_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getContributors_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="192" endline="192" begincolumn="17" endcolumn="35" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getSubscribers_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getSubscribers_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="196" endline="196" begincolumn="17" endcolumn="36" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getSubscription_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getSubscription_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="200" endline="200" begincolumn="17" endcolumn="31" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getCommits_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getCommits_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="204" endline="204" begincolumn="17" endcolumn="35" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getGit_commits_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getGit_commits_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="208" endline="208" begincolumn="17" endcolumn="32" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getComments_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getComments_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="212" endline="212" begincolumn="17" endcolumn="37" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getIssue_comment_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getIssue_comment_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="216" endline="216" begincolumn="17" endcolumn="32" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getContents_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getContents_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="220" endline="220" begincolumn="17" endcolumn="31" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getCompare_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getCompare_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="224" endline="224" begincolumn="17" endcolumn="30" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getMerges_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getMerges_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="228" endline="228" begincolumn="17" endcolumn="31" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getArchive_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getArchive_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="232" endline="232" begincolumn="17" endcolumn="33" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getDownloads_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getDownloads_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="236" endline="236" begincolumn="17" endcolumn="30" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getIssues_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getIssues_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="240" endline="240" begincolumn="17" endcolumn="29" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getPulls_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getPulls_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="244" endline="244" begincolumn="17" endcolumn="34" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getMilestones_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getMilestones_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="248" endline="248" begincolumn="17" endcolumn="37" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getNotifications_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getNotifications_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="252" endline="252" begincolumn="17" endcolumn="30" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getLabels_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getLabels_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="256" endline="256" begincolumn="17" endcolumn="32" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getReleases_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getReleases_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="260" endline="260" begincolumn="17" endcolumn="35" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getDeployments_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getDeployments_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="264" endline="264" begincolumn="17" endcolumn="30" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getCreated_at" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getCreated_at' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="268" endline="268" begincolumn="17" endcolumn="30" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getUpdated_at" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getUpdated_at' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="272" endline="272" begincolumn="17" endcolumn="29" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getPushed_at" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getPushed_at' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="276" endline="276" begincolumn="17" endcolumn="27" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getGit_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getGit_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="280" endline="280" begincolumn="17" endcolumn="27" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getSsh_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getSsh_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="284" endline="284" begincolumn="17" endcolumn="29" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getClone_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getClone_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="288" endline="288" begincolumn="17" endcolumn="27" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getSvn_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getSvn_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="300" endline="300" begincolumn="15" endcolumn="34" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getStargazers_count" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getStargazers_count' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="304" endline="304" begincolumn="15" endcolumn="32" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getWatchers_count" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getWatchers_count' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="312" endline="312" begincolumn="18" endcolumn="31" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getHas_issues" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getHas_issues' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="316" endline="316" begincolumn="18" endcolumn="33" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getHas_projects" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getHas_projects' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="320" endline="320" begincolumn="18" endcolumn="34" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getHas_downloads" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getHas_downloads' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="324" endline="324" begincolumn="18" endcolumn="29" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getHas_wiki" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getHas_wiki' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="328" endline="328" begincolumn="18" endcolumn="30" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getHas_pages" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getHas_pages' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="332" endline="332" begincolumn="18" endcolumn="36" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getHas_discussions" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getHas_discussions' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="336" endline="336" begincolumn="15" endcolumn="29" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getForks_count" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getForks_count' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="340" endline="340" begincolumn="17" endcolumn="30" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getMirror_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getMirror_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="352" endline="352" begincolumn="15" endcolumn="35" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getOpen_issues_count" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getOpen_issues_count' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="357" endline="357" begincolumn="18" endcolumn="34" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getAllow_forking" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getAllow_forking' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="361" endline="361" begincolumn="18" endcolumn="32" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getIs_template" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getIs_template' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="365" endline="365" begincolumn="18" endcolumn="48" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getWeb_commit_signoff_required" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getWeb_commit_signoff_required' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="377" endline="377" begincolumn="15" endcolumn="29" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getOpen_issues" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getOpen_issues' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="385" endline="385" begincolumn="17" endcolumn="34" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="getDefault_branch" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getDefault_branch' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="395" endline="395" begincolumn="15" endcolumn="25" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setNode_id" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setNode_id' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="395" endline="395" begincolumn="34" endcolumn="41" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setNode_id" variable="node_id" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'node_id' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="403" endline="403" begincolumn="15" endcolumn="27" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setFull_name" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setFull_name' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="403" endline="403" begincolumn="36" endcolumn="45" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setFull_name" variable="full_name" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'full_name' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="408" endline="408" begincolumn="15" endcolumn="26" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setHtml_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setHtml_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="408" endline="408" begincolumn="35" endcolumn="43" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setHtml_url" variable="html_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'html_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="424" endline="424" begincolumn="15" endcolumn="27" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setForks_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setForks_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="424" endline="424" begincolumn="36" endcolumn="45" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setForks_url" variable="forks_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'forks_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="428" endline="428" begincolumn="15" endcolumn="26" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setKeys_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setKeys_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="428" endline="428" begincolumn="35" endcolumn="43" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setKeys_url" variable="keys_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'keys_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="432" endline="432" begincolumn="15" endcolumn="35" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setCollaborators_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setCollaborators_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="432" endline="432" begincolumn="44" endcolumn="61" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setCollaborators_url" variable="collaborators_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'collaborators_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="436" endline="436" begincolumn="15" endcolumn="27" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setTeams_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setTeams_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="436" endline="436" begincolumn="36" endcolumn="45" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setTeams_url" variable="teams_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'teams_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="440" endline="440" begincolumn="15" endcolumn="27" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setHooks_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setHooks_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="440" endline="440" begincolumn="36" endcolumn="45" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setHooks_url" variable="hooks_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'hooks_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="444" endline="444" begincolumn="15" endcolumn="34" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setIssue_events_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setIssue_events_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="444" endline="444" begincolumn="43" endcolumn="59" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setIssue_events_url" variable="issue_events_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'issue_events_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="448" endline="448" begincolumn="15" endcolumn="28" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setEvents_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setEvents_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="448" endline="448" begincolumn="37" endcolumn="47" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setEvents_url" variable="events_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'events_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="452" endline="452" begincolumn="15" endcolumn="31" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setAssignees_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setAssignees_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="452" endline="452" begincolumn="40" endcolumn="53" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setAssignees_url" variable="assignees_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'assignees_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="456" endline="456" begincolumn="15" endcolumn="30" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setBranches_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setBranches_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="456" endline="456" begincolumn="39" endcolumn="51" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setBranches_url" variable="branches_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'branches_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="460" endline="460" begincolumn="15" endcolumn="26" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setTags_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setTags_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="460" endline="460" begincolumn="35" endcolumn="43" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setTags_url" variable="tags_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'tags_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="464" endline="464" begincolumn="15" endcolumn="27" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setBlobs_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setBlobs_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="464" endline="464" begincolumn="36" endcolumn="45" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setBlobs_url" variable="blobs_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'blobs_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="468" endline="468" begincolumn="15" endcolumn="30" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setGit_tags_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setGit_tags_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="468" endline="468" begincolumn="39" endcolumn="51" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setGit_tags_url" variable="git_tags_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'git_tags_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="472" endline="472" begincolumn="15" endcolumn="30" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setGit_refs_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setGit_refs_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="472" endline="472" begincolumn="39" endcolumn="51" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setGit_refs_url" variable="git_refs_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'git_refs_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="476" endline="476" begincolumn="15" endcolumn="27" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setTrees_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setTrees_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="476" endline="476" begincolumn="36" endcolumn="45" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setTrees_url" variable="trees_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'trees_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="480" endline="480" begincolumn="15" endcolumn="30" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setStatuses_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setStatuses_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="480" endline="480" begincolumn="39" endcolumn="51" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setStatuses_url" variable="statuses_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'statuses_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="484" endline="484" begincolumn="15" endcolumn="31" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setLanguages_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setLanguages_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="484" endline="484" begincolumn="40" endcolumn="53" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setLanguages_url" variable="languages_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'languages_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="488" endline="488" begincolumn="15" endcolumn="32" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setStargazers_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setStargazers_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="488" endline="488" begincolumn="41" endcolumn="55" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setStargazers_url" variable="stargazers_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'stargazers_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="492" endline="492" begincolumn="15" endcolumn="34" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setContributors_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setContributors_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="492" endline="492" begincolumn="43" endcolumn="59" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setContributors_url" variable="contributors_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'contributors_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="496" endline="496" begincolumn="15" endcolumn="33" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setSubscribers_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setSubscribers_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="496" endline="496" begincolumn="42" endcolumn="57" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setSubscribers_url" variable="subscribers_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'subscribers_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="500" endline="500" begincolumn="15" endcolumn="34" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setSubscription_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setSubscription_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="500" endline="500" begincolumn="43" endcolumn="59" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setSubscription_url" variable="subscription_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'subscription_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="504" endline="504" begincolumn="15" endcolumn="29" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setCommits_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setCommits_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="504" endline="504" begincolumn="38" endcolumn="49" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setCommits_url" variable="commits_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'commits_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="508" endline="508" begincolumn="15" endcolumn="33" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setGit_commits_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setGit_commits_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="508" endline="508" begincolumn="42" endcolumn="57" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setGit_commits_url" variable="git_commits_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'git_commits_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="512" endline="512" begincolumn="15" endcolumn="30" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setComments_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setComments_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="512" endline="512" begincolumn="39" endcolumn="51" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setComments_url" variable="comments_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'comments_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="516" endline="516" begincolumn="15" endcolumn="35" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setIssue_comment_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setIssue_comment_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="516" endline="516" begincolumn="44" endcolumn="61" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setIssue_comment_url" variable="issue_comment_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'issue_comment_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="520" endline="520" begincolumn="15" endcolumn="30" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setContents_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setContents_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="520" endline="520" begincolumn="39" endcolumn="51" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setContents_url" variable="contents_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'contents_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="524" endline="524" begincolumn="15" endcolumn="29" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setCompare_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setCompare_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="524" endline="524" begincolumn="38" endcolumn="49" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setCompare_url" variable="compare_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'compare_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="528" endline="528" begincolumn="15" endcolumn="28" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setMerges_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setMerges_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="528" endline="528" begincolumn="37" endcolumn="47" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setMerges_url" variable="merges_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'merges_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="532" endline="532" begincolumn="15" endcolumn="29" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setArchive_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setArchive_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="532" endline="532" begincolumn="38" endcolumn="49" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setArchive_url" variable="archive_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'archive_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="536" endline="536" begincolumn="15" endcolumn="31" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setDownloads_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setDownloads_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="536" endline="536" begincolumn="40" endcolumn="53" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setDownloads_url" variable="downloads_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'downloads_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="540" endline="540" begincolumn="15" endcolumn="28" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setIssues_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setIssues_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="540" endline="540" begincolumn="37" endcolumn="47" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setIssues_url" variable="issues_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'issues_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="544" endline="544" begincolumn="15" endcolumn="27" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setPulls_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setPulls_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="544" endline="544" begincolumn="36" endcolumn="45" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setPulls_url" variable="pulls_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'pulls_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="548" endline="548" begincolumn="15" endcolumn="32" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setMilestones_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setMilestones_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="548" endline="548" begincolumn="41" endcolumn="55" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setMilestones_url" variable="milestones_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'milestones_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="552" endline="552" begincolumn="15" endcolumn="35" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setNotifications_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setNotifications_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="552" endline="552" begincolumn="44" endcolumn="61" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setNotifications_url" variable="notifications_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'notifications_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="556" endline="556" begincolumn="15" endcolumn="28" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setLabels_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setLabels_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="556" endline="556" begincolumn="37" endcolumn="47" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setLabels_url" variable="labels_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'labels_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="560" endline="560" begincolumn="15" endcolumn="30" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setReleases_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setReleases_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="560" endline="560" begincolumn="39" endcolumn="51" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setReleases_url" variable="releases_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'releases_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="564" endline="564" begincolumn="15" endcolumn="33" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setDeployments_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setDeployments_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="564" endline="564" begincolumn="42" endcolumn="57" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setDeployments_url" variable="deployments_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'deployments_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="568" endline="568" begincolumn="15" endcolumn="28" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setCreated_at" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setCreated_at' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="568" endline="568" begincolumn="37" endcolumn="47" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setCreated_at" variable="created_at" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'created_at' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="572" endline="572" begincolumn="15" endcolumn="28" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setUpdated_at" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setUpdated_at' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="572" endline="572" begincolumn="37" endcolumn="47" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setUpdated_at" variable="updated_at" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'updated_at' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="576" endline="576" begincolumn="15" endcolumn="27" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setPushed_at" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setPushed_at' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="576" endline="576" begincolumn="36" endcolumn="45" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setPushed_at" variable="pushed_at" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'pushed_at' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="580" endline="580" begincolumn="15" endcolumn="25" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setGit_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setGit_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="580" endline="580" begincolumn="34" endcolumn="41" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setGit_url" variable="git_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'git_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="584" endline="584" begincolumn="15" endcolumn="25" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setSsh_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setSsh_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="584" endline="584" begincolumn="34" endcolumn="41" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setSsh_url" variable="ssh_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'ssh_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="588" endline="588" begincolumn="15" endcolumn="27" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setClone_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setClone_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="588" endline="588" begincolumn="36" endcolumn="45" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setClone_url" variable="clone_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'clone_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="592" endline="592" begincolumn="15" endcolumn="25" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setSvn_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setSvn_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="592" endline="592" begincolumn="34" endcolumn="41" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setSvn_url" variable="svn_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'svn_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="604" endline="604" begincolumn="15" endcolumn="34" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setStargazers_count" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setStargazers_count' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="604" endline="604" begincolumn="41" endcolumn="57" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setStargazers_count" variable="stargazers_count" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'stargazers_count' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="608" endline="608" begincolumn="15" endcolumn="32" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setWatchers_count" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setWatchers_count' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="608" endline="608" begincolumn="39" endcolumn="53" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setWatchers_count" variable="watchers_count" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'watchers_count' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="616" endline="616" begincolumn="15" endcolumn="28" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setHas_issues" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setHas_issues' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="616" endline="616" begincolumn="38" endcolumn="48" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setHas_issues" variable="has_issues" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'has_issues' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="620" endline="620" begincolumn="15" endcolumn="30" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setHas_projects" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setHas_projects' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="620" endline="620" begincolumn="40" endcolumn="52" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setHas_projects" variable="has_projects" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'has_projects' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="624" endline="624" begincolumn="15" endcolumn="31" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setHas_downloads" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setHas_downloads' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="624" endline="624" begincolumn="41" endcolumn="54" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setHas_downloads" variable="has_downloads" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'has_downloads' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="628" endline="628" begincolumn="15" endcolumn="26" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setHas_wiki" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setHas_wiki' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="628" endline="628" begincolumn="36" endcolumn="44" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setHas_wiki" variable="has_wiki" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'has_wiki' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="632" endline="632" begincolumn="15" endcolumn="27" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setHas_pages" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setHas_pages' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="632" endline="632" begincolumn="37" endcolumn="46" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setHas_pages" variable="has_pages" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'has_pages' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="636" endline="636" begincolumn="15" endcolumn="33" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setHas_discussions" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setHas_discussions' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="636" endline="636" begincolumn="43" endcolumn="58" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setHas_discussions" variable="has_discussions" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'has_discussions' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="640" endline="640" begincolumn="15" endcolumn="29" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setForks_count" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setForks_count' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="640" endline="640" begincolumn="36" endcolumn="47" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setForks_count" variable="forks_count" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'forks_count' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="644" endline="644" begincolumn="15" endcolumn="28" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setMirror_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setMirror_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="644" endline="644" begincolumn="37" endcolumn="47" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setMirror_url" variable="mirror_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'mirror_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="656" endline="656" begincolumn="15" endcolumn="35" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setOpen_issues_count" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setOpen_issues_count' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="656" endline="656" begincolumn="42" endcolumn="59" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setOpen_issues_count" variable="open_issues_count" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'open_issues_count' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="661" endline="661" begincolumn="15" endcolumn="31" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setAllow_forking" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setAllow_forking' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="661" endline="661" begincolumn="41" endcolumn="54" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setAllow_forking" variable="allow_forking" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'allow_forking' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="665" endline="665" begincolumn="15" endcolumn="29" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setIs_template" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setIs_template' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="665" endline="665" begincolumn="39" endcolumn="50" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setIs_template" variable="is_template" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'is_template' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="669" endline="669" begincolumn="15" endcolumn="45" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setWeb_commit_signoff_required" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setWeb_commit_signoff_required' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="669" endline="669" begincolumn="55" endcolumn="82" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setWeb_commit_signoff_required" variable="web_commit_signoff_required" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'web_commit_signoff_required' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="681" endline="681" begincolumn="15" endcolumn="29" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setOpen_issues" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setOpen_issues' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="681" endline="681" begincolumn="36" endcolumn="47" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setOpen_issues" variable="open_issues" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'open_issues' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="689" endline="689" begincolumn="15" endcolumn="32" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setDefault_branch" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setDefault_branch' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="689" endline="689" begincolumn="41" endcolumn="55" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostRepository" method="setDefault_branch" variable="default_branch" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'default_branch' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+</file>
+<file name="/Users/user/git/codeanalysis/api/src/main/java/io/codety/api/dto/github/GithubWebHookPostSender.java">
+<violation beginline="34" endline="34" begincolumn="17" endcolumn="27" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="getNode_id" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getNode_id' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="38" endline="38" begincolumn="17" endcolumn="30" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="getAvatar_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getAvatar_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="42" endline="42" begincolumn="17" endcolumn="31" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="getGravatar_id" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getGravatar_id' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="50" endline="50" begincolumn="17" endcolumn="28" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="getHtml_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getHtml_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="54" endline="54" begincolumn="17" endcolumn="33" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="getFollowers_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getFollowers_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="58" endline="58" begincolumn="17" endcolumn="33" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="getFollowing_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getFollowing_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="62" endline="62" begincolumn="17" endcolumn="29" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="getGists_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getGists_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="66" endline="66" begincolumn="17" endcolumn="31" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="getStarred_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getStarred_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="70" endline="70" begincolumn="17" endcolumn="37" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="getSubscriptions_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getSubscriptions_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="74" endline="74" begincolumn="17" endcolumn="37" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="getOrganizations_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getOrganizations_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="78" endline="78" begincolumn="17" endcolumn="29" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="getRepos_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getRepos_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="82" endline="82" begincolumn="17" endcolumn="30" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="getEvents_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getEvents_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="86" endline="86" begincolumn="17" endcolumn="39" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="getReceived_events_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getReceived_events_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="94" endline="94" begincolumn="18" endcolumn="31" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="getSite_admin" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getSite_admin' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="108" endline="108" begincolumn="15" endcolumn="25" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="setNode_id" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setNode_id' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="108" endline="108" begincolumn="34" endcolumn="41" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="setNode_id" variable="node_id" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'node_id' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="112" endline="112" begincolumn="15" endcolumn="28" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="setAvatar_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setAvatar_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="112" endline="112" begincolumn="37" endcolumn="47" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="setAvatar_url" variable="avatar_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'avatar_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="116" endline="116" begincolumn="15" endcolumn="29" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="setGravatar_id" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setGravatar_id' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="116" endline="116" begincolumn="38" endcolumn="49" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="setGravatar_id" variable="gravatar_id" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'gravatar_id' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="124" endline="124" begincolumn="15" endcolumn="26" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="setHtml_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setHtml_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="124" endline="124" begincolumn="35" endcolumn="43" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="setHtml_url" variable="html_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'html_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="128" endline="128" begincolumn="15" endcolumn="31" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="setFollowers_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setFollowers_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="128" endline="128" begincolumn="40" endcolumn="53" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="setFollowers_url" variable="followers_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'followers_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="132" endline="132" begincolumn="15" endcolumn="31" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="setFollowing_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setFollowing_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="132" endline="132" begincolumn="40" endcolumn="53" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="setFollowing_url" variable="following_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'following_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="136" endline="136" begincolumn="15" endcolumn="27" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="setGists_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setGists_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="136" endline="136" begincolumn="36" endcolumn="45" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="setGists_url" variable="gists_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'gists_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="140" endline="140" begincolumn="15" endcolumn="29" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="setStarred_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setStarred_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="140" endline="140" begincolumn="38" endcolumn="49" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="setStarred_url" variable="starred_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'starred_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="144" endline="144" begincolumn="15" endcolumn="35" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="setSubscriptions_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setSubscriptions_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="144" endline="144" begincolumn="44" endcolumn="61" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="setSubscriptions_url" variable="subscriptions_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'subscriptions_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="148" endline="148" begincolumn="15" endcolumn="35" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="setOrganizations_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setOrganizations_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="148" endline="148" begincolumn="44" endcolumn="61" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="setOrganizations_url" variable="organizations_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'organizations_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="152" endline="152" begincolumn="15" endcolumn="27" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="setRepos_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setRepos_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="152" endline="152" begincolumn="36" endcolumn="45" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="setRepos_url" variable="repos_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'repos_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="156" endline="156" begincolumn="15" endcolumn="28" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="setEvents_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setEvents_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="156" endline="156" begincolumn="37" endcolumn="47" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="setEvents_url" variable="events_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'events_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="160" endline="160" begincolumn="15" endcolumn="37" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="setReceived_events_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setReceived_events_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="160" endline="160" begincolumn="46" endcolumn="65" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="setReceived_events_url" variable="received_events_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'received_events_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="168" endline="168" begincolumn="15" endcolumn="28" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="setSite_admin" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setSite_admin' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="168" endline="168" begincolumn="38" endcolumn="48" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostSender" method="setSite_admin" variable="site_admin" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'site_admin' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+</file>
+<file name="/Users/user/git/codeanalysis/api/src/main/java/io/codety/api/dto/github/GithubWebHookPostUser.java">
+<violation beginline="34" endline="34" begincolumn="17" endcolumn="27" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="getNode_id" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getNode_id' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="38" endline="38" begincolumn="17" endcolumn="30" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="getAvatar_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getAvatar_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="42" endline="42" begincolumn="17" endcolumn="31" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="getGravatar_id" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getGravatar_id' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="50" endline="50" begincolumn="17" endcolumn="28" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="getHtml_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getHtml_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="54" endline="54" begincolumn="17" endcolumn="33" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="getFollowers_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getFollowers_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="58" endline="58" begincolumn="17" endcolumn="33" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="getFollowing_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getFollowing_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="62" endline="62" begincolumn="17" endcolumn="29" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="getGists_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getGists_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="66" endline="66" begincolumn="17" endcolumn="31" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="getStarred_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getStarred_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="70" endline="70" begincolumn="17" endcolumn="37" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="getSubscriptions_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getSubscriptions_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="74" endline="74" begincolumn="17" endcolumn="37" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="getOrganizations_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getOrganizations_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="78" endline="78" begincolumn="17" endcolumn="29" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="getRepos_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getRepos_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="82" endline="82" begincolumn="17" endcolumn="30" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="getEvents_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getEvents_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="86" endline="86" begincolumn="17" endcolumn="39" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="getReceived_events_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getReceived_events_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="94" endline="94" begincolumn="18" endcolumn="31" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="getSite_admin" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getSite_admin' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="108" endline="108" begincolumn="15" endcolumn="25" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="setNode_id" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setNode_id' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="108" endline="108" begincolumn="34" endcolumn="41" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="setNode_id" variable="node_id" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'node_id' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="112" endline="112" begincolumn="15" endcolumn="28" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="setAvatar_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setAvatar_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="112" endline="112" begincolumn="37" endcolumn="47" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="setAvatar_url" variable="avatar_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'avatar_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="116" endline="116" begincolumn="15" endcolumn="29" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="setGravatar_id" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setGravatar_id' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="116" endline="116" begincolumn="38" endcolumn="49" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="setGravatar_id" variable="gravatar_id" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'gravatar_id' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="124" endline="124" begincolumn="15" endcolumn="26" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="setHtml_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setHtml_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="124" endline="124" begincolumn="35" endcolumn="43" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="setHtml_url" variable="html_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'html_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="128" endline="128" begincolumn="15" endcolumn="31" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="setFollowers_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setFollowers_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="128" endline="128" begincolumn="40" endcolumn="53" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="setFollowers_url" variable="followers_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'followers_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="132" endline="132" begincolumn="15" endcolumn="31" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="setFollowing_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setFollowing_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="132" endline="132" begincolumn="40" endcolumn="53" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="setFollowing_url" variable="following_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'following_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="136" endline="136" begincolumn="15" endcolumn="27" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="setGists_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setGists_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="136" endline="136" begincolumn="36" endcolumn="45" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="setGists_url" variable="gists_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'gists_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="140" endline="140" begincolumn="15" endcolumn="29" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="setStarred_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setStarred_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="140" endline="140" begincolumn="38" endcolumn="49" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="setStarred_url" variable="starred_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'starred_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="144" endline="144" begincolumn="15" endcolumn="35" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="setSubscriptions_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setSubscriptions_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="144" endline="144" begincolumn="44" endcolumn="61" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="setSubscriptions_url" variable="subscriptions_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'subscriptions_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="148" endline="148" begincolumn="15" endcolumn="35" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="setOrganizations_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setOrganizations_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="148" endline="148" begincolumn="44" endcolumn="61" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="setOrganizations_url" variable="organizations_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'organizations_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="152" endline="152" begincolumn="15" endcolumn="27" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="setRepos_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setRepos_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="152" endline="152" begincolumn="36" endcolumn="45" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="setRepos_url" variable="repos_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'repos_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="156" endline="156" begincolumn="15" endcolumn="28" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="setEvents_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setEvents_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="156" endline="156" begincolumn="37" endcolumn="47" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="setEvents_url" variable="events_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'events_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="160" endline="160" begincolumn="15" endcolumn="37" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="setReceived_events_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setReceived_events_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="160" endline="160" begincolumn="46" endcolumn="65" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="setReceived_events_url" variable="received_events_url" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'received_events_url' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="168" endline="168" begincolumn="15" endcolumn="28" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="setSite_admin" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setSite_admin' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="168" endline="168" begincolumn="38" endcolumn="48" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebHookPostUser" method="setSite_admin" variable="site_admin" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'site_admin' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+</file>
+<file name="/Users/user/git/codeanalysis/api/src/main/java/io/codety/api/dto/github/GithubWebhookPostDto.java">
+<violation beginline="24" endline="24" begincolumn="39" endcolumn="54" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebhookPostDto" method="getPull_request" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'getPull_request' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="58" endline="58" begincolumn="15" endcolumn="30" rule="MethodNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebhookPostDto" method="setPull_request" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'setPull_request' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="58" endline="58" begincolumn="61" endcolumn="79" rule="FormalParameterNamingConventions" ruleset="Code Style" package="io.codety.api.dto.github" class="GithubWebhookPostDto" method="setPull_request" variable="pull_requestObject" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'pull_requestObject' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+</file>
+<file name="/Users/user/git/codeanalysis/api/src/main/java/io/codety/api/persistence/CodeAnalysisJobRepositoryImpl.java">
+<violation beginline="6" endline="6" begincolumn="1" endcolumn="54" rule="UnnecessaryImport" ruleset="Code Style" package="io.codety.api.persistence" class="CodeAnalysisJobRepositoryImpl" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'org.springframework.data.jpa.repository.Query'
+</violation>
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="56" rule="UnnecessaryImport" ruleset="Code Style" package="io.codety.api.persistence" class="CodeAnalysisJobRepositoryImpl" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'org.springframework.data.repository.query.Param'
+</violation>
+<violation beginline="22" endline="22" begincolumn="29" endcolumn="41" rule="UnnecessaryLocalBeforeReturn" ruleset="Code Style" package="io.codety.api.persistence" class="CodeAnalysisJobRepositoryImpl" method="fetchOne" variable="singleResult" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#unnecessarylocalbeforereturn" priority="3">
+Consider simply returning the value vs storing it in local variable 'singleResult'
+</violation>
+</file>
+<file name="/Users/user/git/codeanalysis/api/src/main/java/io/codety/api/persistence/CodeAnalyzerQueueDao.java">
+<violation beginline="5" endline="5" begincolumn="1" endcolumn="58" rule="UnnecessaryImport" ruleset="Code Style" package="io.codety.api.persistence" class="CodeAnalyzerQueueDao" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'org.springframework.data.jpa.repository.Modifying'
+</violation>
+<violation beginline="6" endline="6" begincolumn="1" endcolumn="54" rule="UnnecessaryImport" ruleset="Code Style" package="io.codety.api.persistence" class="CodeAnalyzerQueueDao" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'org.springframework.data.jpa.repository.Query'
+</violation>
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="56" rule="UnnecessaryImport" ruleset="Code Style" package="io.codety.api.persistence" class="CodeAnalyzerQueueDao" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'org.springframework.data.repository.query.Param'
+</violation>
+</file>
+<file name="/Users/user/git/codeanalysis/api/src/main/java/io/codety/job/CodeAnalysisJobRunner.java">
+<violation beginline="29" endline="29" begincolumn="16" endcolumn="26" rule="UnusedLocalVariable" ruleset="Best Practices" package="io.codety.job" class="CodeAnalysisJobRunner" method="grabTodoJobAndRun" variable="sourcePath" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_bestpractices.html#unusedlocalvariable" priority="3">
+Avoid unused local variables such as 'sourcePath'.
+</violation>
+<violation beginline="31" endline="31" begincolumn="16" endcolumn="27" rule="UnusedLocalVariable" ruleset="Best Practices" package="io.codety.job" class="CodeAnalysisJobRunner" method="grabTodoJobAndRun" variable="rulesetPath" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_bestpractices.html#unusedlocalvariable" priority="3">
+Avoid unused local variables such as 'rulesetPath'.
+</violation>
+</file>
+<file name="/Users/user/git/codeanalysis/api/src/main/java/io/codety/job/analyzer/JavaPmdCodeAnalyzer.java">
+<violation beginline="10" endline="10" begincolumn="1" endcolumn="25" rule="UnnecessaryImport" ruleset="Code Style" package="io.codety.job.analyzer" class="JavaPmdCodeAnalyzer" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'java.util.Arrays'
+</violation>
+<violation beginline="11" endline="11" begincolumn="1" endcolumn="23" rule="UnnecessaryImport" ruleset="Code Style" package="io.codety.job.analyzer" class="JavaPmdCodeAnalyzer" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'java.util.List'
+</violation>
+<violation beginline="36" endline="38" begincolumn="11" endcolumn="10" rule="IdenticalCatchBranches" ruleset="Code Style" package="io.codety.job.analyzer" class="JavaPmdCodeAnalyzer" method="analyzeCode" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#identicalcatchbranches" priority="3">
+'catch' branch identical to 'IOException' branch
+</violation>
+</file>
+<file name="/Users/user/git/codeanalysis/api/src/main/java/io/codety/job/analyzer/JavaPmdDuplicateCodeAnalyzer.java">
+<violation beginline="34" endline="36" begincolumn="11" endcolumn="10" rule="IdenticalCatchBranches" ruleset="Code Style" package="io.codety.job.analyzer" class="JavaPmdDuplicateCodeAnalyzer" method="analyzeCode" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#identicalcatchbranches" priority="3">
+'catch' branch identical to 'IOException' branch
+</violation>
+</file>
+<file name="/Users/user/git/codeanalysis/api/src/main/java/io/codety/job/queue/CodeAnalysisJobQueueService.java">
+<violation beginline="20" endline="20" begincolumn="25" endcolumn="28" rule="UnnecessaryLocalBeforeReturn" ruleset="Code Style" package="io.codety.job.queue" class="CodeAnalysisJobQueueService" method="poll" variable="job" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#unnecessarylocalbeforereturn" priority="3">
+Consider simply returning the value vs storing it in local variable 'job'
+</violation>
+</file>
+<file name="/Users/user/git/codeanalysis/api/src/main/java/io/codety/job/service/GitRepoDownloadService.java">
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="38" rule="UnnecessaryImport" ruleset="Code Style" package="io.codety.job.service" class="GitRepoDownloadService" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'org.eclipse.jgit.api.errors.*'
+</violation>
+</file>
+<file name="/Users/user/git/codeanalysis/api/src/main/java/io/codety/job/service/GitTokenService.java">
+<violation beginline="28" endline="28" begincolumn="20" endcolumn="34" rule="UnnecessaryLocalBeforeReturn" ruleset="Code Style" package="io.codety.job.service" class="GitTokenService" method="getGitHubAccessToken" variable="gitAccessToken" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#unnecessarylocalbeforereturn" priority="3">
+Consider simply returning the value vs storing it in local variable 'gitAccessToken'
+</violation>
+</file>
+<file name="/Users/user/git/codeanalysis/api/src/main/java/io/codety/job/service/JwtStore.java">
+<violation beginline="14" endline="14" begincolumn="8" endcolumn="13" rule="UseUtilityClass" ruleset="Design" package="io.codety.job.service" class="JwtStore" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_design.html#useutilityclass" priority="3">
+This utility class has a non-private constructor
+</violation>
+</file>
+<file name="/Users/user/git/codeanalysis/api/src/test/java/io/codety/TestApplication.java">
+<violation beginline="3" endline="3" begincolumn="1" endcolumn="69" rule="UnnecessaryImport" ruleset="Code Style" package="io.codety" class="TestApplication" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'org.springframework.boot.autoconfigure.SpringBootApplication'
+</violation>
+<violation beginline="4" endline="4" begincolumn="1" endcolumn="61" rule="UnnecessaryImport" ruleset="Code Style" package="io.codety" class="TestApplication" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'org.springframework.context.annotation.ComponentScan'
+</violation>
+<violation beginline="5" endline="5" begincolumn="1" endcolumn="77" rule="UnnecessaryImport" ruleset="Code Style" package="io.codety" class="TestApplication" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'org.springframework.data.jpa.repository.config.EnableJpaRepositories'
+</violation>
+</file>
+<file name="/Users/user/git/codeanalysis/api/src/test/java/io/codety/api/service/WebhookPostDeserializationTest.java">
+<violation beginline="45" endline="45" begincolumn="16" endcolumn="31" rule="UnnecessaryLocalBeforeReturn" ruleset="Code Style" package="io.codety.api.service" class="WebhookPostDeserializationTest" method="getWebhookPostJson" variable="webhookPostJson" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#unnecessarylocalbeforereturn" priority="3">
+Consider simply returning the value vs storing it in local variable 'webhookPostJson'
+</violation>
+</file>
+<file name="/Users/user/git/codeanalysis/api/src/test/java/io/codety/poc/CloneGitrepo.java">
+<violation beginline="3" endline="3" begincolumn="1" endcolumn="26" rule="UnnecessaryImport" ruleset="Code Style" package="io.codety.poc" class="CloneGitrepo" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'com.auth0.jwt.JWT'
+</violation>
+<violation beginline="4" endline="4" begincolumn="1" endcolumn="43" rule="UnnecessaryImport" ruleset="Code Style" package="io.codety.poc" class="CloneGitrepo" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'com.auth0.jwt.algorithms.Algorithm'
+</violation>
+<violation beginline="8" endline="8" begincolumn="1" endcolumn="34" rule="UnnecessaryImport" ruleset="Code Style" package="io.codety.poc" class="CloneGitrepo" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'org.kohsuke.github.GitHub'
+</violation>
+<violation beginline="9" endline="9" begincolumn="1" endcolumn="41" rule="UnnecessaryImport" ruleset="Code Style" package="io.codety.poc" class="CloneGitrepo" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'org.kohsuke.github.GitHubBuilder'
+</violation>
+<violation beginline="13" endline="13" begincolumn="1" endcolumn="47" rule="UnnecessaryImport" ruleset="Code Style" package="io.codety.poc" class="CloneGitrepo" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'java.security.interfaces.RSAPrivateKey'
+</violation>
+<violation beginline="14" endline="14" begincolumn="1" endcolumn="23" rule="UnnecessaryImport" ruleset="Code Style" package="io.codety.poc" class="CloneGitrepo" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'java.util.Date'
+</violation>
+<violation beginline="15" endline="15" begincolumn="1" endcolumn="23" rule="UnnecessaryImport" ruleset="Code Style" package="io.codety.poc" class="CloneGitrepo" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'java.util.UUID'
+</violation>
+<violation beginline="17" endline="17" begincolumn="8" endcolumn="13" rule="ClassNamingConventions" ruleset="Code Style" package="io.codety.poc" class="CloneGitrepo" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#classnamingconventions" priority="1">
+The class name 'CloneGitrepo' doesn't match '^Test.*$|^[A-Z][a-zA-Z0-9]*Test(s|Case)?$'
+</violation>
+</file>
+<file name="/Users/user/git/codeanalysis/api/src/test/java/io/codety/poc/GenerateJWT.java">
+<violation beginline="5" endline="5" begincolumn="1" endcolumn="52" rule="UnnecessaryImport" ruleset="Code Style" package="io.codety.poc" class="GenerateJWT" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'io.jsonwebtoken.security.SignatureAlgorithm'
+</violation>
+<violation beginline="6" endline="6" begincolumn="1" endcolumn="33" rule="UnnecessaryImport" ruleset="Code Style" package="io.codety.poc" class="GenerateJWT" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'org.eclipse.jgit.api.Git'
+</violation>
+<violation beginline="9" endline="9" begincolumn="1" endcolumn="29" rule="UnnecessaryImport" ruleset="Code Style" package="io.codety.poc" class="GenerateJWT" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'org.kohsuke.github.*'
+</violation>
+<violation beginline="19" endline="19" begincolumn="1" endcolumn="26" rule="UnnecessaryImport" ruleset="Code Style" package="io.codety.poc" class="GenerateJWT" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'java.util.HashMap'
+</violation>
+<violation beginline="21" endline="21" begincolumn="1" endcolumn="22" rule="UnnecessaryImport" ruleset="Code Style" package="io.codety.poc" class="GenerateJWT" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'java.util.Map'
+</violation>
+<violation beginline="23" endline="23" begincolumn="8" endcolumn="13" rule="ClassNamingConventions" ruleset="Code Style" package="io.codety.poc" class="GenerateJWT" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_codestyle.html#classnamingconventions" priority="1">
+The class name 'GenerateJWT' doesn't match '^Test.*$|^[A-Z][a-zA-Z0-9]*Test(s|Case)?$'
+</violation>
+<violation beginline="60" endline="60" begincolumn="16" endcolumn="22" rule="UnusedLocalVariable" ruleset="Best Practices" package="io.codety.poc" class="GenerateJWT" method="clonePrivateGitRepoUsingGithubAppSecret" variable="github" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_bestpractices.html#unusedlocalvariable" priority="3">
+Avoid unused local variables such as 'github'.
+</violation>
+<violation beginline="89" endline="89" begincolumn="35" endcolumn="39" rule="UnusedLocalVariable" ruleset="Best Practices" package="io.codety.poc" class="GenerateJWT" method="main" variable="list" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_bestpractices.html#unusedlocalvariable" priority="3">
+Avoid unused local variables such as 'list'.
+</violation>
+</file>
+<file name="/Users/user/git/codeanalysis/api/src/test/java/io/codety/poc/TestGithubAPI.java">
+<violation beginline="15" endline="15" begincolumn="22" endcolumn="26" rule="UnusedLocalVariable" ruleset="Best Practices" package="io.codety.poc" class="TestGithubAPI" method="testGithubAPI" variable="repo" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.2.0/pmd_rules_java_bestpractices.html#unusedlocalvariable" priority="3">
+Avoid unused local variables such as 'repo'.
+</violation>
+</file>
+<error filename="/Users/user/git/codeanalysis/api/src/main/java/io/codety/job/analyzer/dto/CodeViolationDto.java" msg="ParseException: Parse exception in file '/Users/user/git/codeanalysis/api/src/main/java/io/codety/job/analyzer/dto/CodeViolationDto.java' at line 5, column 5: Encountered &lt;STRING_LITERAL: &quot;\&quot;Problem\&quot;&quot;&gt;.
+Was expecting:
+    &quot;}&quot; ...">
+<![CDATA[net.sourceforge.pmd.lang.ast.ParseException: Parse exception in file '/Users/user/git/codeanalysis/api/src/main/java/io/codety/job/analyzer/dto/CodeViolationDto.java' at line 5, column 5: Encountered <STRING_LITERAL: "\"Problem\"">.
+Was expecting:
+    "}" ...
+	at net.sourceforge.pmd.lang.java.ast.JavaParserImpl.generateParseException(JavaParserImpl.java:14863)
+	at net.sourceforge.pmd.lang.java.ast.JavaParserImpl.jj_consume_token(JavaParserImpl.java:14744)
+	at net.sourceforge.pmd.lang.java.ast.JavaParserImpl.ClassOrInterfaceBody(JavaParserImpl.java:1371)
+	at net.sourceforge.pmd.lang.java.ast.JavaParserImpl.ClassOrInterfaceDeclaration(JavaParserImpl.java:751)
+	at net.sourceforge.pmd.lang.java.ast.JavaParserImpl.TypeDeclaration(JavaParserImpl.java:683)
+	at net.sourceforge.pmd.lang.java.ast.JavaParserImpl.CompilationUnit(JavaParserImpl.java:370)
+	at net.sourceforge.pmd.lang.java.ast.JavaParser.parseImpl(JavaParser.java:57)
+	at net.sourceforge.pmd.lang.java.ast.JavaParser.parseImpl(JavaParser.java:25)
+	at net.sourceforge.pmd.lang.ast.impl.javacc.JjtreeParserAdapter.parse(JjtreeParserAdapter.java:36)
+	at net.sourceforge.pmd.lang.impl.PmdRunnable.parse(PmdRunnable.java:112)
+	at net.sourceforge.pmd.lang.impl.PmdRunnable.processSource(PmdRunnable.java:132)
+	at net.sourceforge.pmd.lang.impl.PmdRunnable.run(PmdRunnable.java:80)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+</error>
+</pmd>

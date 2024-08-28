@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<ruleset name="Hello">
+    <description>
+        All right reserved.
+    </description>
+    <rule name="TestTestTooBig"
+          language="java"
+          message="Test case shouldn't be too long. "
+          class="net.sourceforge.pmd.lang.rule.xpath.XPathRule">
+        <description>
+            blablabla description.
+        </description>
+        <priority>3</priority>
+        <properties>
+            <property name="methodLength" type="Integer" value="5"
+                      description="The length of the method. " />
+            <property name="xpath">
+                <value>
+<![CDATA[
+//MethodDeclaration[
+    ModifierList/Annotation[@SimpleName = 'Test']
+    and
+    Block[@Size > $methodLength ]
+]
+]]>
+                </value>
+            </property>
+        </properties>
+    </rule>
+
+</ruleset>

@@ -1,0 +1,1077 @@
+{
+  "results": [
+    {
+      "filePath": "/Users/user/git/codety/analyzer/build/resources/test/eslint/code-smell-examples/typescript-example.ts",
+      "messages": [
+        {
+          "ruleId": "@typescript-eslint/no-for-in-array",
+          "severity": 2,
+          "message": "For-in loops over arrays skips holes, returns indices as strings, and may visit the prototype chain or other enumerable properties. Use a more robust iteration method such as for-of or array.forEach instead.",
+          "line": 3,
+          "column": 1,
+          "nodeType": null,
+          "messageId": "forInViolation",
+          "endLine": 3,
+          "endColumn": 23
+        },
+        {
+          "ruleId": "@typescript-eslint/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 2.",
+          "line": 4,
+          "column": 1,
+          "nodeType": "Identifier",
+          "messageId": "wrongIndentation",
+          "endLine": 4,
+          "endColumn": 3,
+          "fix": {
+            "range": [
+              57,
+              59
+            ],
+            "text": "    "
+          }
+        },
+        {
+          "ruleId": "no-undef",
+          "severity": 2,
+          "message": "'console' is not defined.",
+          "line": 4,
+          "column": 3,
+          "nodeType": "Identifier",
+          "messageId": "undef",
+          "endLine": 4,
+          "endColumn": 10
+        },
+        {
+          "ruleId": "@typescript-eslint/no-for-in-array",
+          "severity": 2,
+          "message": "For-in loops over arrays skips holes, returns indices as strings, and may visit the prototype chain or other enumerable properties. Use a more robust iteration method such as for-of or array.forEach instead.",
+          "line": 6,
+          "column": 1,
+          "nodeType": null,
+          "messageId": "forInViolation",
+          "endLine": 6,
+          "endColumn": 23
+        },
+        {
+          "ruleId": "@typescript-eslint/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 2.",
+          "line": 7,
+          "column": 1,
+          "nodeType": "Identifier",
+          "messageId": "wrongIndentation",
+          "endLine": 7,
+          "endColumn": 3,
+          "fix": {
+            "range": [
+              109,
+              111
+            ],
+            "text": "    "
+          }
+        },
+        {
+          "ruleId": "no-undef",
+          "severity": 2,
+          "message": "'console' is not defined.",
+          "line": 7,
+          "column": 3,
+          "nodeType": "Identifier",
+          "messageId": "undef",
+          "endLine": 7,
+          "endColumn": 10
+        },
+        {
+          "ruleId": "@typescript-eslint/no-array-delete",
+          "severity": 2,
+          "message": "Using the `delete` operator with an array expression is unsafe.",
+          "line": 12,
+          "column": 1,
+          "nodeType": "UnaryExpression",
+          "messageId": "noArrayDelete",
+          "endLine": 12,
+          "endColumn": 14,
+          "suggestions": [
+            {
+              "messageId": "useSplice",
+              "fix": {
+                "range": [
+                  188,
+                  201
+                ],
+                "text": "arr.splice(0, 1)"
+              },
+              "desc": "Use `array.splice()` instead."
+            }
+          ]
+        },
+        {
+          "ruleId": "no-unused-vars",
+          "severity": 2,
+          "message": "'f' is defined but never used.",
+          "line": 14,
+          "column": 10,
+          "nodeType": "Identifier",
+          "messageId": "unusedVar",
+          "endLine": 14,
+          "endColumn": 11
+        },
+        {
+          "ruleId": "no-unused-vars",
+          "severity": 2,
+          "message": "'a' is assigned a value but never used.",
+          "line": 14,
+          "column": 12,
+          "nodeType": "Identifier",
+          "messageId": "unusedVar",
+          "endLine": 14,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "no-unused-vars",
+          "severity": 2,
+          "message": "'b' is defined but never used.",
+          "line": 14,
+          "column": 19,
+          "nodeType": "Identifier",
+          "messageId": "unusedVar",
+          "endLine": 14,
+          "endColumn": 28
+        },
+        {
+          "ruleId": "no-redeclare",
+          "severity": 2,
+          "message": "'f' is already defined.",
+          "line": 15,
+          "column": 10,
+          "nodeType": "Identifier",
+          "messageId": "redeclared",
+          "endLine": 15,
+          "endColumn": 11
+        },
+        {
+          "ruleId": "no-unused-vars",
+          "severity": 2,
+          "message": "'b' is assigned a value but never used.",
+          "line": 15,
+          "column": 23,
+          "nodeType": "Identifier",
+          "messageId": "unusedVar",
+          "endLine": 15,
+          "endColumn": 24
+        },
+        {
+          "ruleId": "no-unused-vars",
+          "severity": 2,
+          "message": "'c' is defined but never used.",
+          "line": 15,
+          "column": 30,
+          "nodeType": "Identifier",
+          "messageId": "unusedVar",
+          "endLine": 15,
+          "endColumn": 39
+        },
+        {
+          "ruleId": "no-redeclare",
+          "severity": 2,
+          "message": "'f' is already defined.",
+          "line": 16,
+          "column": 10,
+          "nodeType": "Identifier",
+          "messageId": "redeclared",
+          "endLine": 16,
+          "endColumn": 11
+        },
+        {
+          "ruleId": "no-unused-vars",
+          "severity": 2,
+          "message": "'a' is defined but never used.",
+          "line": 16,
+          "column": 12,
+          "nodeType": "Identifier",
+          "messageId": "unusedVar",
+          "endLine": 16,
+          "endColumn": 21
+        },
+        {
+          "ruleId": "no-unused-vars",
+          "severity": 2,
+          "message": "'b' is defined but never used.",
+          "line": 16,
+          "column": 23,
+          "nodeType": "Identifier",
+          "messageId": "unusedVar",
+          "endLine": 16,
+          "endColumn": 33
+        },
+        {
+          "ruleId": "no-unused-vars",
+          "severity": 2,
+          "message": "'c' is defined but never used.",
+          "line": 16,
+          "column": 35,
+          "nodeType": "Identifier",
+          "messageId": "unusedVar",
+          "endLine": 16,
+          "endColumn": 44
+        },
+        {
+          "ruleId": "no-unused-vars",
+          "severity": 2,
+          "message": "'Foo' is defined but never used.",
+          "line": 17,
+          "column": 7,
+          "nodeType": "Identifier",
+          "messageId": "unusedVar",
+          "endLine": 17,
+          "endColumn": 10
+        },
+        {
+          "ruleId": "@typescript-eslint/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 2.",
+          "line": 18,
+          "column": 1,
+          "nodeType": "Identifier",
+          "messageId": "wrongIndentation",
+          "endLine": 18,
+          "endColumn": 3,
+          "fix": {
+            "range": [
+              339,
+              341
+            ],
+            "text": "    "
+          }
+        },
+        {
+          "ruleId": "no-useless-constructor",
+          "severity": 2,
+          "message": "Useless constructor.",
+          "line": 18,
+          "column": 3,
+          "nodeType": "MethodDefinition",
+          "messageId": "noUselessConstructor",
+          "endLine": 21,
+          "endColumn": 7
+        },
+        {
+          "ruleId": "@typescript-eslint/indent",
+          "severity": 2,
+          "message": "Expected indentation of 8 spaces but found 4.",
+          "line": 19,
+          "column": 1,
+          "nodeType": "Keyword",
+          "messageId": "wrongIndentation",
+          "endLine": 19,
+          "endColumn": 5,
+          "fix": {
+            "range": [
+              354,
+              358
+            ],
+            "text": "        "
+          }
+        },
+        {
+          "ruleId": "no-unused-vars",
+          "severity": 2,
+          "message": "'a' is assigned a value but never used.",
+          "line": 19,
+          "column": 12,
+          "nodeType": "Identifier",
+          "messageId": "unusedVar",
+          "endLine": 19,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "@typescript-eslint/indent",
+          "severity": 2,
+          "message": "Expected indentation of 8 spaces but found 4.",
+          "line": 20,
+          "column": 1,
+          "nodeType": "Keyword",
+          "messageId": "wrongIndentation",
+          "endLine": 20,
+          "endColumn": 5,
+          "fix": {
+            "range": [
+              373,
+              377
+            ],
+            "text": "        "
+          }
+        },
+        {
+          "ruleId": "no-unused-vars",
+          "severity": 2,
+          "message": "'b' is defined but never used.",
+          "line": 20,
+          "column": 13,
+          "nodeType": "Identifier",
+          "messageId": "unusedVar",
+          "endLine": 20,
+          "endColumn": 22
+        },
+        {
+          "ruleId": "@typescript-eslint/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 2.",
+          "line": 21,
+          "column": 1,
+          "nodeType": "Punctuator",
+          "messageId": "wrongIndentation",
+          "endLine": 21,
+          "endColumn": 3,
+          "fix": {
+            "range": [
+              396,
+              398
+            ],
+            "text": "    "
+          }
+        },
+        {
+          "ruleId": "no-redeclare",
+          "severity": 2,
+          "message": "'Foo' is already defined.",
+          "line": 23,
+          "column": 7,
+          "nodeType": "Identifier",
+          "messageId": "redeclared",
+          "endLine": 23,
+          "endColumn": 10
+        },
+        {
+          "ruleId": "@typescript-eslint/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 2.",
+          "line": 24,
+          "column": 1,
+          "nodeType": "Identifier",
+          "messageId": "wrongIndentation",
+          "endLine": 24,
+          "endColumn": 3,
+          "fix": {
+            "range": [
+              417,
+              419
+            ],
+            "text": "    "
+          }
+        },
+        {
+          "ruleId": "no-useless-constructor",
+          "severity": 2,
+          "message": "Useless constructor.",
+          "line": 24,
+          "column": 3,
+          "nodeType": "MethodDefinition",
+          "messageId": "noUselessConstructor",
+          "endLine": 27,
+          "endColumn": 7
+        },
+        {
+          "ruleId": "@typescript-eslint/indent",
+          "severity": 2,
+          "message": "Expected indentation of 8 spaces but found 4.",
+          "line": 25,
+          "column": 1,
+          "nodeType": "Keyword",
+          "messageId": "wrongIndentation",
+          "endLine": 25,
+          "endColumn": 5,
+          "fix": {
+            "range": [
+              432,
+              436
+            ],
+            "text": "        "
+          }
+        },
+        {
+          "ruleId": "no-unused-vars",
+          "severity": 2,
+          "message": "'a' is defined but never used.",
+          "line": 25,
+          "column": 12,
+          "nodeType": "Identifier",
+          "messageId": "unusedVar",
+          "endLine": 25,
+          "endColumn": 22
+        },
+        {
+          "ruleId": "@typescript-eslint/indent",
+          "severity": 2,
+          "message": "Expected indentation of 8 spaces but found 4.",
+          "line": 26,
+          "column": 1,
+          "nodeType": "Keyword",
+          "messageId": "wrongIndentation",
+          "endLine": 26,
+          "endColumn": 5,
+          "fix": {
+            "range": [
+              455,
+              459
+            ],
+            "text": "        "
+          }
+        },
+        {
+          "ruleId": "no-unused-vars",
+          "severity": 2,
+          "message": "'b' is defined but never used.",
+          "line": 26,
+          "column": 13,
+          "nodeType": "Identifier",
+          "messageId": "unusedVar",
+          "endLine": 26,
+          "endColumn": 22
+        },
+        {
+          "ruleId": "@typescript-eslint/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 2.",
+          "line": 27,
+          "column": 1,
+          "nodeType": "Punctuator",
+          "messageId": "wrongIndentation",
+          "endLine": 27,
+          "endColumn": 3,
+          "fix": {
+            "range": [
+              478,
+              480
+            ],
+            "text": "    "
+          }
+        }
+      ],
+      "suppressedMessages": [],
+      "errorCount": 33,
+      "fatalErrorCount": 0,
+      "warningCount": 0,
+      "fixableErrorCount": 10,
+      "fixableWarningCount": 0,
+      "source": "\ndeclare const array: string[];\nfor (const i in array) {\n  console.log(array[i]);\n}\nfor (const i in array) {\n  console.log(i, array[i]);\n}\n\n//no array delete:\ndeclare const arr: number[];\ndelete arr[0];\n\nfunction f(a = 0, b: number) {}\nfunction f(a: number, b = 0, c: number) {}\nfunction f(a: number, b?: number, c: number) {}\nclass Foo {\n  constructor(\n    public a = 10,\n    private b: number,\n  ) {}\n}\nclass Foo {\n  constructor(\n    public a?: number,\n    private b: number,\n  ) {}\n}",
+      "usedDeprecatedRules": [
+        {
+          "ruleId": "@typescript-eslint/indent",
+          "replacedBy": [
+            "@stylistic/ts/indent"
+          ]
+        }
+      ]
+    },
+    {
+      "filePath": "/Users/user/git/codety/analyzer/build/resources/test/eslint/code-smell-examples/undef-related-code.js",
+      "messages": [
+        {
+          "ruleId": "no-undef",
+          "severity": 2,
+          "message": "'x' is not defined.",
+          "line": 1,
+          "column": 1,
+          "nodeType": "Identifier",
+          "messageId": "undef",
+          "endLine": 1,
+          "endColumn": 2
+        },
+        {
+          "ruleId": "no-unused-vars",
+          "severity": 2,
+          "message": "'a' is assigned a value but never used.",
+          "line": 2,
+          "column": 5,
+          "nodeType": "Identifier",
+          "messageId": "unusedVar",
+          "endLine": 2,
+          "endColumn": 6
+        },
+        {
+          "ruleId": "no-unused-vars",
+          "severity": 2,
+          "message": "'b' is assigned a value but never used.",
+          "line": 3,
+          "column": 7,
+          "nodeType": "Identifier",
+          "messageId": "unusedVar",
+          "endLine": 3,
+          "endColumn": 8
+        },
+        {
+          "ruleId": "no-undef",
+          "severity": 2,
+          "message": "'x' is not defined.",
+          "line": 3,
+          "column": 11,
+          "nodeType": "Identifier",
+          "messageId": "undef",
+          "endLine": 3,
+          "endColumn": 12
+        },
+        {
+          "ruleId": "jsdoc/check-alignment",
+          "severity": 2,
+          "message": "Expected JSDoc block to be aligned.",
+          "line": 6,
+          "column": 1,
+          "nodeType": "Block",
+          "endLine": 6,
+          "endColumn": 1,
+          "fix": {
+            "range": [
+              32,
+              251
+            ],
+            "text": "/**\n * This function does something see example below:\n * @example\n * var x = foo(\"test\"); //it will show \"test\" message\n *\n * @param {string} str: string argument that will be shown in message\n */"
+          }
+        },
+        {
+          "ruleId": "jsdoc/check-param-names",
+          "severity": 2,
+          "message": "Expected @param names to be \"abc\". Got \"str:\".",
+          "line": 10,
+          "column": 1,
+          "nodeType": "Block",
+          "endLine": 10,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "no-unused-vars",
+          "severity": 2,
+          "message": "'foo' is defined but never used.",
+          "line": 12,
+          "column": 10,
+          "nodeType": "Identifier",
+          "messageId": "unusedVar",
+          "endLine": 12,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "no-unused-vars",
+          "severity": 2,
+          "message": "'abc' is defined but never used.",
+          "line": 12,
+          "column": 14,
+          "nodeType": "Identifier",
+          "messageId": "unusedVar",
+          "endLine": 12,
+          "endColumn": 17
+        },
+        {
+          "ruleId": "no-undef",
+          "severity": 2,
+          "message": "'alert' is not defined.",
+          "line": 14,
+          "column": 4,
+          "nodeType": "Identifier",
+          "messageId": "undef",
+          "endLine": 14,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "no-undef",
+          "severity": 2,
+          "message": "'str' is not defined.",
+          "line": 14,
+          "column": 10,
+          "nodeType": "Identifier",
+          "messageId": "undef",
+          "endLine": 14,
+          "endColumn": 13
+        }
+      ],
+      "suppressedMessages": [],
+      "errorCount": 10,
+      "fatalErrorCount": 0,
+      "warningCount": 0,
+      "fixableErrorCount": 1,
+      "fixableWarningCount": 0,
+      "source": "x = 2;\nlet a = 3;\nconst b = x;\n\n/**\n    * This function does something see example below:\n * @example\n * var x = foo(\"test\"); //it will show \"test\" message\n *\n                    * @param {string} str: string argument that will be shown in message\n */\nfunction foo(abc)\n{\n   alert(str);\n}",
+      "usedDeprecatedRules": []
+    }
+  ],
+  "metadata": {
+    "cwd": "/Users/user/git/codety/analyzer",
+    "rulesMeta": {
+      "@typescript-eslint/no-for-in-array": {
+        "docs": {
+          "description": "Disallow iterating over an array with a for-in loop",
+          "recommended": "recommended",
+          "requiresTypeChecking": true,
+          "url": "https://typescript-eslint.io/rules/no-for-in-array"
+        },
+        "messages": {
+          "forInViolation": "For-in loops over arrays skips holes, returns indices as strings, and may visit the prototype chain or other enumerable properties. Use a more robust iteration method such as for-of or array.forEach instead."
+        },
+        "schema": [],
+        "type": "problem"
+      },
+      "@typescript-eslint/indent": {
+        "deprecated": true,
+        "replacedBy": [
+          "@stylistic/ts/indent"
+        ],
+        "type": "layout",
+        "docs": {
+          "description": "Enforce consistent indentation",
+          "extendsBaseRule": true,
+          "url": "https://typescript-eslint.io/rules/indent"
+        },
+        "fixable": "whitespace",
+        "schema": [
+          {
+            "oneOf": [
+              {
+                "enum": [
+                  "tab"
+                ]
+              },
+              {
+                "type": "integer",
+                "minimum": 0
+              }
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "SwitchCase": {
+                "type": "integer",
+                "minimum": 0,
+                "default": 0
+              },
+              "VariableDeclarator": {
+                "oneOf": [
+                  {
+                    "oneOf": [
+                      {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      {
+                        "enum": [
+                          "first",
+                          "off"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "var": {
+                        "oneOf": [
+                          {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          {
+                            "enum": [
+                              "first",
+                              "off"
+                            ]
+                          }
+                        ]
+                      },
+                      "let": {
+                        "oneOf": [
+                          {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          {
+                            "enum": [
+                              "first",
+                              "off"
+                            ]
+                          }
+                        ]
+                      },
+                      "const": {
+                        "oneOf": [
+                          {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          {
+                            "enum": [
+                              "first",
+                              "off"
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "additionalProperties": false
+                  }
+                ]
+              },
+              "outerIIFEBody": {
+                "oneOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "enum": [
+                      "off"
+                    ]
+                  }
+                ]
+              },
+              "MemberExpression": {
+                "oneOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "enum": [
+                      "off"
+                    ]
+                  }
+                ]
+              },
+              "FunctionDeclaration": {
+                "type": "object",
+                "properties": {
+                  "parameters": {
+                    "oneOf": [
+                      {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      {
+                        "enum": [
+                          "first",
+                          "off"
+                        ]
+                      }
+                    ]
+                  },
+                  "body": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "additionalProperties": false
+              },
+              "FunctionExpression": {
+                "type": "object",
+                "properties": {
+                  "parameters": {
+                    "oneOf": [
+                      {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      {
+                        "enum": [
+                          "first",
+                          "off"
+                        ]
+                      }
+                    ]
+                  },
+                  "body": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "additionalProperties": false
+              },
+              "StaticBlock": {
+                "type": "object",
+                "properties": {
+                  "body": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "additionalProperties": false
+              },
+              "CallExpression": {
+                "type": "object",
+                "properties": {
+                  "arguments": {
+                    "oneOf": [
+                      {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      {
+                        "enum": [
+                          "first",
+                          "off"
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              },
+              "ArrayExpression": {
+                "oneOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "enum": [
+                      "first",
+                      "off"
+                    ]
+                  }
+                ]
+              },
+              "ObjectExpression": {
+                "oneOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "enum": [
+                      "first",
+                      "off"
+                    ]
+                  }
+                ]
+              },
+              "ImportDeclaration": {
+                "oneOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "enum": [
+                      "first",
+                      "off"
+                    ]
+                  }
+                ]
+              },
+              "flatTernaryExpressions": {
+                "type": "boolean",
+                "default": false
+              },
+              "offsetTernaryExpressions": {
+                "type": "boolean",
+                "default": false
+              },
+              "ignoredNodes": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "not": {
+                    "pattern": ":exit$"
+                  }
+                }
+              },
+              "ignoreComments": {
+                "type": "boolean",
+                "default": false
+              }
+            },
+            "additionalProperties": false
+          }
+        ],
+        "messages": {
+          "wrongIndentation": "Expected indentation of {{expected}} but found {{actual}}."
+        }
+      },
+      "no-undef": {
+        "type": "problem",
+        "docs": {
+          "description": "Disallow the use of undeclared variables unless mentioned in `/*global */` comments",
+          "recommended": true,
+          "url": "https://eslint.org/docs/latest/rules/no-undef"
+        },
+        "schema": [
+          {
+            "type": "object",
+            "properties": {
+              "typeof": {
+                "type": "boolean",
+                "default": false
+              }
+            },
+            "additionalProperties": false
+          }
+        ],
+        "messages": {
+          "undef": "'{{name}}' is not defined."
+        }
+      },
+      "@typescript-eslint/no-array-delete": {
+        "hasSuggestions": true,
+        "type": "problem",
+        "docs": {
+          "description": "Disallow using the `delete` operator on array values",
+          "recommended": "strict",
+          "requiresTypeChecking": true,
+          "url": "https://typescript-eslint.io/rules/no-array-delete"
+        },
+        "messages": {
+          "noArrayDelete": "Using the `delete` operator with an array expression is unsafe.",
+          "useSplice": "Use `array.splice()` instead."
+        },
+        "schema": []
+      },
+      "no-unused-vars": {
+        "type": "problem",
+        "docs": {
+          "description": "Disallow unused variables",
+          "recommended": true,
+          "url": "https://eslint.org/docs/latest/rules/no-unused-vars"
+        },
+        "schema": [
+          {
+            "oneOf": [
+              {
+                "enum": [
+                  "all",
+                  "local"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "vars": {
+                    "enum": [
+                      "all",
+                      "local"
+                    ]
+                  },
+                  "varsIgnorePattern": {
+                    "type": "string"
+                  },
+                  "args": {
+                    "enum": [
+                      "all",
+                      "after-used",
+                      "none"
+                    ]
+                  },
+                  "ignoreRestSiblings": {
+                    "type": "boolean"
+                  },
+                  "argsIgnorePattern": {
+                    "type": "string"
+                  },
+                  "caughtErrors": {
+                    "enum": [
+                      "all",
+                      "none"
+                    ]
+                  },
+                  "caughtErrorsIgnorePattern": {
+                    "type": "string"
+                  },
+                  "destructuredArrayIgnorePattern": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            ]
+          }
+        ],
+        "messages": {
+          "unusedVar": "'{{varName}}' is {{action}} but never used{{additional}}."
+        }
+      },
+      "no-redeclare": {
+        "type": "suggestion",
+        "docs": {
+          "description": "Disallow variable redeclaration",
+          "recommended": true,
+          "url": "https://eslint.org/docs/latest/rules/no-redeclare"
+        },
+        "messages": {
+          "redeclared": "'{{id}}' is already defined.",
+          "redeclaredAsBuiltin": "'{{id}}' is already defined as a built-in global variable.",
+          "redeclaredBySyntax": "'{{id}}' is already defined by a variable declaration."
+        },
+        "schema": [
+          {
+            "type": "object",
+            "properties": {
+              "builtinGlobals": {
+                "type": "boolean",
+                "default": true
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      },
+      "no-useless-constructor": {
+        "type": "suggestion",
+        "docs": {
+          "description": "Disallow unnecessary constructors",
+          "recommended": false,
+          "url": "https://eslint.org/docs/latest/rules/no-useless-constructor"
+        },
+        "schema": [],
+        "messages": {
+          "noUselessConstructor": "Useless constructor."
+        }
+      },
+      "jsdoc/check-alignment": {
+        "docs": {
+          "description": "Reports invalid alignment of JSDoc block asterisks.",
+          "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/check-alignment.md#repos-sticky-header"
+        },
+        "fixable": "code",
+        "type": "layout"
+      },
+      "jsdoc/check-param-names": {
+        "docs": {
+          "description": "Ensures that parameter names in JSDoc match those in the function declaration.",
+          "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/check-param-names.md#repos-sticky-header"
+        },
+        "fixable": "code",
+        "schema": [
+          {
+            "additionalProperties": false,
+            "properties": {
+              "allowExtraTrailingParamDocs": {
+                "type": "boolean"
+              },
+              "checkDestructured": {
+                "type": "boolean"
+              },
+              "checkRestProperty": {
+                "type": "boolean"
+              },
+              "checkTypesPattern": {
+                "type": "string"
+              },
+              "disableExtraPropertyReporting": {
+                "type": "boolean"
+              },
+              "disableMissingParamChecks": {
+                "type": "boolean"
+              },
+              "enableFixer": {
+                "type": "boolean"
+              },
+              "useDefaultObjectProperties": {
+                "type": "boolean"
+              }
+            },
+            "type": "object"
+          }
+        ],
+        "type": "suggestion"
+      }
+    }
+  }
+}

@@ -1,0 +1,316 @@
+{
+  "results": [
+    {
+      "filePath": "/Users/user/git/codety/analyzer/src/test/resources/eslint/code-smell-examples/undef-related-code.js",
+      "messages": [
+        {
+          "ruleId": "currentRule/no-restricted-syntax",
+          "severity": 2,
+          "message": "Rule `no-restricted-syntax` is missing a `contexts` option.",
+          "line": 5,
+          "column": 1,
+          "nodeType": "Block",
+          "endLine": 11,
+          "endColumn": 4
+        },
+        {
+          "ruleId": "currentRule/require-description-complete-sentence",
+          "severity": 2,
+          "message": "Sentences must end with a period.",
+          "line": 6,
+          "column": 1,
+          "nodeType": "Block",
+          "endLine": 6,
+          "endColumn": 1,
+          "fix": {
+            "range": [
+              32,
+              251
+            ],
+            "text": "/**\n    * This function does something see example below:\n * @example\n * var x = foo(\"test\"); //it will show \"test\" message\n *\n                    * @param {string} str: string argument that will be shown in message\n */"
+          }
+        },
+        {
+          "ruleId": "currentRule/match-description",
+          "severity": 2,
+          "message": "JSDoc description does not satisfy the regex pattern.",
+          "line": 6,
+          "column": 1,
+          "nodeType": "Block",
+          "endLine": 6,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "currentRule/require-hyphen-before-param-description",
+          "severity": 2,
+          "message": "There must be a hyphen before @param description.",
+          "line": 10,
+          "column": 1,
+          "nodeType": "Block",
+          "endLine": 10,
+          "endColumn": 1,
+          "fix": {
+            "range": [
+              32,
+              251
+            ],
+            "text": "/**\n    * This function does something see example below:\n * @example\n * var x = foo(\"test\"); //it will show \"test\" message\n *\n                    * @param {string} str: - string argument that will be shown in message\n */"
+          }
+        }
+      ],
+      "suppressedMessages": [],
+      "errorCount": 4,
+      "fatalErrorCount": 0,
+      "warningCount": 0,
+      "fixableErrorCount": 2,
+      "fixableWarningCount": 0,
+      "source": "x = 2;\nlet a = 3;\nconst b = x;\n\n/**\n    * This function does something see example below:\n * @example\n * var x = foo(\"test\"); //it will show \"test\" message\n *\n                    * @param {string} str: string argument that will be shown in message\n */\nfunction foo(abc)\n{\n   alert(str);\n}",
+      "usedDeprecatedRules": []
+    }
+  ],
+  "metadata": {
+    "cwd": "/",
+    "rulesMeta": {
+      "currentRule/no-restricted-syntax": {
+        "docs": {
+          "description": "Reports when certain comment structures are present.",
+          "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/no-restricted-syntax.md#repos-sticky-header"
+        },
+        "fixable": "code",
+        "schema": [
+          {
+            "additionalProperties": false,
+            "properties": {
+              "contexts": {
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "additionalProperties": false,
+                      "properties": {
+                        "comment": {
+                          "type": "string"
+                        },
+                        "context": {
+                          "type": "string"
+                        },
+                        "message": {
+                          "type": "string"
+                        }
+                      },
+                      "type": "object"
+                    }
+                  ]
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "contexts"
+            ],
+            "type": "object"
+          }
+        ],
+        "type": "suggestion"
+      },
+      "currentRule/require-description-complete-sentence": {
+        "docs": {
+          "description": "Requires that block description, explicit `@description`, and `@param`/`@returns` tag descriptions are written in complete sentences.",
+          "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-description-complete-sentence.md#repos-sticky-header"
+        },
+        "fixable": "code",
+        "schema": [
+          {
+            "additionalProperties": false,
+            "properties": {
+              "abbreviations": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "newlineBeforeCapsAssumesBadSentenceEnd": {
+                "type": "boolean"
+              },
+              "tags": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            },
+            "type": "object"
+          }
+        ],
+        "type": "suggestion"
+      },
+      "currentRule/match-description": {
+        "docs": {
+          "description": "Enforces a regular expression pattern on descriptions.",
+          "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/match-description.md#repos-sticky-header"
+        },
+        "schema": [
+          {
+            "additionalProperties": false,
+            "properties": {
+              "contexts": {
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "additionalProperties": false,
+                      "properties": {
+                        "comment": {
+                          "type": "string"
+                        },
+                        "context": {
+                          "type": "string"
+                        }
+                      },
+                      "type": "object"
+                    }
+                  ]
+                },
+                "type": "array"
+              },
+              "mainDescription": {
+                "oneOf": [
+                  {
+                    "format": "regex",
+                    "type": "string"
+                  },
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "additionalProperties": false,
+                    "properties": {
+                      "match": {
+                        "oneOf": [
+                          {
+                            "format": "regex",
+                            "type": "string"
+                          },
+                          {
+                            "type": "boolean"
+                          }
+                        ]
+                      },
+                      "message": {
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  }
+                ]
+              },
+              "matchDescription": {
+                "format": "regex",
+                "type": "string"
+              },
+              "message": {
+                "type": "string"
+              },
+              "nonemptyTags": {
+                "type": "boolean"
+              },
+              "tags": {
+                "patternProperties": {
+                  ".*": {
+                    "oneOf": [
+                      {
+                        "format": "regex",
+                        "type": "string"
+                      },
+                      {
+                        "enum": [
+                          true
+                        ],
+                        "type": "boolean"
+                      },
+                      {
+                        "additionalProperties": false,
+                        "properties": {
+                          "match": {
+                            "oneOf": [
+                              {
+                                "format": "regex",
+                                "type": "string"
+                              },
+                              {
+                                "enum": [
+                                  true
+                                ],
+                                "type": "boolean"
+                              }
+                            ]
+                          },
+                          "message": {
+                            "type": "string"
+                          }
+                        },
+                        "type": "object"
+                      }
+                    ]
+                  }
+                },
+                "type": "object"
+              }
+            },
+            "type": "object"
+          }
+        ],
+        "type": "suggestion"
+      },
+      "currentRule/require-hyphen-before-param-description": {
+        "docs": {
+          "description": "Requires a hyphen before the `@param` description.",
+          "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-hyphen-before-param-description.md#repos-sticky-header"
+        },
+        "fixable": "code",
+        "schema": [
+          {
+            "enum": [
+              "always",
+              "never"
+            ],
+            "type": "string"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "tags": {
+                "anyOf": [
+                  {
+                    "patternProperties": {
+                      ".*": {
+                        "enum": [
+                          "always",
+                          "never"
+                        ],
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  {
+                    "enum": [
+                      "any"
+                    ],
+                    "type": "string"
+                  }
+                ]
+              }
+            },
+            "type": "object"
+          }
+        ],
+        "type": "layout"
+      }
+    }
+  }
+}

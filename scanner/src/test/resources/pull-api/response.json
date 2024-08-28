@@ -1,0 +1,36 @@
+{
+  "payloads": [
+    {
+      "codeAnalyzerType": 2,
+      "language": "java",
+      "payload": "<?xml version=\"1.0\"?><ruleset name=\"Default Ruleset\"><description>null</description><rule ref=\"category/java/bestpractices.xml/AbstractClassWithoutAbstractMethod\"></rule><rule ref=\"category/java/bestpractices.xml/AccessorClassGeneration\"></rule><rule ref=\"category/java/bestpractices.xml/AccessorMethodGeneration\"></rule><rule ref=\"category/java/bestpractices.xml/AvoidMessageDigestField\"></rule><rule ref=\"category/java/bestpractices.xml/AvoidPrintStackTrace\"></rule><rule ref=\"category/java/bestpractices.xml/AvoidReassigningParameters\"></rule><rule ref=\"category/java/bestpractices.xml/MissingOverride\"></rule><rule ref=\"category/java/bestpractices.xml/UnusedPrivateField\"></rule><rule ref=\"category/java/bestpractices.xml/UseTryWithResources\"></rule><rule ref=\"category/java/codestyle.xml/ClassNamingConventions\"></rule><rule ref=\"category/java/codestyle.xml/EmptyControlStatement\"></rule><rule ref=\"category/java/codestyle.xml/FinalParameterInAbstractMethod\"></rule><rule ref=\"category/java/codestyle.xml/ForLoopShouldBeWhileLoop\"></rule><rule ref=\"category/java/codestyle.xml/FormalParameterNamingConventions\"></rule><rule ref=\"category/java/codestyle.xml/IdenticalCatchBranches\"></rule><rule ref=\"category/java/codestyle.xml/MethodNamingConventions\"></rule><rule ref=\"category/java/codestyle.xml/NoPackage\"></rule><rule ref=\"category/java/codestyle.xml/PackageCase\"></rule><rule ref=\"category/java/codestyle.xml/UnnecessaryImport\"></rule><rule ref=\"category/java/design.xml/AbstractClassWithoutAnyMethod\"></rule><rule ref=\"category/java/design.xml/AvoidDeeplyNestedIfStmts\"></rule><rule ref=\"category/java/design.xml/AvoidThrowingNullPointerException\"></rule><rule ref=\"category/java/errorprone.xml/AssignmentInOperand\"></rule><rule ref=\"category/java/errorprone.xml/AvoidDuplicateLiterals\"></rule><rule ref=\"category/java/errorprone.xml/AvoidFieldNameMatchingMethodName\"></rule><rule ref=\"category/java/errorprone.xml/AvoidLiteralsInIfCondition\"></rule><rule ref=\"category/java/errorprone.xml/AvoidLosingExceptionInformation\"></rule><rule ref=\"category/java/errorprone.xml/AvoidMultipleUnaryOperators\"></rule><rule ref=\"category/java/errorprone.xml/AvoidUsingOctalValues\"></rule><rule ref=\"category/java/errorprone.xml/CompareObjectsWithEquals\"></rule><rule ref=\"category/java/errorprone.xml/ConstructorCallsOverridableMethod\"></rule><rule ref=\"category/java/errorprone.xml/DoNotCallGarbageCollectionExplicitly\"></rule><rule ref=\"category/java/errorprone.xml/DoNotThrowExceptionInFinally\"></rule><rule ref=\"category/java/errorprone.xml/DontUseFloatTypeForLoopIndices\"></rule><rule ref=\"category/java/errorprone.xml/EmptyCatchBlock\"></rule><rule ref=\"category/java/errorprone.xml/EqualsNull\"></rule><rule ref=\"category/java/errorprone.xml/IdempotentOperations\"></rule><rule ref=\"category/java/errorprone.xml/JumbledIncrementer\"></rule><rule ref=\"category/java/errorprone.xml/MethodWithSameNameAsEnclosingClass\"></rule><rule ref=\"category/java/errorprone.xml/NullAssignment\"></rule><rule ref=\"category/java/errorprone.xml/ProperLogger\"></rule><rule ref=\"category/java/errorprone.xml/UseEqualsToCompareStrings\"></rule><rule ref=\"category/java/errorprone.xml/UselessOperationOnImmutable\"></rule><rule ref=\"category/java/multithreading.xml/AvoidUsingVolatile\"></rule><rule ref=\"category/java/multithreading.xml/DoubleCheckedLocking\"></rule></ruleset>",
+      "version": null
+    },
+    {
+      "codeAnalyzerType": 2,
+      "language": "jsp",
+      "payload": "<?xml version=\"1.0\"?><ruleset name=\"Default Ruleset\"><description>null</description><rule ref=\"category/jsp/bestpractices.xml/DontNestJsfInJstlIteration\"></rule><rule ref=\"category/jsp/bestpractices.xml/NoClassAttribute\"></rule><rule ref=\"category/jsp/bestpractices.xml/NoHtmlComments\"></rule></ruleset>",
+      "version": null
+    },
+    {
+      "codeAnalyzerType": 2,
+      "language": "kotlin",
+      "payload": "<?xml version=\"1.0\"?><ruleset name=\"Default Ruleset\"><description>null</description><rule ref=\"category/kotlin/bestpractices.xml/FunctionNameTooShort\"></rule></ruleset>",
+      "version": null
+    },
+    {
+      "codeAnalyzerType": 2,
+      "language": "apex",
+      "payload": "<?xml version=\"1.0\"?><ruleset name=\"Default Ruleset\"><description>null</description><rule ref=\"category/apex/bestpractices.xml/ApexUnitTestClassShouldHaveAsserts\"></rule><rule ref=\"category/apex/bestpractices.xml/ApexUnitTestClassShouldHaveRunAs\"></rule><rule ref=\"category/apex/bestpractices.xml/ApexUnitTestMethodShouldHaveIsTestAnnotation\"></rule></ruleset>",
+      "version": null
+    },
+    {
+      "codeAnalyzerType": 2,
+      "language": "plsql",
+      "payload": "<?xml version=\"1.0\"?><ruleset name=\"Default Ruleset\"><description>null</description><rule ref=\"category/plsql/codestyle.xml/AvoidTabCharacter\"></rule><rule ref=\"category/plsql/codestyle.xml/CodeFormat\"></rule></ruleset>",
+      "version": null
+    }
+  ],
+  "success": true,
+  "errorMessage": null
+}

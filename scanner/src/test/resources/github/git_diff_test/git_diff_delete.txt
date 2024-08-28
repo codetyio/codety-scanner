@@ -1,0 +1,178 @@
+diff --git a/complete/src/main/java/com/example/springboot/Application.java b/complete/src/main/java/com/example/springboot/Application.java
+index 687a61f..4db3dc7 100644
+--- a/complete/src/main/java/com/example/springboot/Application.java
++++ b/complete/src/main/java/com/example/springboot/Application.java
+@@ -14,22 +14,7 @@ public class Application {
+ 	public static void main(String[] args) {
+ 		SpringApplication.run(Application.class, args);
+ 	}
+-	@Bean
+-	public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
+-		return args -> {
+-			System.out.println("Let's inspect the beans provided by Spring Boot:");
+-//aaaaaa1
+-//aaa2
+ 
+-			String[] beanNames = ctx.getBeanDefinitionNames();
+-			Arrays.sort(beanNames);
+-			for (String beanName : beanNames) {
+-				System.out.println(beanName);
+-			}
+-
+-			//bbb
+-			//bbb2
+-		};
+-	}
+ //ccc
++	//abcdefg
+ }
+diff --git a/complete/src/test/java/com/example/springboot/KafkaMyWordCountConsumer.java b/complete/src/test/java/com/example/springboot/KafkaMyWordCountConsumer.java
+index 408a4f9..3f5d5b2 100644
+--- a/complete/src/test/java/com/example/springboot/KafkaMyWordCountConsumer.java
++++ b/complete/src/test/java/com/example/springboot/KafkaMyWordCountConsumer.java
+@@ -13,15 +13,7 @@ import java.util.Properties;
+ 
+ public class KafkaMyWordCountConsumer {
+ //    static String topic = "my-word-by-year";
+-    static String topic = "test2";
+ 
+-    public static void main(String[] args) throws InterruptedException {
+-//        test_producer();
+-//
+-        test_consumer();
+-//
+-
+-    }
+ 
+     private static void test_consumer() throws InterruptedException {
+ 
+diff --git a/complete/src/test/java/com/example/springboot/KafkaStringConsumeManualOffset.java b/complete/src/test/java/com/example/springboot/KafkaStringConsumeManualOffset.java
+index b4e2e75..f1a9e6a 100644
+--- a/complete/src/test/java/com/example/springboot/KafkaStringConsumeManualOffset.java
++++ b/complete/src/test/java/com/example/springboot/KafkaStringConsumeManualOffset.java
+@@ -12,7 +12,6 @@ import java.util.*;
+ import java.util.stream.Collectors;
+ 
+ public class KafkaStringConsumeManualOffset {
+-    static String topic = "my";
+ 
+     public static void main(String[] args) throws InterruptedException {
+ //        test_producer();
+@@ -143,6 +142,5 @@ public class KafkaStringConsumeManualOffset {
+         } catch (Exception e) {
+             e.printStackTrace();
+         }
+-        System.out.println("Sent out. ");
+     }
+ }
+diff --git a/complete/src/test/java/com/example/springboot/KafkaStringConsumerExactlyOneTransaction.java b/complete/src/test/java/com/example/springboot/KafkaStringConsumerExactlyOneTransaction.java
+index 8a4605c..e69de29 100644
+--- a/complete/src/test/java/com/example/springboot/KafkaStringConsumerExactlyOneTransaction.java
++++ b/complete/src/test/java/com/example/springboot/KafkaStringConsumerExactlyOneTransaction.java
+@@ -1,90 +0,0 @@
+-package com.example.springboot;
+-
+-import org.apache.kafka.clients.consumer.ConsumerConfig;
+-import org.apache.kafka.clients.consumer.ConsumerRecord;
+-import org.apache.kafka.clients.consumer.ConsumerRecords;
+-import org.apache.kafka.clients.consumer.KafkaConsumer;
+-import org.apache.kafka.clients.producer.KafkaProducer;
+-import org.apache.kafka.clients.producer.ProducerRecord;
+-import org.apache.kafka.common.PartitionInfo;
+-import org.apache.kafka.common.TopicPartition;
+-
+-import java.time.Duration;
+-import java.util.*;
+-
+-public class KafkaStringConsumerExactlyOneTransaction {
+-    static String topic = "my";
+-
+-    public static void main(String[] args) throws InterruptedException {
+-//        test_producer();
+-//
+-        test_consumer();
+-
+-
+-    }
+-
+-    private static void test_consumer() throws InterruptedException {
+-
+-        Properties props = new Properties();
+-        props.put("bootstrap.servers", "localhost:9092");
+-        String myGroup5 = "MyGroup6";
+-        props.put("group.id", myGroup5);
+-        props.put("key.deserializer",
+-                "org.apache.kafka.common.serialization.StringDeserializer");
+-        props.put("value.deserializer",
+-                "org.apache.kafka.common.serialization.StringDeserializer");
+-        props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
+-        props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "false ");
+-
+-        KafkaConsumer<String, String> consumer = new KafkaConsumer<String, String>(props);
+-
+-        consumer.subscribe(Collections.singletonList(topic));
+-
+-        List<TopicPartition> partitionList = new ArrayList();
+-
+-        Map<String, List<PartitionInfo>> stringListMap = consumer.listTopics();
+-        for(String s : stringListMap.keySet()){
+-            List<PartitionInfo> partitionInfos = stringListMap.get(s);
+-            for(PartitionInfo info : partitionInfos){
+-                //consumer.beginningOffsets()
+-            }
+-        }
+-
+-        Duration timeout = Duration.ofMillis(5000);
+-        System.out.println("Consuming....... consumer group:" + myGroup5);
+-        while (true) {
+-            System.out.println("polling..." + System.currentTimeMillis());
+-            ConsumerRecords<String, String> records = consumer.poll(timeout);
+-            for (ConsumerRecord<String, String> record : records) {
+-                System.out.printf("topic = %s, partition = %d, offset = %d, " +
+-                                "KEY = %s, VALUE = %s\n",
+-                        record.topic(), record.partition(), record.offset(),
+-                        record.key(), record.value());
+-//                int updatedCount = 1;
+-//                System.out.println("Got: key: " + record.key() + " value: " + record.value());
+-            }
+-        }
+-
+-
+-
+-    }
+-
+-    private static void test_producer() {
+-        Properties props = new Properties();
+-        props.put("bootstrap.servers", "localhost:9092");
+-        props.put("key.serializer", "io.confluent.kafka.serializers.KafkaAvroSerializer");
+-        props.put("value.serializer", "io.confluent.kafka.serializers.KafkaAvroSerializer");
+-        props.put("key.serializer",  "org.apache.kafka.common.serialization.StringSerializer");
+-        props.put("value.serializer",  "org.apache.kafka.common.serialization.StringSerializer");
+-
+-
+-        ProducerRecord<String, String> record = new ProducerRecord<>(topic, "k2", "France222");
+-        KafkaProducer producer = new KafkaProducer<String, String>(props);
+-        try {
+-            producer.send(record).get();
+-        } catch (Exception e) {
+-            e.printStackTrace();
+-        }
+-        System.out.println("Sent out. ");
+-    }
+-}
+diff --git a/complete/src/test/java/com/example/springboot/KafkaWordCountConsumer.java b/complete/src/test/java/com/example/springboot/KafkaWordCountConsumer.java
+index e2e2609..7fb9da9 100644
+--- a/complete/src/test/java/com/example/springboot/KafkaWordCountConsumer.java
++++ b/complete/src/test/java/com/example/springboot/KafkaWordCountConsumer.java
+@@ -1,11 +1,5 @@
+ package com.example.springboot;
+ 
+-import org.apache.kafka.clients.consumer.ConsumerConfig;
+-import org.apache.kafka.clients.consumer.ConsumerRecord;
+-import org.apache.kafka.clients.consumer.ConsumerRecords;
+-import org.apache.kafka.clients.consumer.KafkaConsumer;
+-import org.apache.kafka.clients.producer.KafkaProducer;
+-import org.apache.kafka.clients.producer.ProducerRecord;
+ 
+ import java.time.Duration;
+ import java.util.Collections;

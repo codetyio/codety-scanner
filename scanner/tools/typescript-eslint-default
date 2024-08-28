@@ -1,0 +1,16 @@
+import tsPlugin from '@typescript-eslint/eslint-plugin';
+import tsParser from '@typescript-eslint/parser';
+
+export default tsPlugin.config(
+...tsPlugin.configs.recommended,
+...tsPlugin.configs.stylistic,
+{
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
+  },
+
+);
