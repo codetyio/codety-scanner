@@ -2,7 +2,6 @@
 
 ![image](https://www.codety.io/assets/img/logo_128.png)
 
-
 </div>
 
 **Codety Scanner** is a comprehensive and versatile source code scanner that detects code issues for 20+ programming languages and IaC tools. Codety Scanner's source code is contributed and maintained by Codety Inc.([https://codety.io](https://codety.io/))
@@ -28,6 +27,6 @@
 Check document [Codety Scanner Quickstart](https://docs.codety.io/docs/quickstart/index)
 
 #### License:
-Please check the LICENSE.txt
+https://github.com/codetyio/codety-scanner/blob/main/LICENSE.txt
 
  
