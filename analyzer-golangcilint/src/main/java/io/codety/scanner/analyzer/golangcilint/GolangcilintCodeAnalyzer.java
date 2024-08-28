@@ -48,6 +48,10 @@ public class GolangcilintCodeAnalyzer implements CodeAnalyzerInterface {
 
             String errorOutput = runtimeExecResult.getErrorOutput();
             String successOutput = runtimeExecResult.getSuccessOutput();
+
+            if(errorOutput!=null && errorOutput.length() > 0){
+                CodetyConsoleLogger.debug("Error output from golangci-lint " + errorOutput);
+            }
             if(successOutput == null || successOutput.isEmpty()){
                 return list;
             }
