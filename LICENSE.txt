@@ -5,10 +5,10 @@ specifies another license. Codety Licensed code is found only in the
 /scanner directory.
 
 AGPL v3.0:
-LICENSE_AGPL.txt
+https://github.com/codetyio/codety-scanner/blob/main/LICENSE_AGPL.txt
 
 Codety License v1.0:
-LICENSE_CODETY.txt
+https://github.com/codetyio/codety-scanner/blob/main/LICENSE_CODETY.txt
 
 No grant of any rights in the trademarks, service marks, or logos of Codety is
 made (except as may be necessary to comply with the notice requirements as
