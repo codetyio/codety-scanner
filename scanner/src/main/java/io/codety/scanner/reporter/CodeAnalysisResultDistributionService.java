@@ -49,9 +49,13 @@ public class CodeAnalysisResultDistributionService {
         }
 
 
+
         consoleResultReporter.deliverResult(analyzerRequest, codeAnalysisResultSetDto);
+
         githubPullRequestResultReporter.deliverResult(analyzerRequest, codeAnalysisResultSetDto);
+
         slackResultReporter.deliverResult(analyzerRequest, codeAnalysisResultSetDto);
+
         sarifResultReporter.deliverResult(analyzerRequest, codeAnalysisResultSetDto);
 
         return true;
