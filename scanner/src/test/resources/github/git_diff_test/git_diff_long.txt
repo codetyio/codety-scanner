@@ -1,0 +1,1389 @@
+diff --git a/complete/src/main/java/com/example/springboot/Application.java b/complete/src/main/java/com/example/springboot/Application.java
+index c2330e7..687a61f 100644
+--- a/complete/src/main/java/com/example/springboot/Application.java
++++ b/complete/src/main/java/com/example/springboot/Application.java
+@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Bean;
+ 
+ @SpringBootApplication
+ public class Application {
+-
++//fwejfow
+ 	public static void main(String[] args) {
+ 		SpringApplication.run(Application.class, args);
+ 	}
+@@ -18,6 +18,8 @@ public class Application {
+ 	public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
+ 		return args -> {
+ 			System.out.println("Let's inspect the beans provided by Spring Boot:");
++//aaaaaa1
++//aaa2
+ 
+ 			String[] beanNames = ctx.getBeanDefinitionNames();
+ 			Arrays.sort(beanNames);
+@@ -25,7 +27,9 @@ public class Application {
+ 				System.out.println(beanName);
+ 			}
+ 
++			//bbb
++			//bbb2
+ 		};
+ 	}
+-
++//ccc
+ }
+diff --git a/complete/src/test/java/com/example/springboot/HelloControllerIT.java b/complete/src/test/java/com/example/springboot/HelloControllerIT.java
+index caee476..653680d 100644
+--- a/complete/src/test/java/com/example/springboot/HelloControllerIT.java
++++ b/complete/src/test/java/com/example/springboot/HelloControllerIT.java
+@@ -15,6 +15,8 @@ public class HelloControllerIT {
+ 	@Autowired
+ 	private TestRestTemplate template;
+ 
++    int a2 = 1;
++
+     @Test
+     public void getHello() throws Exception {
+         ResponseEntity<String> response = template.getForEntity("/", String.class);
+diff --git a/complete/src/test/java/com/example/springboot/KafkaAdmin.java b/complete/src/test/java/com/example/springboot/KafkaAdmin.java
+new file mode 100644
+index 0000000..5e4c2c8
+--- /dev/null
++++ b/complete/src/test/java/com/example/springboot/KafkaAdmin.java
+@@ -0,0 +1,63 @@
++package com.example.springboot;
++
++import org.apache.kafka.clients.admin.*;
++
++import java.time.Duration;
++import java.util.Collection;
++import java.util.Properties;
++import java.util.Set;
++import java.util.concurrent.ExecutionException;
++
++public class KafkaAdmin {
++    static String topic = "my";
++
++    public static void main(String[] args) throws InterruptedException, ExecutionException {
++//        test_producer();
++//
++        test_consumer();
++
++
++    }
++
++    private static void test_consumer() throws InterruptedException, ExecutionException {
++
++        Properties props = new Properties();
++        props.put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
++        props.put("max.buffer.bytes", 1 << 20);
++        props.put("connections.max.idle.ms", 10000);
++        props.put("request.timeout.ms", 10000);
++        AdminClient admin = AdminClient.create(props);
++
++        admin.close(Duration.ofSeconds(30));
++
++        Collection<ConsumerGroupListing> consumerGroupListings = admin.listConsumerGroups().valid().get();
++        consumerGroupListings.forEach(System.out::println);
++        ListTopicsResult topics = admin.listTopics();
++        Set<String> names = topics.names().get();
++        System.out.println(names);
++
++//
++//        HashSet<String> topicNames = new HashSet<>();
++//        String topicName = "my";
++//        topicNames.add(topicName);
++//        DescribeTopicsResult demoTopic = admin.describeTopics(topicNames);
++//        try {
++//            TopicDescription topicDescription = demoTopic.values().get(topicName).get();
++//            System.out.println("Description of demo topic:" + topicDescription);
++//            if (topicDescription.partitions().size() != 2) {
++//                System.out.println("Topic has wrong number of partitions. Exiting.");
++//                System.exit(-1);
++//            }
++//        } catch (ExecutionException e) {
++//            // exit early for almost all exceptions
++//            if (!(e.getCause() instanceof UnknownTopicOrPartitionException)) {
++//                e.printStackTrace();
++//                throw e;
++//            }
++//
++//        }
++//
++//
++//        }
++    }
++}
+diff --git a/complete/src/test/java/com/example/springboot/KafkaAvroClient.java b/complete/src/test/java/com/example/springboot/KafkaAvroClient.java
+new file mode 100644
+index 0000000..5260339
+--- /dev/null
++++ b/complete/src/test/java/com/example/springboot/KafkaAvroClient.java
+@@ -0,0 +1,36 @@
++package com.example.springboot;//package com.kafka;
++//
++//import com.avro.schema.User;
++//import org.apache.kafka.clients.producer.KafkaProducer;
++//import org.apache.kafka.clients.producer.Producer;
++//import org.apache.kafka.clients.producer.ProducerRecord;
++//
++//import java.util.Properties;
++//
++//public class KafkaAvroClient {
++//
++//    public static void main(String[] args) {
++//
++//        Properties props = new Properties();
++//        props.put("bootstrap.servers", "localhost:9092");
++//        props.put("key.serializer", "io.confluent.kafka.serializers.KafkaAvroSerializer");
++//        props.put("value.serializer", "io.confluent.kafka.serializers.KafkaAvroSerializer");
++//        props.put("schema.registry.url", "http://localhost:8000");
++//        String topic = "my";
++//        Producer<String, User> producer = new KafkaProducer<>(props);
++//        try {
++//            User user = new User();
++//            user.setFavoriteColor("red");
++//            user.setFavoriteNumber(12);
++//            user.setName("Apple");
++//
++//            ProducerRecord record = new ProducerRecord(topic, User.newBuilder(user).build());
++//            producer.send(record).get();
++//        } catch (Exception e) {
++//            e.printStackTrace();
++//        }
++//        System.out.println("Sent out. ");
++//
++//    }
++//
++//}
+diff --git a/complete/src/test/java/com/example/springboot/KafkaMyWordCountConsumer.java b/complete/src/test/java/com/example/springboot/KafkaMyWordCountConsumer.java
+new file mode 100644
+index 0000000..408a4f9
+--- /dev/null
++++ b/complete/src/test/java/com/example/springboot/KafkaMyWordCountConsumer.java
+@@ -0,0 +1,81 @@
++package com.example.springboot;
++
++import org.apache.kafka.clients.consumer.ConsumerConfig;
++import org.apache.kafka.clients.consumer.ConsumerRecord;
++import org.apache.kafka.clients.consumer.ConsumerRecords;
++import org.apache.kafka.clients.consumer.KafkaConsumer;
++import org.apache.kafka.clients.producer.KafkaProducer;
++import org.apache.kafka.clients.producer.ProducerRecord;
++
++import java.time.Duration;
++import java.util.Collections;
++import java.util.Properties;
++
++public class KafkaMyWordCountConsumer {
++//    static String topic = "my-word-by-year";
++    static String topic = "test2";
++
++    public static void main(String[] args) throws InterruptedException {
++//        test_producer();
++//
++        test_consumer();
++//
++
++    }
++
++    private static void test_consumer() throws InterruptedException {
++
++        Properties props = new Properties();
++        props.put("bootstrap.servers", "localhost:9092");
++        props.put("group.id", "MyGroup1");
++//        props.put("group.id", "MyGroup" + System.currentTimeMillis());
++        props.put("key.deserializer",
++                "org.apache.kafka.common.serialization.StringDeserializer");
++        props.put("value.deserializer",
++                "org.apache.kafka.common.serialization.StringDeserializer");
++//        props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
++        props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "false ");
++        KafkaConsumer<String, String> consumer = new KafkaConsumer<String, String>(props);
++
++        consumer.subscribe(Collections.singletonList(topic));
++
++        Duration timeout = Duration.ofMillis(100);
++        System.out.println("Consuming.......");
++        while (true) {
++            ConsumerRecords<String, String> records = consumer.poll(timeout);
++            for (ConsumerRecord<String, String> record : records) {
++                System.out.printf(System.currentTimeMillis() + " KafkaMyWordCountConsumer::::: topic = %s, partition = %d, offset = %d, " +
++                                "k = %s, value = %s\n",
++                        record.topic(), record.partition(), record.offset(),
++                        record.key(), record.value());
++                //int updatedCount = 1;
++                //System.out.println("Got: key: " + record.key() + " value: " + record.value());
++                consumer.commitAsync();
++            }
++            Thread.sleep(100);
++        }
++
++
++
++    }
++
++    private static void test_producer() {
++        Properties props = new Properties();
++        props.put("bootstrap.servers", "localhost:9092");
++        props.put("key.serializer",  "org.apache.kafka.common.serialization.StringSerializer");
++        props.put("value.serializer",  "org.apache.kafka.common.serialization.StringSerializer");
++        props.put("enable.idempotence",  "true");
++        props.put("acks",  "all");
++
++
++        ProducerRecord<String, String> record = new ProducerRecord<>(topic, "a", "IdempotentMsg1");
++        KafkaProducer producer = new KafkaProducer<String, String>(props);
++
++        try {
++            producer.send(record).get();
++        } catch (Exception e) {
++            e.printStackTrace();
++        }
++        System.out.println("Sent out. ");
++    }
++}
+diff --git a/complete/src/test/java/com/example/springboot/KafkaMyWordCountConsumer222.java b/complete/src/test/java/com/example/springboot/KafkaMyWordCountConsumer222.java
+new file mode 100644
+index 0000000..496574f
+--- /dev/null
++++ b/complete/src/test/java/com/example/springboot/KafkaMyWordCountConsumer222.java
+@@ -0,0 +1,80 @@
++package com.example.springboot;
++
++import org.apache.kafka.clients.consumer.ConsumerConfig;
++import org.apache.kafka.clients.consumer.ConsumerRecord;
++import org.apache.kafka.clients.consumer.ConsumerRecords;
++import org.apache.kafka.clients.consumer.KafkaConsumer;
++import org.apache.kafka.clients.producer.KafkaProducer;
++import org.apache.kafka.clients.producer.ProducerRecord;
++
++import java.time.Duration;
++import java.util.Collections;
++import java.util.Properties;
++
++public class KafkaMyWordCountConsumer222 {
++//    static String topic = "my-word-by-year";
++    static String topic = "test2";
++
++    public static void main(String[] args) throws InterruptedException {
++//        test_producer();
++//
++        test_consumer();
++//
++
++    }
++
++    private static void test_consumer() throws InterruptedException {
++
++        Properties props = new Properties();
++        props.put("bootstrap.servers", "localhost:9092");
++        props.put("group.id", "MyGroup1");
++//        props.put("group.id", "MyGroup" + System.currentTimeMillis());
++        props.put("key.deserializer",
++                "org.apache.kafka.common.serialization.StringDeserializer");
++        props.put("value.deserializer",
++                "org.apache.kafka.common.serialization.StringDeserializer");
++        props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
++        props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "false ");
++        KafkaConsumer<String, String> consumer = new KafkaConsumer<String, String>(props);
++
++        consumer.subscribe(Collections.singletonList(topic));
++
++        Duration timeout = Duration.ofMillis(100);
++        System.out.println("Consuming.......");
++        while (true) {
++            ConsumerRecords<String, String> records = consumer.poll(timeout);
++            for (ConsumerRecord<String, String> record : records) {
++                System.out.printf(System.currentTimeMillis() + " KafkaMyWordCountConsumer::::: topic = %s, partition = %d, offset = %d, " +
++                                "k = %s, value = %s\n",
++                        record.topic(), record.partition(), record.offset(),
++                        record.key(), record.value());
++                //int updatedCount = 1;
++                //System.out.println("Got: key: " + record.key() + " value: " + record.value());
++            }
++            Thread.sleep(100);
++        }
++
++
++
++    }
++
++    private static void test_producer() {
++        Properties props = new Properties();
++        props.put("bootstrap.servers", "localhost:9092");
++        props.put("key.serializer",  "org.apache.kafka.common.serialization.StringSerializer");
++        props.put("value.serializer",  "org.apache.kafka.common.serialization.StringSerializer");
++        props.put("enable.idempotence",  "true");
++        props.put("acks",  "all");
++
++
++        ProducerRecord<String, String> record = new ProducerRecord<>(topic, "a", "IdempotentMsg1");
++        KafkaProducer producer = new KafkaProducer<String, String>(props);
++
++        try {
++            producer.send(record).get();
++        } catch (Exception e) {
++            e.printStackTrace();
++        }
++        System.out.println("Sent out. ");
++    }
++}
+diff --git a/complete/src/test/java/com/example/springboot/KafkaMyWordCountConsumer4.java b/complete/src/test/java/com/example/springboot/KafkaMyWordCountConsumer4.java
+new file mode 100644
+index 0000000..7f69c4f
+--- /dev/null
++++ b/complete/src/test/java/com/example/springboot/KafkaMyWordCountConsumer4.java
+@@ -0,0 +1,57 @@
++package com.example.springboot;
++
++import org.apache.kafka.clients.consumer.ConsumerConfig;
++import org.apache.kafka.clients.consumer.ConsumerRecord;
++import org.apache.kafka.clients.consumer.ConsumerRecords;
++import org.apache.kafka.clients.consumer.KafkaConsumer;
++
++import java.time.Duration;
++import java.util.Collections;
++import java.util.Properties;
++
++public class KafkaMyWordCountConsumer4 {
++    static String topic = "my-word4-by-year";
++
++    public static void main(String[] args) throws InterruptedException {
++//        test_producer();
++//
++        test_consumer();
++//
++
++    }
++
++    private static void test_consumer() throws InterruptedException {
++
++        Properties props = new Properties();
++        props.put("bootstrap.servers", "localhost:9092");
++        props.put("group.id", "MyGroup" + System.currentTimeMillis());
++        props.put("key.deserializer",
++                "org.apache.kafka.common.serialization.StringDeserializer");
++        props.put("value.deserializer",
++                "org.apache.kafka.common.serialization.StringDeserializer");
++        props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
++        props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "false ");
++        KafkaConsumer<String, String> consumer = new KafkaConsumer<String, String>(props);
++
++        consumer.subscribe(Collections.singletonList(topic));
++
++        Duration timeout = Duration.ofMillis(100);
++        System.out.println("Consuming.......");
++        while (true) {
++            ConsumerRecords<String, String> records = consumer.poll(timeout);
++            for (ConsumerRecord<String, String> record : records) {
++                System.out.printf(System.currentTimeMillis() + " KafkaMyWordCountConsumer::::: topic = %s, partition = %d, offset = %d, " +
++                                "k = %s, value = %s\n",
++                        record.topic(), record.partition(), record.offset(),
++                        record.key(), record.value());
++                //int updatedCount = 1;
++                //System.out.println("Got: key: " + record.key() + " value: " + record.value());
++            }
++            Thread.sleep(100);
++        }
++
++
++
++    }
++
++}
+diff --git a/complete/src/test/java/com/example/springboot/KafkaMyWordCountConsumer5.java b/complete/src/test/java/com/example/springboot/KafkaMyWordCountConsumer5.java
+new file mode 100644
+index 0000000..aa89b6e
+--- /dev/null
++++ b/complete/src/test/java/com/example/springboot/KafkaMyWordCountConsumer5.java
+@@ -0,0 +1,57 @@
++package com.example.springboot;
++
++import org.apache.kafka.clients.consumer.ConsumerConfig;
++import org.apache.kafka.clients.consumer.ConsumerRecord;
++import org.apache.kafka.clients.consumer.ConsumerRecords;
++import org.apache.kafka.clients.consumer.KafkaConsumer;
++
++import java.time.Duration;
++import java.util.Collections;
++import java.util.Properties;
++
++public class KafkaMyWordCountConsumer5 {
++    static String topic = "my-word5-by-year";
++
++    public static void main(String[] args) throws InterruptedException {
++//        test_producer();
++//
++        test_consumer();
++//
++
++    }
++
++    private static void test_consumer() throws InterruptedException {
++
++        Properties props = new Properties();
++        props.put("bootstrap.servers", "localhost:9092");
++        props.put("group.id", "MyGroup" + System.currentTimeMillis());
++        props.put("key.deserializer",
++                "org.apache.kafka.common.serialization.StringDeserializer");
++        props.put("value.deserializer",
++                "org.apache.kafka.common.serialization.StringDeserializer");
++        props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
++        props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "false ");
++        KafkaConsumer<String, String> consumer = new KafkaConsumer<String, String>(props);
++
++        consumer.subscribe(Collections.singletonList(topic));
++
++        Duration timeout = Duration.ofMillis(100);
++        System.out.println("Consuming.......");
++        while (true) {
++            ConsumerRecords<String, String> records = consumer.poll(timeout);
++            for (ConsumerRecord<String, String> record : records) {
++                System.out.printf(System.currentTimeMillis() + " KafkaMyWordCountConsumer::::: topic = %s, partition = %d, offset = %d, " +
++                                "k = %s, value = %s\n",
++                        record.topic(), record.partition(), record.offset(),
++                        record.key(), record.value());
++                //int updatedCount = 1;
++                //System.out.println("Got: key: " + record.key() + " value: " + record.value());
++            }
++            Thread.sleep(100);
++        }
++
++
++
++    }
++
++}
+diff --git a/complete/src/test/java/com/example/springboot/KafkaMyWordCountProducer.java b/complete/src/test/java/com/example/springboot/KafkaMyWordCountProducer.java
+new file mode 100644
+index 0000000..c2599e1
+--- /dev/null
++++ b/complete/src/test/java/com/example/springboot/KafkaMyWordCountProducer.java
+@@ -0,0 +1,104 @@
++package com.example.springboot;
++
++import org.apache.kafka.clients.consumer.ConsumerRecord;
++import org.apache.kafka.clients.consumer.ConsumerRecords;
++import org.apache.kafka.clients.consumer.KafkaConsumer;
++import org.apache.kafka.clients.producer.KafkaProducer;
++import org.apache.kafka.clients.producer.ProducerRecord;
++
++import java.time.Duration;
++import java.util.Collections;
++import java.util.Properties;
++import java.util.concurrent.ExecutionException;
++
++public class KafkaMyWordCountProducer {
++    static String topic = "test1";
++    static String topic2 = "test2";
++
++    public static void main(String[] args) throws InterruptedException, ExecutionException {
++        test_producer();
++//
++//        test_consumer();
++
++
++    }
++
++    private static void test_consumer() throws InterruptedException {
++
++        Properties props = new Properties();
++        props.put("bootstrap.servers", "localhost:9092");
++        props.put("group.id", "MyGroup2");
++        props.put("key.deserializer",
++                "org.apache.kafka.common.serialization.StringDeserializer");
++        props.put("value.deserializer",
++                "org.apache.kafka.common.serialization.StringDeserializer");
++
++        KafkaConsumer<String, String> consumer = new KafkaConsumer<String, String>(props);
++
++        consumer.subscribe(Collections.singletonList(topic));
++
++        Duration timeout = Duration.ofMillis(100);
++        System.out.println("Consuming.......");
++        while (true) {
++            ConsumerRecords<String, String> records = consumer.poll(timeout);
++            for (ConsumerRecord<String, String> record : records) {
++                System.out.printf("topic = %s, partition = %d, offset = %d, " +
++                                "customer = %s, country = %s\n",
++                        record.topic(), record.partition(), record.offset(),
++                        record.key(), record.value());
++                int updatedCount = 1;
++                System.out.println("Got: key: " + record.key() + " value: " + record.value());
++            }
++            Thread.sleep(100);
++        }
++
++
++
++    }
++
++    private static void test_producer() throws ExecutionException, InterruptedException {
++        Properties props = new Properties();
++        props.put("bootstrap.servers", "localhost:9092");
++        props.put("key.serializer", "io.confluent.kafka.serializers.KafkaAvroSerializer");
++        props.put("value.serializer", "io.confluent.kafka.serializers.KafkaAvroSerializer");
++        props.put("key.serializer",  "org.apache.kafka.common.serialization.StringSerializer");
++        props.put("value.serializer",  "org.apache.kafka.common.serialization.StringSerializer");
++
++        /*
++apple 2021 1
++apple 2022 2
++apple 2023 3
++orange 2020 1
++
++total sum
++total average
++total count by type
++total count by year
++
++
++        * */
++
++        KafkaProducer producer = new KafkaProducer<String, String>(props);
++        long t1 = System.currentTimeMillis();
++//        producer.send(new ProducerRecord<>(topic, null, "apple 1999 1")).get();
++//        producer.send(new ProducerRecord<>(topic, null, "orange 2000 1")).get();
++//        producer.send(new ProducerRecord<>(topic, null, "apple 2000 1")).get();
++//        producer.send(new ProducerRecord<>(topic, null, "banana 2001 5")).get();
++//        producer.send(new ProducerRecord<>(topic, null, "apple 2002 1")).get();
++        for(int i=0; i<10; i++){
++            producer.send(new ProducerRecord<>(topic2, null, "bananaXEE " + i)).get();
++//            producer.send(new ProducerRecord<>(topic, null, "orange 2024 1")).get();
++        }
++//        producer.send(new ProducerRecord<>(topic, "orange", "3000 3")).get();
++
++        System.out.println("Sent out. " + (System.currentTimeMillis() - t1));
++
++        // 200 million    one request:  1K header, ip, URL, 512bytes.  3K
++        // 600GB//
++        //per server we have about
++
++        //how many partitions do you need?
++        //The output
++
++    }
++}
+diff --git a/complete/src/test/java/com/example/springboot/KafkaMyWordCountStream.java b/complete/src/test/java/com/example/springboot/KafkaMyWordCountStream.java
+new file mode 100644
+index 0000000..ac323d1
+--- /dev/null
++++ b/complete/src/test/java/com/example/springboot/KafkaMyWordCountStream.java
+@@ -0,0 +1,67 @@
++package com.example.springboot;
++
++import org.apache.kafka.clients.consumer.ConsumerConfig;
++import org.apache.kafka.common.serialization.Serdes;
++import org.apache.kafka.streams.KafkaStreams;
++import org.apache.kafka.streams.KeyValue;
++import org.apache.kafka.streams.StreamsBuilder;
++import org.apache.kafka.streams.StreamsConfig;
++import org.apache.kafka.streams.kstream.KStream;
++import org.apache.kafka.streams.kstream.Reducer;
++
++import java.util.Properties;
++import java.util.concurrent.ExecutionException;
++
++public class KafkaMyWordCountStream {
++    static String topic = "my-word2";
++
++
++    public static void main(String[] args) throws InterruptedException, ExecutionException {
++
++        Properties props = new Properties();
++        props.put(StreamsConfig.APPLICATION_ID_CONFIG, "testApp3");
++        props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
++        props.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().getClass().getName());
++        props.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().getClass().getName());
++
++        // setting offset reset to earliest so that we can re-run the demo code with the same pre-loaded data
++        // Note: To re-run the demo, you need to use the offset reset tool:
++        // https://cwiki.apache.org/confluence/display/KAFKA/Kafka+Streams+Application+Reset+Tool
++        props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
++
++
++        StreamsBuilder builder = new StreamsBuilder();
++
++        KStream<String, String> source = builder.stream(topic);
++
++        source.map((k, v) -> new KeyValue<>(v.split(" ")[1], v.split(" ")[2]))
++                .groupByKey().reduce(new SumReducer()).toStream().mapValues(v -> v.toString() + " total Num ")
++                .to("my-word3-by-year");
++
++
++        KafkaStreams streams = new KafkaStreams(builder.build(), props);
++
++        // This is for reset to work. Don't use in production - it causes the app to re-load the state from Kafka on every start
++//        streams.cleanUp();
++
++        System.out.println("Processing the stream....");
++        streams.start();
++
++        // usually the stream application would be running forever,
++        // in this example we just let it run for some time and stop since the input data is finite.
++        //Thread.sleep(5000L);
++
++        //streams.close();
++
++    }
++
++    public static class SumReducer implements Reducer<String>{
++
++        @Override
++        public String apply(String value1, String value2) {
++            return "" +(Integer.valueOf(value1) + Integer.valueOf(value2));
++        }
++    }
++
++
++}
+diff --git a/complete/src/test/java/com/example/springboot/KafkaMyWordCountStreamByName.java b/complete/src/test/java/com/example/springboot/KafkaMyWordCountStreamByName.java
+new file mode 100644
+index 0000000..2a75aa3
+--- /dev/null
++++ b/complete/src/test/java/com/example/springboot/KafkaMyWordCountStreamByName.java
+@@ -0,0 +1,67 @@
++package com.example.springboot;
++
++import org.apache.kafka.clients.consumer.ConsumerConfig;
++import org.apache.kafka.common.serialization.Serdes;
++import org.apache.kafka.streams.KafkaStreams;
++import org.apache.kafka.streams.KeyValue;
++import org.apache.kafka.streams.StreamsBuilder;
++import org.apache.kafka.streams.StreamsConfig;
++import org.apache.kafka.streams.kstream.KStream;
++import org.apache.kafka.streams.kstream.Reducer;
++
++import java.util.Properties;
++import java.util.concurrent.ExecutionException;
++
++public class KafkaMyWordCountStreamByName {
++    static String topic = "my-word2";
++
++
++    public static void main(String[] args) throws InterruptedException, ExecutionException {
++
++        Properties props = new Properties();
++        props.put(StreamsConfig.APPLICATION_ID_CONFIG, "testApp" + System.currentTimeMillis());
++        props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
++        props.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().getClass().getName());
++        props.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().getClass().getName());
++
++        // setting offset reset to earliest so that we can re-run the demo code with the same pre-loaded data
++        // Note: To re-run the demo, you need to use the offset reset tool:
++        // https://cwiki.apache.org/confluence/display/KAFKA/Kafka+Streams+Application+Reset+Tool
++        props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
++
++
++        StreamsBuilder builder = new StreamsBuilder();
++
++        KStream<String, String> source = builder.stream(topic);
++
++        source.map((k, v) -> new KeyValue<>(v.split(" ")[0], v.split(" ")[2]))
++                .groupByKey().reduce(new SumReducer()).toStream().mapValues(v -> v.toString() + " total Num ")
++                .to("my-word-by-name");
++
++
++        KafkaStreams streams = new KafkaStreams(builder.build(), props);
++
++        // This is for reset to work. Don't use in production - it causes the app to re-load the state from Kafka on every start
++//        streams.cleanUp();
++
++        System.out.println("Processing the stream....");
++        streams.start();
++
++        // usually the stream application would be running forever,
++        // in this example we just let it run for some time and stop since the input data is finite.
++        //Thread.sleep(5000L);
++
++        //streams.close();
++
++    }
++
++    public static class SumReducer implements Reducer<String>{
++
++        @Override
++        public String apply(String value1, String value2) {
++            return "" +(Integer.valueOf(value1) + Integer.valueOf(value2));
++        }
++    }
++
++
++}
+diff --git a/complete/src/test/java/com/example/springboot/KafkaMyWordCountStreamByWindow.java b/complete/src/test/java/com/example/springboot/KafkaMyWordCountStreamByWindow.java
+new file mode 100644
+index 0000000..df0a724
+--- /dev/null
++++ b/complete/src/test/java/com/example/springboot/KafkaMyWordCountStreamByWindow.java
+@@ -0,0 +1,71 @@
++package com.example.springboot;
++
++import org.apache.kafka.clients.consumer.ConsumerConfig;
++import org.apache.kafka.common.serialization.Serdes;
++import org.apache.kafka.streams.KafkaStreams;
++import org.apache.kafka.streams.KeyValue;
++import org.apache.kafka.streams.StreamsBuilder;
++import org.apache.kafka.streams.StreamsConfig;
++import org.apache.kafka.streams.kstream.*;
++
++import java.time.Duration;
++import java.util.Properties;
++import java.util.concurrent.ExecutionException;
++
++public class KafkaMyWordCountStreamByWindow {
++    static String topic = "my-word2";
++
++
++    public static void main(String[] args) throws InterruptedException, ExecutionException {
++
++        Properties props = new Properties();
++        props.put(StreamsConfig.APPLICATION_ID_CONFIG, "testApp" + System.currentTimeMillis());
++        props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
++        props.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().getClass().getName());
++        props.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().getClass().getName());
++
++        // setting offset reset to earliest so that we can re-run the demo code with the same pre-loaded data
++        // Note: To re-run the demo, you need to use the offset reset tool:
++        // https://cwiki.apache.org/confluence/display/KAFKA/Kafka+Streams+Application+Reset+Tool
++        props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
++
++
++        StreamsBuilder builder = new StreamsBuilder();
++
++        KStream<String, String> source = builder.stream(topic);
++
++        source.map((k, v) -> new KeyValue<>(v.split(" ")[1], v.split(" ")[2]))
++                .groupByKey()
++                .windowedBy(TimeWindows.ofSizeWithNoGrace(Duration.ofSeconds(30L)))
++                .reduce(new SumReducer())
++                .toStream()
++                .mapValues(v -> v.toString() + " total Num ")
++//                .to("my-word5-by-year");
++                .to("my-word4-by-year", Produced.keySerde(WindowedSerdes.timeWindowedSerdeFrom(String.class, 30000)));
++
++        KafkaStreams streams = new KafkaStreams(builder.build(), props);
++
++        // This is for reset to work. Don't use in production - it causes the app to re-load the state from Kafka on every start
++//        streams.cleanUp();
++
++        System.out.println("Processing the stream....");
++        streams.start();
++
++        // usually the stream application would be running forever,
++        // in this example we just let it run for some time and stop since the input data is finite.
++        //Thread.sleep(5000L);
++
++        //streams.close();
++
++    }
++
++    public static class SumReducer implements Reducer<String>{
++
++        @Override
++        public String apply(String value1, String value2) {
++            return "" +(Integer.valueOf(value1) + Integer.valueOf(value2));
++        }
++    }
++
++
++}
+diff --git a/complete/src/test/java/com/example/springboot/KafkaStockAskPriceProducer.java b/complete/src/test/java/com/example/springboot/KafkaStockAskPriceProducer.java
+new file mode 100644
+index 0000000..5980b29
+--- /dev/null
++++ b/complete/src/test/java/com/example/springboot/KafkaStockAskPriceProducer.java
+@@ -0,0 +1,50 @@
++package com.example.springboot;
++
++import org.apache.kafka.clients.producer.KafkaProducer;
++import org.apache.kafka.clients.producer.ProducerRecord;
++
++import java.util.Properties;
++import java.util.concurrent.ExecutionException;
++
++public class KafkaStockAskPriceProducer {
++    static String topic = "my-stock";
++
++    public static void main(String[] args) throws InterruptedException, ExecutionException {
++        test_producer();
++    }
++
++    private static void test_producer() throws ExecutionException, InterruptedException {
++        Properties props = new Properties();
++        props.put("bootstrap.servers", "localhost:9092");
++        props.put("key.serializer", "io.confluent.kafka.serializers.KafkaAvroSerializer");
++        props.put("value.serializer", "io.confluent.kafka.serializers.KafkaAvroSerializer");
++        props.put("key.serializer",  "org.apache.kafka.common.serialization.StringSerializer");
++        props.put("value.serializer",  "org.apache.kafka.common.serialization.StringSerializer");
++        /*
++apple 2021 1
++apple 2022 2
++apple 2023 3
++orange 2020 1
++
++total sum
++total average
++total count by type
++total count by year
++
++
++        * */
++
++        KafkaProducer producer = new KafkaProducer<String, String>(props);
++
++//        producer.send(new ProducerRecord<>(topic, null, "apple 1999 1")).get();
++//        producer.send(new ProducerRecord<>(topic, null, "orange 2000 1")).get();
++//        producer.send(new ProducerRecord<>(topic, null, "apple 2000 1")).get();
++//        producer.send(new ProducerRecord<>(topic, null, "banana 2001 5")).get();
++//        producer.send(new ProducerRecord<>(topic, null, "apple 2002 1")).get();
++        producer.send(new ProducerRecord<>(topic, null, "apple 2023 1")).get();
++        producer.send(new ProducerRecord<>(topic, null, "orange 2024 1")).get();
++//        producer.send(new ProducerRecord<>(topic, "orange", "3000 3")).get();
++
++        System.out.println("Sent out. ");
++    }
++}
+diff --git a/complete/src/test/java/com/example/springboot/KafkaStringConsumeManualOffset.java b/complete/src/test/java/com/example/springboot/KafkaStringConsumeManualOffset.java
+new file mode 100644
+index 0000000..b4e2e75
+--- /dev/null
++++ b/complete/src/test/java/com/example/springboot/KafkaStringConsumeManualOffset.java
+@@ -0,0 +1,148 @@
++package com.example.springboot;
++
++import org.apache.kafka.clients.consumer.*;
++import org.apache.kafka.clients.producer.KafkaProducer;
++import org.apache.kafka.clients.producer.ProducerRecord;
++import org.apache.kafka.common.TopicPartition;
++
++import java.time.Duration;
++import java.time.Instant;
++import java.time.ZoneId;
++import java.util.*;
++import java.util.stream.Collectors;
++
++public class KafkaStringConsumeManualOffset {
++    static String topic = "my";
++
++    public static void main(String[] args) throws InterruptedException {
++//        test_producer();
++//
++        test_consumer();
++
++
++    }
++
++    private static void test_consumer() throws InterruptedException {
++
++        Properties props = new Properties();
++        props.put("bootstrap.servers", "localhost:9092");
++        String myGroup5 = "MyGroup7x";
++        props.put("group.id", myGroup5);
++        props.put("key.deserializer",
++                "org.apache.kafka.common.serialization.StringDeserializer");
++        props.put("value.deserializer",
++                "org.apache.kafka.common.serialization.StringDeserializer");
++        //props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
++        props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "false ");
++
++        KafkaConsumer<String, String> consumer =  new KafkaConsumer<String, String>(props);
++
++        Duration timeout = Duration.ofMillis(5000);
++        System.out.println("Consuming....... consumer group:" + myGroup5);
++
++        //commented this subscribe().
++//        consumer.subscribe(Collections.singletonList(topic));
++
++//        Set<TopicPartition> assignment1 = consumer.assignment();
++        List<TopicPartition> manualAssignment = new ArrayList();
++        manualAssignment.add(new TopicPartition(topic, 0));
++        manualAssignment.add(new TopicPartition(topic, 1));
++        consumer.assign(manualAssignment);
++        consumer.seekToEnd(manualAssignment);
++
++        Long oneHourEarlier = Instant.now().atZone(ZoneId.systemDefault()).minusMinutes(1).toEpochSecond();
++        Set<TopicPartition> assignment = consumer.assignment();
++        Map<TopicPartition, Long> partitionTimestampMap = assignment.stream().collect(Collectors.toMap(tp -> tp, tp -> oneHourEarlier));
++        Map<TopicPartition, OffsetAndTimestamp> offsetMap = consumer.offsetsForTimes(partitionTimestampMap);
++
++        for(Map.Entry<TopicPartition,OffsetAndTimestamp> entry: offsetMap.entrySet()) {
++            if(entry.getValue()!=null){
++                consumer.seek(entry.getKey(), entry.getValue().offset());
++            }
++        }
++
++
++        while (true) {
++            System.out.println("polling..." + System.currentTimeMillis());
++
++            ConsumerRecords<String, String> records = consumer.poll(timeout);
++            for (ConsumerRecord<String, String> record : records) {
++                System.out.printf("topic = %s, partition = %d, offset = %d, " +
++                                "KEY = %s, VALUE = %s\n",
++                        record.topic(), record.partition(), record.offset(),
++                        record.key(), record.value());
++                consumer.commitAsync();
++//                int updatedCount = 1;
++//                System.out.println("Got: key: " + record.key() + " value: " + record.value());
++            }
++        }
++
++//        List<PartitionInfo> partitionInfos = consumer.partitionsFor(topic);
++//        ArrayList<TopicPartition> partitions = new ArrayList<>();
++//        for(PartitionInfo info : partitionInfos){
++//            partitions.add(new TopicPartition(info.topic(), info.partition()));
++//        }
++//
++//        for(TopicPartition partition : assignment1){
++//            consumer.seek(partition, 1);
++//        }
++//
++//        Long oneHourEarlier = Instant.now().atZone(ZoneId.systemDefault()).minusHours(100).toEpochSecond();
++//
++//        Map<TopicPartition, Long> partitionTimestampMap = assignment1.stream().collect(Collectors.toMap(tp -> tp, tp -> oneHourEarlier));
++//        Map<TopicPartition, OffsetAndTimestamp> offsetMap = consumer.offsetsForTimes(partitionTimestampMap);
++//        System.out.println("size: " + offsetMap.size());
++//        for(Map.Entry<TopicPartition,OffsetAndTimestamp> entry: offsetMap.entrySet()) {
++//            System.out.println(entry.hashCode() + " " + entry.getKey() + " " + entry.getValue() + " ");
++////            System.out.println(consumer.seek(entry.getKey(), entry.getValue().offset()));
++//
++//        }
++//        Set<TopicPartition> assignment = assignment1;
++//        for (TopicPartition p : assignment) {
++//            System.out.println(p.hashCode() + " " + p.topic() + " " + p.partition() + " ");
++//        }
++//        long oneHourEalier = System.currentTimeMillis() - 1000 * 60 * 60;
++//        Map<TopicPartition, OffsetAndTimestamp> topicPartitionOffsetAndTimestampMap = consumer.offsetsForTimes(assignment.stream().collect(Collectors.toMap(tp -> tp, tp -> oneHourEalier)));
++//        for (TopicPartition key : topicPartitionOffsetAndTimestampMap.keySet()) {
++//            long offset = topicPartitionOffsetAndTimestampMap.get(key).offset();
++//            System.out.println("topicPartitionOffsetAndTimestampMap offset:" + offset);
++//
++//        }
++        //ConsumerRecords<String, String> records = consumer.poll(timeout);
++//
++//            if(records.count() > 0){
++//                System.out.println("Got " + records.count() + " records.");
++//            }
++//            for (ConsumerRecord<String, String> record : records) {
++//                System.out.printf("topic = %s, partition = %d, offset = %d, " +
++//                                "KEY = %s, VALUE = %s\n",
++//                        record.topic(), record.partition(), record.offset(),
++//                        record.key(), record.value());
++//                consumer.commitAsync();
++////                int updatedCount = 1;
++////                System.out.println("Got: key: " + record.key() + " value: " + record.value());
++//            }
++//            consumer.commitSync();
++
++
++    }
++
++    private static void test_producer() {
++        Properties props = new Properties();
++        props.put("bootstrap.servers", "localhost:9092");
++        props.put("key.serializer", "io.confluent.kafka.serializers.KafkaAvroSerializer");
++        props.put("value.serializer", "io.confluent.kafka.serializers.KafkaAvroSerializer");
++        props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
++        props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
++
++
++        ProducerRecord<String, String> record = new ProducerRecord<>(topic, "k2", "France222");
++        KafkaProducer producer = new KafkaProducer<String, String>(props);
++        try {
++            producer.send(record).get();
++        } catch (Exception e) {
++            e.printStackTrace();
++        }
++        System.out.println("Sent out. ");
++    }
++}
+diff --git a/complete/src/test/java/com/example/springboot/KafkaStringConsumer1.java b/complete/src/test/java/com/example/springboot/KafkaStringConsumer1.java
+new file mode 100644
+index 0000000..b82b42e
+--- /dev/null
++++ b/complete/src/test/java/com/example/springboot/KafkaStringConsumer1.java
+@@ -0,0 +1,103 @@
++package com.example.springboot;
++
++import org.apache.kafka.clients.consumer.*;
++import org.apache.kafka.clients.producer.KafkaProducer;
++import org.apache.kafka.clients.producer.ProducerRecord;
++import org.apache.kafka.common.TopicPartition;
++
++import java.time.Duration;
++import java.util.Collection;
++import java.util.Collections;
++import java.util.Properties;
++
++public class KafkaStringConsumer1 {
++    static String topic = "my";
++
++    public static void main(String[] args) throws InterruptedException {
++//        test_producer();
++//
++        test_consumer();
++
++
++    }
++
++    private static void test_consumer() throws InterruptedException {
++
++        Properties props = new Properties();
++        props.put("bootstrap.servers", "localhost:9092");
++        String myGroup5 = "MyGroup5";
++        props.put("group.id", myGroup5);
++        props.put("key.deserializer",
++                "org.apache.kafka.common.serialization.StringDeserializer");
++        props.put("value.deserializer",
++                "org.apache.kafka.common.serialization.StringDeserializer");
++        props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
++        props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "false ");
++
++        KafkaConsumer<String, String> consumer = new KafkaConsumer<String, String>(props);
++
++        consumer.subscribe(Collections.singletonList(topic), new ConsumerRebalanceListener() {
++            @Override
++            public void onPartitionsRevoked(Collection<TopicPartition> partitions) {
++                System.out.println("onPartitionsRevoked--------... ");
++                for(TopicPartition partition : partitions){
++                    System.out.println("onPartitionsRevoked--------: " + partition.hashCode() + " " + partition.hashCode());
++                }
++
++            }
++
++            @Override
++            public void onPartitionsAssigned(Collection<TopicPartition> partitions) {
++                System.out.println("onPartitionsAssigned... ");
++                for(TopicPartition partition : partitions){
++                    System.out.println("onPartitionsAssigned: " + partition.hashCode() + " " + partition.hashCode());
++                }
++
++            }
++        });
++
++        Duration timeout = Duration.ofMillis(5000);
++        System.out.println("Consuming....... consumer group:" + myGroup5);
++        int i = 0;
++        while (i++ < 1000) {
++            System.out.println("polling..." + System.currentTimeMillis());
++
++            ConsumerRecords<String, String> records = consumer.poll(timeout);
++            if(records.count() > 0){
++                System.out.println("Got " + records.count() + " records.");
++            }
++            for (ConsumerRecord<String, String> record : records) {
++                System.out.printf("topic = %s, partition = %d, offset = %d, " +
++                                "KEY = %s, VALUE = %s\n",
++                        record.topic(), record.partition(), record.offset(),
++                        record.key(), record.value());
++                consumer.commitAsync();
++//                int updatedCount = 1;
++//                System.out.println("Got: key: " + record.key() + " value: " + record.value());
++            }
++            consumer.commitSync();
++        }
++
++
++
++    }
++
++    private static void test_producer() {
++        Properties props = new Properties();
++        props.put("bootstrap.servers", "localhost:9092");
++        props.put("key.serializer", "io.confluent.kafka.serializers.KafkaAvroSerializer");
++        props.put("value.serializer", "io.confluent.kafka.serializers.KafkaAvroSerializer");
++        props.put("key.serializer",  "org.apache.kafka.common.serialization.StringSerializer");
++        props.put("value.serializer",  "org.apache.kafka.common.serialization.StringSerializer");
++
++
++        ProducerRecord<String, String> record = new ProducerRecord<>(topic, "k2", "France222");
++        KafkaProducer producer = new KafkaProducer<String, String>(props);
++        try {
++            producer.send(record).get();
++        } catch (Exception e) {
++            e.printStackTrace();
++        }
++        System.out.println("Sent out. ");
++    }
++}
+diff --git a/complete/src/test/java/com/example/springboot/KafkaStringConsumer11.java b/complete/src/test/java/com/example/springboot/KafkaStringConsumer11.java
+new file mode 100644
+index 0000000..bf2d8e4
+--- /dev/null
++++ b/complete/src/test/java/com/example/springboot/KafkaStringConsumer11.java
+@@ -0,0 +1,96 @@
++package com.example.springboot;
++
++import org.apache.kafka.clients.consumer.*;
++import org.apache.kafka.clients.producer.KafkaProducer;
++import org.apache.kafka.clients.producer.ProducerRecord;
++import org.apache.kafka.common.TopicPartition;
++
++import java.time.Duration;
++import java.util.Collection;
++import java.util.Collections;
++import java.util.Properties;
++
++public class KafkaStringConsumer11 {
++    static String topic = "my";
++
++    public static void main(String[] args) throws InterruptedException {
++//        test_producer();
++//
++        test_consumer();
++
++
++    }
++
++    private static void test_consumer() throws InterruptedException {
++
++        Properties props = new Properties();
++        props.put("bootstrap.servers", "localhost:9092");
++        String myGroup5 = "MyGroup7x";
++        props.put("group.id", myGroup5);
++        props.put("key.deserializer",
++                "org.apache.kafka.common.serialization.StringDeserializer");
++        props.put("value.deserializer",
++                "org.apache.kafka.common.serialization.StringDeserializer");
++        props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
++        props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "false ");
++
++        KafkaConsumer<String, String> consumer = new KafkaConsumer<String, String>(props);
++
++        consumer.subscribe(Collections.singletonList(topic), new ConsumerRebalanceListener() {
++            @Override
++            public void onPartitionsRevoked(Collection<TopicPartition> partitions) {
++                System.out.println("Going to end");
++            }
++
++            @Override
++            public void onPartitionsAssigned(Collection<TopicPartition> partitions) {
++                System.out.println("New Client2");
++
++            }
++        });
++
++        Duration timeout = Duration.ofMillis(5000);
++        System.out.println("Consuming....... consumer group:" + myGroup5);
++        int i = 0;
++        while (i++ < 1000) {
++            System.out.println("polling..." + System.currentTimeMillis());
++
++            ConsumerRecords<String, String> records = consumer.poll(timeout);
++            if(records.count() > 0){
++                System.out.println("Got " + records.count() + " records.");
++            }
++            for (ConsumerRecord<String, String> record : records) {
++                System.out.printf("topic = %s, partition = %d, offset = %d, " +
++                                "KEY = %s, VALUE = %s\n",
++                        record.topic(), record.partition(), record.offset(),
++                        record.key(), record.value());
++                consumer.commitAsync();
++//                int updatedCount = 1;
++//                System.out.println("Got: key: " + record.key() + " value: " + record.value());
++            }
++            consumer.commitSync();
++        }
++
++
++
++    }
++
++    private static void test_producer() {
++        Properties props = new Properties();
++        props.put("bootstrap.servers", "localhost:9092");
++        props.put("key.serializer", "io.confluent.kafka.serializers.KafkaAvroSerializer");
++        props.put("value.serializer", "io.confluent.kafka.serializers.KafkaAvroSerializer");
++        props.put("key.serializer",  "org.apache.kafka.common.serialization.StringSerializer");
++        props.put("value.serializer",  "org.apache.kafka.common.serialization.StringSerializer");
++
++
++        ProducerRecord<String, String> record = new ProducerRecord<>("kafka-config-topic", "k2", "France222");
++        KafkaProducer producer = new KafkaProducer<String, String>(props);
++        try {
++            producer.send(record).get();
++        } catch (Exception e) {
++            e.printStackTrace();
++        }
++        System.out.println("Sent out. ");
++    }
++}
+diff --git a/complete/src/test/java/com/example/springboot/KafkaStringConsumerExactlyOneTransaction.java b/complete/src/test/java/com/example/springboot/KafkaStringConsumerExactlyOneTransaction.java
+new file mode 100644
+index 0000000..8a4605c
+--- /dev/null
++++ b/complete/src/test/java/com/example/springboot/KafkaStringConsumerExactlyOneTransaction.java
+@@ -0,0 +1,90 @@
++package com.example.springboot;
++
++import org.apache.kafka.clients.consumer.ConsumerConfig;
++import org.apache.kafka.clients.consumer.ConsumerRecord;
++import org.apache.kafka.clients.consumer.ConsumerRecords;
++import org.apache.kafka.clients.consumer.KafkaConsumer;
++import org.apache.kafka.clients.producer.KafkaProducer;
++import org.apache.kafka.clients.producer.ProducerRecord;
++import org.apache.kafka.common.PartitionInfo;
++import org.apache.kafka.common.TopicPartition;
++
++import java.time.Duration;
++import java.util.*;
++
++public class KafkaStringConsumerExactlyOneTransaction {
++    static String topic = "my";
++
++    public static void main(String[] args) throws InterruptedException {
++//        test_producer();
++//
++        test_consumer();
++
++
++    }
++
++    private static void test_consumer() throws InterruptedException {
++
++        Properties props = new Properties();
++        props.put("bootstrap.servers", "localhost:9092");
++        String myGroup5 = "MyGroup6";
++        props.put("group.id", myGroup5);
++        props.put("key.deserializer",
++                "org.apache.kafka.common.serialization.StringDeserializer");
++        props.put("value.deserializer",
++                "org.apache.kafka.common.serialization.StringDeserializer");
++        props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
++        props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "false ");
++
++        KafkaConsumer<String, String> consumer = new KafkaConsumer<String, String>(props);
++
++        consumer.subscribe(Collections.singletonList(topic));
++
++        List<TopicPartition> partitionList = new ArrayList();
++
++        Map<String, List<PartitionInfo>> stringListMap = consumer.listTopics();
++        for(String s : stringListMap.keySet()){
++            List<PartitionInfo> partitionInfos = stringListMap.get(s);
++            for(PartitionInfo info : partitionInfos){
++                //consumer.beginningOffsets()
++            }
++        }
++
++        Duration timeout = Duration.ofMillis(5000);
++        System.out.println("Consuming....... consumer group:" + myGroup5);
++        while (true) {
++            System.out.println("polling..." + System.currentTimeMillis());
++            ConsumerRecords<String, String> records = consumer.poll(timeout);
++            for (ConsumerRecord<String, String> record : records) {
++                System.out.printf("topic = %s, partition = %d, offset = %d, " +
++                                "KEY = %s, VALUE = %s\n",
++                        record.topic(), record.partition(), record.offset(),
++                        record.key(), record.value());
++//                int updatedCount = 1;
++//                System.out.println("Got: key: " + record.key() + " value: " + record.value());
++            }
++        }
++
++
++
++    }
++
++    private static void test_producer() {
++        Properties props = new Properties();
++        props.put("bootstrap.servers", "localhost:9092");
++        props.put("key.serializer", "io.confluent.kafka.serializers.KafkaAvroSerializer");
++        props.put("value.serializer", "io.confluent.kafka.serializers.KafkaAvroSerializer");
++        props.put("key.serializer",  "org.apache.kafka.common.serialization.StringSerializer");
++        props.put("value.serializer",  "org.apache.kafka.common.serialization.StringSerializer");
++
++
++        ProducerRecord<String, String> record = new ProducerRecord<>(topic, "k2", "France222");
++        KafkaProducer producer = new KafkaProducer<String, String>(props);
++        try {
++            producer.send(record).get();
++        } catch (Exception e) {
++            e.printStackTrace();
++        }
++        System.out.println("Sent out. ");
++    }
++}
+diff --git a/complete/src/test/java/com/example/springboot/KafkaWordCountConsumer.java b/complete/src/test/java/com/example/springboot/KafkaWordCountConsumer.java
+new file mode 100644
+index 0000000..e2e2609
+--- /dev/null
++++ b/complete/src/test/java/com/example/springboot/KafkaWordCountConsumer.java
+@@ -0,0 +1,77 @@
++package com.example.springboot;
++
++import org.apache.kafka.clients.consumer.ConsumerConfig;
++import org.apache.kafka.clients.consumer.ConsumerRecord;
++import org.apache.kafka.clients.consumer.ConsumerRecords;
++import org.apache.kafka.clients.consumer.KafkaConsumer;
++import org.apache.kafka.clients.producer.KafkaProducer;
++import org.apache.kafka.clients.producer.ProducerRecord;
++
++import java.time.Duration;
++import java.util.Collections;
++import java.util.Properties;
++
++public class KafkaWordCountConsumer {
++    static String topic = "my-output";
++
++    public static void main(String[] args) throws InterruptedException {
++//        test_producer();
++        test_consumer();
++
++
++    }
++
++    private static void test_consumer() throws InterruptedException {
++
++        Properties props = new Properties();
++        props.put("bootstrap.servers", "localhost:9092");
++        props.put("group.id", "MyGroup2");
++        props.put("key.deserializer",
++                "org.apache.kafka.common.serialization.StringDeserializer");
++        props.put("value.deserializer",
++                "org.apache.kafka.common.serialization.StringDeserializer");
++        props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
++        props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "false ");
++
++        KafkaConsumer<String, String> consumer = new KafkaConsumer<String, String>(props);
++
++        consumer.subscribe(Collections.singletonList(topic));
++
++        Duration timeout = Duration.ofMillis(5000);
++        while (true) {
++            System.out.println("Consuming......." + System.currentTimeMillis());
++            ConsumerRecords<String, String> records = consumer.poll(timeout);
++            for (ConsumerRecord<String, String> record : records) {
++                System.out.printf("KafkaWordCountConsumer: topic = %s, partition = %d, offset = %d, " +
++                                "key = %s, value = %s\n",
++                        record.topic(), record.partition(), record.offset(),
++                        record.key(), record.value());
++//                int updatedCount = 1;
++//                System.out.println("Got: key: " + record.key() + " value: " + record.value());
++            }
++//            Thread.sleep(100);
++        }
++
++
++
++    }
++
++    private static void test_producer() {
++        Properties props = new Properties();
++        props.put("bootstrap.servers", "localhost:9092");
++        props.put("key.serializer", "io.confluent.kafka.serializers.KafkaAvroSerializer");
++        props.put("value.serializer", "io.confluent.kafka.serializers.KafkaAvroSerializer");
++        props.put("key.serializer",  "org.apache.kafka.common.serialization.StringSerializer");
++        props.put("value.serializer",  "org.apache.kafka.common.serialization.StringSerializer");
++
++
++        ProducerRecord<String, String> record = new ProducerRecord<>(topic, "k1", "France222");
++        KafkaProducer producer = new KafkaProducer<String, String>(props);
++        try {
++            producer.send(record).get();
++        } catch (Exception e) {
++            e.printStackTrace();
++        }
++        System.out.println("Sent out. ");
++    }
++}

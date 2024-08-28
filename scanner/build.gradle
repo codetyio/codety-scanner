@@ -1,0 +1,50 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.guardsquare:proguard-gradle:7.5.0'
+    }
+}
+
+plugins {
+    id 'java'
+}
+
+archivesBaseName = 'app'
+group = 'io.codety.scanner'
+version = '0.1'
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':scanner-common')
+    implementation project(':analyzer-checkov')
+    implementation project(':analyzer-cppcheck')
+    implementation project(':analyzer-eslint')
+    implementation project(':analyzer-pmd')
+    implementation project(':analyzer-pylint')
+    implementation project(':analyzer-trivy')
+    implementation project(':analyzer-golangcilint')
+    implementation project(':analyzer-codety')
+
+
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+jar {
+    enabled = false
+    archiveClassifier = '' //use empty string
+    version = null
+}

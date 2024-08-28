@@ -1,0 +1,9 @@
+@@ -15,6 +15,8 @@ public class HelloControllerIT {
+ \t@Autowired
+ \tprivate TestRestTemplate template;
+ 
++    int a2 = 1;
++
+     @Test
+     public void getHello() throws Exception {
+         ResponseEntity<String> response = template.getForEntity(\"/\", String.class);

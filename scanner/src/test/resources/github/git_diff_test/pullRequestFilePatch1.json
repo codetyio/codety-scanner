@@ -1,0 +1,91 @@
+@@ -0,0 +1,90 @@
++package com.example.springboot;
++
++import org.apache.kafka.clients.consumer.ConsumerConfig;
++import org.apache.kafka.clients.consumer.ConsumerRecord;
++import org.apache.kafka.clients.consumer.ConsumerRecords;
++import org.apache.kafka.clients.consumer.KafkaConsumer;
++import org.apache.kafka.clients.producer.KafkaProducer;
++import org.apache.kafka.clients.producer.ProducerRecord;
++import org.apache.kafka.common.PartitionInfo;
++import org.apache.kafka.common.TopicPartition;
++
++import java.time.Duration;
++import java.util.*;
++
++public class KafkaStringConsumerExactlyOneTransaction {
++    static String topic = "my";
++
++    public static void main(String[] args) throws InterruptedException {
++//        test_producer();
++//
++        test_consumer();
++
++
++    }
++
++    private static void test_consumer() throws InterruptedException {
++
++        Properties props = new Properties();
++        props.put("bootstrap.servers", "localhost:9092");
++        String myGroup5 = "MyGroup6";
++        props.put("group.id", myGroup5);
++        props.put("key.deserializer",
++                "org.apache.kafka.common.serialization.StringDeserializer");
++        props.put("value.deserializer",
++                "org.apache.kafka.common.serialization.StringDeserializer");
++        props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
++        props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "false ");
++
++        KafkaConsumer<String, String> consumer = new KafkaConsumer<String, String>(props);
++
++        consumer.subscribe(Collections.singletonList(topic));
++
++        List<TopicPartition> partitionList = new ArrayList();
++
++        Map<String, List<PartitionInfo>> stringListMap = consumer.listTopics();
++        for(String s : stringListMap.keySet()){
++            List<PartitionInfo> partitionInfos = stringListMap.get(s);
++            for(PartitionInfo info : partitionInfos){
++                //consumer.beginningOffsets()
++            }
++        }
++
++        Duration timeout = Duration.ofMillis(5000);
++        System.out.println("Consuming....... consumer group:" + myGroup5);
++        while (true) {
++            System.out.println("polling..." + System.currentTimeMillis());
++            ConsumerRecords<String, String> records = consumer.poll(timeout);
++            for (ConsumerRecord<String, String> record : records) {
++                System.out.printf("topic = %s, partition = %d, offset = %d, " +
++                                "KEY = %s, VALUE = %s\n",
++                        record.topic(), record.partition(), record.offset(),
++                        record.key(), record.value());
++//                int updatedCount = 1;
++//                System.out.println("Got: key: " + record.key() + " value: " + record.value());
++            }
++        }
++
++
++
++    }
++
++    private static void test_producer() {
++        Properties props = new Properties();
++        props.put("bootstrap.servers", "localhost:9092");
++        props.put("key.serializer", "io.confluent.kafka.serializers.KafkaAvroSerializer");
++        props.put("value.serializer", "io.confluent.kafka.serializers.KafkaAvroSerializer");
++        props.put("key.serializer",  "org.apache.kafka.common.serialization.StringSerializer");
++        props.put("value.serializer",  "org.apache.kafka.common.serialization.StringSerializer");
++
++
++        ProducerRecord<String, String> record = new ProducerRecord<>(topic, "k2", "France222");
++        KafkaProducer producer = new KafkaProducer<String, String>(props);
++        try {
++            producer.send(record).get();
++        } catch (Exception e) {
++            e.printStackTrace();
++        }
++        System.out.println("Sent out. ");
++    }
++}

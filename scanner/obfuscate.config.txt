@@ -1,0 +1,17 @@
+-dontshrink //required
+-dontoptimize //required
+-useuniqueclassmembernames //optional
+-allowaccessmodification
+-repackageclasses 'io.codety'
+//    keepnames 'class io.codety.service.*' //keep class names and field names
+-keepclassmembers 'class io.codety.*.dto.**{*;}' //keep fields for the serialization and deserialization.
+-keepattributes '*Annotation*'
+// Keep the main class entry point.
+-keep public class io.codety.AnalyzerApplication {
+        public static void main(java.lang.String[]);
+        public void run(String[]);
+     }
+  //flattenpackagehierarchy
+  //repackageclasses
+-obfuscationdictionary "obfuscate_dict_field_names.txt" //obfuscate field and method names, can generate from https://generateuuid.online/
+-classobfuscationdictionary "obfuscate_dict_class_names.txt" //package names.

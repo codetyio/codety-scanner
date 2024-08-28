@@ -1,0 +1,228 @@
+{
+  "results": [
+    {
+      "filePath": "/Users/user/git/codety/analyzer/build/resources/test/eslint/code-smell-examples/typescript-example.ts",
+      "messages": [
+        {
+          "ruleId": "currentRule/no-array-delete",
+          "severity": 2,
+          "message": "Using the `delete` operator with an array expression is unsafe.",
+          "line": 12,
+          "column": 1,
+          "nodeType": "UnaryExpression",
+          "messageId": "noArrayDelete",
+          "endLine": 12,
+          "endColumn": 14,
+          "suggestions": [
+            {
+              "messageId": "useSplice",
+              "fix": {
+                "range": [
+                  188,
+                  201
+                ],
+                "text": "arr.splice(0, 1)"
+              },
+              "desc": "Use `array.splice()` instead."
+            }
+          ]
+        },
+        {
+          "ruleId": "currentRule/no-unused-vars",
+          "severity": 2,
+          "message": "'f' is defined but never used.",
+          "line": 14,
+          "column": 10,
+          "nodeType": null,
+          "messageId": "unusedVar",
+          "endLine": 14,
+          "endColumn": 11
+        },
+        {
+          "ruleId": "currentRule/no-unused-vars",
+          "severity": 2,
+          "message": "'a' is assigned a value but never used.",
+          "line": 14,
+          "column": 12,
+          "nodeType": null,
+          "messageId": "unusedVar",
+          "endLine": 14,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "currentRule/no-unused-vars",
+          "severity": 2,
+          "message": "'b' is defined but never used.",
+          "line": 14,
+          "column": 19,
+          "nodeType": null,
+          "messageId": "unusedVar",
+          "endLine": 14,
+          "endColumn": 20
+        },
+        {
+          "ruleId": "currentRule/no-unused-vars",
+          "severity": 2,
+          "message": "'b' is assigned a value but never used.",
+          "line": 15,
+          "column": 23,
+          "nodeType": null,
+          "messageId": "unusedVar",
+          "endLine": 15,
+          "endColumn": 24
+        },
+        {
+          "ruleId": "currentRule/no-unused-vars",
+          "severity": 2,
+          "message": "'c' is defined but never used.",
+          "line": 15,
+          "column": 30,
+          "nodeType": null,
+          "messageId": "unusedVar",
+          "endLine": 15,
+          "endColumn": 31
+        },
+        {
+          "ruleId": "currentRule/no-unused-vars",
+          "severity": 2,
+          "message": "'a' is defined but never used.",
+          "line": 16,
+          "column": 12,
+          "nodeType": null,
+          "messageId": "unusedVar",
+          "endLine": 16,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "currentRule/no-unused-vars",
+          "severity": 2,
+          "message": "'b' is defined but never used.",
+          "line": 16,
+          "column": 23,
+          "nodeType": null,
+          "messageId": "unusedVar",
+          "endLine": 16,
+          "endColumn": 24
+        },
+        {
+          "ruleId": "currentRule/no-unused-vars",
+          "severity": 2,
+          "message": "'c' is defined but never used.",
+          "line": 16,
+          "column": 35,
+          "nodeType": null,
+          "messageId": "unusedVar",
+          "endLine": 16,
+          "endColumn": 36
+        },
+        {
+          "ruleId": "currentRule/no-unused-vars",
+          "severity": 2,
+          "message": "'Foo' is defined but never used.",
+          "line": 17,
+          "column": 7,
+          "nodeType": null,
+          "messageId": "unusedVar",
+          "endLine": 17,
+          "endColumn": 10
+        }
+      ],
+      "suppressedMessages": [],
+      "errorCount": 10,
+      "fatalErrorCount": 0,
+      "warningCount": 0,
+      "fixableErrorCount": 0,
+      "fixableWarningCount": 0,
+      "source": "\ndeclare const array: string[];\nfor (const i in array) {\n  console.log(array[i]);\n}\nfor (const i in array) {\n  console.log(i, array[i]);\n}\n\n//no array delete:\ndeclare const arr: number[];\ndelete arr[0];\n\nfunction f(a = 0, b: number) {}\nfunction f(a: number, b = 0, c: number) {}\nfunction f(a: number, b?: number, c: number) {}\nclass Foo {\n  constructor(\n    public a = 10,\n    private b: number,\n  ) {}\n}\nclass Foo {\n  constructor(\n    public a?: number,\n    private b: number,\n  ) {}\n}",
+      "usedDeprecatedRules": []
+    }
+  ],
+  "metadata": {
+    "cwd": "/",
+    "rulesMeta": {
+      "currentRule/no-array-delete": {
+        "hasSuggestions": true,
+        "type": "problem",
+        "docs": {
+          "description": "Disallow using the `delete` operator on array values",
+          "recommended": "strict",
+          "requiresTypeChecking": true,
+          "url": "https://typescript-eslint.io/rules/no-array-delete"
+        },
+        "messages": {
+          "noArrayDelete": "Using the `delete` operator with an array expression is unsafe.",
+          "useSplice": "Use `array.splice()` instead."
+        },
+        "schema": []
+      },
+      "currentRule/no-unused-vars": {
+        "type": "problem",
+        "docs": {
+          "description": "Disallow unused variables",
+          "recommended": "recommended",
+          "extendsBaseRule": true,
+          "url": "https://typescript-eslint.io/rules/no-unused-vars"
+        },
+        "schema": [
+          {
+            "oneOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "all",
+                  "local"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "vars": {
+                    "type": "string",
+                    "enum": [
+                      "all",
+                      "local"
+                    ]
+                  },
+                  "varsIgnorePattern": {
+                    "type": "string"
+                  },
+                  "args": {
+                    "type": "string",
+                    "enum": [
+                      "all",
+                      "after-used",
+                      "none"
+                    ]
+                  },
+                  "ignoreRestSiblings": {
+                    "type": "boolean"
+                  },
+                  "argsIgnorePattern": {
+                    "type": "string"
+                  },
+                  "caughtErrors": {
+                    "type": "string",
+                    "enum": [
+                      "all",
+                      "none"
+                    ]
+                  },
+                  "caughtErrorsIgnorePattern": {
+                    "type": "string"
+                  },
+                  "destructuredArrayIgnorePattern": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            ]
+          }
+        ],
+        "messages": {
+          "unusedVar": "'{{varName}}' is {{action}} but never used{{additional}}."
+        }
+      }
+    }
+  }
+}

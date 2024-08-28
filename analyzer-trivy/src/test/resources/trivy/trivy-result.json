@@ -1,0 +1,134 @@
+{
+  "SchemaVersion": 2,
+  "CreatedAt": "2024-08-13T20:04:55.580038-07:00",
+  "ArtifactName": ".",
+  "ArtifactType": "filesystem",
+  "Metadata": {
+    "ImageConfig": {
+      "architecture": "",
+      "created": "0001-01-01T00:00:00Z",
+      "os": "",
+      "rootfs": {
+        "type": "",
+        "diff_ids": null
+      },
+      "config": {}
+    }
+  },
+  "Results": [
+    {
+      "Target": "console/src/main/java/io/blabla/gitsource/github/dto/oauth/blabla.java",
+      "Class": "secret",
+      "Secrets": [
+        {
+          "RuleID": "github-app-token",
+          "Category": "GitHub",
+          "Severity": "CRITICAL",
+          "Title": "GitHub App Token",
+          "StartLine": 5,
+          "EndLine": 5,
+          "Code": {
+            "Lines": [
+              {
+                "Number": 3,
+                "Content": "public class GithubOAuthCallbackResponseDto {",
+                "IsCause": false,
+                "Annotation": "",
+                "Truncated": false,
+                "Highlighted": "public class GithubOAuthCallbackResponseDto {",
+                "FirstCause": false,
+                "LastCause": false
+              },
+              {
+                "Number": 4,
+                "Content": "/*",
+                "IsCause": false,
+                "Annotation": "",
+                "Truncated": false,
+                "Highlighted": "/*",
+                "FirstCause": false,
+                "LastCause": false
+              },
+              {
+                "Number": 5,
+                "Content": "\"access_token\": \"****************************************\",",
+                "IsCause": true,
+                "Annotation": "",
+                "Truncated": false,
+                "Highlighted": "\"access_token\": \"****************************************\",",
+                "FirstCause": true,
+                "LastCause": true
+              },
+              {
+                "Number": 6,
+                "Content": "\"expires_in\": 28800,",
+                "IsCause": false,
+                "Annotation": "",
+                "Truncated": false,
+                "Highlighted": "\"expires_in\": 28800,",
+                "FirstCause": false,
+                "LastCause": false
+              }
+            ]
+          },
+          "Match": "\"access_token\": \"****************************************\",",
+          "Layer": {}
+        },
+        {
+          "RuleID": "github-refresh-token",
+          "Category": "GitHub",
+          "Severity": "CRITICAL",
+          "Title": "GitHub Refresh Token",
+          "StartLine": 7,
+          "EndLine": 7,
+          "Code": {
+            "Lines": [
+              {
+                "Number": 5,
+                "Content": "\"access_token\": \"****************************************\",",
+                "IsCause": false,
+                "Annotation": "",
+                "Truncated": false,
+                "Highlighted": "\"access_token\": \"****************************************\",",
+                "FirstCause": false,
+                "LastCause": false
+              },
+              {
+                "Number": 6,
+                "Content": "\"expires_in\": 28800,",
+                "IsCause": false,
+                "Annotation": "",
+                "Truncated": false,
+                "Highlighted": "\"expires_in\": 28800,",
+                "FirstCause": false,
+                "LastCause": false
+              },
+              {
+                "Number": 7,
+                "Content": "\"refresh_token\": \"********************************************************************************\",",
+                "IsCause": true,
+                "Annotation": "",
+                "Truncated": false,
+                "Highlighted": "\"refresh_token\": \"********************************************************************************\",",
+                "FirstCause": true,
+                "LastCause": true
+              },
+              {
+                "Number": 8,
+                "Content": "\"refresh_token_expires_in\": 15897600,",
+                "IsCause": false,
+                "Annotation": "",
+                "Truncated": false,
+                "Highlighted": "\"refresh_token_expires_in\": 15897600,",
+                "FirstCause": false,
+                "LastCause": false
+              }
+            ]
+          },
+          "Match": "\"refresh_token\": \"********************************************************************************\",",
+          "Layer": {}
+        }
+      ]
+    }
+  ]
+}

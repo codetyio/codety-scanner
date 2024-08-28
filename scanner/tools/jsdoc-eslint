@@ -1,0 +1,12 @@
+//v9
+import jsdoc from "eslint-plugin-jsdoc";
+export default [
+    {
+        plugins: {
+            "currentRule":jsdoc,
+        },
+        rules: {
+//CODETY
+        }
+    }
+];

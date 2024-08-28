@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<ruleset name="Custom Rules"
+         xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
+    <description>
+        Created by Codety Inc.
+    </description>
+
+    <rule ref="category/java/bestpractices.xml/AbstractClassWithoutAbstractMethod"></rule>
+    <rule ref="category/java/bestpractices.xml/AccessorClassGeneration"></rule>
+    <rule ref="category/java/bestpractices.xml/AccessorMethodGeneration"></rule>
+    <rule ref="category/java/bestpractices.xml/AvoidMessageDigestField"></rule>
+    <rule ref="category/java/bestpractices.xml/AvoidPrintStackTrace"></rule>
+    <rule ref="category/java/bestpractices.xml/AvoidReassigningParameters"></rule>
+    <rule ref="category/java/bestpractices.xml/MissingOverride"></rule>
+    <rule ref="category/java/bestpractices.xml/UnusedAssignment"/>
+    <rule ref="category/java/codestyle.xml/UnnecessaryImport"/>
+    <rule ref="category/java/codestyle.xml/PackageCase"/>
+    <rule ref="category/java/bestpractices.xml/UnusedPrivateField">
+        <properties>
+            <property name="ignoredFieldNames" value="serialVersionUID|logger"/>
+        </properties>
+    </rule>
+    <rule ref="category/java/design.xml/NPathComplexity">
+        <properties>
+            <property name="reportLevel" value="200"/> <!-- default value: 200 -->
+        </properties>
+    </rule>
+    <rule ref="category/java/bestpractices.xml/UseTryWithResources"/>
+
+    <rule ref="category/java/errorprone.xml/NullAssignment"/>
+    <rule ref="category/java/errorprone.xml/ProperLogger"/>
+    <!--    <rule ref="category/java/errorprone.xml/CloseResource"> &lt;!&ndash; disabled due to NullPointerException bug in pmd &ndash;&gt;-->
+    <!--        <properties>-->
+    <!--            <property name="closeTargets" value=""/>-->
+    <!--            <property name="types" value="java.lang.AutoCloseable,java.sql.Connection,java.sql.Statement"/>-->
+    <!--            <property name="closeAsDefaultTarget" value="true"/>-->
+    <!--            &lt;!&ndash; ignore ResultSet since the actual implementation is empty in close() method &ndash;&gt;-->
+    <!--            <property name="allowedResourceTypes"-->
+    <!--                      value="java.sql.ResultSet|java.io.ByteArrayOutputStream|java.io.ByteArrayInputStream|java.io.StringWriter|java.io.CharArrayWriter|java.util.stream.Stream|java.util.stream.IntStream|java.util.stream.LongStream|java.util.stream.DoubleStream"/>-->
+    <!--            <property name="closeNotInFinally" value="false"/>-->
+    <!--        </properties>-->
+    <!--    </rule>-->
+
+    <rule ref="category/java/errorprone.xml/AvoidLiteralsInIfCondition">
+        <properties>
+            <property name="ignoreMagicNumbers" value="-1,0,1"/>
+            <property name="ignoreExpressions" value="true"/>
+        </properties>
+    </rule>
+
+    <rule ref="category/java/errorprone.xml/UseEqualsToCompareStrings"/> <!-- should not use '==' to compare strings -->
+    <rule ref="category/java/errorprone.xml/UselessOperationOnImmutable"/>
+    <rule ref="category/java/errorprone.xml/AvoidFieldNameMatchingMethodName"/>
+    <rule ref="category/java/errorprone.xml/AvoidLosingExceptionInformation"/>
+    <rule ref="category/java/errorprone.xml/AvoidMultipleUnaryOperators"/> <!-- e.g. ~~3, !!!false, etc. -->
+    <rule ref="category/java/errorprone.xml/AvoidUsingOctalValues"/><!-- e.g. 020,  -->
+    <rule ref="category/java/errorprone.xml/CompareObjectsWithEquals"/>
+    <rule ref="category/java/errorprone.xml/ConstructorCallsOverridableMethod"/>
+    <rule ref="category/java/errorprone.xml/DoNotCallGarbageCollectionExplicitly"/>
+    <rule ref="category/java/errorprone.xml/DoNotThrowExceptionInFinally"/>
+    <rule ref="category/java/errorprone.xml/DontUseFloatTypeForLoopIndices"/>
+    <rule ref="category/java/errorprone.xml/EmptyCatchBlock"/>
+    <rule ref="category/java/errorprone.xml/EqualsNull"/>
+    <rule ref="category/java/errorprone.xml/IdempotentOperations"/>
+    <rule ref="category/java/errorprone.xml/JumbledIncrementer"/>
+    <rule ref="category/java/errorprone.xml/MethodWithSameNameAsEnclosingClass"/>
+    <rule ref="category/java/errorprone.xml/AssignmentInOperand"/>
+    <rule ref="category/java/multithreading.xml/DoubleCheckedLocking"/>
+    <rule ref="category/java/multithreading.xml/AvoidUsingVolatile"/>
+
+    <rule ref="category/java/design.xml/AbstractClassWithoutAnyMethod"/>
+    <rule ref="category/java/design.xml/AvoidThrowingNullPointerException"/>
+    <rule ref="category/java/design.xml/AvoidDeeplyNestedIfStmts">
+        <properties>
+            <property name="problemDepth" value="4"/>
+        </properties>
+    </rule>
+
+    <rule ref="category/java/bestpractices.xml/SystemPrintln"/>
+    <rule ref="category/java/codestyle.xml/AvoidDollarSigns"/>
+    <rule ref="category/java/codestyle.xml/BooleanGetMethodName"/>
+    <rule ref="category/java/codestyle.xml/ShortMethodName">
+        <properties>
+            <property name="minimum" value="3"/>
+        </properties>
+    </rule>
+    <rule ref="category/java/codestyle.xml/ClassNamingConventions"> <!-- avoid special character usages, e.g. $ -->
+        <properties>
+            <property name="classPattern" value="[A-Z][a-zA-Z0-9]*"/>
+            <property name="abstractClassPattern" value="[A-Z][a-zA-Z0-9]*"/>
+            <property name="interfacePattern" value="[A-Z][a-zA-Z0-9]*"/>
+            <property name="enumPattern" value="[A-Z][a-zA-Z0-9]*"/>
+            <property name="annotationPattern" value="[A-Z][a-zA-Z0-9]*"/>
+            <property name="utilityClassPattern" value="[A-Z][a-zA-Z0-9]*"/>
+        </properties>
+    </rule>
+    <rule ref="category/java/codestyle.xml/MethodNamingConventions">
+        <properties>
+            <property name="methodPattern" value="[a-z].*"/>
+            <property name="staticPattern" value="[a-z].*"/>
+            <property name="nativePattern" value="[a-z].*"/>
+            <property name="junit3TestPattern" value="[a-z].*"/>
+            <property name="junit4TestPattern" value="[a-z].*"/>
+            <property name="junit5TestPattern" value="[a-z].*"/>
+        </properties>
+    </rule>
+    <rule ref="category/java/codestyle.xml/FormalParameterNamingConventions">
+        <properties>
+            <property name="methodParameterPattern" value="[a-z][a-zA-Z0-9]*"/>
+            <property name="finalMethodParameterPattern" value="[a-z][a-zA-Z0-9]*"/>
+            <property name="lambdaParameterPattern" value="[a-z][a-zA-Z0-9]*"/>
+            <property name="explicitLambdaParameterPattern" value="[a-z][a-zA-Z0-9]*"/>
+        </properties>
+    </rule>
+    <rule ref="category/java/codestyle.xml/EmptyControlStatement"/>
+    <rule ref="category/java/codestyle.xml/IdenticalCatchBranches"/>
+    <rule ref="category/java/codestyle.xml/FinalParameterInAbstractMethod"/>
+    <rule ref="category/java/codestyle.xml/ForLoopShouldBeWhileLoop"/>
+    <rule ref="category/java/codestyle.xml/NoPackage"/>
+    <rule ref="category/java/errorprone.xml/AvoidDuplicateLiterals">
+        <properties>
+            <property name="maxDuplicateLiterals" value="4"/>
+            <property name="minimumLength" value="3"/>
+            <property name="skipAnnotations" value="false"/>
+        </properties>
+    </rule>
+</ruleset>

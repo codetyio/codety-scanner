@@ -1,0 +1,11 @@
+//v9
+import htmlPlugin from "@html-eslint/eslint-plugin";
+import htmlParser from '@html-eslint/parser';
+export default [
+    {
+        ...htmlPlugin.configs["flat/recommended"],
+        files: ["**/*.html", "**/*.htm"], //required
+        
+
+    }
+];

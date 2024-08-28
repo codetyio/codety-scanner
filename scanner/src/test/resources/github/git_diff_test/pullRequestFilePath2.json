@@ -1,0 +1,29 @@
+@@ -10,22 +10,26 @@
+ 
+ @SpringBootApplication
+ public class Application {
+-
++//fwejfow
+ \tpublic static void main(String[] args) {
+ \t\tSpringApplication.run(Application.class, args);
+ \t}
+ \t@Bean
+ \tpublic CommandLineRunner commandLineRunner(ApplicationContext ctx) {
+ \t\treturn args -> {
+ \t\t\tSystem.out.println(\"Let's inspect the beans provided by Spring Boot:\");
++//aaaaaa1
++//aaa2
+ 
+ \t\t\tString[] beanNames = ctx.getBeanDefinitionNames();
+ \t\t\tArrays.sort(beanNames);
+ \t\t\tfor (String beanName : beanNames) {
+ \t\t\t\tSystem.out.println(beanName);
+ \t\t\t}
+ 
++\t\t\t//bbb
++\t\t\t//bbb2
+ \t\t};
+ \t}
+-
++//ccc
+ }

@@ -1,0 +1,508 @@
+{
+  "Issues": [
+    {
+      "FromLinter": "typecheck",
+      "Text": ": # mymodule\n./unused-var.go:7:9: declared and not used: u1\n./unused-var.go:8:9: declared and not used: u2",
+      "Severity": "",
+      "SourceLines": [
+        "package main"
+      ],
+      "Replacement": null,
+      "Pos": {
+        "Filename": "unused-var.go",
+        "Offset": 0,
+        "Line": 1,
+        "Column": 0
+      },
+      "ExpectNoLint": false,
+      "ExpectedNoLintLinter": ""
+    }
+  ],
+  "Report": {
+    "Warnings": [
+      {
+        "Text": "The linter 'execinquery' is deprecated (since v1.58.0) due to: The repository of the linter has been archived by the owner. "
+      },
+      {
+        "Text": "The linter 'exportloopref' is deprecated (since v1.60.2) due to: Since Go1.22 (loopvar) this linter is no longer relevant. Replaced by copyloopvar."
+      },
+      {
+        "Text": "The linter 'gomnd' is deprecated (since v1.58.0) due to: The linter has been renamed. Replaced by mnd."
+      }
+    ],
+    "Linters": [
+      {
+        "Name": "asasalint",
+        "Enabled": true
+      },
+      {
+        "Name": "asciicheck",
+        "Enabled": true
+      },
+      {
+        "Name": "bidichk",
+        "Enabled": true
+      },
+      {
+        "Name": "bodyclose",
+        "Enabled": true
+      },
+      {
+        "Name": "canonicalheader",
+        "Enabled": true
+      },
+      {
+        "Name": "containedctx",
+        "Enabled": true
+      },
+      {
+        "Name": "contextcheck"
+      },
+      {
+        "Name": "copyloopvar",
+        "Enabled": true
+      },
+      {
+        "Name": "cyclop",
+        "Enabled": true
+      },
+      {
+        "Name": "decorder",
+        "Enabled": true
+      },
+      {
+        "Name": "deadcode"
+      },
+      {
+        "Name": "depguard",
+        "Enabled": true
+      },
+      {
+        "Name": "dogsled",
+        "Enabled": true
+      },
+      {
+        "Name": "dupl",
+        "Enabled": true
+      },
+      {
+        "Name": "dupword",
+        "Enabled": true
+      },
+      {
+        "Name": "durationcheck",
+        "Enabled": true
+      },
+      {
+        "Name": "errcheck",
+        "Enabled": true,
+        "EnabledByDefault": true
+      },
+      {
+        "Name": "errchkjson",
+        "Enabled": true
+      },
+      {
+        "Name": "errname",
+        "Enabled": true
+      },
+      {
+        "Name": "errorlint",
+        "Enabled": true
+      },
+      {
+        "Name": "execinquery",
+        "Enabled": true
+      },
+      {
+        "Name": "exhaustive",
+        "Enabled": true
+      },
+      {
+        "Name": "exhaustivestruct"
+      },
+      {
+        "Name": "exhaustruct",
+        "Enabled": true
+      },
+      {
+        "Name": "exportloopref",
+        "Enabled": true
+      },
+      {
+        "Name": "forbidigo",
+        "Enabled": true
+      },
+      {
+        "Name": "forcetypeassert",
+        "Enabled": true
+      },
+      {
+        "Name": "fatcontext",
+        "Enabled": true
+      },
+      {
+        "Name": "funlen",
+        "Enabled": true
+      },
+      {
+        "Name": "gci",
+        "Enabled": true
+      },
+      {
+        "Name": "ginkgolinter",
+        "Enabled": true
+      },
+      {
+        "Name": "gocheckcompilerdirectives",
+        "Enabled": true
+      },
+      {
+        "Name": "gochecknoglobals",
+        "Enabled": true
+      },
+      {
+        "Name": "gochecknoinits",
+        "Enabled": true
+      },
+      {
+        "Name": "gochecksumtype",
+        "Enabled": true
+      },
+      {
+        "Name": "gocognit",
+        "Enabled": true
+      },
+      {
+        "Name": "goconst",
+        "Enabled": true
+      },
+      {
+        "Name": "gocritic",
+        "Enabled": true
+      },
+      {
+        "Name": "gocyclo",
+        "Enabled": true
+      },
+      {
+        "Name": "godot",
+        "Enabled": true
+      },
+      {
+        "Name": "godox",
+        "Enabled": true
+      },
+      {
+        "Name": "err113",
+        "Enabled": true
+      },
+      {
+        "Name": "gofmt",
+        "Enabled": true
+      },
+      {
+        "Name": "gofumpt",
+        "Enabled": true
+      },
+      {
+        "Name": "goheader",
+        "Enabled": true
+      },
+      {
+        "Name": "goimports",
+        "Enabled": true
+      },
+      {
+        "Name": "golint"
+      },
+      {
+        "Name": "mnd",
+        "Enabled": true
+      },
+      {
+        "Name": "gomnd",
+        "Enabled": true
+      },
+      {
+        "Name": "gomoddirectives",
+        "Enabled": true
+      },
+      {
+        "Name": "gomodguard",
+        "Enabled": true
+      },
+      {
+        "Name": "goprintffuncname",
+        "Enabled": true
+      },
+      {
+        "Name": "gosec",
+        "Enabled": true
+      },
+      {
+        "Name": "gosimple",
+        "Enabled": true,
+        "EnabledByDefault": true
+      },
+      {
+        "Name": "gosmopolitan",
+        "Enabled": true
+      },
+      {
+        "Name": "govet",
+        "Enabled": true,
+        "EnabledByDefault": true
+      },
+      {
+        "Name": "grouper",
+        "Enabled": true
+      },
+      {
+        "Name": "ifshort"
+      },
+      {
+        "Name": "importas",
+        "Enabled": true
+      },
+      {
+        "Name": "inamedparam",
+        "Enabled": true
+      },
+      {
+        "Name": "ineffassign",
+        "Enabled": true,
+        "EnabledByDefault": true
+      },
+      {
+        "Name": "interfacebloat",
+        "Enabled": true
+      },
+      {
+        "Name": "interfacer"
+      },
+      {
+        "Name": "intrange",
+        "Enabled": true
+      },
+      {
+        "Name": "ireturn",
+        "Enabled": true
+      },
+      {
+        "Name": "lll",
+        "Enabled": true
+      },
+      {
+        "Name": "loggercheck",
+        "Enabled": true
+      },
+      {
+        "Name": "maintidx",
+        "Enabled": true
+      },
+      {
+        "Name": "makezero",
+        "Enabled": true
+      },
+      {
+        "Name": "maligned"
+      },
+      {
+        "Name": "mirror",
+        "Enabled": true
+      },
+      {
+        "Name": "misspell",
+        "Enabled": true
+      },
+      {
+        "Name": "musttag",
+        "Enabled": true
+      },
+      {
+        "Name": "nakedret",
+        "Enabled": true
+      },
+      {
+        "Name": "nestif",
+        "Enabled": true
+      },
+      {
+        "Name": "nilerr",
+        "Enabled": true
+      },
+      {
+        "Name": "nilnil",
+        "Enabled": true
+      },
+      {
+        "Name": "nlreturn",
+        "Enabled": true
+      },
+      {
+        "Name": "noctx",
+        "Enabled": true
+      },
+      {
+        "Name": "nonamedreturns",
+        "Enabled": true
+      },
+      {
+        "Name": "nosnakecase"
+      },
+      {
+        "Name": "nosprintfhostport",
+        "Enabled": true
+      },
+      {
+        "Name": "paralleltest",
+        "Enabled": true
+      },
+      {
+        "Name": "perfsprint",
+        "Enabled": true
+      },
+      {
+        "Name": "prealloc",
+        "Enabled": true
+      },
+      {
+        "Name": "predeclared",
+        "Enabled": true
+      },
+      {
+        "Name": "promlinter",
+        "Enabled": true
+      },
+      {
+        "Name": "protogetter",
+        "Enabled": true
+      },
+      {
+        "Name": "reassign",
+        "Enabled": true
+      },
+      {
+        "Name": "revive",
+        "Enabled": true
+      },
+      {
+        "Name": "rowserrcheck",
+        "Enabled": true
+      },
+      {
+        "Name": "sloglint",
+        "Enabled": true
+      },
+      {
+        "Name": "scopelint"
+      },
+      {
+        "Name": "sqlclosecheck",
+        "Enabled": true
+      },
+      {
+        "Name": "spancheck",
+        "Enabled": true
+      },
+      {
+        "Name": "staticcheck",
+        "Enabled": true,
+        "EnabledByDefault": true
+      },
+      {
+        "Name": "structcheck"
+      },
+      {
+        "Name": "stylecheck",
+        "Enabled": true
+      },
+      {
+        "Name": "tagalign",
+        "Enabled": true
+      },
+      {
+        "Name": "tagliatelle",
+        "Enabled": true
+      },
+      {
+        "Name": "tenv",
+        "Enabled": true
+      },
+      {
+        "Name": "testableexamples",
+        "Enabled": true
+      },
+      {
+        "Name": "testifylint",
+        "Enabled": true
+      },
+      {
+        "Name": "testpackage",
+        "Enabled": true
+      },
+      {
+        "Name": "thelper",
+        "Enabled": true
+      },
+      {
+        "Name": "tparallel",
+        "Enabled": true
+      },
+      {
+        "Name": "typecheck",
+        "Enabled": true,
+        "EnabledByDefault": true
+      },
+      {
+        "Name": "unconvert",
+        "Enabled": true
+      },
+      {
+        "Name": "unparam",
+        "Enabled": true
+      },
+      {
+        "Name": "unused",
+        "Enabled": true,
+        "EnabledByDefault": true
+      },
+      {
+        "Name": "usestdlibvars",
+        "Enabled": true
+      },
+      {
+        "Name": "varcheck"
+      },
+      {
+        "Name": "varnamelen",
+        "Enabled": true
+      },
+      {
+        "Name": "wastedassign",
+        "Enabled": true
+      },
+      {
+        "Name": "whitespace",
+        "Enabled": true
+      },
+      {
+        "Name": "wrapcheck",
+        "Enabled": true
+      },
+      {
+        "Name": "wsl",
+        "Enabled": true
+      },
+      {
+        "Name": "zerologlint",
+        "Enabled": true
+      },
+      {
+        "Name": "nolintlint",
+        "Enabled": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,152 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        google()
+    }
+    dependencies {
+        classpath 'com.guardsquare:proguard-gradle:7.5.0'
+        classpath("com.github.johnrengelman:shadow:8.1.1")
+    }
+}
+
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.3.1'
+    id 'io.spring.dependency-management' version '1.1.5'
+    id 'com.github.johnrengelman.shadow' version "8.1.1"
+}
+
+archivesBaseName = 'app'
+group = 'io.codety'
+version = '0.1'
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'com.mysql:mysql-connector-j'
+
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+//
+    implementation 'org.kohsuke:github-api:1.323'
+    implementation 'org.eclipse.jgit:org.eclipse.jgit:6.10.0.202406032230-r'
+    implementation 'com.auth0:java-jwt:4.4.0'
+    implementation 'io.jsonwebtoken:jjwt-api:0.12.5'
+    implementation 'io.jsonwebtoken:jjwt-impl:0.12.5'
+    implementation 'io.jsonwebtoken:jjwt-jackson:0.12.5'
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.17.2'
+
+    implementation 'com.google.code.gson:gson:2.11.0'
+//    implementation 'com.opencsv:opencsv:5.9'
+
+    implementation 'net.sourceforge.pmd:pmd-core:7.2.0'
+//    implementation 'net.sourceforge.pmd:pmd-test:7.2.0'
+    implementation 'net.sourceforge.pmd:pmd-java:7.2.0'
+//    implementation 'net.sourceforge.pmd:pmd-lang-test:7.2.0'
+
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+jar {
+    enabled = false
+    archiveClassifier = '' //use empty string
+    version = null
+}
+
+tasks.register ('extractJar', Copy) {
+    dependsOn tasks.assemble
+
+    def zipFile = layout.buildDirectory.dir("libs/app.jar")
+    def outputDir = layout.buildDirectory.dir("extracted")
+
+    from zipTree(zipFile)
+    into outputDir
+}
+
+tasks.register('deleteClasses', Delete) {
+    delete layout.buildDirectory.dir("extracted/BOOT-INF/classes/")
+}
+
+tasks.register('copyObfuscatedClasses', Copy) {
+    mustRunAfter tasks.proguard
+    dependsOn tasks.deleteClasses
+
+    from zipTree(layout.buildDirectory.dir("obfuscatedClasses.jar"))
+    into layout.buildDirectory.dir("extracted/BOOT-INF/classes/")
+}
+
+tasks.register('deleteObfuscated', Delete) {
+    delete layout.buildDirectory.dir('obfuscatedClasses.jar')
+    delete layout.buildDirectory.dir('libs/app.jar')
+}
+
+tasks.register('repackage', Zip) {
+    mustRunAfter tasks.proguard
+    dependsOn tasks.deleteClasses
+    dependsOn tasks.copyObfuscatedClasses
+    dependsOn tasks.deleteObfuscated
+
+    from  layout.buildDirectory.dir("extracted")
+    entryCompression ZipEntryCompression.STORED
+    archiveFileName= "app-dist.jar"
+    destinationDirectory = file(layout.buildDirectory.dir("libs"))
+
+}
+
+tasks.register('proguard', proguard.gradle.ProGuardTask) {
+    dependsOn tasks.extractJar
+    verbose
+
+    injars  layout.buildDirectory.dir("extracted/BOOT-INF/classes")
+    outjars layout.buildDirectory.dir("obfuscatedClasses.jar")
+    // Automatically handle the Java version of this build.
+    if (System.getProperty('java.version').startsWith('1.')) {
+        // Before Java 9, the runtime classes were packaged in a single jar file.
+        libraryjars "${System.getProperty('java.home')}/lib/rt.jar"
+    } else {
+        // As of Java 9, the runtime classes are packaged in modular jmod files.
+        libraryjars "${System.getProperty('java.home')}/jmods/java.base.jmod", jarfilter: '!**.jar', filter: '!module-info.class'
+        //libraryjars "${System.getProperty('java.home')}/jmods/....."
+    }
+    libraryjars sourceSets.main.compileClasspath //Required, this will contain the Spring dependencies.
+    dontshrink //required
+    dontoptimize //required
+    dontwarn
+    useuniqueclassmembernames //optional
+    allowaccessmodification
+    repackageclasses 'io.codety'
+    //    keepnames 'class io.codety.service.*' //keep class names and field names
+    keepclassmembers 'class io.codety.*.dto.**{*;}' //keep fields for the serialization and deserialization.
+    keepclassmembers 'class io.codety.analyzer.connectivity.dto.protocol.**{*;}' //keep fields for the serialization and deserialization.
+    keepclassmembers 'class io.codety.analyzer.integration.*.dto.**{*;}' //keep fields for the serialization and deserialization.
+
+    keepattributes '*Annotation*'
+    keepattributes 'EnclosingMethod,Signature' //fixing the Jackson deserialization issue.
+    keepnames 'class com.fasterxml.jackson.** { *; }'
+
+    // Keep the main class entry point.
+    keep 'public class io.codety.vGF3MmcwpBZHbbCcTTyvc { \
+            public static void main(java.lang.String[]); \
+            public void run(String[]); \
+         }'
+    obfuscationdictionary "obfuscate-dict-field-names.txt" //obfuscate field and method names, can generate from https://generateuuid.online/
+    classobfuscationdictionary "obfuscate-dict-class-names.txt" //package names.
+
+    //    flattenpackagehierarchy
+
+    // After ProGuard has executed, repackage the app.
+    finalizedBy tasks.repackage
+}

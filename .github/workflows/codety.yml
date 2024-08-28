@@ -1,0 +1,38 @@
+name: Codety
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "**" ] # **
+jobs:
+  Codety-Scanner:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: read
+    container:
+      image: codetyio/codety:latest
+      env:
+#        CODETY_TOKEN: ${{ secrets.CODETY_TOKEN_PROD }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+      - uses: actions/checkout@main
+      - run: codety
+        env:
+
+          CODETY_RUNNER_DEBUG: true
+          #prod:
+          #        CODETY_TOKEN: ${{ secrets.CODETY_TOKEN_PROD }}
+          #test:
+          CODETY_TOKEN: ${{ secrets.CODETY_TOKEN_TEST }}
+          CODETY_HOST: ${{ vars.CODETY_HOST_TEST }}
+
+          CODETY_ENABLE_SLACK_NOTIFICATION: true
+          SLACK_OAUTH_TOKEN: ${{ secrets.SLACK_OAUTH_TOKEN_TEST_INTEGRATION }}
+          SLACK_CONVERSATION_ID: ${{ vars.SLACK_CONVERSATION_ID }}
+
+      - name: Upload SARIF results file
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: codety-scanning-result.sarif

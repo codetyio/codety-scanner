@@ -1,0 +1,14 @@
+rootProject.name = "codety-scanner"
+
+include 'code-issue-examples'
+include 'image'
+include 'scanner-common'
+include 'scanner'
+include 'analyzer-codety'
+include 'analyzer-cppcheck'
+include 'analyzer-checkov'
+include 'analyzer-eslint'
+include 'analyzer-pmd'
+include 'analyzer-pylint'
+include 'analyzer-trivy'
+include 'analyzer-golangcilint'

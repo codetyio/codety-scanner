@@ -1,0 +1,18 @@
+//v9
+import htmlPlugin from "@html-eslint/eslint-plugin";
+import htmlParser from '@html-eslint/parser';
+export default [
+    {
+        files: ["**/*.html", "**/*.htm"], //required
+        languageOptions: { //required
+          parser: htmlParser,
+          parserOptions : { project:true },
+        },
+        plugins: { //required
+          "currentRule": htmlPlugin,
+        },
+        rules: {
+         //CODETY
+        },
+    }
+];
