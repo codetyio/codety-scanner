@@ -19,9 +19,11 @@ public class AnalyzerRequest {
     private boolean enablePostingPullRequestComment = true;
     private boolean enablePostingPullRequestReviews = true;
     private boolean enablePostingGitHubPullRequestCheckRunAnnotations = true;
+    private boolean enableConsoleIssueReporter = true;
 
     private GitProviderType gitProviderType;
     private ComputeRunnerType computeRunnerType;
+
 
     private String localGitRepoPath;
     private String gitRepoFullName;
@@ -84,11 +86,18 @@ public class AnalyzerRequest {
         analyzerRequest.setCodetyToken(envMap.get(CodetyConstant.ENV_CODETY_TOKEN));
         analyzerRequest.setCodetyHost(envMap.get(CodetyConstant.ENV_CODETY_HOST));
 
-        analyzerRequest.enableSlackNotification = "true".equals(envMap.get(CodetyConstant.ENV_CODETY_ENABLE_SLACK_NOTIFICATION));
+        analyzerRequest.enableSlackNotification = "true".equals(envMap.get(CodetyConstant.ENV_CODETY_ISSUE_REPORTER_SLACK));
         if(analyzerRequest.enableSlackNotification) {
             analyzerRequest.slackOauthToken = (envMap.get(CodetyConstant.ENV_SLACK_OAUTH_TOKEN));
             analyzerRequest.slackConversationId = (envMap.get(CodetyConstant.ENV_SLACK_CONVERSATION_ID));
         }
+
+        analyzerRequest.enableConsoleIssueReporter = !"false".equals(envMap.get(CodetyConstant.ENV_CODETY_ISSUE_REPORTER_CONSOLE));
+        analyzerRequest.enablePostingPullRequestComment = !"false".equals(envMap.get(CodetyConstant.ENV_CODETY_ISSUE_REPORTER_GITHUB_PR_COMMENT));
+        analyzerRequest.enablePostingPullRequestReviews = !"false".equals(envMap.get(CodetyConstant.ENV_CODETY_ISSUE_REPORTER_GITHUB_PR_REVIEW));
+        analyzerRequest.enablePostingGitHubPullRequestCheckRunAnnotations = !"false".equals(envMap.get(CodetyConstant.ENV_CODETY_ISSUE_REPORTER_GITHUB_PR_CHECK_RUN_ANNOTATION));
+
+
 
         String handleDiff = envMap.get(CodetyConstant.ENV_CODETY_REPORT_ALL_ISSUES);
         if(handleDiff == null || "0".equals(handleDiff)){
@@ -422,5 +431,13 @@ public class AnalyzerRequest {
 
     public void setSlackConversationId(String slackConversationId) {
         this.slackConversationId = slackConversationId;
+    }
+
+    public boolean isEnableConsoleIssueReporter() {
+        return enableConsoleIssueReporter;
+    }
+
+    public void setEnableConsoleIssueReporter(boolean enableConsoleIssueReporter) {
+        this.enableConsoleIssueReporter = enableConsoleIssueReporter;
     }
 }

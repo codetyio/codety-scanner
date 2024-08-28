@@ -11,15 +11,45 @@ For troubleshooting purposes only.
 
 ####  CODETY_REPORT_ALL_ISSUES
 type: boolean
+
 value: false | true
 
-####  CODETY_PRINT_TO_CONSOLE
+#### CODETY_ISSUE_REPORTER_CONSOLE
+type: boolean
+
+value: false | true, default: true
+
+#### CODETY_ISSUE_REPORTER_GITHUB_PR_COMMENT
+default: true
+
+type: boolean
+
+value: false | true, default: true
+
+#### CODETY_ISSUE_REPORTER_GITHUB_PR_REVIEW
+default: true
+
+type: boolean
+
+value: false | true, default: true
+
+#### CODETY_ISSUE_REPORTER_GITHUB_PR_CHECK_RUN_ANNOTATION
+type: boolean
+
+value: false | true, default: true
 
 #### GITHUB_TOKEN
 The token will be used for posting pull request review comments
 Below GitHub permissions are needed within the Codety Scanner runtime scope:
 * `pull-requests: write`
 * `contents: read`
+
+#### CODETY_ISSUE_REPORTER_SLACK
+type: boolean
+
+value: false | true, default: false
+
+
 
 #### SLACK_OAUTH_TOKEN
 The token will be used for Slack notification integration.  
