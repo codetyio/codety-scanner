@@ -48,6 +48,9 @@ public class GolangcilintCodeAnalyzer implements CodeAnalyzerInterface {
 
             String errorOutput = runtimeExecResult.getErrorOutput();
             String successOutput = runtimeExecResult.getSuccessOutput();
+            if(successOutput == null || successOutput.isEmpty()){
+                return list;
+            }
 
             List<CodeAnalysisIssueDto> codeAnalysisIssueDtoList = GolangcilintResultConverter.convertResult(successOutput);
             if(codeAnalysisIssueDtoList == null || codeAnalysisIssueDtoList.isEmpty()){
