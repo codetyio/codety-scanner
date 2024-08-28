@@ -47,9 +47,9 @@ public class GithubPullRequestResultReporter implements ResultReporter {
                 StringBuilder pullRequestComment = createPullRequestComment(analyzerRequest, codeAnalysisResultDtoList);
                 githubCommentService.addOrUpdatePullRequestComment(analyzerRequest, pullRequestComment.toString());
             }
-//            if(analyzerRequest.isEnablePostingGitHubPullRequestCheckRunAnnotations()){
-//                githubCommentService.addCheckRunAnnotations(analyzerRequest, codeAnalysisResultDtoList);
-//            }
+            if(analyzerRequest.isEnablePostingGitHubPullRequestCheckRunAnnotations()){
+                githubCommentService.addCheckRunAnnotations(analyzerRequest, codeAnalysisResultDtoList);
+            }
         }
 
     }

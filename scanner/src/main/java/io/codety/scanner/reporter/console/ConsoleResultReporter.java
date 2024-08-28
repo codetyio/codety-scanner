@@ -13,6 +13,10 @@ public class ConsoleResultReporter implements ResultReporter {
     @Override
     public void deliverResult(AnalyzerRequest analyzerRequest, CodeAnalysisResultSetDto codeAnalysisResultSetDto) {
 
+        if(!analyzerRequest.isEnableConsoleIssueReporter()) {
+            CodetyConsoleLogger.info("Skip posting issue result into console terminal");
+        }
+
         String consoleOutputString = codeAnalysisResultSetDto.toConsoleOutputString(analyzerRequest);
         if(consoleOutputString!=null && consoleOutputString.length() > 0) {
             CodetyConsoleLogger.info(CodetyConstant.INFO_SHOW_ANALYSIS_RESULT);
