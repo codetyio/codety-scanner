@@ -11,6 +11,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -48,8 +50,8 @@ public class ScalastyleCodeAnalyzer implements CodeAnalyzerInterface {
 
             String errorOutput = runtimeExecResult.getErrorOutput();
             String successOutput = runtimeExecResult.getSuccessOutput();
-
-//            List<CodeAnalysisIssueDto> codeAnalysisIssueDtoList = CppcheckResultConverter.convertResult(errorOutput);
+            String payload = Files.readString(Path.of(tmpConfigDownloadFolder.getAbsolutePath()));
+            List<CodeAnalysisIssueDto> codeAnalysisIssueDtoList = ScalastyleConverter.convertResult(payload);
 //            if(codeAnalysisIssueDtoList == null || codeAnalysisIssueDtoList.isEmpty()){
 //                return list;
 //            }
