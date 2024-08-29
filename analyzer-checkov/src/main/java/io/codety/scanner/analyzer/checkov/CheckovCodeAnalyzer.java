@@ -19,7 +19,7 @@ public class CheckovCodeAnalyzer implements CodeAnalyzerInterface {
     private static final String checkov = "checkov";
     @Override
     public List<CodeAnalysisResultDto> analyzeCode(AnalyzerConfigurationDetailDto runnerConfiguration, AnalyzerRequest request) {
-        CodetyConsoleLogger.debug("Scanning "+runnerConfiguration.getLanguage()+" code via "+runnerConfiguration.getCodeAnalyzerType().name()+"...");
+        CodetyConsoleLogger.info("Scanning "+runnerConfiguration.getLanguage()+" code via "+runnerConfiguration.getCodeAnalyzerType().name()+"...");
         ArrayList<CodeAnalysisResultDto> list = new ArrayList();
 
         String[] command;

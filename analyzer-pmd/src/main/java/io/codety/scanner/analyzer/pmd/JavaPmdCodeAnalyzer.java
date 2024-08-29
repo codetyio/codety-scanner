@@ -92,7 +92,7 @@ public class JavaPmdCodeAnalyzer implements CodeAnalyzerInterface {
 
     @Override
     public List<CodeAnalysisResultDto> analyzeCode(AnalyzerConfigurationDetailDto runnerConfiguration, AnalyzerRequest request) {
-        CodetyConsoleLogger.debug("Scanning "+runnerConfiguration.getLanguage()+" code via "+runnerConfiguration.getCodeAnalyzerType().name()+"...");
+        CodetyConsoleLogger.info("Scanning "+runnerConfiguration.getLanguage()+" code via "+runnerConfiguration.getCodeAnalyzerType().name()+"...");
         String baseSourcePath = request.getLocalGitRepoPath();
         CodeAnalyzerSettingGroupDto codeAnalyzerSettingGroupDto = sourceCodeDirectoryLayoutAnalyzer.analyzeSourceDirectory(baseSourcePath);
         List<CodeAnalysisResultDto> resultSetDto = new ArrayList<>();

@@ -31,7 +31,7 @@ public class CppcheckCodeAnalyzer implements CodeAnalyzerInterface {
     private static final String INFO_failedToRunCppcheck = "Failed to run cpp analyzer due to error: ";
     @Override
     public List<CodeAnalysisResultDto> analyzeCode(AnalyzerConfigurationDetailDto runnerConfiguration, AnalyzerRequest request) {
-        CodetyConsoleLogger.debug("Scanning "+runnerConfiguration.getLanguage()+" code via "+runnerConfiguration.getCodeAnalyzerType().name()+"...");
+        CodetyConsoleLogger.info("Scanning "+runnerConfiguration.getLanguage()+" code via "+runnerConfiguration.getCodeAnalyzerType().name()+"...");
         File file = runnerConfiguration.getFile();
 //cppcheck  . --suppressions-list=suppression.txt  --xml 2>error1.txt
         ArrayList<CodeAnalysisResultDto> list = new ArrayList();

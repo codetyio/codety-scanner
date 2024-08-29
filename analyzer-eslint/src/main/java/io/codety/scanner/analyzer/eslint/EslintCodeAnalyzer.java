@@ -47,7 +47,7 @@ public class EslintCodeAnalyzer implements CodeAnalyzerInterface {
     String aTrue = "true";
     @Override
     public List<CodeAnalysisResultDto> analyzeCode(AnalyzerConfigurationDetailDto runnerConfiguration, AnalyzerRequest request) {
-        CodetyConsoleLogger.debug("Scanning "+runnerConfiguration.getLanguage()+" code via "+runnerConfiguration.getPluginCode()+"...");
+        CodetyConsoleLogger.info("Scanning "+runnerConfiguration.getLanguage()+" code via "+runnerConfiguration.getPluginCode()+"...");
         List<CodeAnalysisResultDto> result = new ArrayList<>();
 
         CodetyConsoleLogger.debug(infoStartProcessing + runnerConfiguration.getLanguage() + " " + runnerConfiguration.getPluginCode());
