@@ -1,17 +1,26 @@
 package io.codety.scanner.analyzer.scalastyle.dto;
 
-public class ScalastyleError {
-	private int line;
-	private String source;
-	private String severity;
-	private String message;
-	private int column;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
-	public int getLine() {
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class ScalastyleError {
+	@JacksonXmlProperty(isAttribute = true)
+	private Integer line;
+	@JacksonXmlProperty(isAttribute = true)
+	private String source;
+	@JacksonXmlProperty(isAttribute = true)
+	private String severity;
+	@JacksonXmlProperty(isAttribute = true)
+	private String message;
+	@JacksonXmlProperty(isAttribute = true)
+	private Integer column;
+
+	public Integer getLine() {
 		return line;
 	}
 
-	public void setLine(int line) {
+	public void setLine(Integer line) {
 		this.line = line;
 	}
 
@@ -39,11 +48,11 @@ public class ScalastyleError {
 		this.message = message;
 	}
 
-	public int getColumn() {
+	public Integer getColumn() {
 		return column;
 	}
 
-	public void setColumn(int column) {
+	public void setColumn(Integer column) {
 		this.column = column;
 	}
 }
