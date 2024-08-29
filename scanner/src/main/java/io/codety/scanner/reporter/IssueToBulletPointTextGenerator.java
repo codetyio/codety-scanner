@@ -39,6 +39,6 @@ public class IssueToBulletPointTextGenerator {
             sb.append("[").append(issueDto.getCweId()).append("] ");
         }
         if (issueDto.getDescription() != null)
-            sb.append(" ").append(issueDto.getDescription());
+            sb.append(" ").append(issueDto.getDescription().replaceAll("\\n", ""));
     }
 }
