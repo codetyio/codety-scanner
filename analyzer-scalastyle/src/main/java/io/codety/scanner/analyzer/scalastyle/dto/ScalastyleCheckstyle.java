@@ -1,10 +1,21 @@
 package io.codety.scanner.analyzer.scalastyle.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+
 import java.util.List;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
+@JacksonXmlRootElement(localName = "checkstyle")
 public class ScalastyleCheckstyle {
+
+	@JacksonXmlProperty(localName = "file")
+	@JacksonXmlElementWrapper(useWrapping = false)
 	private List<ScalastyleFile> file;
-	private double version;
+
+	private String version;
 
 	public List<ScalastyleFile> getFile() {
 		return file;
@@ -14,11 +25,11 @@ public class ScalastyleCheckstyle {
 		this.file = file;
 	}
 
-	public double getVersion() {
+	public String getVersion() {
 		return version;
 	}
 
-	public void setVersion(double version) {
+	public void setVersion(String version) {
 		this.version = version;
 	}
 }
