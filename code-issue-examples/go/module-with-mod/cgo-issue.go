@@ -1,34 +1,21 @@
-package cgoexample
+package mymodule
 
-/*
-#include <stdio.h>
-#include <stdlib.h>
+import "fmt"
 
-void myprint(char* s) {
-	printf("%s\n", s);
-}
-*/
-import "C"
+func MyModule() {
 
-import (
-	"fmt"
-	"unsafe"
-)
+    var u1 = "initial"
+    var u2 = "initial"
 
-func Example() {
-	cs := C.CString("Hello from stdio\n")
-	C.myprint(cs)
-	fmt.Printf("bad format %t", cs)
-	C.free(unsafe.Pointer(cs))
-}
+    var b, c int = 1, 2
+    fmt.Println(b, c)
 
-func notFormattedForGofmt()  {
-}
+    var d = true
+    fmt.Println(d)
 
-func errorForRevive(p *int) error {
-	if p == nil {
-		return nil
-	} else {
-		return nil
-	}
+    var e int
+    fmt.Println(e)
+
+    f := "apple"
+    fmt.Println(f)
 }
