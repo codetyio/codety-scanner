@@ -35,6 +35,7 @@ dependencies {
     implementation project(':analyzer-trivy')
     implementation project(':analyzer-golangcilint')
     implementation project(':analyzer-codety')
+    implementation project(':analyzer-scalastyle')
 
 
 }
