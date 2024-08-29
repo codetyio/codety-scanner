@@ -43,7 +43,7 @@ public class CheckovCodeAnalyzer implements CodeAnalyzerInterface {
             }
 
             CodeAnalysisResultDto resultDto = new CodeAnalysisResultDto(runnerConfiguration.getLanguage(), runnerConfiguration.getCodeAnalyzerType());
-            resultDto.setDisplayTitle("IaC issues");
+            resultDto.setDisplayTitle("IaC");
             resultDto.addIssues(codeAnalysisIssueDtoList);
             list.add(resultDto);
 

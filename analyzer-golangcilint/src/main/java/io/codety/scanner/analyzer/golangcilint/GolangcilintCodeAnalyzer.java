@@ -37,9 +37,6 @@ public class GolangcilintCodeAnalyzer implements CodeAnalyzerInterface {
                 } else {
                     cmdList.add("--enable-all");
                 }
-//                for (File file : goModules) {
-//                    cmdList.add(file.getName() + "/...");
-//                }
 
                 cmdList.add( "./...");
 
