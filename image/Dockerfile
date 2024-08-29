@@ -1,6 +1,6 @@
 FROM  amazoncorretto:17-alpine-jdk
 
-RUN apk add --no-cache python3 py3-pip
+RUN apk add --no-cache python3 py3-pip go
 RUN apk add --no-cache bash openssl ca-certificates git libc6-compat libstdc++ curl cppcheck nodejs npm py3-pylint
 
 RUN npm install --prefix /usr/local/eslint9/ eslint@9.x eslint-plugin-jsdoc eslint-plugin-react eslint-plugin-vue @html-eslint/parser @html-eslint/eslint-plugin
@@ -8,6 +8,10 @@ RUN npm install --prefix /usr/local/eslint8/ eslint@8.x  typescript @typescript-
 
 # !!!!!!checkov build will be failed in arm64 environment, you need to append `--platform=linux/amd64` during docker build or run if you use ARM64 environment(e.g. M1+ chips MacBook)
 RUN pip3 install checkov --break-system-packages
+
+# install golang
+# COPY --from=golang:1.17-alpine /usr/local/go/ /usr/local/go/
+# ENV PATH="/usr/local/go/bin:${PATH}"
 
 #golang lint
 RUN wget -O- -nv https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s v1.60.3

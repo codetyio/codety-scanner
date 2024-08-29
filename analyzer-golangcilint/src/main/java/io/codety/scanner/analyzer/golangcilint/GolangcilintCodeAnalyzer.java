@@ -23,50 +23,53 @@ public class GolangcilintCodeAnalyzer implements CodeAnalyzerInterface {
         try {
             List<File> goModules = GolangcilintModuleUtil.findGoModules(request.getLocalGitRepoPath());
 
-            List<String> cmdList = new ArrayList<>();
-            cmdList.add("golangci-lint");
-            cmdList.add("run");
-            cmdList.add("--no-config");
-            cmdList.add("--out-format");
-            cmdList.add("json");
+            for(File file : goModules) {
+                List<String> cmdList = new ArrayList<>();
+                cmdList.add("golangci-lint");
+                cmdList.add("run");
+                cmdList.add("--no-config");
+                cmdList.add("--out-format");
+                cmdList.add("json");
+
+                if (runnerConfiguration.getPayload() == null || runnerConfiguration.getPayload().isEmpty()) {
+                    cmdList.add("--enable-all");
+
+                } else {
+                    cmdList.add("--enable-all");
+                }
+//                for (File file : goModules) {
+//                    cmdList.add(file.getName() + "/...");
+//                }
+
+                cmdList.add( "./...");
+
+                String[] command = cmdList.toArray(new String[0]);
 
 
-            if(runnerConfiguration.getPayload() == null || runnerConfiguration.getPayload().isEmpty()){
-                cmdList.add("--enable-all");
+                RuntimeExecUtil.RuntimeExecResult runtimeExecResult = RuntimeExecUtil.exec(command, file.getAbsolutePath(), 60, false, null);
 
-            }else{
-                cmdList.add("--enable-all");
+                String errorOutput = runtimeExecResult.getErrorOutput();
+                String successOutput = runtimeExecResult.getSuccessOutput();
+
+                if (errorOutput != null && errorOutput.length() > 0) {
+                    CodetyConsoleLogger.debug("Error output from golangci-lint " + errorOutput);
+                }
+                if (successOutput == null || successOutput.isEmpty()) {
+                    return list;
+                }
+
+                List<CodeAnalysisIssueDto> codeAnalysisIssueDtoList = GolangcilintResultConverter.convertResult(successOutput);
+                if (codeAnalysisIssueDtoList == null || codeAnalysisIssueDtoList.isEmpty()) {
+                    return list;
+                }
+
+                CodeAnalysisResultDto resultDto = new CodeAnalysisResultDto(runnerConfiguration.getLanguage(), runnerConfiguration.getCodeAnalyzerType());
+
+                resultDto.setDisplayTitle("Golang");
+                resultDto.addIssues(codeAnalysisIssueDtoList);
+
+                list.add(resultDto);
             }
-            for(File file : goModules){
-                cmdList.add(file.getName() + "/...");
-            }
-
-            String[] command = cmdList.toArray(new String[0]);
-
-
-            RuntimeExecUtil.RuntimeExecResult runtimeExecResult = RuntimeExecUtil.exec(command, null, 60, false, null);
-
-            String errorOutput = runtimeExecResult.getErrorOutput();
-            String successOutput = runtimeExecResult.getSuccessOutput();
-
-            if(errorOutput!=null && errorOutput.length() > 0){
-                CodetyConsoleLogger.debug("Error output from golangci-lint " + errorOutput);
-            }
-            if(successOutput == null || successOutput.isEmpty()){
-                return list;
-            }
-
-            List<CodeAnalysisIssueDto> codeAnalysisIssueDtoList = GolangcilintResultConverter.convertResult(successOutput);
-            if(codeAnalysisIssueDtoList == null || codeAnalysisIssueDtoList.isEmpty()){
-                return list;
-            }
-
-            CodeAnalysisResultDto resultDto = new CodeAnalysisResultDto(runnerConfiguration.getLanguage(), runnerConfiguration.getCodeAnalyzerType());
-
-            resultDto.setDisplayTitle("Golang");
-            resultDto.addIssues(codeAnalysisIssueDtoList);
-
-            list.add(resultDto);
 
         } catch (Exception e) {
 
