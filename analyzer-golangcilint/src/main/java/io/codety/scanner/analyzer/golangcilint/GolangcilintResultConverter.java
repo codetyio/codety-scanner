@@ -24,7 +24,7 @@ public class GolangcilintResultConverter {
                 CodeAnalysisIssueDto issueDto = new CodeAnalysisIssueDto();
 
                 String ruleId = golangIssue.getFromLinter();
-                String description = golangIssue.getText();
+                String description = golangIssue.getText().replaceAll("\\n", " ");
 
                 GolangcilintPos pos = golangIssue.getPos();
                 int line = pos.getLine();
