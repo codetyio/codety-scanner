@@ -26,7 +26,7 @@ public class PylintCodeAnalyzer implements CodeAnalyzerInterface {
     String message = "Cannot get any unmaterialized rules.";
     @Override
     public List<CodeAnalysisResultDto> analyzeCode(AnalyzerConfigurationDetailDto runnerConfiguration, AnalyzerRequest request) {
-        CodetyConsoleLogger.debug("Scanning "+runnerConfiguration.getLanguage()+" code via "+runnerConfiguration.getCodeAnalyzerType().name()+"...");
+        CodetyConsoleLogger.info("Scanning "+runnerConfiguration.getLanguage()+" code via "+runnerConfiguration.getCodeAnalyzerType().name()+"...");
         List<CodeAnalysisResultDto> result = new ArrayList<>();
 
         CodetyConsoleLogger.debug(infoStartProcessing + runnerConfiguration.getLanguage() + " " + runnerConfiguration.getPluginCode());
