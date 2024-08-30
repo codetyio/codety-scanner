@@ -302,8 +302,10 @@ public class GithubCommentService {
         String priorityEmojo = " :white_circle: ";
         if (priority == null) {
             ;
-        } else if (priority >= 3) {
+        } else if (priority >= 4) {
             priorityEmojo = " :red_circle: ";
+        } else if (priority >= 3) {
+            priorityEmojo = " :yellow_circle: ";
         } else if (priority >= 2) {
             priorityEmojo = " :white_circle: ";
         }
