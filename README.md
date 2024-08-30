@@ -10,7 +10,7 @@
 
 ### Codety Scanner can: 
 #### 1. Scan code
-* Scan and detect code issues using 5000+ rules(both Codety built and community built rules), be able to detect issues like:  
+Codety Scanner runs in your CI pipeline and detects code issues using 5000+ rules(both Codety built and community built rules), be able to detect issues like:  
   * Insecure and vulnerable code
   * Unexpected secrets/tokens/API-keys in the code
   * Code smells and technical debt accumulation
@@ -41,7 +41,7 @@
   * (and keep adding more)
 
 #### 2. Report scanning result
-* Compile scanning result and send notifications via different channels like:
+Codety Scanner compile code scanning results to:
   * GitHub pull request comments ([check demo](https://github.com/codetyio/codety-scanner/pull/15#issuecomment-2320351633))
   * GitHub pull request review comments ([check demo](https://github.com/codetyio/codety-scanner/pull/15/files#r1738123885))
   * GitHub check runs ([check demo](https://github.com/codetyio/codety-scanner/runs/29462342113))
