@@ -31,9 +31,6 @@ public class GithubCommentService {
             githubClient = createGithubClient(gitHubAccessToken);
 
             GHRepository repository = githubClient.getRepositoryById(analyzerRequest.getExternalGitRepoId());
-//            GHCheckRunBuilder test = repository.createCheckRun("test", analyzerRequest.getGitCommitSha());
-//            GHCheckRunBuilder.Output output = new GHCheckRunBuilder.Output("", "");
-//            output.add(new GHCheckRunBuilder.Annotation());
 
             GHPullRequest pullRequest = repository.getPullRequest(Integer.valueOf(analyzerRequest.getExternalPullRequestId()));
 
