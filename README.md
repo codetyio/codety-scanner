@@ -56,5 +56,5 @@ Check document [Codety Scanner Quickstart](https://docs.codety.io/docs/quickstar
 https://github.com/codetyio/codety-scanner/blob/main/LICENSE.txt
 
 > [!TIP]
-> Codety Console can help you to manage your Codety Scanner's configurations and set up custom code standards according to your organization's need
+> [Codety Console](http://www.codety.io) is a subscription based product which can help you to manage your Codety Scanner's configurations and set up custom code standards according to your organization's need
  
