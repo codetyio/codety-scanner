@@ -71,7 +71,6 @@ public class ScalastyleCodeAnalyzer implements CodeAnalyzerInterface {
             CodetyConsoleLogger.debug("Failed to run scalastyle due to error " + e.getMessage(), e);
             CodetyConsoleLogger.info("Skip Scalastyle analyzer due to error " + e.getMessage());
         }
-
         return list;
     }
 
