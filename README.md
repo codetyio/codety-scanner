@@ -39,7 +39,9 @@
   * Docker
   * (and keep adding more)
 * Compile scanning result and send notifications via different channels like:
-  * GitHub pull request review comments
+  * GitHub pull request comments ([check demo](https://github.com/codetyio/codety-scanner/pull/10#issuecomment-2319379042))
+  * GitHub pull request review comments ([check demo](https://github.com/codetyio/codety-scanner/pull/11/files#r1738038578))
+  * GitHub check runs ([check demo](https://github.com/codetyio/codety-scanner/runs/29462342113))
   * Slack
   * GitLab merge request review comments(coming...)
   * Email (coming...)
