@@ -21,4 +21,5 @@ public class LanguageType {
     public static final String plsql = "plsql";
     public static final String iac = "iac";
     public static final String all = "all";
+    public static final String scala = "scala";
 }

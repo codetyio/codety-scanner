@@ -81,7 +81,8 @@ public class GithubPullRequestResultReporter implements ResultReporter {
                 stringBuilder.append("Issues found in this pull request based on the custom Code Standards settings:").append("\n");
             }
             stringBuilder.append(analysisResultCommentTablePayload);
-            stringBuilder.append("\n").append("> The above content will be updated automatically after a scan pushed into this pull request.").append("\n");
+            stringBuilder.append("\n");
+            //.append("> The above content will be updated automatically after any code change pushed into this pull request.").append("\n");
         }
 
         stringBuilder.append(CodetyConstant.githubCommentTagStart);
