@@ -57,5 +57,5 @@ https://github.com/codetyio/codety-scanner/blob/main/LICENSE.txt
 <br/>
 
 > [!TIP]
-> **Codety Scanner** is free for personal and commercial use, [**Codety Console**](http://www.codety.io) is a subscription-based product that helps you manage Codety Scanner's code standards according to your organization's needs.
+> **Codety Scanner** detect code issues using default recommended code scanning rules for general use cases, [**Codety Console**](http://www.codety.io) is a subscription-based product that helps you manage and custom code standards according to your organization's needs.
  
