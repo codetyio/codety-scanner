@@ -43,7 +43,7 @@
 #### 2. Report scanning result
 * Compile scanning result and send notifications via different channels like:
   * GitHub pull request comments ([check demo](https://github.com/codetyio/codety-scanner/pull/15#issuecomment-2320351633))
-  * GitHub pull request review comments ([check demo](https://github.com/codetyio/codety-scanner/pull/15/files#r1738116957))
+  * GitHub pull request review comments ([check demo](https://github.com/codetyio/codety-scanner/pull/15/files#r1738123885))
   * GitHub check runs ([check demo](https://github.com/codetyio/codety-scanner/runs/29462342113))
   * Slack
   * GitLab merge request review comments(coming...)
