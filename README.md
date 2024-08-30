@@ -4,13 +4,19 @@
 
 </div>
 
-**Codety Scanner** is a free and comprehensive source code scanner that detects code issues for 20+ programming languages and IaC tools. Codety Scanner's source code is contributed and maintained by Codety Inc.([https://codety.io](https://codety.io/))
-  
+**Codety Scanner** is a free and comprehensive source code scanner that detects code issues for 20+ programming languages and IaC tools. Codety Scanner's source code is contributed and maintained by Codety Inc.([https://codety.io](https://codety.io/)).
+Codety Scanner detects your code issues and report results to:
+* GitHub pull request comments ([check demo](https://github.com/codetyio/codety-scanner/pull/15#issuecomment-2320351633))
+* GitHub pull request review comments ([check demo](https://github.com/codetyio/codety-scanner/pull/15/files#r1738123885))
+* GitHub check runs ([check demo](https://github.com/codetyio/codety-scanner/runs/29462342113))
+* Slack
+* GitLab merge request review comments(coming...)
+
+
 ![image](https://www.codety.io/assets/img/hero-3.png)
 
-### Codety Scanner can: 
-#### 1. Scan code
-Codety Scanner runs in your CI pipeline and detects code issues using 5000+ rules(both Codety built and community built rules), be able to detect issues like:  
+### Codety Scanner can:
+* Detect code issues using 5000+ rules(both Codety built and community built rules), be able to detect issues like:  
   * Insecure and vulnerable code
   * Unexpected secrets/tokens/API-keys in the code
   * Code smells and technical debt accumulation
@@ -40,14 +46,6 @@ Codety Scanner runs in your CI pipeline and detects code issues using 5000+ rule
   * Docker
   * (and keep adding more)
 
-#### 2. Report scanning result
-Codety Scanner compile code scanning results to:
-  * GitHub pull request comments ([check demo](https://github.com/codetyio/codety-scanner/pull/15#issuecomment-2320351633))
-  * GitHub pull request review comments ([check demo](https://github.com/codetyio/codety-scanner/pull/15/files#r1738123885))
-  * GitHub check runs ([check demo](https://github.com/codetyio/codety-scanner/runs/29462342113))
-  * Slack
-  * GitLab merge request review comments(coming...)
-  * Email (coming...)
 
 ### How to use:
 Check document [Codety Scanner Quickstart](https://docs.codety.io/docs/quickstart/index)
