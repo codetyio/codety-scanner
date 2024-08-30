@@ -25,7 +25,6 @@
   * C++
   * Go
   * Scala
-  * Ruby
   * html 
   * Kotlin
   * Swift
