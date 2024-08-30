@@ -321,7 +321,7 @@ public class GithubCommentService {
 
             GHRepository repository = githubClient.getRepositoryById(analyzerRequest.getExternalGitRepoId());
 
-            GHPullRequest pullRequest = repository.getPullRequest(Integer.valueOf(analyzerRequest.getExternalPullRequestId()));
+
 //            String mergeCommitSha = pullRequest.getMergeCommitSha();
 
             for(CodeAnalysisResultDto resultDto : codeAnalysisResultDtoList) {
