@@ -2,6 +2,7 @@ package io.codety.scanner.service;
 
 import io.codety.scanner.analyzer.checkov.CheckovCodeAnalyzer;
 import io.codety.scanner.analyzer.golangcilint.GolangcilintCodeAnalyzer;
+import io.codety.scanner.analyzer.scalastyle.ScalastyleCodeAnalyzer;
 import io.codety.scanner.connectivity.CodetyConfigService;
 import io.codety.scanner.analyzer.dto.AnalyzerConfigurationDetailDto;
 import io.codety.scanner.analyzer.dto.AnalyzerConfigurationDto;
@@ -48,6 +49,9 @@ public class ScannerService {
 
     @Autowired
     CppcheckCodeAnalyzer cppcheckCodeAnalyzer;
+
+    @Autowired
+    ScalastyleCodeAnalyzer scalastyleCodeAnalyzer;
 
     @Autowired
     CodetyRegexCodeAnalyzer codetyRegexCodeAnalyzer;
@@ -114,6 +118,7 @@ public class ScannerService {
         codeAnalysisResultSetDto.getCodeAnalysisResultDtoList().addAll(pylintCodeAnalyzer.analyzeCode(request));
         codeAnalysisResultSetDto.getCodeAnalysisResultDtoList().addAll(checkovCodeAnalyzer.analyzeCode(request));
         codeAnalysisResultSetDto.getCodeAnalysisResultDtoList().addAll(golangcilintCodeAnalyzer.analyzeCode(request));
+        codeAnalysisResultSetDto.getCodeAnalysisResultDtoList().addAll(scalastyleCodeAnalyzer.analyzeCode(request));
 
         return codeAnalysisResultSetDto;
     }

@@ -12,6 +12,7 @@ public enum CodeAnalyzerType {
     , trivy(6)
     , checkov(10)
     , golangcilint(20)
+    , scalastyle(30)
     ;
     public final int codeAnalyzerType;
 
