@@ -7,9 +7,9 @@
 **Codety Scanner** is a free and comprehensive source code scanner that detects code issues for 20+ programming languages and IaC tools. Codety Scanner's source code is contributed and maintained by [Codety Inc.]([https://codety.io](https://codety.io/))
 
 Codety Scanner detects your code issues and report results to:
-* GitHub pull request comments ([check demo](https://github.com/codetyio/codety-scanner/pull/15#issuecomment-2320351633))
-* GitHub pull request review comments ([check demo](https://github.com/codetyio/codety-scanner/pull/15/files#r1738123885))
-* GitHub check runs ([check demo](https://github.com/codetyio/codety-scanner/runs/29462342113))
+* GitHub pull request comments ([check example here](https://github.com/codetyio/codety-scanner/pull/15#issuecomment-2320351633))
+* GitHub pull request review comments ([check example here](https://github.com/codetyio/codety-scanner/pull/15/files#r1738123885))
+* GitHub check runs ([check example here](https://github.com/codetyio/codety-scanner/runs/29462342113))
 * Slack
 * GitLab merge request review comments(coming...)
 
