@@ -58,5 +58,5 @@ https://github.com/codetyio/codety-scanner/blob/main/LICENSE.txt
 <br/>
 
 > [!TIP]
-> [Codety Console](http://www.codety.io) is a subscription-based product which can help you to manage Codety Scanner's configurations and set up custom code standards according to your organization's needs.
+> [Codety Console](http://www.codety.io) is a subscription-based product that helps you manage Codety Scanner's configurations and set up custom code standards according to your organization's needs.
  
