@@ -29,7 +29,7 @@ resource "aws_security_group" "alb-security-group" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  tags = {
-    Name = "ALB Security group"
-  }
-}
+   tags = {
+     Name = "ALB Security group"
+   }
+ }
