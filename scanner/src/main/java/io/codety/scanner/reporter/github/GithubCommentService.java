@@ -49,7 +49,7 @@ public class GithubCommentService {
 
             CodetyConsoleLogger.info(CodetyConstant.INFO_PR_COMMENT_POSTED + commentUrl);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            CodetyConsoleLogger.debug("Failed to post comment to GitHub", e);
         }
 
         return true;
