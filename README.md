@@ -8,7 +8,8 @@
   
 ![image](https://www.codety.io/assets/img/hero-3.png)
 
-#### Codety Scanner can: 
+### Codety Scanner can: 
+#### 1. Scan code
 * Scan and detect code issues using 5000+ rules(both Codety built and community built rules), be able to detect issues like:  
   * Insecure and vulnerable code
   * Unexpected secrets/tokens/API-keys in the code
@@ -38,6 +39,8 @@
   * Kubernetes
   * Docker
   * (and keep adding more)
+
+#### 2. Report scanning result
 * Compile scanning result and send notifications via different channels like:
   * GitHub pull request comments ([check demo](https://github.com/codetyio/codety-scanner/pull/10#issuecomment-2319379042))
   * GitHub pull request review comments ([check demo](https://github.com/codetyio/codety-scanner/pull/11/files#r1738038578))
@@ -46,10 +49,10 @@
   * GitLab merge request review comments(coming...)
   * Email (coming...)
 
-#### How to use:
+### How to use:
 Check document [Codety Scanner Quickstart](https://docs.codety.io/docs/quickstart/index)
 
-#### License:
+### License:
 https://github.com/codetyio/codety-scanner/blob/main/LICENSE.txt
 
  
