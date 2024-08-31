@@ -65,7 +65,8 @@ public class CodeAnalysisResultDistributionService {
 
         List<CodeAnalysisResultDto> codeAnalysisResultDtoList = codeAnalysisResultSetDto.getCodeAnalysisResultDtoList();
         if(codeAnalysisResultDtoList!=null && codeAnalysisResultDtoList.size() > 0 && analyzerRequest.isFailJobWhenCodeIssueWasFound()){
-            CodetyConsoleLogger.info("Fail the job due to code issues were found and " + ENV_CODETY_FAIL_JOB_WHEN_CODE_ISSUE_WAS_FOUND + " is true");
+            int count = codeAnalysisResultDtoList == null ? 0 : codeAnalysisResultDtoList.size();
+            CodetyConsoleLogger.info("Fail the job due to "+count+" code issue(s) were found and " + ENV_CODETY_FAIL_JOB_WHEN_CODE_ISSUE_WAS_FOUND + " is true");
             System.exit(-1);
         }
 
