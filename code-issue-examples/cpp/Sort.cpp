@@ -7,7 +7,7 @@ void merging(int arr1[], int arr2[], int arr3[])
 	int i = 0, j = 0, k = 0;
 	for (i = 0; i < 5 && j < 5;)
 	{ // comparing first array elements with second
-		if (arr1[i] < arr2[j])
+		if  (arr1[i] < arr2[j])
 		{
 			arr3[k] = arr1[i];
 			k++;
