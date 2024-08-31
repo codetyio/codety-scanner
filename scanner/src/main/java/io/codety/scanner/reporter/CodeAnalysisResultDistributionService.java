@@ -72,7 +72,7 @@ public class CodeAnalysisResultDistributionService {
                     break;
                 }
             }
-            if(containsCodeIssue && analyzerRequest.isFailJobWhenCodeIssueWasFound()) {
+            if(containsCodeIssue && analyzerRequest.isFailJobWhenCodeIssueWasFound() && analyzerRequest.getExternalPullRequestId()!=null) {
                 CodetyConsoleLogger.info("Fail the job due to code issue(s) were found and " + ENV_CODETY_FAIL_JOB_WHEN_CODE_ISSUE_WAS_FOUND + " is true");
                 System.exit(-1);
             }

@@ -34,7 +34,7 @@ public class GithubPullRequestResultReporter implements ResultReporter {
 
         if (analyzerRequest.getGithubAccessToken() != null) {
 
-            if(analyzerRequest.isEnablePostingGitHubPullRequestCheckRunAnnotations() && analyzerRequest.getExternalPullRequestId()!=null){
+            if(analyzerRequest.isEnablePostingGitHubPullRequestCheckRunAnnotations()){
                 githubCommentService.addCheckRunAnnotations(analyzerRequest, codeAnalysisResultDtoList);
             }
 
