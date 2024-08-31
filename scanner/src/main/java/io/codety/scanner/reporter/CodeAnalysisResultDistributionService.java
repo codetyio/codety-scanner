@@ -67,7 +67,7 @@ public class CodeAnalysisResultDistributionService {
         if(codeAnalysisResultDtoList!=null){
             boolean containsCodeIssue = false;
             for(CodeAnalysisResultDto resultDto : codeAnalysisResultDtoList){
-                if(resultDto.getIssueCount() > 0){
+                if(resultDto.getIssuesByFile().size() > 0){
                     containsCodeIssue = true;
                     break;
                 }
