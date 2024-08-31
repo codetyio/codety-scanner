@@ -77,7 +77,6 @@ public class CodeAnalysisResultDistributionService {
                 System.exit(-1);
             }
         }
-
         return true;
     }
 
