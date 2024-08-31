@@ -16,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Map;
 
 import static io.codety.scanner.util.CodetyConstant.ENV_CODETY_FAIL_JOB_WHEN_CODE_ISSUE_WAS_FOUND;
 
@@ -64,10 +65,18 @@ public class CodeAnalysisResultDistributionService {
         sarifResultReporter.deliverResult(analyzerRequest, codeAnalysisResultSetDto);
 
         List<CodeAnalysisResultDto> codeAnalysisResultDtoList = codeAnalysisResultSetDto.getCodeAnalysisResultDtoList();
-        if(codeAnalysisResultDtoList!=null && codeAnalysisResultDtoList.size() > 0 && analyzerRequest.isFailJobWhenCodeIssueWasFound()){
-            int count = codeAnalysisResultDtoList == null ? 0 : codeAnalysisResultDtoList.size();
-            CodetyConsoleLogger.info("Fail the job due to "+count+" code issue(s) were found and " + ENV_CODETY_FAIL_JOB_WHEN_CODE_ISSUE_WAS_FOUND + " is true");
-            System.exit(-1);
+        if(codeAnalysisResultDtoList!=null){
+            boolean containsCodeIssue = false;
+            for(CodeAnalysisResultDto resultDto : codeAnalysisResultDtoList){
+                if(resultDto.getIssueCount() > 0){
+                    containsCodeIssue = true;
+                    break;
+                }
+            }
+            if(containsCodeIssue && analyzerRequest.isFailJobWhenCodeIssueWasFound()) {
+                CodetyConsoleLogger.info("Fail the job due to code issue(s) were found and " + ENV_CODETY_FAIL_JOB_WHEN_CODE_ISSUE_WAS_FOUND + " is true");
+                System.exit(-1);
+            }
         }
 
         return true;
