@@ -16,7 +16,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-import java.util.Map;
 
 import static io.codety.scanner.util.CodetyConstant.ENV_CODETY_FAIL_JOB_WHEN_CODE_ISSUE_WAS_FOUND;
 
