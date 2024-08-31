@@ -20,6 +20,7 @@ public class AnalyzerRequest {
     private boolean enablePostingPullRequestReviews = true;
     private boolean enablePostingGitHubPullRequestCheckRunAnnotations = true;
     private boolean enableConsoleIssueReporter = true;
+    private boolean failJobWhenCodeIssueWasFound = false;
 
     private GitProviderType gitProviderType;
     private ComputeRunnerType computeRunnerType;
@@ -68,19 +69,6 @@ public class AnalyzerRequest {
             CodetyConsoleLogger.setPrintDebugInfo(true);
         }
 
-//        if(CodetyConsoleLogger.isDebugMode()) {
-//            CodetyConsoleLogger.debug("========ENV VARIABLES===========");
-//            envMap.forEach((k, v) -> {
-//                String value = v;
-//                String lowerCase = k.toLowerCase();
-//                if (lowerCase.contains("token") || lowerCase.contains("password")) {
-//                    value = "******MASKED******";
-//                }
-//                CodetyConsoleLogger.debug(k + "=" + value);
-//            });
-//            CodetyConsoleLogger.debug("====================");
-//        }
-
         AnalyzerRequest analyzerRequest = new AnalyzerRequest();
         analyzerRequest.setLocalGitRepoPath(args[0]);
         analyzerRequest.setCodetyToken(envMap.get(CodetyConstant.ENV_CODETY_TOKEN));
@@ -96,6 +84,7 @@ public class AnalyzerRequest {
         analyzerRequest.enablePostingPullRequestComment = !"false".equals(envMap.get(CodetyConstant.ENV_CODETY_ISSUE_REPORTER_GITHUB_PR_COMMENT));
         analyzerRequest.enablePostingPullRequestReviews = !"false".equals(envMap.get(CodetyConstant.ENV_CODETY_ISSUE_REPORTER_GITHUB_PR_REVIEW));
         analyzerRequest.enablePostingGitHubPullRequestCheckRunAnnotations = !"false".equals(envMap.get(CodetyConstant.ENV_CODETY_ISSUE_REPORTER_GITHUB_PR_CHECK_RUN_ANNOTATION));
+        analyzerRequest.failJobWhenCodeIssueWasFound = "true".equals(envMap.get(CodetyConstant.ENV_CODETY_FAIL_JOB_WHEN_CODE_ISSUE_WAS_FOUND));
 
 
 
@@ -439,5 +428,13 @@ public class AnalyzerRequest {
 
     public void setEnableConsoleIssueReporter(boolean enableConsoleIssueReporter) {
         this.enableConsoleIssueReporter = enableConsoleIssueReporter;
+    }
+
+    public boolean isFailJobWhenCodeIssueWasFound() {
+        return failJobWhenCodeIssueWasFound;
+    }
+
+    public void setFailJobWhenCodeIssueWasFound(boolean failJobWhenCodeIssueWasFound) {
+        this.failJobWhenCodeIssueWasFound = failJobWhenCodeIssueWasFound;
     }
 }

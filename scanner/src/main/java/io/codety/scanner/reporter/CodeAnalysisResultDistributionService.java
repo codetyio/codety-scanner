@@ -1,5 +1,6 @@
 package io.codety.scanner.reporter;
 
+import io.codety.scanner.reporter.dto.CodeAnalysisResultDto;
 import io.codety.scanner.reporter.dto.CodeAnalysisResultSetDto;
 import io.codety.scanner.reporter.sarif.SarifResultReporter;
 import io.codety.scanner.reporter.slack.SlackResultReporter;
@@ -13,6 +14,10 @@ import io.codety.scanner.util.CodetyConstant;
 import io.codety.scanner.prework.dto.GitFileChangeList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
+
+import static io.codety.scanner.util.CodetyConstant.ENV_CODETY_FAIL_JOB_WHEN_CODE_ISSUE_WAS_FOUND;
 
 @Component
 public class CodeAnalysisResultDistributionService {
@@ -57,6 +62,12 @@ public class CodeAnalysisResultDistributionService {
         slackResultReporter.deliverResult(analyzerRequest, codeAnalysisResultSetDto);
 
         sarifResultReporter.deliverResult(analyzerRequest, codeAnalysisResultSetDto);
+
+        List<CodeAnalysisResultDto> codeAnalysisResultDtoList = codeAnalysisResultSetDto.getCodeAnalysisResultDtoList();
+        if(codeAnalysisResultDtoList!=null && codeAnalysisResultDtoList.size() > 0 && analyzerRequest.isFailJobWhenCodeIssueWasFound()){
+            CodetyConsoleLogger.info("Fail the job due to " + ENV_CODETY_FAIL_JOB_WHEN_CODE_ISSUE_WAS_FOUND + " is true");
+            System.exit(-1);
+        }
 
         return true;
     }
