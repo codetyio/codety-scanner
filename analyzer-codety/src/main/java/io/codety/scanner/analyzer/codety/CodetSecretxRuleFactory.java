@@ -42,7 +42,7 @@ public class CodetSecretxRuleFactory {
                     "twitter-client-id\t\t(?i)twitter(.{0,20})?['\\\"][0-9a-z]{18,25}\n" +
                     "twitter-oauth\t\t[t|T][w|W][i|I][t|T][t|T][e|E][r|R].{0,30}['\\\"\\\\s][0-9a-zA-Z]{35,44}['\\\"\\\\s]\n" +
                     "twitter-secret-key\t\t(?i)twitter(.{0,20})?['\\\"][0-9a-z]{35,44}\n" +
-                    "vault-token\t\t[sb]\\.[a-zA-Z0-9]{24}\n" +
+//                    "vault-token\t\t[sb]\\.[a-zA-Z0-9]{24}\n" +
                     "adobe-token\t\t(adobe[a-z0-9_ .\\-,]{0,25})(=|>|:=|\\|\\|:|<=|=>|:).{0,5}['\\\"](\\s[a-f0-9]{32})['\\\"]\n" +
                     "adobe-secret\t\t(p8e-)(?i)[a-z0-9]{32}\n" +
                     "atlassian-token\t\t(atlassian[a-z0-9_ .\\-,]{0,25})(=|>|:=|\\|\\|:|<=|=>|:).{0,5}['\\\"](\\s[a-z0-9]{24})['\\\"]\n" +
