@@ -14,6 +14,11 @@ type: boolean
 
 value: false | true
 
+#### CODETY_FAIL_JOB_WHEN_CODE_ISSUE_WAS_FOUND
+type: boolean
+
+value: false | true, default: false
+
 #### CODETY_ISSUE_REPORTER_CONSOLE
 type: boolean
 
