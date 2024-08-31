@@ -10,20 +10,12 @@ public class CodeAnalysisResultDto {
     private CodeAnalyzerType codeAnalyzerType;
 
     private Map<String, List<CodeAnalysisIssueDto>> issuesByFile = new LinkedHashMap<>();
-    private int issueCount = 0;
 
 
     public CodeAnalysisResultDto(String language, CodeAnalyzerType codeAnalyzerType) {
         this.language = language;
         this.codeAnalyzerType = codeAnalyzerType;
         this.displayTitle = language;
-    }
-
-    public void setIssuesByFile(Map<String, List<CodeAnalysisIssueDto>> issuesByFile) {
-        this.issuesByFile = issuesByFile;
-        if(issuesByFile!=null){
-            issueCount += issuesByFile.size();
-        }
     }
 
     public void addIssue(CodeAnalysisIssueDto issueDto) {
@@ -34,7 +26,6 @@ public class CodeAnalysisResultDto {
         String filePath = issueDto.getFilePath();
         issuesByFile.putIfAbsent(filePath, new ArrayList<>());
         issuesByFile.get(filePath).add(issueDto);
-        issueCount++;
     }
 
     public void addIssues(List<CodeAnalysisIssueDto> codeAnalysisIssueDtoList) {
@@ -78,9 +69,8 @@ public class CodeAnalysisResultDto {
     public Map<String, List<CodeAnalysisIssueDto>> getIssuesByFile() {
         return issuesByFile;
     }
-
-
-    public int getIssueCount() {
-        return issueCount;
+    public void setIssuesByFile(Map<String, List<CodeAnalysisIssueDto>> issuesByFile) {
+        this.issuesByFile = issuesByFile;
     }
+
 }
