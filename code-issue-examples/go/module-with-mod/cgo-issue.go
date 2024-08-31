@@ -4,6 +4,7 @@ import "fmt"
 
 func MyModule() {
 
+    
     var u1 = "initial"
     var u2 = "initial"
 
