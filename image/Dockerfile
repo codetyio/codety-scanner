@@ -1,4 +1,4 @@
-FROM  amazoncorretto:17-alpine-jdk
+FROM  amazoncorretto:21-alpine-jdk
 
 RUN apk add --no-cache python3 py3-pip go
 RUN apk add --no-cache bash openssl ca-certificates git libc6-compat libstdc++ curl cppcheck nodejs npm py3-pylint
