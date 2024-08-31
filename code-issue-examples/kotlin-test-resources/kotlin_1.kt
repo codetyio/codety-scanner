@@ -1,18 +1,18 @@
-class Lamp {
+ class Lamp {
 
-    // property (data member)
-    private var isOn: Boolean = false
+     // property (data member)
+     private var isOn: Boolean = false
 
-    // member function
-    fun turnOn() {
-        isOn = true
-    }
+     // member function
+     fun turnOn() {
+         isOn = true
+     }
 
     // member function
     fun turnOff() {
         isOn = false
     }
-}
+ }
 
 fun main(args: Array<String>) {
 
