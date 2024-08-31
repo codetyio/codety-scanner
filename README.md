@@ -56,6 +56,6 @@ https://github.com/codetyio/codety-scanner/blob/main/LICENSE.txt
 
 <br/>
 
-> [!INF]
+> [!NOTE]
 > **Codety Scanner** detect code issues using default recommended code scanning rules for general use cases, [**Codety Console**](http://www.codety.io) is a subscription-based product that helps you manage and custom code standards according to your organization's needs.
  
