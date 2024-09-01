@@ -27,7 +27,7 @@ jobs:
           #        CODETY_TOKEN: ${{ secrets.CODETY_TOKEN_PROD }}
           #test:
           CODETY_TOKEN: ${{ secrets.CODETY_TOKEN_TEST }}
-#          CODETY_HOST: ${{ vars.CODETY_HOST_TEST }}
+          CODETY_HOST: ${{ vars.CODETY_HOST_TEST }}
 
           CODETY_ISSUE_REPORTER_SLACK: true
           CODETY_FAIL_JOB_WHEN_CODE_ISSUE_WAS_FOUND: true
