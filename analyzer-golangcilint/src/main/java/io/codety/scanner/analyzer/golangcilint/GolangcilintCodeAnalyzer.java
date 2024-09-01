@@ -27,15 +27,17 @@ public class GolangcilintCodeAnalyzer implements CodeAnalyzerInterface {
                 List<String> cmdList = new ArrayList<>();
                 cmdList.add("golangci-lint");
                 cmdList.add("run");
-                cmdList.add("--no-config");
                 cmdList.add("--out-format");
                 cmdList.add("json");
 
                 if (runnerConfiguration.getPayload() == null || runnerConfiguration.getPayload().isEmpty()) {
+                    cmdList.add("--no-config");
                     cmdList.add("--enable-all");
-
                 } else {
-                    cmdList.add("--enable-all");
+                    String absolutePath = runnerConfiguration.getFile().getAbsolutePath();
+                    cmdList.add("--disable-all");
+                    cmdList.add("--config");
+                    cmdList.add(absolutePath);
                 }
 
                 cmdList.add( "./...");
@@ -52,16 +54,12 @@ public class GolangcilintCodeAnalyzer implements CodeAnalyzerInterface {
                     CodetyConsoleLogger.debug("Error output from golangci-lint " + errorOutput);
                 }
                 if (successOutput == null || successOutput.isEmpty()) {
-
                     continue;
-
                 }
 
                 List<CodeAnalysisIssueDto> codeAnalysisIssueDtoList = GolangcilintResultConverter.convertResult(successOutput);
                 if (codeAnalysisIssueDtoList == null || codeAnalysisIssueDtoList.isEmpty()) {
-
                     continue;
-
                 }
 
                 CodeAnalysisResultDto resultDto = new CodeAnalysisResultDto(runnerConfiguration.getLanguage(), runnerConfiguration.getCodeAnalyzerType());
