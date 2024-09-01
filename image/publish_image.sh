@@ -8,7 +8,7 @@ if [ "$BUILD_JAR" != "0" ]; then
   echo " ========= Build application start  ========":
   java --version
   echo ""-- Build uses proguard, if the jar build failed, please check the proguard config in build.gradle ---""
-  ./gradlew :scanner:clean :scanner:build -x test -Dspring.profiles.active=prod -info
+  ./gradlew :scanner:clean :scanner:build -x test -Dspring.profiles.active=prod
   if [ $? -ne 0 ]; then
       echo "Failed to build Java project. "
       exit 1;
