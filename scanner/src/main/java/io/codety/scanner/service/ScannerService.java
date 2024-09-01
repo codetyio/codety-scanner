@@ -68,8 +68,6 @@ public class ScannerService {
     public void process(String[] args) {
 
         //Check whether there's no any argument feeding into the Java application,
-        //     Wrong: `java -jar app.jar`
-        //     Right: `java -jar app.jar ./`
         if (args == null || args.length == 0) {
             CodetyConsoleLogger.info(CodetyConstant.INFO_INVALID_MAIN_PROCESS_INPUT);
             return;
