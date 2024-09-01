@@ -1,4 +1,4 @@
-package mymodule
+ package mymodule
 
 import "fmt"
 
