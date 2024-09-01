@@ -12,8 +12,9 @@ import java.util.List;
 
 public class GolangcilintResultConverter {
 
-    public static List<CodeAnalysisIssueDto> convertResult(String errorOutput) {
+    public static List<CodeAnalysisIssueDto> convertResult(String errorOutput, String absolutePath) {
         ArrayList<CodeAnalysisIssueDto> codeAnalysisIssueDtos = new ArrayList<>();
+        String prefixPath = absolutePath.endsWith("/") ? absolutePath : absolutePath + "/";
 
         try {
             GolangcilintRoot golangcilintRoot = JsonFactoryUtil.objectMapper.readValue(errorOutput, GolangcilintRoot.class);
@@ -34,7 +35,7 @@ public class GolangcilintResultConverter {
                 issueDto.setDescription(description);
                 issueDto.setStartLineNumber(line);
                 issueDto.setPriority(3);//
-                issueDto.setFilePath(filename);
+                issueDto.setFilePath(prefixPath + filename);
 
                 codeAnalysisIssueDtos.add(issueDto);
             }
