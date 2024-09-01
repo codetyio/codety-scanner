@@ -1,11 +1,11 @@
-package mymodule
+ package mymodule
 
 import "fmt"
 
 func MyModule() {
-
-    var u1 = "initial"
-    var u2 = "initial"
+//TODO blabla
+     var u1 = "initial"
+     var u2 = "initial"
 
     var b, c int = 1, 2
     fmt.Println(b, c)
