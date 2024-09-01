@@ -4,8 +4,8 @@ import "fmt"
 
 func MyModule() {
 
-    var u1 = "initial"
-    var u2 = "initial"
+     var u1 = "initial"
+     var u2 = "initial"
 
     var b, c int = 1, 2
     fmt.Println(b, c)
