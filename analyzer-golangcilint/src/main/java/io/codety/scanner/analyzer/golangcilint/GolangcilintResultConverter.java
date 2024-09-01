@@ -5,6 +5,7 @@ import io.codety.scanner.analyzer.golangcilint.dto.GolangcilintIssue;
 import io.codety.scanner.analyzer.golangcilint.dto.GolangcilintPos;
 import io.codety.scanner.analyzer.golangcilint.dto.GolangcilintRoot;
 import io.codety.scanner.reporter.dto.CodeAnalysisIssueDto;
+import io.codety.scanner.util.CodetyConsoleLogger;
 import io.codety.scanner.util.JsonFactoryUtil;
 
 import java.util.ArrayList;
@@ -36,6 +37,7 @@ public class GolangcilintResultConverter {
                 issueDto.setStartLineNumber(line);
                 issueDto.setPriority(3);//
                 issueDto.setFilePath(prefixPath + filename);
+                CodetyConsoleLogger.debug("Golangcilint file path:" + issueDto.getFilePath());
 
                 codeAnalysisIssueDtos.add(issueDto);
             }

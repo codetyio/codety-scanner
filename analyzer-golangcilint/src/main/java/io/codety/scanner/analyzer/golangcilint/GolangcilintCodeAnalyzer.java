@@ -59,7 +59,13 @@ public class GolangcilintCodeAnalyzer implements CodeAnalyzerInterface {
                     CodetyConsoleLogger.debug("Success output from golangci-lint " + successOutput);
                 }
 
-                List<CodeAnalysisIssueDto> codeAnalysisIssueDtoList = GolangcilintResultConverter.convertResult(successOutput, file.getAbsolutePath());
+                String absolutePath = file.getAbsolutePath();
+                String localGitRepoPath = request.getLocalGitRepoPath();
+                absolutePath = absolutePath.substring(localGitRepoPath.length());
+                if(absolutePath.startsWith("/")){
+                    absolutePath = absolutePath.substring(1);
+                }
+                List<CodeAnalysisIssueDto> codeAnalysisIssueDtoList = GolangcilintResultConverter.convertResult(successOutput, absolutePath);
                 if (codeAnalysisIssueDtoList == null || codeAnalysisIssueDtoList.isEmpty()) {
                     continue;
                 }
