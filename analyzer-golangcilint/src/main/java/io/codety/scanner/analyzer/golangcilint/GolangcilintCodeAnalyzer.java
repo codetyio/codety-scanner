@@ -55,6 +55,8 @@ public class GolangcilintCodeAnalyzer implements CodeAnalyzerInterface {
                 }
                 if (successOutput == null || successOutput.isEmpty()) {
                     continue;
+                }else{
+                    CodetyConsoleLogger.debug("Success output from golangci-lint " + successOutput);
                 }
 
                 List<CodeAnalysisIssueDto> codeAnalysisIssueDtoList = GolangcilintResultConverter.convertResult(successOutput);
