@@ -37,7 +37,6 @@ public class GolangcilintResultConverter {
                 issueDto.setStartLineNumber(line);
                 issueDto.setPriority(3);//
                 issueDto.setFilePath(prefixPath + filename);
-                CodetyConsoleLogger.debug("Golangcilint file path:" + issueDto.getFilePath());
 
                 codeAnalysisIssueDtos.add(issueDto);
             }
