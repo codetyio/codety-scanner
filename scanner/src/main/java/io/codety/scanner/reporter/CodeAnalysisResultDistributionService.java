@@ -53,15 +53,13 @@ public class CodeAnalysisResultDistributionService {
             CodetyConsoleLogger.debug(CodetyConstant.INFO_SKIP_RESULT_FILTERING);
         }
 
-
-
-        consoleResultReporter.deliverResult(analyzerRequest, codeAnalysisResultSetDto);
-
         githubPullRequestResultReporter.deliverResult(analyzerRequest, codeAnalysisResultSetDto);
 
         slackResultReporter.deliverResult(analyzerRequest, codeAnalysisResultSetDto);
 
         sarifResultReporter.deliverResult(analyzerRequest, codeAnalysisResultSetDto);
+
+        consoleResultReporter.deliverResult(analyzerRequest, codeAnalysisResultSetDto);
 
         List<CodeAnalysisResultDto> codeAnalysisResultDtoList = codeAnalysisResultSetDto.getCodeAnalysisResultDtoList();
         if(codeAnalysisResultDtoList!=null){

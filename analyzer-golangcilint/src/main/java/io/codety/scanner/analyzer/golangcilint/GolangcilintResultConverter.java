@@ -29,7 +29,7 @@ public class GolangcilintResultConverter {
                 GolangcilintPos pos = golangIssue.getPos();
                 int line = pos.getLine();
                 String filename = pos.getFilename();
-                issueDto.setIssueCategory("general");
+                issueDto.setIssueCategory("generic");
                 issueDto.setIssueCode(ruleId);
                 issueDto.setDescription(description);
                 issueDto.setStartLineNumber(line);
