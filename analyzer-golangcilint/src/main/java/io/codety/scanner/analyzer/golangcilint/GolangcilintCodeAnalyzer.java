@@ -55,8 +55,6 @@ public class GolangcilintCodeAnalyzer implements CodeAnalyzerInterface {
                 }
                 if (successOutput == null || successOutput.isEmpty()) {
                     continue;
-                }else{
-                    CodetyConsoleLogger.debug("Success output from golangci-lint " + successOutput);
                 }
 
                 String absolutePath = file.getAbsolutePath();
