@@ -146,6 +146,8 @@ public class ScannerService {
 //            }
             else if(analyzerConfigurationDetailDto.getCodeAnalyzerType() == CodeAnalyzerType.codety){
                 codeAnalysisResultDtos = codetyRegexCodeAnalyzer.analyzeCode(analyzerConfigurationDetailDto, request);
+            }else if(analyzerConfigurationDetailDto.getCodeAnalyzerType() == CodeAnalyzerType.golangcilint){
+                codeAnalysisResultDtos = golangcilintCodeAnalyzer.analyzeCode(analyzerConfigurationDetailDto, request);
             }
             if(codeAnalysisResultDtos!=null) {
                 CodetyConsoleLogger.debug(codeAnalysisResultDtos.size() + INFO_ISSUE_VIA + analyzerConfigurationDetailDto.getPluginCode() + space + analyzerConfigurationDetailDto.getLanguage());
