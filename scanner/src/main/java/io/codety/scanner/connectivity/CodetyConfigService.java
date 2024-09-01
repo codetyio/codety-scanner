@@ -21,7 +21,7 @@ public class CodetyConfigService {
     private static File tmpConfigDownloadFolder = new File("/tmp/codety_tmp_files" + "/" + UUID.randomUUID());
     private static int defaultTimeout = 10;
     private static String invalidTimeoutSetting = "Invalid timeout setting.";
-    private static String apiEndpoint = "/api/ruleset/pull";
+    private static String apiEndpoint = "api/ruleset/pull";
 
     public AnalyzerConfigurationDto downloadRulesetConfig(AnalyzerRequest analyzerRequest) {
         AnalyzerConfigurationDto analyzerConfigurationDto = new AnalyzerConfigurationDto();
@@ -44,6 +44,7 @@ public class CodetyConfigService {
 
         String uri = apiEndpoint;
         String host = codetyHost != null ? codetyHost : defaultHost;
+        host = host.endsWith("/") ? host.substring(0, host.length()-1) : host;//remove ending '/' from host.
         String url = host + uri;
 
         String requestPayload = null;
