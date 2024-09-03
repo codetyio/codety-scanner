@@ -63,7 +63,7 @@ public class ScannerService {
     @Autowired
     CodeAnalysisResultDistributionService codeAnalysisResultDistributionService;
     private static final String INFO_failedToAnalysisResult = "Failed to process the analysis result due to errors. ";
-    private static final String INFO_ISSUE_VIA = " issues via ";
+    private static final String INFO_ISSUE_VIA = " issue(s) was found via ";
     private static final String space = " ";
     public void process(String[] args) {
 
@@ -153,7 +153,7 @@ public class ScannerService {
                 CodetyConsoleLogger.debug("Skip code analyzer " + currentAnalyzerAndPlugin);
             }
             if(codeAnalysisResultDtos!=null) {
-                CodetyConsoleLogger.debug(codeAnalysisResultDtos.size() + INFO_ISSUE_VIA + analyzerConfigurationDetailDto.getPluginCode() + space + analyzerConfigurationDetailDto.getLanguage());
+                CodetyConsoleLogger.debug(codeAnalysisResultDtos.size() + INFO_ISSUE_VIA + currentAnalyzerAndPlugin + " before filtering");
                 resultSetDto.getCodeAnalysisResultDtoList().addAll(codeAnalysisResultDtos);
             }
         }
