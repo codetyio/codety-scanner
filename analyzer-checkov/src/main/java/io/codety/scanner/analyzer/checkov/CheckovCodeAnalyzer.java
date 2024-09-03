@@ -10,7 +10,6 @@ import io.codety.scanner.service.dto.AnalyzerRequest;
 import io.codety.scanner.util.CodetyConsoleLogger;
 import io.codety.scanner.util.RuntimeExecUtil;
 import org.springframework.stereotype.Service;
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,10 +27,10 @@ public class CheckovCodeAnalyzer implements CodeAnalyzerInterface {
         if(runnerConfiguration.getPayload() == null || runnerConfiguration.getPayload().isEmpty()){
             command = new String[]{checkov, "--skip-resources-without-violations", "--skip-results-upload", "--quiet", "-o", "json", "-d",  request.getLocalGitRepoPath()};
         }else{
-            command = new String[]{checkov, "--skip-resources-without-violations", "--skip-results-upload", "--quiet", "-o", "json", "-d",  request.getLocalGitRepoPath()};
+            //--check CKV_GCP_33,CKV_GCP_34,CKV_GCP_35 ...
+            command = new String[]{checkov, "--check",  runnerConfiguration.getPayload(), "--skip-resources-without-violations", "--skip-results-upload", "--quiet", "-o", "json", "-d",  request.getLocalGitRepoPath()};
         }
         try {
-
             RuntimeExecUtil.RuntimeExecResult runtimeExecResult = RuntimeExecUtil.exec(command, null, 60, false, null);
 
             String errorOutput = runtimeExecResult.getErrorOutput();
