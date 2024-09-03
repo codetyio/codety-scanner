@@ -129,7 +129,7 @@ public class ScannerService {
         }
         for(AnalyzerConfigurationDetailDto analyzerConfigurationDetailDto : analyzerConfigurationDto.getConfigurationDetailDtoList()){
             List<CodeAnalysisResultDto> codeAnalysisResultDtos = null;
-            CodetyConsoleLogger.debug("Start scanning the code via analyzer " + analyzerConfigurationDetailDto.getCodeAnalyzerType().name());
+            CodetyConsoleLogger.debug("Start scanning the code via analyzer " + analyzerConfigurationDetailDto.getCodeAnalyzerType().name() + (analyzerConfigurationDetailDto.getPluginCode()!=null ? " " + analyzerConfigurationDetailDto.getPluginCode() : ""));
             if(analyzerConfigurationDetailDto.getCodeAnalyzerType() == CodeAnalyzerType.cppcheck){
                 codeAnalysisResultDtos = cppcheckCodeAnalyzer.analyzeCode(analyzerConfigurationDetailDto, request);
             }else if(analyzerConfigurationDetailDto.getCodeAnalyzerType() == CodeAnalyzerType.pmd){
@@ -146,6 +146,8 @@ public class ScannerService {
                 codeAnalysisResultDtos = codetyRegexCodeAnalyzer.analyzeCode(analyzerConfigurationDetailDto, request);
             }else if(analyzerConfigurationDetailDto.getCodeAnalyzerType() == CodeAnalyzerType.golangcilint){
                 codeAnalysisResultDtos = golangcilintCodeAnalyzer.analyzeCode(analyzerConfigurationDetailDto, request);
+            }else if(analyzerConfigurationDetailDto.getCodeAnalyzerType() == CodeAnalyzerType.checkov){
+                codeAnalysisResultDtos = checkovCodeAnalyzer.analyzeCode(analyzerConfigurationDetailDto, request);
             }
             if(codeAnalysisResultDtos!=null) {
                 CodetyConsoleLogger.debug(codeAnalysisResultDtos.size() + INFO_ISSUE_VIA + analyzerConfigurationDetailDto.getPluginCode() + space + analyzerConfigurationDetailDto.getLanguage());

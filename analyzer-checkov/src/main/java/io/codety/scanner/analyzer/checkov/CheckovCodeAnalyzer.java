@@ -10,7 +10,6 @@ import io.codety.scanner.service.dto.AnalyzerRequest;
 import io.codety.scanner.util.CodetyConsoleLogger;
 import io.codety.scanner.util.RuntimeExecUtil;
 import org.springframework.stereotype.Service;
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
