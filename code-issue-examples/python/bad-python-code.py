@@ -1,2 +1,2 @@
-b3 = 1
-print(a2)
+ b3 = 1
+ print(a2)
