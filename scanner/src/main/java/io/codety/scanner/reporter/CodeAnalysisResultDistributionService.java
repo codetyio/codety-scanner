@@ -53,6 +53,7 @@ public class CodeAnalysisResultDistributionService {
             CodetyConsoleLogger.debug(CodetyConstant.INFO_SKIP_RESULT_FILTERING);
         }
 
+        //don't change the method calling orders below
         githubPullRequestResultReporter.deliverResult(analyzerRequest, codeAnalysisResultSetDto);
 
         slackResultReporter.deliverResult(analyzerRequest, codeAnalysisResultSetDto);
