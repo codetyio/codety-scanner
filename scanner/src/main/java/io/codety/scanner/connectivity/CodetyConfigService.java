@@ -23,7 +23,6 @@ public class CodetyConfigService {
     private static String invalidTimeoutSetting = "Invalid timeout setting.";
     private static String apiEndpoint = "/api/ruleset/pull";
 
-
     public AnalyzerConfigurationDto downloadRulesetConfig(AnalyzerRequest analyzerRequest) {
         AnalyzerConfigurationDto analyzerConfigurationDto = new AnalyzerConfigurationDto();
         String codetyToken = analyzerRequest.getCodetyToken();
