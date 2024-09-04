@@ -325,7 +325,7 @@ public class GithubCommentService {
 
             for(CodeAnalysisResultDto resultDto : codeAnalysisResultDtoList) {
 
-                CodetyConsoleLogger.debug("Reporting check run annotations " + analyzerRequest.getGitCommitSha() );
+                CodetyConsoleLogger.debug("Reporting GitHub Check Run annotation " + analyzerRequest.getGitCommitSha() );
 
                 GHCheckRunBuilder codetyRun = repository.createCheckRun("Codety scanner - " + resultDto.getDisplayTitle(), analyzerRequest.getGitCommitSha());
 
