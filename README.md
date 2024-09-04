@@ -54,6 +54,9 @@ Check document [Codety Scanner Quickstart](https://docs.codety.io/docs/quickstar
 ### License:
 https://github.com/codetyio/codety-scanner/blob/main/LICENSE.txt
 
+### Welcome new contributors
+We greatly value contributions of any kind. Contributions could include, but are not limited to documentation improvements, bug reports, new or improved code! Check more at [CONTRIBUTING.md](https://github.com/codetyio/codety-scanner/blob/main/CONTRIBUTING.md)
+
 <br/>
 
 > [!NOTE]
