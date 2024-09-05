@@ -1,0 +1,3348 @@
+{
+  "metadata": {
+    "rubocop_version": "1.66.1",
+    "ruby_engine": "ruby",
+    "ruby_version": "3.3.5",
+    "ruby_patchlevel": "100",
+    "ruby_platform": "arm64-darwin23"
+  },
+  "files": [
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/arguments_env.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/arguments_file.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/ast_aliases.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cache_config.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cached_data.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cli.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cli/command.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cli/command/auto_generate_config.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cli/command/base.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cli/command/execute_runner.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cli/command/init_dotfile.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cli/command/lsp.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cli/command/show_cops.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cli/command/show_docs_url.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cli/command/suggest_extensions.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cli/command/version.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cli/environment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/comment_config.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/config.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/config_finder.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/config_loader.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/config_loader_resolver.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/config_obsoletion.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/config_obsoletion/changed_enforced_styles.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/config_obsoletion/changed_parameter.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/config_obsoletion/cop_rule.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/config_obsoletion/extracted_cop.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/config_obsoletion/parameter_rule.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/config_obsoletion/removed_cop.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/config_obsoletion/renamed_cop.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/config_obsoletion/rule.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/config_obsoletion/split_cop.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/config_regeneration.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/config_store.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/config_validator.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/autocorrect_logic.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/badge.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/base.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/bundler/duplicated_gem.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/bundler/duplicated_group.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/bundler/gem_comment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/bundler/gem_filename.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/bundler/gem_version.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/bundler/insecure_protocol_source.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/bundler/ordered_gems.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/commissioner.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/cop.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/corrector.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/correctors/alignment_corrector.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/correctors/condition_corrector.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/correctors/each_to_for_corrector.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/correctors/empty_line_corrector.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/correctors/for_to_each_corrector.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/correctors/if_then_corrector.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/correctors/lambda_literal_to_method_corrector.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/correctors/line_break_corrector.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/correctors/multiline_literal_brace_corrector.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/correctors/ordered_gem_corrector.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/correctors/parentheses_corrector.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/correctors/percent_literal_corrector.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/correctors/punctuation_corrector.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/correctors/require_library_corrector.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/correctors/space_corrector.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/correctors/string_literal_corrector.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/correctors/unused_arg_corrector.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/documentation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/exclude_limit.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/force.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/gemspec/add_runtime_dependency.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/gemspec/dependency_version.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/gemspec/deprecated_attribute_assignment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/gemspec/development_dependencies.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/gemspec/duplicated_assignment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/gemspec/ordered_dependencies.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/gemspec/require_mfa.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/gemspec/required_ruby_version.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/gemspec/ruby_version_globals_usage.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/generator.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/generator/configuration_injector.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/generator/require_file_injector.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/ignored_node.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/internal_affairs.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/internal_affairs/cop_description.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/internal_affairs/create_empty_file.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/internal_affairs/empty_line_between_expect_offense_and_correction.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/internal_affairs/example_description.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/internal_affairs/example_heredoc_delimiter.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/internal_affairs/inherit_deprecated_cop_class.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/internal_affairs/lambda_or_proc.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/internal_affairs/location_expression.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/internal_affairs/location_line_equality_comparison.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/internal_affairs/method_name_end_with.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/internal_affairs/method_name_equal.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/internal_affairs/node_destructuring.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/internal_affairs/node_first_or_last_argument.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/internal_affairs/node_matcher_directive.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/internal_affairs/node_type_predicate.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/internal_affairs/numblock_handler.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/internal_affairs/offense_location_keyword.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/internal_affairs/processed_source_buffer_name.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/internal_affairs/redundant_context_config_parameter.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/internal_affairs/redundant_described_class_as_subject.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/internal_affairs/redundant_expect_offense_arguments.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/internal_affairs/redundant_let_rubocop_config_new.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/internal_affairs/redundant_location_argument.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/internal_affairs/redundant_message_argument.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/internal_affairs/redundant_method_dispatch_node.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/internal_affairs/redundant_source_range.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/internal_affairs/single_line_comparison.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/internal_affairs/style_detected_api_use.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/internal_affairs/undefined_config.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/internal_affairs/useless_message_assertion.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/internal_affairs/useless_restrict_on_send.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/access_modifier_indentation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/argument_alignment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/array_alignment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/assignment_indentation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/begin_end_alignment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/block_alignment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/block_end_newline.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/case_indentation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/class_structure.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/closing_heredoc_indentation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/closing_parenthesis_indentation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/comment_indentation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/condition_position.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/def_end_alignment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/dot_position.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/else_alignment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/empty_comment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/empty_line_after_guard_clause.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/empty_line_after_magic_comment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/empty_line_after_multiline_condition.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/empty_line_between_defs.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/empty_lines.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/empty_lines_around_access_modifier.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/empty_lines_around_arguments.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/empty_lines_around_attribute_accessor.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/empty_lines_around_begin_body.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/empty_lines_around_block_body.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/empty_lines_around_class_body.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/empty_lines_around_exception_handling_keywords.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/empty_lines_around_method_body.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/empty_lines_around_module_body.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/end_alignment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/end_of_line.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/extra_spacing.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/first_argument_indentation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/first_array_element_indentation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/first_array_element_line_break.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/first_hash_element_indentation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/first_hash_element_line_break.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/first_method_argument_line_break.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/first_method_parameter_line_break.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/first_parameter_indentation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/hash_alignment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/heredoc_argument_closing_parenthesis.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/heredoc_indentation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/indentation_consistency.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/indentation_style.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/indentation_width.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/initial_indentation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/leading_comment_space.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/leading_empty_lines.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/line_continuation_leading_space.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/line_continuation_spacing.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/line_end_string_concatenation_indentation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/line_length.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/multiline_array_brace_layout.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/multiline_array_line_breaks.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/multiline_assignment_layout.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/multiline_block_layout.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/multiline_hash_brace_layout.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/multiline_hash_key_line_breaks.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/multiline_method_argument_line_breaks.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/multiline_method_call_brace_layout.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/multiline_method_call_indentation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/multiline_method_definition_brace_layout.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/multiline_method_parameter_line_breaks.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/multiline_operation_indentation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/parameter_alignment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/redundant_line_break.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/rescue_ensure_alignment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/single_line_block_chain.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/space_after_colon.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/space_after_comma.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/space_after_method_name.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/space_after_not.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/space_after_semicolon.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/space_around_block_parameters.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/space_around_equals_in_parameter_default.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/space_around_keyword.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/space_around_method_call_operator.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/space_around_operators.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/space_before_block_braces.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/space_before_brackets.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/space_before_comma.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/space_before_comment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/space_before_first_arg.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/space_before_semicolon.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/space_in_lambda_literal.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/space_inside_array_literal_brackets.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/space_inside_array_percent_literal.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/space_inside_block_braces.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/space_inside_hash_literal_braces.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/space_inside_parens.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/space_inside_percent_literal_delimiters.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/space_inside_range_literal.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/space_inside_reference_brackets.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/space_inside_string_interpolation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/trailing_empty_lines.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/layout/trailing_whitespace.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/legacy/corrections_proxy.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/legacy/corrector.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/ambiguous_assignment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/ambiguous_block_association.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/ambiguous_operator.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/ambiguous_operator_precedence.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/ambiguous_range.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/ambiguous_regexp_literal.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/assignment_in_condition.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/big_decimal_new.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/binary_operator_with_identical_operands.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/boolean_symbol.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/circular_argument_reference.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/constant_definition_in_block.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/constant_overwritten_in_rescue.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/constant_resolution.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/debugger.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/deprecated_class_methods.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/deprecated_constants.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/deprecated_open_ssl_constant.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/disjunctive_assignment_in_constructor.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/duplicate_branch.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/duplicate_case_condition.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/duplicate_elsif_condition.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/duplicate_hash_key.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/duplicate_magic_comment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/duplicate_match_pattern.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/duplicate_methods.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/duplicate_regexp_character_class_element.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/duplicate_require.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/duplicate_rescue_exception.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/each_with_object_argument.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/else_layout.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/empty_block.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/empty_class.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/empty_conditional_body.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/empty_ensure.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/empty_expression.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/empty_file.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/empty_in_pattern.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/empty_interpolation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/empty_when.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/ensure_return.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/erb_new_arguments.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/flip_flop.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/float_comparison.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/float_out_of_range.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/format_parameter_mismatch.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/hash_compare_by_identity.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/heredoc_method_call_position.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/identity_comparison.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/implicit_string_concatenation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/incompatible_io_select_with_fiber_scheduler.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/ineffective_access_modifier.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/inherit_exception.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/interpolation_check.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/it_without_arguments_in_block.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/lambda_without_literal_block.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/literal_as_condition.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/literal_assignment_in_condition.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/literal_in_interpolation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/loop.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/missing_cop_enable_directive.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/missing_super.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/mixed_case_range.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/mixed_regexp_capture_types.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/multiple_comparison.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/nested_method_definition.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/nested_percent_literal.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/next_without_accumulator.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/no_return_in_begin_end_blocks.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/non_atomic_file_operation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/non_deterministic_require_order.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/non_local_exit_from_iterator.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/number_conversion.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/numbered_parameter_assignment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/or_assignment_to_constant.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/ordered_magic_comments.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/out_of_range_regexp_ref.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/parentheses_as_grouped_expression.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/percent_string_array.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/percent_symbol_array.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/raise_exception.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/rand_one.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/redundant_cop_disable_directive.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/redundant_cop_enable_directive.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/redundant_dir_glob_sort.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/redundant_regexp_quantifiers.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/redundant_require_statement.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/redundant_safe_navigation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/redundant_splat_expansion.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/redundant_string_coercion.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/redundant_with_index.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/redundant_with_object.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/refinement_import_methods.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/regexp_as_condition.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/require_parentheses.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/require_range_parentheses.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/require_relative_self_path.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/rescue_exception.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/rescue_type.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/return_in_void_context.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/safe_navigation_chain.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/safe_navigation_consistency.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/safe_navigation_with_empty.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/script_permission.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/self_assignment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/send_with_mixin_argument.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/shadowed_argument.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/shadowed_exception.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/shadowing_outer_local_variable.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/struct_new_override.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/suppressed_exception.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/symbol_conversion.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/syntax.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/to_enum_arguments.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/to_json.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/top_level_return_with_argument.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/trailing_comma_in_attribute_declaration.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/triple_quotes.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/underscore_prefixed_variable_name.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/unexpected_block_arity.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/unified_integer.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/unmodified_reduce_accumulator.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/unreachable_code.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/unreachable_loop.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/unused_block_argument.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/unused_method_argument.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/uri_escape_unescape.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/uri_regexp.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/useless_access_modifier.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/useless_assignment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/useless_else_without_rescue.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/useless_method_definition.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/useless_numeric_operation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/useless_rescue.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/useless_ruby2_keywords.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/useless_setter_call.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/useless_times.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/lint/void.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/message_annotator.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/metrics/abc_size.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/metrics/block_length.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/metrics/block_nesting.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/metrics/class_length.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/metrics/collection_literal_length.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/metrics/cyclomatic_complexity.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/metrics/method_length.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/metrics/module_length.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/metrics/parameter_lists.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/metrics/perceived_complexity.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/metrics/utils/abc_size_calculator.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/metrics/utils/code_length_calculator.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/metrics/utils/iterating_block.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/metrics/utils/repeated_attribute_discount.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/metrics/utils/repeated_csend_discount.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/migration/department_name.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/alignment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/allowed_identifiers.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/allowed_methods.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/allowed_pattern.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/allowed_receivers.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/annotation_comment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/array_min_size.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/array_syntax.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/auto_corrector.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/check_assignment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/check_line_breakable.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/code_length.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/comments_help.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/configurable_enforced_style.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/configurable_formatting.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/configurable_max.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/configurable_naming.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/configurable_numbering.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/def_node.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/documentation_comment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/duplication.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/empty_lines_around_body.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/empty_parameter.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/end_keyword_alignment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/enforce_superclass.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/first_element_line_break.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/frozen_string_literal.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/gem_declaration.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/gemspec_help.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/hash_alignment_styles.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/hash_shorthand_syntax.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/hash_transform_method.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/heredoc.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/integer_node.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/interpolation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/line_length_help.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/match_range.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/method_complexity.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/method_preference.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/min_body_length.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/min_branches_count.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/multiline_element_indentation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/multiline_element_line_breaks.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/multiline_expression_indentation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/multiline_literal_brace_layout.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/negative_conditional.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/nil_methods.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/on_normal_if_unless.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/ordered_gem_node.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/parentheses.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/percent_array.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/percent_literal.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/preceding_following_alignment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/preferred_delimiters.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/range_help.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/rational_literal.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/require_library.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/rescue_node.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/safe_assignment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/space_after_punctuation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/space_before_punctuation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/statement_modifier.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/string_help.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/string_literals_help.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/surrounding_space.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/symbol_help.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/target_ruby_version.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/trailing_body.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/trailing_comma.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/uncommunicative_name.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/unused_argument.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/mixin/visibility_help.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/naming/accessor_method_name.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/naming/ascii_identifiers.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/naming/binary_operator_parameter_name.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/naming/block_forwarding.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/naming/block_parameter_name.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/naming/class_and_module_camel_case.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/naming/constant_name.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/naming/file_name.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/naming/heredoc_delimiter_case.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/naming/heredoc_delimiter_naming.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/naming/inclusive_language.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/naming/memoized_instance_variable_name.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/naming/method_name.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/naming/method_parameter_name.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/naming/predicate_name.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/naming/rescued_exceptions_variable_name.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/naming/variable_name.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/naming/variable_number.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/offense.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/registry.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/security/compound_hash.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/security/eval.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/security/io_methods.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/security/json_load.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/security/marshal_load.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/security/open.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/security/yaml_load.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/severity.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/access_modifier_declarations.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/accessor_grouping.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/alias.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/and_or.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/arguments_forwarding.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/array_coercion.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/array_first_last.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/array_intersect.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/array_join.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/ascii_comments.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/attr.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/auto_resource_cleanup.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/bare_percent_literals.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/begin_block.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/bisected_attr_accessor.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/bisected_attr_accessor/macro.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/block_comments.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/block_delimiters.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/case_equality.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/case_like_if.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/character_literal.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/class_and_module_children.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/class_check.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/class_equality_comparison.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/class_methods.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/class_methods_definitions.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/class_vars.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/collection_compact.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/collection_methods.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/colon_method_call.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/colon_method_definition.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/combinable_loops.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/command_literal.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/comment_annotation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/commented_keyword.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/comparable_clamp.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/concat_array_literals.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/conditional_assignment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/constant_visibility.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/copyright.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/data_inheritance.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/date_time.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/def_with_parentheses.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/dir.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/dir_empty.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/disable_cops_within_source_code_directive.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/document_dynamic_eval_definition.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/documentation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/documentation_method.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/double_cop_disable_directive.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/double_negation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/each_for_simple_loop.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/each_with_object.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/empty_block_parameter.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/empty_case_condition.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/empty_else.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/empty_heredoc.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/empty_lambda_parameter.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/empty_literal.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/empty_method.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/encoding.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/end_block.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/endless_method.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/env_home.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/eval_with_location.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/even_odd.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/exact_regexp_match.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/expand_path_arguments.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/explicit_block_argument.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/exponential_notation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/fetch_env_var.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/file_empty.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/file_read.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/file_write.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/float_division.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/for.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/format_string.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/format_string_token.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/frozen_string_literal_comment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/global_std_stream.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/global_vars.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/guard_clause.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/hash_as_last_array_item.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/hash_conversion.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/hash_each_methods.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/hash_except.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/hash_like_case.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/hash_syntax.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/hash_transform_keys.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/hash_transform_values.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/identical_conditional_branches.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/if_inside_else.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/if_unless_modifier.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/if_unless_modifier_of_if_unless.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/if_with_boolean_literal_branches.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/if_with_semicolon.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/implicit_runtime_error.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/in_pattern_then.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/infinite_loop.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/inline_comment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/inverse_methods.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/invertible_unless_condition.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/ip_addresses.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/keyword_parameters_order.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/lambda.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/lambda_call.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/line_end_concatenation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/magic_comment_format.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/map_compact_with_conditional_block.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/map_into_array.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/map_to_hash.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/map_to_set.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/method_call_with_args_parentheses.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/method_call_with_args_parentheses/omit_parentheses.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/method_call_with_args_parentheses/require_parentheses.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/method_call_without_args_parentheses.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/method_called_on_do_end_block.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/method_def_parentheses.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/min_max.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/min_max_comparison.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/missing_else.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/missing_respond_to_missing.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/mixin_grouping.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/mixin_usage.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/module_function.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/multiline_block_chain.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/multiline_if_modifier.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/multiline_if_then.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/multiline_in_pattern_then.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/multiline_memoization.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/multiline_method_signature.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/multiline_ternary_operator.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/multiline_when_then.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/multiple_comparison.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/mutable_constant.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/negated_if.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/negated_if_else_condition.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/negated_unless.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/negated_while.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/nested_file_dirname.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/nested_modifier.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/nested_parenthesized_calls.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/nested_ternary_operator.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/next.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/nil_comparison.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/nil_lambda.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/non_nil_check.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/not.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/numbered_parameters.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/numbered_parameters_limit.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/numeric_literal_prefix.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/numeric_literals.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/numeric_predicate.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/object_then.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/one_line_conditional.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/open_struct_use.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/operator_method_call.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/option_hash.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/optional_arguments.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/optional_boolean_parameter.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/or_assignment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/parallel_assignment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/parentheses_around_condition.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/percent_literal_delimiters.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/percent_q_literals.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/perl_backrefs.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/preferred_hash_methods.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/proc.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/quoted_symbols.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/raise_args.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/random_with_offset.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/redundant_argument.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/redundant_array_constructor.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/redundant_assignment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/redundant_begin.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/redundant_capital_w.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/redundant_condition.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/redundant_conditional.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/redundant_constant_base.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/redundant_current_directory_in_path.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/redundant_double_splat_hash_braces.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/redundant_each.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/redundant_exception.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/redundant_fetch_block.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/redundant_file_extension_in_require.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/redundant_filter_chain.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/redundant_freeze.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/redundant_heredoc_delimiter_quotes.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/redundant_initialize.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/redundant_interpolation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/redundant_interpolation_unfreeze.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/redundant_line_continuation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/redundant_parentheses.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/redundant_percent_q.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/redundant_regexp_argument.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/redundant_regexp_character_class.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/redundant_regexp_constructor.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/redundant_regexp_escape.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/redundant_return.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/redundant_self.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/redundant_self_assignment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/redundant_self_assignment_branch.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/redundant_sort.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/redundant_sort_by.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/redundant_string_escape.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/regexp_literal.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/require_order.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/rescue_modifier.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/rescue_standard_error.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/return_nil.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/return_nil_in_predicate_method_definition.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/safe_navigation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/sample.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/select_by_regexp.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/self_assignment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/semicolon.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/send.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/send_with_literal_method_name.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/signal_exception.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/single_argument_dig.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/single_line_block_params.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/single_line_do_end_block.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/single_line_methods.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/slicing_with_range.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/sole_nested_conditional.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/special_global_vars.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/stabby_lambda_parentheses.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/static_class.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/stderr_puts.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/string_chars.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/string_concatenation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/string_hash_keys.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/string_literals.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/string_literals_in_interpolation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/string_methods.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/strip.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/struct_inheritance.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/super_arguments.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/super_with_args_parentheses.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/swap_values.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/symbol_array.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/symbol_literal.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/symbol_proc.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/ternary_parentheses.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/top_level_method_definition.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/trailing_body_on_class.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/trailing_body_on_method_definition.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/trailing_body_on_module.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/trailing_comma_in_arguments.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/trailing_comma_in_array_literal.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/trailing_comma_in_block_args.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/trailing_comma_in_hash_literal.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/trailing_method_end_statement.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/trailing_underscore_variable.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/trivial_accessors.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/unless_else.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/unless_logical_operators.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/unpack_first.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/variable_interpolation.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/when_then.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/while_until_do.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/while_until_modifier.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/word_array.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/yaml_file_read.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/yoda_condition.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/yoda_expression.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/style/zero_length_predicate.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/team.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/util.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/utils/format_string.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/utils/regexp_ranges.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/variable_force.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/variable_force/assignment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/variable_force/branch.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/variable_force/branchable.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/variable_force/reference.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/variable_force/scope.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/variable_force/variable.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cop/variable_force/variable_table.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/cops_documentation_generator.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/core_ext/string.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/directive_comment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/error.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/ext/comment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/ext/processed_source.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/ext/range.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/ext/regexp_node.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/ext/regexp_parser.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/feature_loader.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/file_finder.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/file_patterns.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/formatter.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/formatter/auto_gen_config_formatter.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/formatter/base_formatter.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/formatter/clang_style_formatter.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/formatter/colorizable.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/formatter/disabled_config_formatter.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/formatter/emacs_style_formatter.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/formatter/file_list_formatter.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/formatter/formatter_set.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/formatter/fuubar_style_formatter.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/formatter/github_actions_formatter.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/formatter/html_formatter.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/formatter/json_formatter.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/formatter/junit_formatter.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/formatter/markdown_formatter.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/formatter/offense_count_formatter.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/formatter/pacman_formatter.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/formatter/progress_formatter.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/formatter/quiet_formatter.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/formatter/simple_text_formatter.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/formatter/tap_formatter.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/formatter/text_util.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/formatter/worst_offenders_formatter.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/lockfile.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/lsp.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/lsp/logger.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/lsp/routes.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/lsp/runtime.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/lsp/server.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/lsp/severity.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/magic_comment.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/name_similarity.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/options.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/path_util.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/platform.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/rake_task.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/remote_config.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/result_cache.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/rspec/cop_helper.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/rspec/expect_offense.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/rspec/host_environment_simulation_helper.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/rspec/parallel_formatter.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/rspec/shared_contexts.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/rspec/support.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/runner.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/server.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/server/cache.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/server/cli.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/server/client_command.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/server/client_command/base.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/server/client_command/exec.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/server/client_command/restart.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/server/client_command/start.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/server/client_command/status.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/server/client_command/stop.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/server/core.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/server/errors.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/server/helper.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/server/server_command.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/server/server_command/base.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/server/server_command/exec.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/server/server_command/stop.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/server/socket_reader.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/string_interpreter.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/target_finder.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/target_ruby.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/util.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/version.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/warning.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/gems/rubocop-1.66.1/lib/rubocop/yaml_duplication_checker.rb",
+      "offenses": []
+    },
+    {
+      "path": "ruby/3.3.0/specifications/rubocop-1.66.1.gemspec",
+      "offenses": []
+    },
+    {
+      "path": "specs/index.rubygems.org%443/quick/Marshal.4.8/ast-2.4.2.gemspec",
+      "offenses": []
+    }
+  ],
+  "summary": {
+    "offense_count": 0,
+    "target_file_count": 1269,
+    "inspected_file_count": 832
+  }
+}
