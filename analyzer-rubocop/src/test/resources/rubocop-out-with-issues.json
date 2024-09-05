@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "rubocop_version": "1.66.1",
+    "ruby_engine": "ruby",
+    "ruby_version": "3.3.5",
+    "ruby_patchlevel": "100",
+    "ruby_platform": "arm64-darwin23"
+  },
+  "files": [
+    {
+      "path": "/Users/user/git/codety-scanner/code-issue-examples/ruby/bad-ruby-code-examples.rb",
+      "offenses": [
+        {
+          "severity": "warning",
+          "message": "Unused block argument - `k`. If it's necessary, use `_` or `_k` as an argument name to indicate that it won't be used.",
+          "cop_name": "Lint/UnusedBlockArgument",
+          "corrected": false,
+          "correctable": true,
+          "location": {
+            "start_line": 2,
+            "start_column": 22,
+            "last_line": 2,
+            "last_column": 22,
+            "length": 1,
+            "line": 2,
+            "column": 22
+          }
+        },
+        {
+          "severity": "convention",
+          "message": "Do not use parallel assignment.",
+          "cop_name": "Style/ParallelAssignment",
+          "corrected": false,
+          "correctable": true,
+          "location": {
+            "start_line": 10,
+            "start_column": 1,
+            "last_line": 10,
+            "last_column": 42,
+            "length": 42,
+            "line": 10,
+            "column": 1
+          }
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "offense_count": 2,
+    "target_file_count": 1,
+    "inspected_file_count": 1
+  }
+}
