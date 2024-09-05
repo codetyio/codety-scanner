@@ -101,9 +101,7 @@ public class ScannerService {
         }finally {
             codetyConfigService.cleanupTmpDirs();
         }
-
 //        System.exit(-1);
-
     }
 
     private CodeAnalysisResultSetDto runDefaultCodeAnalysis(AnalyzerRequest request) {
