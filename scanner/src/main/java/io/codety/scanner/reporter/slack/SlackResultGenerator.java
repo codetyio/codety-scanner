@@ -46,7 +46,7 @@ public class SlackResultGenerator {
 
     public List<SlackMessageBlock> generateRichTextPayloadResult(AnalyzerRequest analyzerRequest, CodeAnalysisResultSetDto codeAnalysisResultSetDto) {
         List<SlackMessageBlock> blocks = new ArrayList<>();
-        List<CodeAnalysisResultDto> codeAnalysisResultDtoList = codeAnalysisResultSetDto.getCodeAnalysisResultDtoList();
+        List<CodeAnalysisResultDto> codeAnalysisResultDtoList = codeAnalysisResultSetDto.getMergedByLanguage();
         if(codeAnalysisResultSetDto == null || codeAnalysisResultDtoList.size() ==0 ){
             return blocks;
         }
