@@ -1,6 +1,5 @@
 package io.codety.scanner.analyzer.eslint;
 
-import io.codety.scanner.analyzer.dto.AnalyzerConfigurationDetailDto;
 import io.codety.scanner.analyzer.eslint.dto.EslintErrorMessage;
 import io.codety.scanner.analyzer.eslint.dto.EslintResult;
 import io.codety.scanner.analyzer.eslint.dto.EslintResults;
@@ -9,13 +8,13 @@ import io.codety.scanner.reporter.dto.CodeAnalysisResultDto;
 
 public class EslintResultsConverter {
 
-    public static CodeAnalysisResultDto convertFormat(EslintResults eslintResults, AnalyzerConfigurationDetailDto runnerConfiguration, String sourceLocation) {
+    public static void convertFormat(CodeAnalysisResultDto resultDto, EslintResults eslintResults, String sourceLocation) {
+
 
         if(eslintResults == null || eslintResults.getResults() == null){
-            return null;
+            return;
         }
 
-        CodeAnalysisResultDto resultDto = new CodeAnalysisResultDto(runnerConfiguration.getLanguage(), runnerConfiguration.getCodeAnalyzerType());
         for(EslintResult eslintResult : eslintResults.getResults()){
             EslintErrorMessage[] messages = eslintResult.getMessages();
             for(EslintErrorMessage message : messages){
@@ -51,6 +50,5 @@ public class EslintResultsConverter {
             }
         }
 
-        return resultDto;
     }
 }

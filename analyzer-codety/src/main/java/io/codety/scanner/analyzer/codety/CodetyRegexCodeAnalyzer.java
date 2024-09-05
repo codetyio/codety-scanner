@@ -53,8 +53,7 @@ public class CodetyRegexCodeAnalyzer implements CodeAnalyzerInterface {
         }
 
         CodeAnalysisResultDto resultDto = new CodeAnalysisResultDto("Secrets detection", CodeAnalyzerType.codety);
-
-
+        list.add(resultDto);
         if(inputRuleList == null || inputRuleList.isEmpty()){
             return list;
         }
@@ -98,9 +97,9 @@ public class CodetyRegexCodeAnalyzer implements CodeAnalyzerInterface {
 //        for(CodeAnalysisIssueDto tmpIssue: resultDto.getIssues()){
 //            CodetyConsoleLogger.debug("detected issue from Codety analyzer:  " + tmpIssue.getFilePath() + " " + tmpIssue.getStartLineNumber());
 //        }
-        if(resultDto.getIssuesByFile().size() > 0){
-            list.add(resultDto);
-        }
+//        if(resultDto.getIssuesByFile().size() > 0){
+
+//        }
         return list;
     }
 

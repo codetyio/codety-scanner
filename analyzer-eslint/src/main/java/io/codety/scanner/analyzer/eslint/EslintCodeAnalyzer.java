@@ -71,6 +71,10 @@ public class EslintCodeAnalyzer implements CodeAnalyzerInterface {
             RuntimeExecUtil.RuntimeExecResult runtimeExecResult = RuntimeExecUtil.exec(command, rootExecutionPath, 60, false, additionalEnv);
             String errorOutput = runtimeExecResult.getErrorOutput();
             String successOutput = runtimeExecResult.getSuccessOutput();
+
+            CodeAnalysisResultDto resultDto = new CodeAnalysisResultDto(runnerConfiguration.getLanguage(), runnerConfiguration.getCodeAnalyzerType());
+            result.add(resultDto);
+
             if(errorOutput!=null && !errorOutput.isEmpty()){
                 CodetyConsoleLogger.debug(eslint + " execution error:" + errorOutput);
                 return result;
@@ -78,9 +82,9 @@ public class EslintCodeAnalyzer implements CodeAnalyzerInterface {
             CodetyConsoleLogger.debug(eslint + " analysis result: " + successOutput);
 
             EslintResults deserialize = EslintJsonWithMetadataDeserializer.deserialize(successOutput);
+
             CodetyConsoleLogger.debug(eslint + " results from deserialization:" + (deserialize== null || deserialize.getResults() == null ? 0 :deserialize.getResults().length));
-            CodeAnalysisResultDto resultDto = EslintResultsConverter.convertFormat(deserialize, runnerConfiguration, sourceLocation);
-            result.add(resultDto);
+            EslintResultsConverter.convertFormat(resultDto, deserialize, sourceLocation);
 
         }catch (Exception e){
             CodetyConsoleLogger.debug(infoFailedEslint, e);

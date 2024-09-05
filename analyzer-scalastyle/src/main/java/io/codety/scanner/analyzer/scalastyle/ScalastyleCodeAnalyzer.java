@@ -55,16 +55,15 @@ public class ScalastyleCodeAnalyzer implements CodeAnalyzerInterface {
             String successOutput = runtimeExecResult.getSuccessOutput();
             String payload = Files.readString(Path.of(tmpConfigDownloadFolder.getAbsolutePath()));
             List<CodeAnalysisIssueDto> codeAnalysisIssueDtoList = ScalastyleConverter.convertResult(payload);
+
+            CodeAnalysisResultDto resultDto = new CodeAnalysisResultDto(runnerConfiguration.getLanguage(), runnerConfiguration.getCodeAnalyzerType());
+            resultDto.setDisplayTitle(runnerConfiguration.getLanguage());
+            list.add(resultDto);
+
             if(codeAnalysisIssueDtoList == null || codeAnalysisIssueDtoList.isEmpty()){
                 return list;
             }
-
-            CodeAnalysisResultDto resultDto = new CodeAnalysisResultDto(runnerConfiguration.getLanguage(), runnerConfiguration.getCodeAnalyzerType());
-
-            resultDto.setDisplayTitle(runnerConfiguration.getLanguage());
             resultDto.addIssues(codeAnalysisIssueDtoList);
-
-            list.add(resultDto);
 
         } catch (Exception e) {
             CodetyConsoleLogger.debug("Failed to run scalastyle due to error " + e.getMessage(), e);
