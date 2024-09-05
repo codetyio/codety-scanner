@@ -53,7 +53,7 @@ public class CodeAnalysisResultSetDto {
             }
         }
 
-        for (CodeAnalysisResultDto resultDto : this.getCodeAnalysisResultDtoList()) {
+        for (CodeAnalysisResultDto resultDto : this.getMergedByLanguage()) {
             if (resultDto == null) {
                 continue;
             }
