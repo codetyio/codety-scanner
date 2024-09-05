@@ -119,6 +119,7 @@ public class ScannerService {
         codeAnalysisResultSetDto.getCodeAnalysisResultDtoList().addAll(checkovCodeAnalyzer.analyzeCode(request));
         codeAnalysisResultSetDto.getCodeAnalysisResultDtoList().addAll(golangcilintCodeAnalyzer.analyzeCode(request));
         codeAnalysisResultSetDto.getCodeAnalysisResultDtoList().addAll(scalastyleCodeAnalyzer.analyzeCode(request));
+        codeAnalysisResultSetDto.getCodeAnalysisResultDtoList().addAll(rubocopCodeAnalyzer.analyzeCode(request));
 
         return codeAnalysisResultSetDto;
     }
