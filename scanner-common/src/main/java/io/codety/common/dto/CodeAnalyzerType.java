@@ -13,6 +13,7 @@ public enum CodeAnalyzerType {
     , checkov(10)
     , golangcilint(20)
     , scalastyle(30)
+    , rubocop(40)
     ;
     public final int codeAnalyzerType;
 
