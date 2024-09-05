@@ -1,4 +1,4 @@
-package io.codety.scanner;
+package io.codety.scanner.scalastyle;
 
 import io.codety.scanner.analyzer.scalastyle.ScalastyleCodeAnalyzer;
 import io.codety.scanner.reporter.dto.CodeAnalysisIssueDto;
