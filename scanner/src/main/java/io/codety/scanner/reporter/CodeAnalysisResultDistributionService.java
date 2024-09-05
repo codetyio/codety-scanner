@@ -9,6 +9,7 @@ import io.codety.scanner.service.CodeChangeDiffAnalyzer;
 import io.codety.scanner.service.dto.AnalyzerRequest;
 import io.codety.scanner.reporter.console.ConsoleResultReporter;
 import io.codety.scanner.reporter.github.GithubPullRequestResultReporter;
+import io.codety.scanner.util.CodeAnalysisResultSetDtoConverter;
 import io.codety.scanner.util.CodetyConsoleLogger;
 import io.codety.scanner.util.CodetyConstant;
 import io.codety.scanner.prework.dto.GitFileChangeList;
@@ -52,6 +53,9 @@ public class CodeAnalysisResultDistributionService {
         } else {
             CodetyConsoleLogger.debug(CodetyConstant.INFO_SKIP_RESULT_FILTERING);
         }
+
+        //TODO: merge codeAnalysisResultSetDto by languages
+//        CodeAnalysisResultSetDtoConverter.mergeByLanguage(codeAnalysisResultSetDto);
 
         //don't change the method calling orders below
         githubPullRequestResultReporter.deliverResult(analyzerRequest, codeAnalysisResultSetDto);
