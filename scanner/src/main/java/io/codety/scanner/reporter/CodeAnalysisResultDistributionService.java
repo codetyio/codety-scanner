@@ -55,7 +55,7 @@ public class CodeAnalysisResultDistributionService {
         }
 
         //TODO: merge codeAnalysisResultSetDto by languages
-//        CodeAnalysisResultSetDtoConverter.mergeByLanguage(codeAnalysisResultSetDto);
+        CodeAnalysisResultSetDtoConverter.mergeByLanguage(codeAnalysisResultSetDto);
 
         //don't change the method calling orders below
         githubPullRequestResultReporter.deliverResult(analyzerRequest, codeAnalysisResultSetDto);
