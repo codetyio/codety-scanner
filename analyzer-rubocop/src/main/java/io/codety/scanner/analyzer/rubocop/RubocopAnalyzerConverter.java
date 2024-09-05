@@ -6,6 +6,7 @@ import io.codety.scanner.analyzer.rubocop.dto.RubocopOffense;
 import io.codety.scanner.analyzer.rubocop.dto.RubocopRoot;
 import io.codety.scanner.reporter.dto.CodeAnalysisIssueDto;
 import io.codety.scanner.util.JsonFactoryUtil;
+import io.codety.scanner.util.StringUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,10 +40,11 @@ public class RubocopAnalyzerConverter {
                 String externalRuleId = rubocopOffense.getCop_name();
                 String[] split = externalRuleId.split("/");
                 String category = split[0].toLowerCase();
+                String issue = StringUtil.camelCaseSentencesToDashConnectedSentences(split[1].trim());
                 RubocopIssueLocation location = rubocopOffense.getLocation();
                 issueDto.setStartLineNumber(location.getStart_line());
                 issueDto.setEndLineNumber(location.getLast_line());
-                issueDto.setIssueCode(externalRuleId);
+                issueDto.setIssueCode(issue);
                 issueDto.setIssueCategory(category);
                 issueDto.setDescription(rubocopOffense.getMessage());
                 issueDto.setPriority(convertPriority(rubocopOffense.getSeverity()));
