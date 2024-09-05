@@ -1,5 +1,6 @@
 FROM  amazoncorretto:17-alpine-jdk
 
+
 RUN apk add --no-cache python3 py3-pip go
 RUN apk add --no-cache bash openssl ca-certificates git libc6-compat libstdc++ curl cppcheck nodejs npm py3-pylint
 
@@ -16,6 +17,13 @@ RUN pip3 install checkov --break-system-packages
 #golang lint
 RUN wget -O- -nv https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s v1.60.3
 RUN golangci-lint --version
+
+
+RUN apk add --no-cache ruby-dev cmake clang build-base
+#RUN export CC=clang
+#RUN export CXX=clang++
+RUN gem install -V rubocop
+RUN rubocop --version
 
 #RUN curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin v0.18.3
 
