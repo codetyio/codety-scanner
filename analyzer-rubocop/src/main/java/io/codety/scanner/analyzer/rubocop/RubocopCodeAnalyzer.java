@@ -23,7 +23,6 @@ public class RubocopCodeAnalyzer implements CodeAnalyzerInterface {
 
         File file = runnerConfiguration.getFile();
 //cppcheck  . --suppressions-list=suppression.txt  --xml 2>error1.txt
-        ArrayList<CodeAnalysisResultDto> list = new ArrayList();
 
         String[] command;
 
@@ -39,15 +38,20 @@ public class RubocopCodeAnalyzer implements CodeAnalyzerInterface {
 
             RuntimeExecUtil.RuntimeExecResult runtimeExecResult = RuntimeExecUtil.exec(command, null, 60, false, null);
 
-            String errorOutput = runtimeExecResult.getErrorOutput();
-            String successOutput = runtimeExecResult.getSuccessOutput();
+
 
             CodeAnalysisResultDto resultDto = new CodeAnalysisResultDto(runnerConfiguration.getLanguage(), runnerConfiguration.getCodeAnalyzerType());
-            list.add(resultDto);
+            codeAnalysisResultDtos.add(resultDto);
 
-            List<CodeAnalysisIssueDto> codeAnalysisIssueDtoList = RubocopAnalyzerConverter.convertResult(errorOutput, localGitRepoPath);
-            resultDto.addIssues(codeAnalysisIssueDtoList);
-
+            String errorOutput = runtimeExecResult.getErrorOutput();
+            String successOutput = runtimeExecResult.getSuccessOutput();
+            if(errorOutput!=null && errorOutput.length() > 0){
+                CodetyConsoleLogger.debug("Warnings from rubucop: " + errorOutput);
+            }
+            if(successOutput!=null && successOutput.length() > 0) {
+                List<CodeAnalysisIssueDto> codeAnalysisIssueDtoList = RubocopAnalyzerConverter.convertResult(successOutput, localGitRepoPath);
+                resultDto.addIssues(codeAnalysisIssueDtoList);
+            }
         } catch (Exception e) {
             CodetyConsoleLogger.debug("Failed to run Rubocop analyzer ", e);
             CodetyConsoleLogger.info("Failed to run Rubocop analyzer " + e.getMessage());
