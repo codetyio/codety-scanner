@@ -29,8 +29,7 @@ public class GithubPullRequestResultReporter implements ResultReporter {
             return;
         }
 
-        List<CodeAnalysisResultDto> codeAnalysisResultDtoList = codeAnalysisResultSetDto.getCodeAnalysisResultDtoList();
-
+        List<CodeAnalysisResultDto> codeAnalysisResultDtoList = codeAnalysisResultSetDto.getMergedByLanguage();
 
         if (analyzerRequest.getGithubAccessToken() != null) {
 
