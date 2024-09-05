@@ -1,6 +1,7 @@
 package io.codety.scanner.reporter.dto;
 
 import io.codety.common.dto.CodeAnalyzerType;
+import io.codety.scanner.util.StringUtil;
 
 import java.util.*;
 
@@ -15,7 +16,9 @@ public class CodeAnalysisResultDto {
     public CodeAnalysisResultDto(String language, CodeAnalyzerType codeAnalyzerType) {
         this.language = language;
         this.codeAnalyzerType = codeAnalyzerType;
-        this.displayTitle = language;
+        if(language!=null) {
+            this.displayTitle = StringUtil.toCamelCaseWord(language);
+        }
     }
 
     public void addIssue(CodeAnalysisIssueDto issueDto) {
