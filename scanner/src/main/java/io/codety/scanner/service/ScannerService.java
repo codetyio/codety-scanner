@@ -113,7 +113,6 @@ public class ScannerService {
 
         codeAnalysisResultSetDto.getCodeAnalysisResultDtoList().addAll(javaPmdCodeAnalyzer.analyzeCode(request));
         codeAnalysisResultSetDto.getCodeAnalysisResultDtoList().addAll(codetyRegexCodeAnalyzer.analyzeCode(request));
-
         codeAnalysisResultSetDto.getCodeAnalysisResultDtoList().addAll(eslintCodeAnalyzer.analyzeCode(request));
         codeAnalysisResultSetDto.getCodeAnalysisResultDtoList().addAll(pylintCodeAnalyzer.analyzeCode(request));
         codeAnalysisResultSetDto.getCodeAnalysisResultDtoList().addAll(checkovCodeAnalyzer.analyzeCode(request));
