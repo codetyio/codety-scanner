@@ -2,6 +2,7 @@ package io.codety.scanner.service;
 
 import io.codety.scanner.analyzer.checkov.CheckovCodeAnalyzer;
 import io.codety.scanner.analyzer.golangcilint.GolangcilintCodeAnalyzer;
+import io.codety.scanner.analyzer.rubocop.RubocopCodeAnalyzer;
 import io.codety.scanner.analyzer.scalastyle.ScalastyleCodeAnalyzer;
 import io.codety.scanner.connectivity.CodetyConfigService;
 import io.codety.scanner.analyzer.dto.AnalyzerConfigurationDetailDto;
@@ -49,6 +50,9 @@ public class ScannerService {
 
     @Autowired
     CppcheckCodeAnalyzer cppcheckCodeAnalyzer;
+
+    @Autowired
+    RubocopCodeAnalyzer rubocopCodeAnalyzer;
 
     @Autowired
     ScalastyleCodeAnalyzer scalastyleCodeAnalyzer;
@@ -129,26 +133,33 @@ public class ScannerService {
         }
         for(AnalyzerConfigurationDetailDto analyzerConfigurationDetailDto : analyzerConfigurationDto.getConfigurationDetailDtoList()){
             List<CodeAnalysisResultDto> codeAnalysisResultDtos = null;
-            String currentAnalyzerAndPlugin = analyzerConfigurationDetailDto.getCodeAnalyzerType().name() + (analyzerConfigurationDetailDto.getPluginCode() != null ? " " + analyzerConfigurationDetailDto.getPluginCode() : "") + " for " + analyzerConfigurationDetailDto.getLanguage();
+            CodeAnalyzerType codeAnalyzerType = analyzerConfigurationDetailDto.getCodeAnalyzerType();
+            if(codeAnalyzerType == null){
+                CodetyConsoleLogger.info("Skip unsupported analyzer for language " + analyzerConfigurationDetailDto.getLanguage());
+                continue;
+            }
+            String currentAnalyzerAndPlugin = codeAnalyzerType.name() + (analyzerConfigurationDetailDto.getPluginCode() != null ? " " + analyzerConfigurationDetailDto.getPluginCode() : "") + " for " + analyzerConfigurationDetailDto.getLanguage();
             CodetyConsoleLogger.debug("Start scanning the code using analyzer " + currentAnalyzerAndPlugin);
-            if(analyzerConfigurationDetailDto.getCodeAnalyzerType() == CodeAnalyzerType.cppcheck){
+            if(codeAnalyzerType == CodeAnalyzerType.cppcheck){
                 codeAnalysisResultDtos = cppcheckCodeAnalyzer.analyzeCode(analyzerConfigurationDetailDto, request);
-            }else if(analyzerConfigurationDetailDto.getCodeAnalyzerType() == CodeAnalyzerType.pmd){
+            }else if(codeAnalyzerType == CodeAnalyzerType.pmd){
                 codeAnalysisResultDtos = javaPmdCodeAnalyzer.analyzeCode(analyzerConfigurationDetailDto, request);
-            }else if(analyzerConfigurationDetailDto.getCodeAnalyzerType() == CodeAnalyzerType.eslint){
+            }else if(codeAnalyzerType == CodeAnalyzerType.eslint){
                 codeAnalysisResultDtos = eslintCodeAnalyzer.analyzeCode(analyzerConfigurationDetailDto, request);
-            }else if(analyzerConfigurationDetailDto.getCodeAnalyzerType() == CodeAnalyzerType.pylint){
+            }else if(codeAnalyzerType == CodeAnalyzerType.pylint){
                 codeAnalysisResultDtos = pylintCodeAnalyzer.analyzeCode(analyzerConfigurationDetailDto, request);
             }
 //            else if(analyzerConfigurationDetailDto.getCodeAnalyzerType() == CodeAnalyzerType.trivy){
 //                codeAnalysisResultDtos = trivyCodeAnalyzer.analyzeCode(analyzerConfigurationDetailDto, request);
 //            }
-            else if(analyzerConfigurationDetailDto.getCodeAnalyzerType() == CodeAnalyzerType.codety){
+            else if(codeAnalyzerType == CodeAnalyzerType.codety){
                 codeAnalysisResultDtos = codetyRegexCodeAnalyzer.analyzeCode(analyzerConfigurationDetailDto, request);
-            }else if(analyzerConfigurationDetailDto.getCodeAnalyzerType() == CodeAnalyzerType.golangcilint){
+            }else if(codeAnalyzerType == CodeAnalyzerType.golangcilint){
                 codeAnalysisResultDtos = golangcilintCodeAnalyzer.analyzeCode(analyzerConfigurationDetailDto, request);
-            }else if(analyzerConfigurationDetailDto.getCodeAnalyzerType() == CodeAnalyzerType.checkov){
+            }else if(codeAnalyzerType == CodeAnalyzerType.checkov){
                 codeAnalysisResultDtos = checkovCodeAnalyzer.analyzeCode(analyzerConfigurationDetailDto, request);
+            }else if(codeAnalyzerType == CodeAnalyzerType.rubocop){
+                codeAnalysisResultDtos = rubocopCodeAnalyzer.analyzeCode(analyzerConfigurationDetailDto, request);
             }else{
                 CodetyConsoleLogger.debug("Skip code analyzer " + currentAnalyzerAndPlugin);
             }
