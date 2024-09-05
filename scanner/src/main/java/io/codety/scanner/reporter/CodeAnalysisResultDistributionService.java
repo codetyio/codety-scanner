@@ -54,8 +54,8 @@ public class CodeAnalysisResultDistributionService {
             CodetyConsoleLogger.debug(CodetyConstant.INFO_SKIP_RESULT_FILTERING);
         }
 
-        //TODO: merge codeAnalysisResultSetDto by languages
-        CodeAnalysisResultSetDtoConverter.mergeByLanguage(codeAnalysisResultSetDto);
+        List<CodeAnalysisResultDto> mergedList = CodeAnalysisResultSetDtoConverter.mergeByLanguage(codeAnalysisResultSetDto);
+        codeAnalysisResultSetDto.setMergedByLanguage(mergedList);
 
         //don't change the method calling orders below
         githubPullRequestResultReporter.deliverResult(analyzerRequest, codeAnalysisResultSetDto);
