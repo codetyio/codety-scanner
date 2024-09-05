@@ -44,7 +44,8 @@ public class JavaPmdCodeAnalyzer implements CodeAnalyzerInterface {
         String sourcePath = settingDto.getSourceCodePathList().stream().collect(Collectors.joining(","));
         String rulesetPath = settingDto.getRulesetPathList().stream().collect(Collectors.joining(","));
         CodeAnalysisResultDto codeAnalysisResultDto = new CodeAnalysisResultDto(analyzerConfigurationDetailDto.getLanguage(), analyzerConfigurationDetailDto.getCodeAnalyzerType());
-        codeAnalysisResultDto.setDisplayTitle(StringUtil.toCamelCaseWord(analyzerConfigurationDetailDto.getLanguage()) + " " + settingDto.getCodeAnalyzerType().label);
+        String s = settingDto.getCodeAnalyzerType() == CodeSourceDirectoryType.source_code ? "" : " " + settingDto.getCodeAnalyzerType().label;
+        codeAnalysisResultDto.setDisplayTitle(StringUtil.toCamelCaseWord(analyzerConfigurationDetailDto.getLanguage()) + s);
         String[] command = {bash, pmd, check, dir, sourcePath, "-f", "csv", rulesetsParam, rulesetPath, nocacheParam};
 
         try {
