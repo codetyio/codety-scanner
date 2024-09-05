@@ -47,8 +47,8 @@ public class CodetyRegexCodeAnalyzer implements CodeAnalyzerInterface {
                 inputRuleList = codetyRegexAnalyzerRuleList.getRules();
             }
         } catch (JsonProcessingException e) {
-            CodetyConsoleLogger.debug("Failed to deserialize codety analyzer from payload", e);
-            CodetyConsoleLogger.info("Skipping codety due to the deserialization warning");
+            CodetyConsoleLogger.debug("Failed to deserialize Codety analyzer from payload", e);
+            CodetyConsoleLogger.info("Skipping codety analyzer due to the deserialization warning");
             return list;
         }
 
