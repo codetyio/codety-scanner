@@ -37,6 +37,11 @@ public class GithubPullRequestResultReporter implements ResultReporter {
                 githubCommentService.addCheckRunAnnotations(analyzerRequest, codeAnalysisResultDtoList);
             }
 
+            if (analyzerRequest.isEnablePostingPullRequestComment()) {
+                StringBuilder pullRequestComment = createPullRequestComment(analyzerRequest, codeAnalysisResultDtoList);
+                githubCommentService.addOrUpdatePullRequestComment(analyzerRequest, pullRequestComment.toString());
+            }
+
             if (analyzerRequest.isEnablePostingPullRequestReviews()) {
                 try {
                     githubCommentService.addPullRequestReviews(analyzerRequest, codeAnalysisResultSetDto);
@@ -45,10 +50,6 @@ public class GithubPullRequestResultReporter implements ResultReporter {
                 }
             }
 
-            if (analyzerRequest.isEnablePostingPullRequestComment()) {
-                StringBuilder pullRequestComment = createPullRequestComment(analyzerRequest, codeAnalysisResultDtoList);
-                githubCommentService.addOrUpdatePullRequestComment(analyzerRequest, pullRequestComment.toString());
-            }
 
         }
 
