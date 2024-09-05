@@ -11,6 +11,8 @@ public class CodeAnalysisResultSetDto {
 
     List<CodeAnalysisResultDto> codeAnalysisResultDtoList = new ArrayList();
 
+    List<CodeAnalysisResultDto> mergedByLanguage = new ArrayList();
+
     public List<CodeAnalysisResultDto> getCodeAnalysisResultDtoList() {
         return codeAnalysisResultDtoList;
     }
@@ -75,5 +77,13 @@ public class CodeAnalysisResultSetDto {
             }
         }
         return sb.toString();
+    }
+
+    public List<CodeAnalysisResultDto> getMergedByLanguage() {
+        return mergedByLanguage;
+    }
+
+    public void setMergedByLanguage(List<CodeAnalysisResultDto> mergedByLanguage) {
+        this.mergedByLanguage = mergedByLanguage;
     }
 }
