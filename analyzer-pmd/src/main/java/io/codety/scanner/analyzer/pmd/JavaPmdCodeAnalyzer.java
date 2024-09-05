@@ -9,10 +9,7 @@ import io.codety.scanner.reporter.dto.CodeAnalysisIssueDto;
 import io.codety.scanner.reporter.dto.CodeAnalysisResultDto;
 import io.codety.common.dto.CodeAnalyzerType;
 import io.codety.scanner.service.dto.AnalyzerRequest;
-import io.codety.scanner.util.CodetyConsoleLogger;
-import io.codety.scanner.util.CodetyConstant;
-import io.codety.scanner.util.RuntimeExecUtil;
-import io.codety.scanner.util.StringUtil;
+import io.codety.scanner.util.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -94,24 +91,32 @@ public class JavaPmdCodeAnalyzer implements CodeAnalyzerInterface {
     public List<CodeAnalysisResultDto> analyzeCode(AnalyzerConfigurationDetailDto runnerConfiguration, AnalyzerRequest request) {
         CodetyConsoleLogger.info("Scanning "+runnerConfiguration.getLanguage()+" code via "+runnerConfiguration.getCodeAnalyzerType().name()+"...");
         String baseSourcePath = request.getLocalGitRepoPath();
-        CodeAnalyzerSettingGroupDto codeAnalyzerSettingGroupDto = sourceCodeDirectoryLayoutAnalyzer.analyzeSourceDirectory(baseSourcePath);
+
         List<CodeAnalysisResultDto> resultSetDto = new ArrayList<>();
-        CodetyConsoleLogger.debug("Found number of source path: " + codeAnalyzerSettingGroupDto.getCodeAnalysisSettingDtos().size());
-        for (JavaPmdCodeAnalysisSettingDto javaPmdCodeAnalysisSettingDto : codeAnalyzerSettingGroupDto.getCodeAnalysisSettingDtos()) {
+        if(runnerConfiguration.getLanguage().equalsIgnoreCase("java")) {
+            CodeAnalyzerSettingGroupDto codeAnalyzerSettingGroupDto = sourceCodeDirectoryLayoutAnalyzer.analyzeSourceDirectory(baseSourcePath);
+            CodetyConsoleLogger.debug("Found number of source path: " + codeAnalyzerSettingGroupDto.getCodeAnalysisSettingDtos().size());
+            for (JavaPmdCodeAnalysisSettingDto javaPmdCodeAnalysisSettingDto : codeAnalyzerSettingGroupDto.getCodeAnalysisSettingDtos()) {
+                if (runnerConfiguration != null && runnerConfiguration.getFile() != null) {
+                    CodetyConsoleLogger.debug(useCustomRuleset);
+                    javaPmdCodeAnalysisSettingDto.setRulesetPathList(List.of(runnerConfiguration.getFile().getAbsolutePath()));
+                } else {
 
-            if(runnerConfiguration != null && runnerConfiguration.getFile()!=null){
+                    CodetyConsoleLogger.debug(useDefaultRuleset);
+                    javaPmdCodeAnalysisSettingDto.setRulesetPathList(List.of(pmdRulesetPath));
+                }
 
-                CodetyConsoleLogger.debug(useCustomRuleset);
-                javaPmdCodeAnalysisSettingDto.setRulesetPathList(List.of(runnerConfiguration.getFile().getAbsolutePath()));
-            }else{
-
-                CodetyConsoleLogger.debug(useDefaultRuleset);
-                javaPmdCodeAnalysisSettingDto.setRulesetPathList(List.of(pmdRulesetPath));
+                CodeAnalysisResultDto codeAnalysisResultDto = this.analyzeCode(javaPmdCodeAnalysisSettingDto, runnerConfiguration, baseSourcePath);
+                resultSetDto.add(codeAnalysisResultDto);
             }
-
+        }else{
+            JavaPmdCodeAnalysisSettingDto javaPmdCodeAnalysisSettingDto = new JavaPmdCodeAnalysisSettingDto(CodeSourceDirectoryType.source_code);
+            javaPmdCodeAnalysisSettingDto.setRulesetPathList(List.of(runnerConfiguration.getFile().getAbsolutePath()));
+            javaPmdCodeAnalysisSettingDto.setSourceCodePathList(List.of(request.getLocalGitRepoPath()));
             CodeAnalysisResultDto codeAnalysisResultDto = this.analyzeCode(javaPmdCodeAnalysisSettingDto, runnerConfiguration, baseSourcePath);
             resultSetDto.add(codeAnalysisResultDto);
         }
+
         // pmd analyzer end =========================================
         return resultSetDto;
     }
