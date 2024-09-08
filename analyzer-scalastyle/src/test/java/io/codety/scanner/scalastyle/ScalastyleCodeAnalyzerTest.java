@@ -22,7 +22,7 @@ public class ScalastyleCodeAnalyzerTest {
 
     @Test
     void testAnalyze(){
-        String s = "../code-issue-examples";
+        
         String absolutePath = Path.of("../","code-issue-examples").toAbsolutePath().toFile().getAbsolutePath();
         AnalyzerRequest analyzerRequest = AnalyzerRequest.processSystemVariablesToRequest(new HashMap<>(), new String[]{absolutePath});
         List<CodeAnalysisResultDto> codeAnalysisResultDtos = scalastyleCodeAnalyzer.analyzeCode(analyzerRequest);
