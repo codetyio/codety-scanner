@@ -36,6 +36,8 @@ dependencies {
     implementation project(':analyzer-golangcilint')
     implementation project(':analyzer-codety')
     implementation project(':analyzer-scalastyle')
+    implementation project(':analyzer-stylelint')
+    implementation project(':analyzer-shellcheck')
     implementation project(':analyzer-rubocop')
 
 

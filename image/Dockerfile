@@ -2,11 +2,12 @@ FROM  amazoncorretto:17-alpine-jdk
 
 
 RUN apk add --no-cache python3 py3-pip go
+RUN apk add --no-cache shellcheck
 RUN apk add --no-cache bash openssl ca-certificates git libc6-compat libstdc++ curl cppcheck nodejs npm py3-pylint
 
 RUN npm install --prefix /usr/local/eslint9/ eslint@9.x eslint-plugin-jsdoc eslint-plugin-react eslint-plugin-vue @html-eslint/parser @html-eslint/eslint-plugin
 RUN npm install --prefix /usr/local/eslint8/ eslint@8.x  typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
-
+RUN npm install --prefix /usr/local/stylelint/ stylelint
 # !!!!!!checkov build will be failed in arm64 environment, you need to append `--platform=linux/amd64` during docker build or run if you use ARM64 environment(e.g. M1+ chips MacBook)
 RUN pip3 install checkov --break-system-packages
 
@@ -18,10 +19,10 @@ RUN pip3 install checkov --break-system-packages
 RUN wget -O- -nv https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s v1.60.3
 RUN golangci-lint --version
 
-
 RUN apk add --no-cache ruby-dev cmake clang build-base
 #RUN export CC=clang
 #RUN export CXX=clang++
+# the rubocop build is kinda slow in Alpine
 RUN gem install -V rubocop
 RUN rubocop --version
 
