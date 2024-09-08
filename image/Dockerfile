@@ -7,7 +7,7 @@ RUN apk add --no-cache bash openssl ca-certificates git libc6-compat libstdc++ c
 
 RUN npm install --prefix /usr/local/eslint9/ eslint@9.x eslint-plugin-jsdoc eslint-plugin-react eslint-plugin-vue @html-eslint/parser @html-eslint/eslint-plugin
 RUN npm install --prefix /usr/local/eslint8/ eslint@8.x  typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
-RUN npm install --prefix /usr/local/stylelint/ stylelint
+RUN npm install --prefix /usr/local/stylelint/ stylelint stylelint-config-recommended
 # !!!!!!checkov build will be failed in arm64 environment, you need to append `--platform=linux/amd64` during docker build or run if you use ARM64 environment(e.g. M1+ chips MacBook)
 RUN pip3 install checkov --break-system-packages
 
