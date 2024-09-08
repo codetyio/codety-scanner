@@ -4,6 +4,7 @@ import io.codety.scanner.analyzer.checkov.CheckovCodeAnalyzer;
 import io.codety.scanner.analyzer.golangcilint.GolangcilintCodeAnalyzer;
 import io.codety.scanner.analyzer.rubocop.RubocopCodeAnalyzer;
 import io.codety.scanner.analyzer.scalastyle.ScalastyleCodeAnalyzer;
+import io.codety.scanner.analyzer.stylelint.StylelintCodeAnalyzer;
 import io.codety.scanner.connectivity.CodetyConfigService;
 import io.codety.scanner.analyzer.dto.AnalyzerConfigurationDetailDto;
 import io.codety.scanner.analyzer.dto.AnalyzerConfigurationDto;
@@ -56,6 +57,9 @@ public class ScannerService {
 
     @Autowired
     ScalastyleCodeAnalyzer scalastyleCodeAnalyzer;
+
+    @Autowired
+    StylelintCodeAnalyzer stylelintCodeAnalyzer;
 
     @Autowired
     CodetyRegexCodeAnalyzer codetyRegexCodeAnalyzer;
@@ -119,6 +123,7 @@ public class ScannerService {
         codeAnalysisResultSetDto.getCodeAnalysisResultDtoList().addAll(golangcilintCodeAnalyzer.analyzeCode(request));
         codeAnalysisResultSetDto.getCodeAnalysisResultDtoList().addAll(scalastyleCodeAnalyzer.analyzeCode(request));
         codeAnalysisResultSetDto.getCodeAnalysisResultDtoList().addAll(rubocopCodeAnalyzer.analyzeCode(request));
+        codeAnalysisResultSetDto.getCodeAnalysisResultDtoList().addAll(stylelintCodeAnalyzer.analyzeCode(request));
 
         return codeAnalysisResultSetDto;
     }
