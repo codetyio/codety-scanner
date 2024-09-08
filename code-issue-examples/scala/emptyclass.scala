@@ -1,2 +1,2 @@
- object MyEmptyClass {
- }
+object MyEmptyClass {
+}
