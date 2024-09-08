@@ -22,9 +22,6 @@ public class ShellcheckCodeAnalyzer implements CodeAnalyzerInterface {
 
         ArrayList<CodeAnalysisResultDto> codeAnalysisResultDtos = new ArrayList<>();
 
-//        File file = runnerConfiguration.getFile();
-//cppcheck  . --suppressions-list=suppression.txt  --xml 2>error1.txt
-
         String[] command;
 
         String localGitRepoPath = request.getLocalGitRepoPath();
@@ -43,15 +40,15 @@ public class ShellcheckCodeAnalyzer implements CodeAnalyzerInterface {
             String errorOutput = runtimeExecResult.getErrorOutput();
             String successOutput = runtimeExecResult.getSuccessOutput();
             if(errorOutput!=null && errorOutput.length() > 0){
-                CodetyConsoleLogger.debug("Warnings from rubucop: " + errorOutput);
+                CodetyConsoleLogger.debug("Warnings from shellcheck: " + errorOutput);
             }
             if(successOutput!=null && successOutput.length() > 0) {
                 List<CodeAnalysisIssueDto> codeAnalysisIssueDtoList = ShellcheckConverter.convertResult(successOutput, localGitRepoPath);
                 resultDto.addIssues(codeAnalysisIssueDtoList);
             }
         } catch (Exception e) {
-            CodetyConsoleLogger.debug("Failed to run Rubocop analyzer ", e);
-            CodetyConsoleLogger.info("Failed to run Rubocop analyzer " + e.getMessage());
+            CodetyConsoleLogger.debug("Failed to run shellcheck analyzer ", e);
+            CodetyConsoleLogger.info("Failed to run shellcheck analyzer " + e.getMessage());
         }
 
         return codeAnalysisResultDtos;
