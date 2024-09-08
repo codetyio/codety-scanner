@@ -6,6 +6,7 @@ public class LanguageType {
     public static final String kotlin = "kotlin";
     public static final String jsp = "jsp";
     public static final String cpp = "cpp";
+    public static final String css = "css";
     public static final String csharp = "csharp";
     public static final String dart = "dart";
     public static final String go = "go";
