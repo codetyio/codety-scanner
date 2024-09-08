@@ -50,10 +50,12 @@ public class StylelintConverter {
         return codeAnalysisIssueDtos;
     }
 
+    private static final String error = "error";
     private static Integer getPriority(String severity) {
 
         int result = 3;
-        if("error".equalsIgnoreCase(severity)){
+
+        if(error.equalsIgnoreCase(severity)){
             result = 4;
         }
 
