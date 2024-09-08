@@ -4,6 +4,7 @@ DOCKER_BUILD_VERSION=$1
 BUILD_JAR=$2
 DOCKER_IMG=codetyio/codety
 
+
 if [ "$BUILD_JAR" != "0" ]; then
   echo " ========= Build application start  ========":
   java --version
@@ -16,6 +17,9 @@ if [ "$BUILD_JAR" != "0" ]; then
 fi
 
 echo " ========= Build application end  ========":
+
+git tag -a "$DOCKER_BUILD_VERSION" -m "tag version $DOCKER_BUILD_VERSION"
+git push origin "$DOCKER_BUILD_VERSION"
 
 #--platform=linux/amd64,linux/arm64
 echo " ========= Build and publish images start  ========":
