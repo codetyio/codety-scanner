@@ -18,9 +18,6 @@ fi
 
 echo " ========= Build application end  ========":
 
-git tag -a "$DOCKER_BUILD_VERSION" -m "tag version $DOCKER_BUILD_VERSION"
-git push origin "$DOCKER_BUILD_VERSION"
-
 #--platform=linux/amd64,linux/arm64
 echo " ========= Build and publish images start  ========":
 docker buildx build --platform=linux/amd64 -t "$DOCKER_IMG":$DOCKER_BUILD_VERSION  -t "$DOCKER_IMG":latest -f image/Dockerfile . --push
@@ -28,6 +25,11 @@ if [ $? -ne 0 ]; then
     echo "Failed to build multi-platform container, create a new builder may fix the issue: '$> docker buildx create --name mybuilder --use ' "
     exit 1;
 fi
+
+
+git tag -a "$DOCKER_BUILD_VERSION" -m "tag version $DOCKER_BUILD_VERSION"
+git push origin "$DOCKER_BUILD_VERSION"
+
 echo " ========= Build and publish images end  ========":
 
 echo "====User below command to test the container: ====="

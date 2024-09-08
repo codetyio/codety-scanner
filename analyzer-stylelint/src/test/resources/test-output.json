@@ -1,0 +1,29 @@
+[
+  {
+    "source": "/Users/user/git/codety-scanner/code-issue-examples/css/bad-css.css",
+    "deprecations": [],
+    "invalidOptionWarnings": [],
+    "parseErrors": [],
+    "errored": true,
+    "warnings": [
+      {
+        "line": 1,
+        "column": 6,
+        "endLine": 2,
+        "endColumn": 2,
+        "rule": "block-no-empty",
+        "severity": "error",
+        "text": "Unexpected empty block (block-no-empty)"
+      },
+      {
+        "line": 4,
+        "column": 1,
+        "endLine": 4,
+        "endColumn": 5,
+        "rule": "comment-no-empty",
+        "severity": "error",
+        "text": "Unexpected empty comment (comment-no-empty)"
+      }
+    ]
+  }
+]
