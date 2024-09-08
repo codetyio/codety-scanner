@@ -26,9 +26,9 @@ public class ShellcheckCodeAnalyzer implements CodeAnalyzerInterface {
 
         String localGitRepoPath = request.getLocalGitRepoPath();
         if(runnerConfiguration.getPayload() == null || runnerConfiguration.getPayload().isEmpty()){
-            command = new String[]{"shellcheck", "--format=json", localGitRepoPath + "/*"};
+            command = new String[]{"shellcheck", "--format=json", localGitRepoPath + "/**/*.sh"};
         }else{
-            command = new String[]{"shellcheck", "--format=json", localGitRepoPath + "/*"};
+            command = new String[]{"shellcheck", "--format=json", localGitRepoPath + "/**/*.sh"};
         }
         try {
 
