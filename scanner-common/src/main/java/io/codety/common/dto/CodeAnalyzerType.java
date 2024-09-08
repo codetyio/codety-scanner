@@ -15,6 +15,7 @@ public enum CodeAnalyzerType {
     , scalastyle(30)
     , rubocop(40)
     , stylelint(50)
+    , shellcheck(60)
     ;
     public final int codeAnalyzerType;
 
