@@ -4,7 +4,7 @@
 
 </div>
 
-**Codety Scanner** is a free and comprehensive source code scanner that detects code issues for 20+ programming languages and IaC tools. Codety Scanner's source code is contributed and maintained by [Codety Inc.(https://codety.io)](https://codety.io)
+**Codety Scanner** is a comprehensive code scanner designed to detect code issues for 20+ programming languages and IaC frameworks. It embeds more than 5,000 code analysis rules and can detect code smells, vulnerable code, secrets in the code, performance issues, style violations, and more. Codety Scanner is open source and is free for personal and commercial use, Codety Scanner's source code is contributed and maintained by [Codety Inc.(https://codety.io)](https://codety.io)
 
 Codety Scanner detects your code issues and report results to:
 * GitHub pull request comments ([check example here](https://github.com/codetyio/codety-scanner/pull/15#issuecomment-2320351633))
