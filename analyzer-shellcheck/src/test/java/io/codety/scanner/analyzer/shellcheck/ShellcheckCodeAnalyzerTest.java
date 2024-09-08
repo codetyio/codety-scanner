@@ -26,6 +26,7 @@ public class ShellcheckCodeAnalyzerTest {
         List<CodeAnalysisResultDto> codeAnalysisResultDtos = shellcheckCodeAnalyzer.analyzeCode(analyzerRequest);
         Assertions.assertTrue(codeAnalysisResultDtos.size() > 0);
 
+        
         for(CodeAnalysisResultDto codeAnalysisResultDto : codeAnalysisResultDtos){
             Map<String, List<CodeAnalysisIssueDto>> issuesByFile = codeAnalysisResultDto.getIssuesByFile();
             Assertions.assertTrue(issuesByFile.size() > 0);
