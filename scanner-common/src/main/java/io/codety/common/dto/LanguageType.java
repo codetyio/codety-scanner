@@ -18,6 +18,7 @@ public class LanguageType {
     public static final String typescript = "typescript";
     public static final String swift = "swift";
     public static final String html = "html";
+    public static final String shell = "shell";
     public static final String modelica = "modelica";
     public static final String plsql = "plsql";
     public static final String iac = "iac";
