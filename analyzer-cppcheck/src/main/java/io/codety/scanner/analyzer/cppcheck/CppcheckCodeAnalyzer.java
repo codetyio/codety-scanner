@@ -19,7 +19,6 @@ import java.util.List;
 public class CppcheckCodeAnalyzer implements CodeAnalyzerInterface {
     private static final String cppcheck = "cppcheck";
     private static final String suppressionListParam = "--suppressions-list=";
-//    private static final String xmlOutputParam = "--xml";
     private static final String templateParam = "--template=";
     static final String cppcheckResultLocationPrefix = "|--@@";
     static final String cppcheckResultLocationSeparator = "@@@@@@";
