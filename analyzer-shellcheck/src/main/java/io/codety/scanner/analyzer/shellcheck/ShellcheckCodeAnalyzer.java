@@ -51,7 +51,6 @@ public class ShellcheckCodeAnalyzer implements CodeAnalyzerInterface {
             CodetyConsoleLogger.debug("Failed to run shellcheck analyzer ", e);
             CodetyConsoleLogger.info("Failed to run shellcheck analyzer " + e.getMessage());
         }
-
         return codeAnalysisResultDtos;
     }
 
