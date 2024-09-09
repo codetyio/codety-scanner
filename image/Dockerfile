@@ -1,10 +1,5 @@
 FROM  amazoncorretto:17-alpine-jdk
 
-COPY scanner/codety.sh /usr/bin/codety
-COPY scanner/tools/ /tools/
-COPY scanner/build/libs/app.jar /usr/app.jar
-RUN chmod +x /usr/bin/codety
-
 RUN apk add --no-cache python3 py3-pip go
 RUN apk add --no-cache shellcheck
 RUN apk add --no-cache bash openssl ca-certificates git libc6-compat libstdc++ curl cppcheck nodejs npm py3-pylint
@@ -32,8 +27,12 @@ RUN rubocop --version
 
 #RUN curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin v0.18.3
 
-
 RUN curl -sfL https://oss.sonatype.org/content/repositories/releases/org/scalastyle/scalastyle_2.12/1.0.0/scalastyle_2.12-1.0.0-batch.jar > /tools/scalastyle.jar
+
+COPY scanner/codety.sh /usr/bin/codety
+COPY scanner/tools/ /tools/
+COPY scanner/build/libs/app.jar /usr/app.jar
+RUN chmod +x /usr/bin/codety
 
 WORKDIR /src
 ENTRYPOINT ["codety"]
