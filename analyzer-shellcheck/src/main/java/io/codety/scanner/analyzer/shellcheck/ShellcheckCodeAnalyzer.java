@@ -26,7 +26,10 @@ public class ShellcheckCodeAnalyzer implements CodeAnalyzerInterface {
 
         String localGitRepoPath = request.getLocalGitRepoPath();
         if(runnerConfiguration.getPayload() == null || runnerConfiguration.getPayload().isEmpty()){
-            command = new String[]{"shellcheck", "--format=json", localGitRepoPath + "/**/*.sh"};
+//            command = new String[]{"shellcheck", "--format=json", localGitRepoPath + "/**/*.sh"};
+            //find ~/git/codety-scanner/code-issue-examples -type f \( -name '*.sh' -o -name '*.bash' -o -name '*.ksh' -o -name '*.bashrc' -o -name '*.bash_profile' -o -name '*.bash_login' -o -name '*.bash_logout' \) | xargs shellcheck --format=json
+            command = new String[]{"find", localGitRepoPath, "-type", "f", "\\( -name '*.sh' -o -name '*.bash' -o -name '*.ksh' -o -name '*.bashrc' -o -name '*.bash_profile' -o -name '*.bash_login' -o -name '*.bash_logout' \\)", "|", "xargs", "shellcheck", "--format=json"};
+
         }else{
             command = new String[]{"shellcheck", "--format=json", localGitRepoPath + "/**/*.sh"};
         }
