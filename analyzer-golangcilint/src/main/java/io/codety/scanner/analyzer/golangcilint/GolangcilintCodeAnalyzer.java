@@ -44,7 +44,6 @@ public class GolangcilintCodeAnalyzer implements CodeAnalyzerInterface {
 
                 String[] command = cmdList.toArray(new String[0]);
 
-
                 RuntimeExecUtil.RuntimeExecResult runtimeExecResult = RuntimeExecUtil.exec(command, file.getAbsolutePath(), 60, false, null);
 
                 String errorOutput = runtimeExecResult.getErrorOutput();
