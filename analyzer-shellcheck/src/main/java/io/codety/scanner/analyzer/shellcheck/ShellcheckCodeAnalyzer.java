@@ -11,11 +11,17 @@ import io.codety.scanner.util.CodetyConsoleLogger;
 import io.codety.scanner.util.RuntimeExecUtil;
 import org.springframework.stereotype.Service;
 
+import java.io.File;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 @Service
 public class ShellcheckCodeAnalyzer implements CodeAnalyzerInterface {
+
+    String[] suffixList = new String[]{".sh", ".bash",".ksh", ".bashrc", ".bash_profile", ".bash_login", ".bash_logout"};
+
     @Override
     public List<CodeAnalysisResultDto> analyzeCode(AnalyzerConfigurationDetailDto runnerConfiguration, AnalyzerRequest request) {
 
@@ -24,10 +30,18 @@ public class ShellcheckCodeAnalyzer implements CodeAnalyzerInterface {
         String[] command;
 
         String localGitRepoPath = request.getLocalGitRepoPath();
+
+        List<File> findAllShellScripts = findShellScripts(localGitRepoPath, suffixList);
+        List<String> cmdList = new ArrayList<>();
         if(runnerConfiguration.getPayload() == null || runnerConfiguration.getPayload().isEmpty()){
 //            command = new String[]{"shellcheck", "--format=json", localGitRepoPath + "/**/*.sh"};
-            //find ~/git/codety-scanner/code-issue-examples -type f \( -name '*.sh' -o -name '*.bash' -o -name '*.ksh' -o -name '*.bashrc' -o -name '*.bash_profile' -o -name '*.bash_login' -o -name '*.bash_logout' \) | xargs shellcheck --format=json
-            command = new String[]{"find", localGitRepoPath, "-type", "f", "\\( -name '*.sh' -o -name '*.bash' -o -name '*.ksh' -o -name '*.bashrc' -o -name '*.bash_profile' -o -name '*.bash_login' -o -name '*.bash_logout' \\)", "|", "xargs", "shellcheck", "--format=json"};
+            cmdList.add("shellcheck");
+            cmdList.add("--format=json");
+            for(File f : findAllShellScripts){
+                cmdList.add(f.getAbsolutePath());
+            }
+
+            command = cmdList.toArray(new String[0]);
 
         }else{
             command = new String[]{"shellcheck", "--format=json", localGitRepoPath + "/**/*.sh"};
@@ -52,6 +66,43 @@ public class ShellcheckCodeAnalyzer implements CodeAnalyzerInterface {
             CodetyConsoleLogger.info("Failed to run shellcheck analyzer " + e.getMessage());
         }
         return codeAnalysisResultDtos;
+    }
+
+    private List<File> findShellScripts(String localGitRepoPath, String[] suffixList) {
+        File f = new File(localGitRepoPath);
+        List<File> result = new ArrayList<>();
+        Queue<File> fileQueue = new LinkedList<>();
+        fileQueue.add(f);
+        while(!fileQueue.isEmpty()){
+            int size = fileQueue.size();
+            for(int i=0; i<size; i++){
+                File poll = fileQueue.poll();
+
+                for(File child : poll.listFiles()){
+                    if(child.isDirectory()){
+                        fileQueue.add(child);
+                    }else if (child.isFile() && isShellScript(child, suffixList)){
+                        result.add(child);
+                    }
+                }
+            }
+
+        }
+        return result;
+    }
+
+    private boolean isShellScript(File poll, String[] suffixList) {
+        if(poll == null){
+            return false;
+        }
+        String name = poll.getName().toLowerCase();
+        for(String s : suffixList){
+            if(name.endsWith(s)){
+                return true;
+            }
+        }
+
+        return false;
     }
 
     @Override

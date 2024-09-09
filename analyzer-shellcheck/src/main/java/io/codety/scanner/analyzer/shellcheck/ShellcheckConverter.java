@@ -30,6 +30,7 @@ public class ShellcheckConverter {
                 issueDto.setEndLineNumber(issue.getEndLine());
                 issueDto.setDescription(issue.getMessage());
                 issueDto.setIssueCategory("styling");//
+                issueDto.setIssueCode(""+issue.getCode());//
 
                 codeAnalysisIssueDtos.add(issueDto);
             }
