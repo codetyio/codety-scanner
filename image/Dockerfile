@@ -27,8 +27,6 @@ RUN rubocop --version
 
 #RUN curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin v0.18.3
 
-
-
 COPY scanner/codety.sh /usr/bin/codety
 COPY scanner/tools/ /tools/
 COPY scanner/build/libs/app.jar /usr/app.jar
