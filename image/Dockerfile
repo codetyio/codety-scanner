@@ -1,5 +1,9 @@
 FROM  amazoncorretto:17-alpine-jdk
 
+COPY scanner/codety.sh /usr/bin/codety
+COPY scanner/tools/ /tools/
+COPY scanner/build/libs/app.jar /usr/app.jar
+RUN chmod +x /usr/bin/codety
 
 RUN apk add --no-cache python3 py3-pip go
 RUN apk add --no-cache shellcheck
@@ -19,7 +23,7 @@ RUN pip3 install checkov --break-system-packages
 RUN wget -O- -nv https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s v1.60.3
 RUN golangci-lint --version
 
-RUN apk add --no-cache ruby-dev cmake clang build-base
+RUN apk add --no-cache ruby-full ruby-dev cmake clang build-base
 #RUN export CC=clang
 #RUN export CXX=clang++
 # the rubocop build is kinda slow in Alpine
@@ -28,10 +32,7 @@ RUN rubocop --version
 
 #RUN curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin v0.18.3
 
-COPY scanner/codety.sh /usr/bin/codety
-COPY scanner/tools/ /tools/
-COPY scanner/build/libs/app.jar /usr/app.jar
-RUN chmod +x /usr/bin/codety
+
 RUN curl -sfL https://oss.sonatype.org/content/repositories/releases/org/scalastyle/scalastyle_2.12/1.0.0/scalastyle_2.12-1.0.0-batch.jar > /tools/scalastyle.jar
 
 WORKDIR /src
