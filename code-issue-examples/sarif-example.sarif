@@ -1,0 +1,1800 @@
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Codety Scanner - Java source code",
+          "rules": [
+            {
+              "id": " enums and annotations must belong to a named package",
+              "shortDescription": {
+                "text": "All classes"
+              },
+              "fullDescription": {
+                "text": "All classes"
+              },
+              "help": {
+                "text": "All classes"
+              },
+              "properties": {
+                "category": " interfaces"
+              }
+            },
+            {
+              "id": "UnnecessaryImport",
+              "shortDescription": {
+                "text": "Unused import 'java.util.List'"
+              },
+              "fullDescription": {
+                "text": "Unused import 'java.util.List'"
+              },
+              "help": {
+                "text": "Unused import 'java.util.List'"
+              },
+              "properties": {
+                "category": "Code Style"
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "UnnecessaryImport",
+          "message": {
+            "text": "[Code Style] [UnnecessaryImport]  Unused import 'java.util.List'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "java-pmd/module_api/src/main/java/com/MyApi.java"
+                },
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": " enums and annotations must belong to a named package",
+          "message": {
+            "text": "[ interfaces] [ enums and annotations must belong to a named package]  All classes"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "java-pmd/module_scheduler/src/main/java/MyScheduler.java"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        }
+      ]
+    },
+    {
+      "tool": {
+        "driver": {
+          "name": "Codety Scanner - Java test case code",
+          "rules": [
+            {
+              "id": " enums and annotations must belong to a named package",
+              "shortDescription": {
+                "text": "All classes"
+              },
+              "fullDescription": {
+                "text": "All classes"
+              },
+              "help": {
+                "text": "All classes"
+              },
+              "properties": {
+                "category": " interfaces"
+              }
+            },
+            {
+              "id": "AvoidDollarSigns",
+              "shortDescription": {
+                "text": "Avoid using dollar signs in variable/method/class/interface names"
+              },
+              "fullDescription": {
+                "text": "Avoid using dollar signs in variable/method/class/interface names"
+              },
+              "help": {
+                "text": "Avoid using dollar signs in variable/method/class/interface names"
+              },
+              "properties": {
+                "category": "Code Style"
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": " enums and annotations must belong to a named package",
+          "message": {
+            "text": "[ interfaces] [ enums and annotations must belong to a named package]  All classes"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "java-pmd/module_api/src/test/java/IAmNoPackage.java"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "AvoidDollarSigns",
+          "message": {
+            "text": "[Code Style] [AvoidDollarSigns]  Avoid using dollar signs in variable/method/class/interface names"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "java-pmd/module_api/src/test/java/IAmNoPackage.java"
+                },
+                "region": {
+                  "startLine": 3,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        }
+      ]
+    },
+    {
+      "tool": {
+        "driver": {
+          "name": "Codety Scanner - Secrets detection",
+          "rules": [
+            {
+              "id": "github-access-token",
+              "shortDescription": {
+                "text": "Detected potential exposure of sensitive information"
+              },
+              "fullDescription": {
+                "text": "Detected potential exposure of sensitive information"
+              },
+              "help": {
+                "text": "Detected potential exposure of sensitive information"
+              },
+              "properties": {
+                "category": "security"
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "github-access-token",
+          "message": {
+            "text": "[security] [github-access-token]  Detected potential exposure of sensitive information"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "secrets/github-secret.txt"
+                },
+                "region": {
+                  "startLine": 2,
+                  "startColumn": 1,
+                  "endLine": 2,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "github-access-token",
+          "message": {
+            "text": "[security] [github-access-token]  Detected potential exposure of sensitive information"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "secrets/github-secret.txt"
+                },
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 1,
+                  "endLine": 6,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "github-access-token",
+          "message": {
+            "text": "[security] [github-access-token]  Detected potential exposure of sensitive information"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "java-trivy/module_api/src/main/java/com/SecretExposureJavaExample.java"
+                },
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 1,
+                  "endLine": 5,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "github-access-token",
+          "message": {
+            "text": "[security] [github-access-token]  Detected potential exposure of sensitive information"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "java-trivy/module_api/src/main/java/com/SecretExposureJavaExample.java"
+                },
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 1,
+                  "endLine": 7,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        }
+      ]
+    },
+    {
+      "tool": {
+        "driver": {
+          "name": "Codety Scanner - javascript",
+          "rules": [
+            {
+              "id": "require-closing-tags",
+              "shortDescription": {
+                "text": "Missing closing tag for div."
+              },
+              "fullDescription": {
+                "text": "Missing closing tag for div."
+              },
+              "help": {
+                "text": "Missing closing tag for div."
+              },
+              "properties": {
+                "category": "Tag"
+              }
+            },
+            {
+              "id": "indent",
+              "shortDescription": {
+                "text": "Expected indentation of 4 space but found no indent."
+              },
+              "fullDescription": {
+                "text": "Expected indentation of 4 space but found no indent."
+              },
+              "help": {
+                "text": "Expected indentation of 4 space but found no indent."
+              },
+              "properties": {
+                "category": "generic"
+              }
+            },
+            {
+              "id": "require-lang",
+              "shortDescription": {
+                "text": "Missing `lang` attribute in `<html>` tag."
+              },
+              "fullDescription": {
+                "text": "Missing `lang` attribute in `<html>` tag."
+              },
+              "help": {
+                "text": "Missing `lang` attribute in `<html>` tag."
+              },
+              "properties": {
+                "category": "generic"
+              }
+            },
+            {
+              "id": "no-duplicate-id",
+              "shortDescription": {
+                "text": "The id '1' is duplicated."
+              },
+              "fullDescription": {
+                "text": "The id '1' is duplicated."
+              },
+              "help": {
+                "text": "The id '1' is duplicated."
+              },
+              "properties": {
+                "category": "AttributeValue"
+              }
+            },
+            {
+              "id": "require-img-alt",
+              "shortDescription": {
+                "text": "Missing `alt` attribute at `<img>` tag"
+              },
+              "fullDescription": {
+                "text": "Missing `alt` attribute at `<img>` tag"
+              },
+              "help": {
+                "text": "Missing `alt` attribute at `<img>` tag"
+              },
+              "properties": {
+                "category": "generic"
+              }
+            },
+            {
+              "id": "require-doctype",
+              "shortDescription": {
+                "text": "Missing `<!DOCTYPE HTML>`"
+              },
+              "fullDescription": {
+                "text": "Missing `<!DOCTYPE HTML>`"
+              },
+              "help": {
+                "text": "Missing `<!DOCTYPE HTML>`"
+              },
+              "properties": {
+                "category": "Tag"
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "require-img-alt",
+          "message": {
+            "text": "[generic] [require-img-alt]  Missing `alt` attribute at `<img>` tag"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "html/bad-html.html"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "no-duplicate-id",
+          "message": {
+            "text": "[AttributeValue] [no-duplicate-id]  The id '1' is duplicated."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "html/bad-html.html"
+                },
+                "region": {
+                  "startLine": 2,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "no-duplicate-id",
+          "message": {
+            "text": "[AttributeValue] [no-duplicate-id]  The id '1' is duplicated."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "html/bad-html.html"
+                },
+                "region": {
+                  "startLine": 3,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "require-closing-tags",
+          "message": {
+            "text": "[Tag] [require-closing-tags]  Missing closing tag for div."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "html/bad-html.html"
+                },
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "require-lang",
+          "message": {
+            "text": "[generic] [require-lang]  Missing `lang` attribute in `<html>` tag."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "html/bad-html.html"
+                },
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "require-doctype",
+          "message": {
+            "text": "[Tag] [require-doctype]  Missing `<!DOCTYPE HTML>`"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "html/bad-html.html"
+                },
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "indent",
+          "message": {
+            "text": "[generic] [indent]  Expected indentation of 4 space but found no indent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "html/bad-html.html"
+                },
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        }
+      ]
+    },
+    {
+      "tool": {
+        "driver": {
+          "name": "Codety Scanner - javascript",
+          "rules": []
+        }
+      },
+      "results": []
+    },
+    {
+      "tool": {
+        "driver": {
+          "name": "Codety Scanner - python",
+          "rules": [
+            {
+              "id": "wrong-import-order",
+              "shortDescription": {
+                "text": "standard import \"typing.Optional\" should be placed before third party import \"torch\""
+              },
+              "fullDescription": {
+                "text": "standard import \"typing.Optional\" should be placed before third party import \"torch\""
+              },
+              "help": {
+                "text": "standard import \"typing.Optional\" should be placed before third party import \"torch\""
+              },
+              "properties": {
+                "category": "convention"
+              }
+            },
+            {
+              "id": "missing-module-docstring",
+              "shortDescription": {
+                "text": "Missing module docstring"
+              },
+              "fullDescription": {
+                "text": "Missing module docstring"
+              },
+              "help": {
+                "text": "Missing module docstring"
+              },
+              "properties": {
+                "category": "convention"
+              }
+            },
+            {
+              "id": "invalid-name",
+              "shortDescription": {
+                "text": "Module name \"bad-python-code\" doesn't conform to snake_case naming style"
+              },
+              "fullDescription": {
+                "text": "Module name \"bad-python-code\" doesn't conform to snake_case naming style"
+              },
+              "help": {
+                "text": "Module name \"bad-python-code\" doesn't conform to snake_case naming style"
+              },
+              "properties": {
+                "category": "convention"
+              }
+            },
+            {
+              "id": "undefined-variable",
+              "shortDescription": {
+                "text": "Undefined variable 'a2'"
+              },
+              "fullDescription": {
+                "text": "Undefined variable 'a2'"
+              },
+              "help": {
+                "text": "Undefined variable 'a2'"
+              },
+              "properties": {
+                "category": "error"
+              }
+            },
+            {
+              "id": "import-error",
+              "shortDescription": {
+                "text": "Unable to import 'torch'"
+              },
+              "fullDescription": {
+                "text": "Unable to import 'torch'"
+              },
+              "help": {
+                "text": "Unable to import 'torch'"
+              },
+              "properties": {
+                "category": "error"
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "missing-module-docstring",
+          "message": {
+            "text": "[convention] [missing-module-docstring]  Missing module docstring"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "python/bad-python-code.py"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "invalid-name",
+          "message": {
+            "text": "[convention] [invalid-name]  Module name \"bad-python-code\" doesn't conform to snake_case naming style"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "python/bad-python-code.py"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "invalid-name",
+          "message": {
+            "text": "[convention] [invalid-name]  Constant name \"b3\" doesn't conform to UPPER_CASE naming style"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "python/bad-python-code.py"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "undefined-variable",
+          "message": {
+            "text": "[error] [undefined-variable]  Undefined variable 'a2'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "python/bad-python-code.py"
+                },
+                "region": {
+                  "startLine": 2,
+                  "startColumn": 1,
+                  "endLine": 2,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "missing-module-docstring",
+          "message": {
+            "text": "[convention] [missing-module-docstring]  Missing module docstring"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "python/consistency.py"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "import-error",
+          "message": {
+            "text": "[error] [import-error]  Unable to import 'torch'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "python/consistency.py"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "wrong-import-order",
+          "message": {
+            "text": "[convention] [wrong-import-order]  standard import \"typing.Optional\" should be placed before third party import \"torch\""
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "python/consistency.py"
+                },
+                "region": {
+                  "startLine": 2,
+                  "startColumn": 1,
+                  "endLine": 2,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        }
+      ]
+    },
+    {
+      "tool": {
+        "driver": {
+          "name": "Codety Scanner - IaC",
+          "rules": [
+            {
+              "id": "CKV2_AWS_41",
+              "shortDescription": {
+                "text": "Ensure an IAM role is attached to EC2 instance"
+              },
+              "fullDescription": {
+                "text": "Ensure an IAM role is attached to EC2 instance"
+              },
+              "help": {
+                "text": "Ensure an IAM role is attached to EC2 instance"
+              },
+              "properties": {
+                "category": "security"
+              }
+            },
+            {
+              "id": "CKV_AWS_131",
+              "shortDescription": {
+                "text": "Ensure that ALB drops HTTP headers"
+              },
+              "fullDescription": {
+                "text": "Ensure that ALB drops HTTP headers"
+              },
+              "help": {
+                "text": "Ensure that ALB drops HTTP headers"
+              },
+              "properties": {
+                "category": "security"
+              }
+            },
+            {
+              "id": "CKV2_AWS_11",
+              "shortDescription": {
+                "text": "Ensure VPC flow logging is enabled in all VPCs"
+              },
+              "fullDescription": {
+                "text": "Ensure VPC flow logging is enabled in all VPCs"
+              },
+              "help": {
+                "text": "Ensure VPC flow logging is enabled in all VPCs"
+              },
+              "properties": {
+                "category": "security"
+              }
+            },
+            {
+              "id": "CKV2_AWS_19",
+              "shortDescription": {
+                "text": "Ensure that all EIP addresses allocated to a VPC are attached to EC2 instances"
+              },
+              "fullDescription": {
+                "text": "Ensure that all EIP addresses allocated to a VPC are attached to EC2 instances"
+              },
+              "help": {
+                "text": "Ensure that all EIP addresses allocated to a VPC are attached to EC2 instances"
+              },
+              "properties": {
+                "category": "security"
+              }
+            },
+            {
+              "id": "CKV_AWS_135",
+              "shortDescription": {
+                "text": "Ensure that EC2 is EBS optimized"
+              },
+              "fullDescription": {
+                "text": "Ensure that EC2 is EBS optimized"
+              },
+              "help": {
+                "text": "Ensure that EC2 is EBS optimized"
+              },
+              "properties": {
+                "category": "security"
+              }
+            },
+            {
+              "id": "CKV_AWS_260",
+              "shortDescription": {
+                "text": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 80"
+              },
+              "fullDescription": {
+                "text": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 80"
+              },
+              "help": {
+                "text": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 80"
+              },
+              "properties": {
+                "category": "security"
+              }
+            },
+            {
+              "id": "CKV_AWS_261",
+              "shortDescription": {
+                "text": "Ensure HTTP HTTPS Target group defines Healthcheck"
+              },
+              "fullDescription": {
+                "text": "Ensure HTTP HTTPS Target group defines Healthcheck"
+              },
+              "help": {
+                "text": "Ensure HTTP HTTPS Target group defines Healthcheck"
+              },
+              "properties": {
+                "category": "security"
+              }
+            },
+            {
+              "id": "CKV_AWS_23",
+              "shortDescription": {
+                "text": "Ensure every security group and rule has a description"
+              },
+              "fullDescription": {
+                "text": "Ensure every security group and rule has a description"
+              },
+              "help": {
+                "text": "Ensure every security group and rule has a description"
+              },
+              "properties": {
+                "category": "security"
+              }
+            },
+            {
+              "id": "CKV_AWS_130",
+              "shortDescription": {
+                "text": "Ensure VPC subnets do not assign public IP by default"
+              },
+              "fullDescription": {
+                "text": "Ensure VPC subnets do not assign public IP by default"
+              },
+              "help": {
+                "text": "Ensure VPC subnets do not assign public IP by default"
+              },
+              "properties": {
+                "category": "security"
+              }
+            },
+            {
+              "id": "CKV_AWS_79",
+              "shortDescription": {
+                "text": "Ensure Instance Metadata Service Version 1 is not enabled"
+              },
+              "fullDescription": {
+                "text": "Ensure Instance Metadata Service Version 1 is not enabled"
+              },
+              "help": {
+                "text": "Ensure Instance Metadata Service Version 1 is not enabled"
+              },
+              "properties": {
+                "category": "security"
+              }
+            },
+            {
+              "id": "CKV_AWS_91",
+              "shortDescription": {
+                "text": "Ensure the ELBv2 (Application/Network) has access logging enabled"
+              },
+              "fullDescription": {
+                "text": "Ensure the ELBv2 (Application/Network) has access logging enabled"
+              },
+              "help": {
+                "text": "Ensure the ELBv2 (Application/Network) has access logging enabled"
+              },
+              "properties": {
+                "category": "security"
+              }
+            },
+            {
+              "id": "CKV_AWS_8",
+              "shortDescription": {
+                "text": "Ensure all data stored in the Launch configuration or instance Elastic Blocks Store is securely encrypted"
+              },
+              "fullDescription": {
+                "text": "Ensure all data stored in the Launch configuration or instance Elastic Blocks Store is securely encrypted"
+              },
+              "help": {
+                "text": "Ensure all data stored in the Launch configuration or instance Elastic Blocks Store is securely encrypted"
+              },
+              "properties": {
+                "category": "security"
+              }
+            },
+            {
+              "id": "CKV2_AWS_28",
+              "shortDescription": {
+                "text": "Ensure public facing ALB are protected by WAF"
+              },
+              "fullDescription": {
+                "text": "Ensure public facing ALB are protected by WAF"
+              },
+              "help": {
+                "text": "Ensure public facing ALB are protected by WAF"
+              },
+              "properties": {
+                "category": "security"
+              }
+            },
+            {
+              "id": "CKV2_AWS_12",
+              "shortDescription": {
+                "text": "Ensure the default security group of every VPC restricts all traffic"
+              },
+              "fullDescription": {
+                "text": "Ensure the default security group of every VPC restricts all traffic"
+              },
+              "help": {
+                "text": "Ensure the default security group of every VPC restricts all traffic"
+              },
+              "properties": {
+                "category": "security"
+              }
+            },
+            {
+              "id": "CKV_AWS_150",
+              "shortDescription": {
+                "text": "Ensure that Load Balancer has deletion protection enabled"
+              },
+              "fullDescription": {
+                "text": "Ensure that Load Balancer has deletion protection enabled"
+              },
+              "help": {
+                "text": "Ensure that Load Balancer has deletion protection enabled"
+              },
+              "properties": {
+                "category": "security"
+              }
+            },
+            {
+              "id": "CKV_AWS_126",
+              "shortDescription": {
+                "text": "Ensure that detailed monitoring is enabled for EC2 instances"
+              },
+              "fullDescription": {
+                "text": "Ensure that detailed monitoring is enabled for EC2 instances"
+              },
+              "help": {
+                "text": "Ensure that detailed monitoring is enabled for EC2 instances"
+              },
+              "properties": {
+                "category": "security"
+              }
+            },
+            {
+              "id": "CKV_SECRET_6",
+              "shortDescription": {
+                "text": "Base64 High Entropy String"
+              },
+              "fullDescription": {
+                "text": "Base64 High Entropy String"
+              },
+              "help": {
+                "text": "Base64 High Entropy String"
+              },
+              "properties": {
+                "category": "security"
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "CKV_AWS_23",
+          "message": {
+            "text": "[security] [CKV_AWS_23]  Ensure every security group and rule has a description"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "iac/terraform/vpc-3-layer-example/alb_sg.tf"
+                },
+                "region": {
+                  "startLine": 35,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "CKV_AWS_260",
+          "message": {
+            "text": "[security] [CKV_AWS_260]  Ensure no security groups allow ingress from 0.0.0.0:0 to port 80"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "iac/terraform/vpc-3-layer-example/alb_sg.tf"
+                },
+                "region": {
+                  "startLine": 35,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "CKV_AWS_23",
+          "message": {
+            "text": "[security] [CKV_AWS_23]  Ensure every security group and rule has a description"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "iac/terraform/vpc-3-layer-example/app_sg.tf"
+                },
+                "region": {
+                  "startLine": 28,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "CKV_AWS_79",
+          "message": {
+            "text": "[security] [CKV_AWS_79]  Ensure Instance Metadata Service Version 1 is not enabled"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "iac/terraform/vpc-3-layer-example/ec2.tf"
+                },
+                "region": {
+                  "startLine": 35,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "CKV_AWS_135",
+          "message": {
+            "text": "[security] [CKV_AWS_135]  Ensure that EC2 is EBS optimized"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "iac/terraform/vpc-3-layer-example/ec2.tf"
+                },
+                "region": {
+                  "startLine": 35,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "CKV_AWS_8",
+          "message": {
+            "text": "[security] [CKV_AWS_8]  Ensure all data stored in the Launch configuration or instance Elastic Blocks Store is securely encrypted"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "iac/terraform/vpc-3-layer-example/ec2.tf"
+                },
+                "region": {
+                  "startLine": 35,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "CKV_AWS_126",
+          "message": {
+            "text": "[security] [CKV_AWS_126]  Ensure that detailed monitoring is enabled for EC2 instances"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "iac/terraform/vpc-3-layer-example/ec2.tf"
+                },
+                "region": {
+                  "startLine": 35,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "CKV_AWS_79",
+          "message": {
+            "text": "[security] [CKV_AWS_79]  Ensure Instance Metadata Service Version 1 is not enabled"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "iac/terraform/vpc-3-layer-example/ec2.tf"
+                },
+                "region": {
+                  "startLine": 67,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "CKV_AWS_135",
+          "message": {
+            "text": "[security] [CKV_AWS_135]  Ensure that EC2 is EBS optimized"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "iac/terraform/vpc-3-layer-example/ec2.tf"
+                },
+                "region": {
+                  "startLine": 67,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "CKV_AWS_8",
+          "message": {
+            "text": "[security] [CKV_AWS_8]  Ensure all data stored in the Launch configuration or instance Elastic Blocks Store is securely encrypted"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "iac/terraform/vpc-3-layer-example/ec2.tf"
+                },
+                "region": {
+                  "startLine": 67,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "CKV_AWS_126",
+          "message": {
+            "text": "[security] [CKV_AWS_126]  Ensure that detailed monitoring is enabled for EC2 instances"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "iac/terraform/vpc-3-layer-example/ec2.tf"
+                },
+                "region": {
+                  "startLine": 67,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "CKV2_AWS_41",
+          "message": {
+            "text": "[security] [CKV2_AWS_41]  Ensure an IAM role is attached to EC2 instance"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "iac/terraform/vpc-3-layer-example/ec2.tf"
+                },
+                "region": {
+                  "startLine": 35,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "CKV2_AWS_41",
+          "message": {
+            "text": "[security] [CKV2_AWS_41]  Ensure an IAM role is attached to EC2 instance"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "iac/terraform/vpc-3-layer-example/ec2.tf"
+                },
+                "region": {
+                  "startLine": 67,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "CKV_AWS_91",
+          "message": {
+            "text": "[security] [CKV_AWS_91]  Ensure the ELBv2 (Application/Network) has access logging enabled"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "iac/terraform/vpc-3-layer-example/load-balancer.tf"
+                },
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "CKV_AWS_150",
+          "message": {
+            "text": "[security] [CKV_AWS_150]  Ensure that Load Balancer has deletion protection enabled"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "iac/terraform/vpc-3-layer-example/load-balancer.tf"
+                },
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "CKV_AWS_131",
+          "message": {
+            "text": "[security] [CKV_AWS_131]  Ensure that ALB drops HTTP headers"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "iac/terraform/vpc-3-layer-example/load-balancer.tf"
+                },
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "CKV_AWS_261",
+          "message": {
+            "text": "[security] [CKV_AWS_261]  Ensure HTTP HTTPS Target group defines Healthcheck"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "iac/terraform/vpc-3-layer-example/load-balancer.tf"
+                },
+                "region": {
+                  "startLine": 22,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "CKV2_AWS_28",
+          "message": {
+            "text": "[security] [CKV2_AWS_28]  Ensure public facing ALB are protected by WAF"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "iac/terraform/vpc-3-layer-example/load-balancer.tf"
+                },
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "CKV_AWS_130",
+          "message": {
+            "text": "[security] [CKV_AWS_130]  Ensure VPC subnets do not assign public IP by default"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "iac/terraform/vpc-3-layer-example/subnets.tf"
+                },
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "CKV_AWS_130",
+          "message": {
+            "text": "[security] [CKV_AWS_130]  Ensure VPC subnets do not assign public IP by default"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "iac/terraform/vpc-3-layer-example/subnets.tf"
+                },
+                "region": {
+                  "startLine": 29,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "CKV_AWS_23",
+          "message": {
+            "text": "[security] [CKV_AWS_23]  Ensure every security group and rule has a description"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "iac/terraform/vpc-3-layer-example/web_sg.tf"
+                },
+                "region": {
+                  "startLine": 43,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "CKV2_AWS_11",
+          "message": {
+            "text": "[security] [CKV2_AWS_11]  Ensure VPC flow logging is enabled in all VPCs"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "iac/terraform/vpc-3-layer-example/vpc.tf"
+                },
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "CKV2_AWS_12",
+          "message": {
+            "text": "[security] [CKV2_AWS_12]  Ensure the default security group of every VPC restricts all traffic"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "iac/terraform/vpc-3-layer-example/vpc.tf"
+                },
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "CKV2_AWS_19",
+          "message": {
+            "text": "[security] [CKV2_AWS_19]  Ensure that all EIP addresses allocated to a VPC are attached to EC2 instances"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "iac/terraform/vpc-3-layer-example/nat_gateway.tf"
+                },
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "CKV_SECRET_6",
+          "message": {
+            "text": "[security] [CKV_SECRET_6]  Base64 High Entropy String"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "iac/terraform/vpc-3-layer-example/rds.tf"
+                },
+                "region": {
+                  "startLine": 24,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        }
+      ]
+    },
+    {
+      "tool": {
+        "driver": {
+          "name": "Codety Scanner - Golang",
+          "rules": [
+            {
+              "id": "typecheck",
+              "shortDescription": {
+                "text": ": found packages mymodule (cgo-issue.go) and hello (hello.go) in "
+              },
+              "fullDescription": {
+                "text": ": found packages mymodule (cgo-issue.go) and hello (hello.go) in "
+              },
+              "help": {
+                "text": ": found packages mymodule (cgo-issue.go) and hello (hello.go) in "
+              },
+              "properties": {
+                "category": "generic"
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "typecheck",
+          "message": {
+            "text": "[generic] [typecheck]  : found packages mymodule (cgo-issue.go) and hello (hello.go) in "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "go/module-with-mod/cgo-issue.go"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "typecheck",
+          "message": {
+            "text": "[generic] [typecheck]  : # hello/mymodule mymodule/unused-var.go:7:10: u1 declared and not used mymodule/unused-var.go:8:10: u2 declared and not used"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "go/module-with-mod/mymodule/unused-var.go"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        }
+      ]
+    },
+    {
+      "tool": {
+        "driver": {
+          "name": "Codety Scanner - scala",
+          "rules": [
+            {
+              "id": "HeaderMatchesChecker",
+              "shortDescription": {
+                "text": "Header does not match expected text"
+              },
+              "fullDescription": {
+                "text": "Header does not match expected text"
+              },
+              "help": {
+                "text": "Header does not match expected text"
+              },
+              "properties": {
+                "category": "generic"
+              }
+            },
+            {
+              "id": "NewLineAtEofChecker",
+              "shortDescription": {
+                "text": "File must end with newline character"
+              },
+              "fullDescription": {
+                "text": "File must end with newline character"
+              },
+              "help": {
+                "text": "File must end with newline character"
+              },
+              "properties": {
+                "category": "generic"
+              }
+            },
+            {
+              "id": "EmptyClassChecker",
+              "shortDescription": {
+                "text": "Redundant braces after class definition"
+              },
+              "fullDescription": {
+                "text": "Redundant braces after class definition"
+              },
+              "help": {
+                "text": "Redundant braces after class definition"
+              },
+              "properties": {
+                "category": "generic"
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "HeaderMatchesChecker",
+          "message": {
+            "text": "[generic] [HeaderMatchesChecker]  Header does not match expected text"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/scala/emptyclass.scala"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "NewLineAtEofChecker",
+          "message": {
+            "text": "[generic] [NewLineAtEofChecker]  File must end with newline character"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/scala/emptyclass.scala"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "EmptyClassChecker",
+          "message": {
+            "text": "[generic] [EmptyClassChecker]  Redundant braces after class definition"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/scala/emptyclass.scala"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "HeaderMatchesChecker",
+          "message": {
+            "text": "[generic] [HeaderMatchesChecker]  Header does not match expected text"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/scala/test.scala"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        },
+        {
+          "ruleId": "NewLineAtEofChecker",
+          "message": {
+            "text": "[generic] [NewLineAtEofChecker]  File must end with newline character"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/scala/test.scala"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {}
+        }
+      ]
+    }
+  ]
+}
