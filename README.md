@@ -35,8 +35,8 @@ Codety Scanner detects your code issues and report results to:
   * Go
   * Ruby
   * Scala
-  * Bash
-  * Html 
+  * Shell(sh, bash, dash, ksh, busybox)
+  * Html
   * Css
   * Kotlin
   * Swift
