@@ -11,7 +11,6 @@ import io.codety.scanner.util.CodetyConsoleLogger;
 import io.codety.scanner.util.RuntimeExecUtil;
 import org.springframework.stereotype.Service;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,8 +33,7 @@ public class ShellcheckCodeAnalyzer implements CodeAnalyzerInterface {
             command = new String[]{"shellcheck", "--format=json", localGitRepoPath + "/**/*.sh"};
         }
         try {
-
-            RuntimeExecUtil.RuntimeExecResult runtimeExecResult = RuntimeExecUtil.exec(command, null, 60, false, null);
+            RuntimeExecUtil.RuntimeExecResult runtimeExecResult = RuntimeExecUtil.exec(command, "/", 60, false, null);
 
             CodeAnalysisResultDto resultDto = new CodeAnalysisResultDto(runnerConfiguration.getLanguage(), runnerConfiguration.getCodeAnalyzerType());
             codeAnalysisResultDtos.add(resultDto);
