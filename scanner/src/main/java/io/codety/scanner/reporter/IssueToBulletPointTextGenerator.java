@@ -24,9 +24,9 @@ public class IssueToBulletPointTextGenerator {
         StringBuilder tmpSb = new StringBuilder();
         extracted(dto, tmpSb);
         String tmpSbStr = tmpSb.toString();
-        tmpSbStr = tmpSbStr.replaceAll("\\`", "");
-        tmpSbStr = tmpSbStr.replaceAll("\\<", "&lt;");
-        tmpSbStr = tmpSbStr.replaceAll("\\>", "&gt;");
+        tmpSbStr = tmpSbStr.replaceAll("`", "");
+        tmpSbStr = tmpSbStr.replaceAll("<", "&lt;");
+        tmpSbStr = tmpSbStr.replaceAll(">", "&gt;");
         tmpSbStr = tmpSbStr.replaceAll("\\|", "\\\\|");
         return tmpSbStr;
     }
