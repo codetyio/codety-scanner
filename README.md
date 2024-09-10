@@ -1,6 +1,6 @@
 <div align="center">
 
-![image](https://www.codety.io/assets/img/logo_128.png)
+![image](https://www.codety.io/assets/img/logo_600.png)
 
 </div>
 
