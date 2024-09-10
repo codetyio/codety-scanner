@@ -40,15 +40,17 @@ Codety Scanner detects your code issues and report results to:
   * Css
   * Kotlin
   * Swift
-  * Jsp
+  * JSP
   * Apex
   * Modelica
+  * Plsql
+  * XML, XSL, WSDL
   * CloudFormation
   * Serverless framework
   * Helm charts
   * Kubernetes
   * Docker
-  * (and keep adding more)
+  * and more
 
 
 ### How to use:
