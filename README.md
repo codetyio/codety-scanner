@@ -9,7 +9,7 @@
 Codety Scanner detects your code issues and report results to:
 * GitHub pull request comments ([check example here](https://github.com/codetyio/codety-scanner/pull/15#issuecomment-2320351633))
 * GitHub pull request review comments ([check example here](https://github.com/codetyio/codety-scanner/pull/15/files#r1738123885))
-* GitHub check run annotations ([check example here](https://github.com/codetyio/codety-scanner/runs/29462342113))
+* GitHub check run annotations ([check example here](https://github.com/codetyio/codety-scanner/actions/runs/10786005219/job/29912189435))
 * Slack
 * GitLab merge request review comments(coming...)
 
