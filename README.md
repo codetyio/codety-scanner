@@ -4,7 +4,7 @@
 
 </div>
 
-**Codety Scanner** is a comprehensive code scanner designed to detect code issues for 20+ programming languages and IaC frameworks. It embeds more than 5,000 code analysis rules and can detect code smells, vulnerable code, secrets in the code, performance issues, style violations, and more. Codety Scanner is open source and is free for personal and commercial use, Codety Scanner's source code is contributed and maintained by [Codety Inc.(https://codety.io)](https://codety.io)
+**Codety Scanner** is a comprehensive code scanner designed to detect code issues for 30+ programming languages and IaC frameworks. It embeds more than 6,000 code analysis rules and can detect code smells, vulnerable code, secrets in the code, performance issues, style violations, and more. Codety Scanner is open source and is free for personal and commercial use, Codety Scanner's source code is contributed and maintained by [Codety Inc.(https://codety.io)](https://codety.io)
 
 Codety Scanner detects your code issues and report results to:
 * GitHub pull request comments ([check example here](https://github.com/codetyio/codety-scanner/pull/15#issuecomment-2320351633))
@@ -17,14 +17,14 @@ Codety Scanner detects your code issues and report results to:
 ![image](https://www.codety.io/assets/img/hero-3.png)
 
 ### Codety Scanner can:
-* Detect code issues using 5000+ rules(both Codety built and community built rules), be able to detect issues like:  
+* Detect code issues like:  
   * Insecure and vulnerable code
   * Unexpected secrets/tokens/API-keys in the code
   * Code smells and technical debt accumulation
   * Code style violations
   * Some performance issues
   * And more...
-* Support 20+ programming languages and IaC frameworks:
+* Support 30+ programming languages and IaC frameworks:
   * Terraform code(AWS, GCP, Azure and OCI)
   * Java
   * Python
