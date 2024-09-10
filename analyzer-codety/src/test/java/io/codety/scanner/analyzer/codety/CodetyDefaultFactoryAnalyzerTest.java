@@ -19,9 +19,7 @@ public class CodetyDefaultFactoryAnalyzerTest {
 
             Pattern pattern = Pattern.compile(codetyMatchingRule.getRegex());
             boolean b = pattern.matcher("oiwejf ighp_111111111111111111111111111111111111").find();
-            if(b){
-//                System.out.println("doing: " + codetyMatchingRule.getRuleId());
-            }
+
 
         }
     }
