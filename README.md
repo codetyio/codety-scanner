@@ -24,7 +24,7 @@ Codety Scanner detects your code issues and report results to:
   * Code style violations
   * Some performance issues
   * And more...
-* Support 20+ programming languages and IaC tools:
+* Support 20+ programming languages and IaC frameworks:
   * Terraform code(AWS, GCP, Azure and OCI)
   * Java
   * Python
