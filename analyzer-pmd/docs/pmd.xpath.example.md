@@ -33,6 +33,8 @@ Block[@Size > 1]
 
 
 # User regex:
+```
+
 <![CDATA[
 //ClassDeclaration[matches(@SimpleName, '.*') or pmd-java:typeIs('junit.framework.TestCase')]
     (: a junit 3 method :)
@@ -51,3 +53,5 @@ Block[@Size > 1]
         )
     ]
 ]]>
+
+```
