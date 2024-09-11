@@ -27,7 +27,7 @@ public class CheckovCodeAnalyzer implements CodeAnalyzerInterface {
         if(runnerConfiguration.getPayload() == null || runnerConfiguration.getPayload().isEmpty()){
             command = new String[]{checkov, "--skip-resources-without-violations", "--skip-results-upload", "--quiet", "-o", "json", "-d",  request.getLocalGitRepoPath()};
         }else{
-            //--check CKV_GCP_33,CKV_GCP_34,CKV_GCP_35 ...
+            //Use multiple rules: --check CKV_GCP_33,CKV_GCP_34,CKV_GCP_35 ...
             command = new String[]{checkov, "--check",  runnerConfiguration.getPayload(), "--skip-resources-without-violations", "--skip-results-upload", "--quiet", "-o", "json", "-d",  request.getLocalGitRepoPath()};
         }
         try {
