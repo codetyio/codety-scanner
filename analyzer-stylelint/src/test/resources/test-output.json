@@ -1,6 +1,6 @@
 [
   {
-    "source": "/Users/user/git/codety-scanner/code-issue-examples/css/bad-css.css",
+    "source": "code-issue-examples/css/bad-css.css",
     "deprecations": [],
     "invalidOptionWarnings": [],
     "parseErrors": [],
