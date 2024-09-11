@@ -34,7 +34,6 @@ public class ShellcheckCodeAnalyzer implements CodeAnalyzerInterface {
         List<File> findAllShellScripts = findShellScripts(localGitRepoPath, suffixList);
         List<String> cmdList = new ArrayList<>();
         if(runnerConfiguration.getPayload() == null || runnerConfiguration.getPayload().isEmpty()){
-//            command = new String[]{"shellcheck", "--format=json", localGitRepoPath + "/**/*.sh"};
             cmdList.add("shellcheck");
             cmdList.add("--format=json");
             for(File f : findAllShellScripts){
