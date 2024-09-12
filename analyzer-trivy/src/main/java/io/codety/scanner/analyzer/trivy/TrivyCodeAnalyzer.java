@@ -27,9 +27,6 @@ public class TrivyCodeAnalyzer implements CodeAnalyzerInterface {
 
             String errorOutput = runtimeExecResult.getErrorOutput();
             String successOutput = runtimeExecResult.getSuccessOutput();
-//            CodetyConsoleLogger.info("errorOutput: " + errorOutput);
-//            CodetyConsoleLogger.info("successOutput: " + successOutput);
-
             List<CodeAnalysisIssueDto> codeAnalysisIssueDtoList = TrivyResultConverter.convertResult(successOutput);
             if (codeAnalysisIssueDtoList == null || codeAnalysisIssueDtoList.isEmpty()) {
                 return list;
