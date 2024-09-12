@@ -28,7 +28,7 @@ public class ScalastyleCodeAnalyzer implements CodeAnalyzerInterface {
     @Override
     public List<CodeAnalysisResultDto> analyzeCode(AnalyzerConfigurationDetailDto runnerConfiguration, AnalyzerRequest request) {
 
-        //cmd example:
+        //CLI command example:
         //  java -jar ~/dev/scalastyle.jar --config analyzer-scalastyle/src/test/resources/default-config.xml --xmlOutput ~/dev/tmp.xml  code-issue-examples/scala
         CodetyConsoleLogger.info("Scanning "+runnerConfiguration.getLanguage()+" code via "+runnerConfiguration.getCodeAnalyzerType().name()+"...");
         ArrayList<CodeAnalysisResultDto> list = new ArrayList();
