@@ -1,6 +1,7 @@
 package io.codety.common.dto;
 
 public class LanguageType {
+    public static final String all = "all";
     public static final String java = "java";
     public static final String apex = "apex";
     public static final String kotlin = "kotlin";
@@ -22,6 +23,5 @@ public class LanguageType {
     public static final String modelica = "modelica";
     public static final String plsql = "plsql";
     public static final String iac = "iac";
-    public static final String all = "all";
     public static final String scala = "scala";
 }
