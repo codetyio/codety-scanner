@@ -25,7 +25,6 @@ public class CodeAnalysisResultDto {
         if(issueDto == null){
             return;
         }
-
         String filePath = issueDto.getFilePath();
         issuesByFile.putIfAbsent(filePath, new ArrayList<>());
         issuesByFile.get(filePath).add(issueDto);
