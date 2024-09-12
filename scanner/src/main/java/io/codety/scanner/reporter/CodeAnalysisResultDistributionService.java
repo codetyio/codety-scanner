@@ -31,10 +31,8 @@ public class CodeAnalysisResultDistributionService {
     ConsoleResultReporter consoleResultReporter;
     @Autowired
     GithubPullRequestResultReporter githubPullRequestResultReporter;
-
     @Autowired
     SlackResultReporter slackResultReporter;
-
     @Autowired
     SarifResultReporter sarifResultReporter;
 
