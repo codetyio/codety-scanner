@@ -3,6 +3,7 @@ package io.codety.scanner.util;
 import java.io.PrintStream;
 
 public class CodetyConsoleLogger {
+    
 //    public static Logger logger = LoggerFactory.getLogger(CodetyConsoleLogger.class);
 
     private static boolean printDebugInfo = false;
