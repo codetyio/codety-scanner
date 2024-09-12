@@ -13,7 +13,7 @@ import java.util.List;
 
 public class ScalastyleConverter {
 
-
+    private static final String genericCategory = "generic";
     public static List<CodeAnalysisIssueDto> convertResult(String payload) {
         ArrayList<CodeAnalysisIssueDto> codeAnalysisIssueDtos = new ArrayList<>();
         try {
@@ -32,7 +32,7 @@ public class ScalastyleConverter {
                         issueDto.setFilePath(fileName);
                         String severity = error.getSeverity();
                         issueDto.setPriority(3);
-                        issueDto.setIssueCategory("generic");
+                        issueDto.setIssueCategory(genericCategory);
                         String source = error.getSource();
                         if (source != null) {
                             String[] split = source.split("\\.");
