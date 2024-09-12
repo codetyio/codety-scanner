@@ -54,14 +54,12 @@ public class SlackResultReporter implements ResultReporter {
             CodetyConsoleLogger.info("Failed drafting slack message block.");
         }
 
-
     }
 
     public static boolean postSlackMessage(String slackOauthToken, String slackConversationId, List<SlackMessageBlock> slackMessageBlocks) {
         if(slackMessageBlocks == null || slackMessageBlocks.isEmpty()){
             return false;
         }
-
         try {
             Map<String, String> header = new HashMap();
             header.put("Content-Type", "application/json; charset=utf-8");
