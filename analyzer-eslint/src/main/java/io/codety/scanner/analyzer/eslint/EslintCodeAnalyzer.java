@@ -44,7 +44,8 @@ public class EslintCodeAnalyzer implements CodeAnalyzerInterface {
     private static final String infoFailedEslint = "Failed to process analyzer, ";
     String typescriptPluginCode = "typescript-eslint";
     String eslintUseFlatConfig = "ESLINT_USE_FLAT_CONFIG";
-    String aTrue = "true";
+    String trueStr = "true";
+    
     @Override
     public List<CodeAnalysisResultDto> analyzeCode(AnalyzerConfigurationDetailDto runnerConfiguration, AnalyzerRequest request) {
         CodetyConsoleLogger.info("Scanning "+runnerConfiguration.getLanguage()+" code via "+runnerConfiguration.getPluginCode()+"...");
@@ -55,7 +56,7 @@ public class EslintCodeAnalyzer implements CodeAnalyzerInterface {
             String eslintVer = "9";
             Map<String, String> additionalEnv = null;
             if(runnerConfiguration.getPluginCode().equals(typescriptPluginCode)){
-                additionalEnv = Map.of(eslintUseFlatConfig, aTrue);
+                additionalEnv = Map.of(eslintUseFlatConfig, trueStr);
                 eslintVer = "8";
             }
 
