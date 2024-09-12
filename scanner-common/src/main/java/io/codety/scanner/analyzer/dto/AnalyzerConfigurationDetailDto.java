@@ -10,7 +10,7 @@ public class AnalyzerConfigurationDetailDto {
     String pluginCode;
     File file;
     String language;
-    CodeAnalyzerType codeAnalyzerType; //
+    CodeAnalyzerType codeAnalyzerType; 
 
     public AnalyzerConfigurationDetailDto(String language, CodeAnalyzerType codeAnalyzerType) {
         this.language = language;
