@@ -38,6 +38,7 @@ dependencies {
     implementation project(':analyzer-scalastyle')
     implementation project(':analyzer-stylelint')
     implementation project(':analyzer-shellcheck')
+    implementation project(':analyzer-phpstan')
     implementation project(':analyzer-rubocop')
 
 

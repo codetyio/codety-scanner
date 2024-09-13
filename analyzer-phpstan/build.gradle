@@ -1,0 +1,21 @@
+plugins {
+    id 'java-library'
+}
+
+group = 'io.codety'
+version = 'unspecified'
+
+dependencies {
+    implementation project(':scanner-common')
+
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jar {
+    enabled = true
+    archiveClassifier = '' //use empty string
+    version = null
+}
