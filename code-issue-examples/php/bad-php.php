@@ -1,25 +1,27 @@
-public function getName(): string
-{
-    return $this->name;
-}
+<?php
 
-if ($this->getName() === 'Foo') {
-    echo $this->getName(); // still 'Foo'
-}
+// The drupal_set_message() function is being deprecated!
+// @see https://api.drupal.org/api/drupal/core%21includes%21bootstrap.inc/function/drupal_set_message/8.5.x
+// > Deprecated in Drupal 8.5.0 and will be removed before Drupal 9.0.0.
+// > Use \Drupal\Core\Messenger\MessengerInterface::addMessage() instead.
 
-public function getRandomNumber(): int
-{
-    return rand();
-}
+// In some custom code.
+\Drupal::messenger()->addMessage('Say something else');
 
-if ($this->getRandomNumber() === 4) {
-    echo $this->getRandomNumber(); // it's not going to be 4 but PHPStan will think it is
-}
+// When trying to print out a simple var.
+\Drupal::messenger()->addMessage(print_r($stuff, TRUE));
 
-// "Class has an uninitialized property $foo. Give it default value or assign it in the constructor."
-private int $foo;
+// In a Drupal 8 Form's submitForm() handler:
+$this->messenger()->addMessage($this->t('Hello world.'));
 
-public function setFoo(int $foo): void
-{
-	$this->foo = $foo;
-}
+// Add specific type of message.
+$this->messenger()->addMessage('Hello world', 'custom');
+
+// Add error message.
+$this->messenger()->addError('Hello world');
+
+// Add status message.
+$this->messenger()->addStatus('Hello world');
+
+// Add warning message.
+$this->messenger()->addWarning('Hello world');
