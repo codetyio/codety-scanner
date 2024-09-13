@@ -1,7 +1,7 @@
 package io.codety.code.example;
 
 public class SecretExposureJavaExample {
-    /*
+    /* secret examples: 
     "access_token": "ghu_BlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBla",
     "expires_in": 28800,
     "refresh_token": "ghr_BlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBlaBla",
