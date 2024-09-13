@@ -1,7 +1,7 @@
 package io.codety.scanner.analyzer.eslint.dto;
 
 public class EslintDeprecatedRule {
-    String ruleId;
+    private String ruleId;
 
     public String getRuleId() {
         return ruleId;
