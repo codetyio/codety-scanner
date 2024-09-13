@@ -1,7 +1,7 @@
 package io.codety.scanner.analyzer.eslint.dto;
 
 public class EslintResults {
-    EslintResult[] results;
+    private EslintResult[] results;
 
     public EslintResult[] getResults() {
         return results;
