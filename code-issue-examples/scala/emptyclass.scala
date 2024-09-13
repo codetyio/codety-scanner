@@ -1,5 +1,5 @@
- object MyEmptyClass {
- }
+object MyEmptyClass {
+}
 
- object MyEmptyClass2 {
- }
+object MyEmptyClass2 {
+}
