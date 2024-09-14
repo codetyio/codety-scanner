@@ -13,6 +13,7 @@ Codety Scanner detects your code issues and report results to:
 * Slack
 * GitLab merge request review comments(coming...)
 
+Codety Scanner provides out-of-box integrations with pmd, eslint, checkov, cppcheck, checkov, golangci-lint, phpstan, pmd, pylint, rubocop, scalastyle, shellcheck, stylelint, trivy, etc.
 
 ![image](https://www.codety.io/assets/img/hero-3.png)
 
@@ -51,7 +52,7 @@ Codety Scanner detects your code issues and report results to:
   * Kubernetes
   * Docker
   * and more
-
+ 
 
 ### How to use:
 Check document [Codety Scanner Quickstart](https://docs.codety.io/docs/quickstart/index)
