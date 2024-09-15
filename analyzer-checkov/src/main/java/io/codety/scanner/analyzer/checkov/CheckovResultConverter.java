@@ -60,7 +60,6 @@ public class CheckovResultConverter {
                     codeAnalysisIssueDtos.add(issueDto);
                 }
 
-
             }
 
 
