@@ -2,16 +2,16 @@ package io.codety.scanner.analyzer.eslint.dto;
 
 public class EslintResult {
 
-    String filePath;
-    EslintErrorMessage[] messages;
-    EslintDeprecatedRule[] usedDeprecatedRules;
+    private String filePath;
+    private EslintErrorMessage[] messages;
+    private EslintDeprecatedRule[] usedDeprecatedRules;
     //"suppressedMessages": [],
-    Integer errorCount = 0;
-    Integer fatalErrorCount = 0;
-    Integer warningCount = 0;
-    Integer fixableErrorCount = 0;
-    Integer fixableWarningCount = 0;
-    String source;
+    private Integer errorCount = 0;
+    private Integer fatalErrorCount = 0;
+    private Integer warningCount = 0;
+    private Integer fixableErrorCount = 0;
+    private Integer fixableWarningCount = 0;
+    private String source;
 
     public String getFilePath() {
         return filePath;
