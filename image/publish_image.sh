@@ -25,12 +25,14 @@ if [ $? -ne 0 ]; then
     echo "Failed to build multi-platform container, create a new builder may fix the issue: '$> docker buildx create --name mybuilder --use ' "
     exit 1;
 fi
-
+echo " ========= Build and publish images end  ========":
 
 git tag -a "$DOCKER_BUILD_VERSION" -m "tag version $DOCKER_BUILD_VERSION"
 git push origin "$DOCKER_BUILD_VERSION"
 
-echo " ========= Build and publish images end  ========":
+#echo " ========= Publish release start  ========":
+#gh release upload "$DOCKER_BUILD_VERSION" scanner/build/libs/app.jar
+#echo " ========= Publish release end  ========":
 
 echo "====User below command to test the container: ====="
 echo "docker run -v $(pwd):/src codetyio/codety:$1"
