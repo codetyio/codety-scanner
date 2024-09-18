@@ -16,6 +16,7 @@ public enum CodeAnalyzerType {
     , rubocop(40)
     , stylelint(50)
     , shellcheck(60)
+    , phpstan(70)
     ;
     public final int codeAnalyzerType;
 
