@@ -48,7 +48,8 @@ public class PhpstanCodeAnalyzer implements CodeAnalyzerInterface {
             CodeAnalysisResultDto resultDto = new CodeAnalysisResultDto(runnerConfiguration.getLanguage(), runnerConfiguration.getCodeAnalyzerType());
             if(errorOutput!=null && errorOutput.length() > 0){
                 CodetyConsoleLogger.info("Phpstan error output: " + errorOutput);
-            }else {
+            }
+            if(successOutput!=null && successOutput.length() > 0){
                 List<CodeAnalysisIssueDto> codeAnalysisIssueDtoList = PhpstanConverter.convertResult(successOutput, localGitRepoPath);
                 resultDto.addIssues(codeAnalysisIssueDtoList);
             }
