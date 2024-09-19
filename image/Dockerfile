@@ -24,7 +24,7 @@ RUN apk add --no-cache ruby-full ruby-dev cmake clang build-base
 # the rubocop build is kinda slow in Alpine
 RUN gem install -V rubocop
 RUN rubocop --version
-RUN apk add --no-cache composer
+RUN apk add --no-cache composer php-tokenizer
 RUN composer require --dev phpstan/phpstan
 #RUN curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin v0.18.3
 
