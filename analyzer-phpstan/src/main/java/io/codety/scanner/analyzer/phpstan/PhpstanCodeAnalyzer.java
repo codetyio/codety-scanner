@@ -45,20 +45,19 @@ public class PhpstanCodeAnalyzer implements CodeAnalyzerInterface {
 
             String errorOutput = runtimeExecResult.getErrorOutput();
             String successOutput = runtimeExecResult.getSuccessOutput();
-
+            CodeAnalysisResultDto resultDto = new CodeAnalysisResultDto(runnerConfiguration.getLanguage(), runnerConfiguration.getCodeAnalyzerType());
             if(errorOutput!=null && errorOutput.length() > 0){
                 CodetyConsoleLogger.info("Phpstan error output: " + errorOutput);
+            }else {
+                List<CodeAnalysisIssueDto> codeAnalysisIssueDtoList = PhpstanConverter.convertResult(successOutput, localGitRepoPath);
+                resultDto.addIssues(codeAnalysisIssueDtoList);
             }
 
-            List<CodeAnalysisIssueDto> codeAnalysisIssueDtoList = PhpstanConverter.convertResult(successOutput, localGitRepoPath);
-
-            CodeAnalysisResultDto resultDto = new CodeAnalysisResultDto(runnerConfiguration.getLanguage(), runnerConfiguration.getCodeAnalyzerType());
-            resultDto.addIssues(codeAnalysisIssueDtoList);
             list.add(resultDto);
 
         } catch (Exception e) {
-            CodetyConsoleLogger.info("Skip checkov analyzer due to exceptions");
-            CodetyConsoleLogger.debug("Skip checkov analyzer due to exceptions " + e.getMessage(), e);
+            CodetyConsoleLogger.info("Skip Phpstan analyzer due to exceptions");
+            CodetyConsoleLogger.debug("Skip Phpstan analyzer due to exceptions " + e.getMessage(), e);
         }
 
         return list;
