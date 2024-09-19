@@ -133,7 +133,7 @@ public class ScannerService {
         codeAnalysisResultSetDto.getCodeAnalysisResultDtoList().addAll(rubocopCodeAnalyzer.analyzeCode(request));
         codeAnalysisResultSetDto.getCodeAnalysisResultDtoList().addAll(stylelintCodeAnalyzer.analyzeCode(request));
         codeAnalysisResultSetDto.getCodeAnalysisResultDtoList().addAll(shellcheckCodeAnalyzer.analyzeCode(request));
-//        codeAnalysisResultSetDto.getCodeAnalysisResultDtoList().addAll(phpstanCodeAnalyzer.analyzeCode(request));
+        codeAnalysisResultSetDto.getCodeAnalysisResultDtoList().addAll(phpstanCodeAnalyzer.analyzeCode(request));
 
         return codeAnalysisResultSetDto;
     }

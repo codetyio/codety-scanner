@@ -1,6 +1,6 @@
 <?php
-$someData = \MyNamespace\MyORM\MyRepository::findAllBySomething(SOMETHING);
+ $someData = \MyNamespace\MyORM\MyRepository::findAllBySomething(SOMETHING);
 
-foreach ($someData as $myEntity) {
-	$myEntity->doTheThing();
-}
+ foreach ($someData as $myEntity) {
+ 	$myEntity->doTheThing();
+ }
