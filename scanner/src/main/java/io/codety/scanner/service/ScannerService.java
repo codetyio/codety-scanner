@@ -2,6 +2,7 @@ package io.codety.scanner.service;
 
 import io.codety.scanner.analyzer.checkov.CheckovCodeAnalyzer;
 import io.codety.scanner.analyzer.golangcilint.GolangcilintCodeAnalyzer;
+import io.codety.scanner.analyzer.phpstan.PhpstanCodeAnalyzer;
 import io.codety.scanner.analyzer.rubocop.RubocopCodeAnalyzer;
 import io.codety.scanner.analyzer.scalastyle.ScalastyleCodeAnalyzer;
 import io.codety.scanner.analyzer.shellcheck.ShellcheckCodeAnalyzer;
@@ -64,6 +65,9 @@ public class ScannerService {
 
     @Autowired
     ShellcheckCodeAnalyzer shellcheckCodeAnalyzer;
+
+    @Autowired
+    PhpstanCodeAnalyzer phpstanCodeAnalyzer;
 
     @Autowired
     CodetyRegexCodeAnalyzer codetyRegexCodeAnalyzer;
@@ -129,6 +133,7 @@ public class ScannerService {
         codeAnalysisResultSetDto.getCodeAnalysisResultDtoList().addAll(rubocopCodeAnalyzer.analyzeCode(request));
         codeAnalysisResultSetDto.getCodeAnalysisResultDtoList().addAll(stylelintCodeAnalyzer.analyzeCode(request));
         codeAnalysisResultSetDto.getCodeAnalysisResultDtoList().addAll(shellcheckCodeAnalyzer.analyzeCode(request));
+//        codeAnalysisResultSetDto.getCodeAnalysisResultDtoList().addAll(phpstanCodeAnalyzer.analyzeCode(request));
 
         return codeAnalysisResultSetDto;
     }
