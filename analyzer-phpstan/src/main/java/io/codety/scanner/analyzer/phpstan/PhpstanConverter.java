@@ -36,7 +36,7 @@ public class PhpstanConverter {
                 issueDto.setFilePath(filePath);
                 issueDto.setStartLineNumber(phpstanMessage.getLine());
                 String identifier = phpstanMessage.getIdentifier();
-                issueDto.setIssueCategory(identifier);
+                issueDto.setIssueCategory("generic");
                 issueDto.setDescription(message);
                 issueDto.setIssueCode(identifier);
                 issueDto.setPriority(defaultPriority);
