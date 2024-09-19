@@ -33,7 +33,7 @@ public class PhpstanCodeAnalyzer implements CodeAnalyzerInterface {
         String localGitRepoPath = request.getLocalGitRepoPath();
         //./vendor/bin/phpstan --memory-limit=1024000000  --no-interaction --no-progress  --error-format=json  analyse
 
-        String phpstanPath = phpstanBinPath + "phpstan";
+        String phpstanPath = "." + phpstanBinPath + "phpstan";
         if(runnerConfiguration.getPayload() == null || runnerConfiguration.getPayload().isEmpty()){
             command = new String[]{phpstanPath, "--memory-limit=" + memoryLimit, "--no-interaction", "--no-progress", "--error-format=json", "analyse", localGitRepoPath};
         }else{
