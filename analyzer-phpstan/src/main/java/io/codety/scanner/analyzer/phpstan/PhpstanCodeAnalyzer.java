@@ -9,7 +9,7 @@ import io.codety.scanner.reporter.dto.CodeAnalysisResultDto;
 import io.codety.scanner.service.dto.AnalyzerRequest;
 import io.codety.scanner.util.CodetyConsoleLogger;
 import io.codety.scanner.util.RuntimeExecUtil;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -17,6 +17,12 @@ import java.util.List;
 
 @Service
 public class PhpstanCodeAnalyzer implements CodeAnalyzerInterface {
+
+    private static final long memoryLimit = 1024000000;
+
+    @Value("${codety.phpstan.path}")
+    String phpstanBinPath;
+
     @Override
     public List<CodeAnalysisResultDto> analyzeCode(AnalyzerConfigurationDetailDto runnerConfiguration, AnalyzerRequest request) {
 
@@ -26,11 +32,13 @@ public class PhpstanCodeAnalyzer implements CodeAnalyzerInterface {
         String[] command;
         String localGitRepoPath = request.getLocalGitRepoPath();
         //./vendor/bin/phpstan --memory-limit=1024000000  --no-interaction --no-progress  --error-format=json  analyse
+
+        String phpstanPath = phpstanBinPath + "phpstan";
         if(runnerConfiguration.getPayload() == null || runnerConfiguration.getPayload().isEmpty()){
-            command = new String[]{"./vendor/bin/phpsta", "--memory-limit=1024000000", "--no-interaction", "--no-progress", "--error-format=json", "analyse", localGitRepoPath};
+            command = new String[]{phpstanPath, "--memory-limit=" + memoryLimit, "--no-interaction", "--no-progress", "--error-format=json", "analyse", localGitRepoPath};
         }else{
             //Use multiple rules: --check CKV_GCP_33,CKV_GCP_34,CKV_GCP_35 ...
-            command = new String[]{"./vendor/bin/phpsta", "--memory-limit=1024000000", "--no-interaction", "--no-progress", "--error-format=json", "analyse", localGitRepoPath};
+            command = new String[]{phpstanPath, "--memory-limit=" + memoryLimit, "--no-interaction", "--no-progress", "--error-format=json", "analyse", localGitRepoPath};
         }
         try {
             RuntimeExecUtil.RuntimeExecResult runtimeExecResult = RuntimeExecUtil.exec(command, "/", 60, false, null);
