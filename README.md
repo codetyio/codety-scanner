@@ -39,6 +39,7 @@ Codety Scanner provides out-of-box integrations with pmd, eslint, checkov, cppch
   * Shell(sh, bash, dash, ksh, busybox)
   * Html
   * Css
+  * Php
   * Kotlin
   * Swift
   * JSP
