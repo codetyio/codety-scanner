@@ -3,9 +3,7 @@ package io.codety.scanner.source.dto;
 public class GitRepoDownloadResponseDto {
 
     private boolean success = false;
-
     private String errorMsg;
-
     private String sourcePath;
 
     public String getSourcePath() {
