@@ -73,9 +73,6 @@ public class PylintCodeAnalyzer implements CodeAnalyzerInterface {
         if (errorOutput != null && !errorOutput.isEmpty()) {
             CodetyConsoleLogger.debug(cmdPylint + errorMsg + errorOutput);
         }
-
-//        CodetyConsoleLogger.debug(cmdPylint + resultInfo + successOutput);
-
         CodeAnalysisResultDto resultDto = PylintResultsConverter.convertFormat(successOutput, runnerConfiguration);
         return resultDto;
     }
