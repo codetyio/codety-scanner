@@ -26,6 +26,7 @@ public class GolangcilintCodeAnalyzerTest {
         List<CodeAnalysisResultDto> codeAnalysisResultDtos = golangcilintCodeAnalyzer.analyzeCode(new AnalyzerConfigurationDetailDto(LanguageType.go, CodeAnalyzerType.golangcilint), analyzerRequest);
 
         Assertions.assertTrue(codeAnalysisResultDtos != null);
+        Assertions.assertTrue(codeAnalysisResultDtos.size() > 0);
     }
 
 }
