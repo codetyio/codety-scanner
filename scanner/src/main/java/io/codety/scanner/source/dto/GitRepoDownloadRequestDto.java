@@ -1,20 +1,18 @@
 package io.codety.scanner.source.dto;
 
 public class GitRepoDownloadRequestDto {
-
-    boolean authenticationRequired;
-
-    String accountId;
-    Long githubInstallationId;
-    Integer externalGitProviderType; //1:github, 2:gitlab, 3:bitbucket.
-    String externalGitRepoId;
-    String gitRepoFullName;
-    String externalPullRequestId;
-    String externalPullRequestMergeTargetRef;
-    String cloneHttpsUrl;
-    String cloneSshUrl;
-    String gitBranchRef;
-    String gitCommitSha;
+    private boolean authenticationRequired;
+    private String accountId;
+    private Long githubInstallationId;
+    private Integer externalGitProviderType; //1:github, 2:gitlab, 3:bitbucket.
+    private String externalGitRepoId;
+    private String gitRepoFullName;
+    private String externalPullRequestId;
+    private String externalPullRequestMergeTargetRef;
+    private String cloneHttpsUrl;
+    private String cloneSshUrl;
+    private String gitBranchRef;
+    private String gitCommitSha;
 
     public boolean isAuthenticationRequired() {
         return authenticationRequired;
