@@ -9,9 +9,7 @@ public class CodeAnalysisResultDto {
     private String displayTitle;
     private String language; // only be used for analysis result distribution,e.g. review comment title.
     private CodeAnalyzerType codeAnalyzerType;
-
     private Map<String, List<CodeAnalysisIssueDto>> issuesByFile = new LinkedHashMap<>();
-
 
     public CodeAnalysisResultDto(String language, CodeAnalyzerType codeAnalyzerType) {
         this.language = language;
@@ -42,7 +40,6 @@ public class CodeAnalysisResultDto {
     }
 
     ///-----------------------------------------------
-
 
     public String getDisplayTitle() {
         return displayTitle;
