@@ -10,7 +10,7 @@ repositories {
 }
 
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.11.0')
+    testImplementation platform('org.junit:junit-bom:5.11.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
     testImplementation "org.testcontainers:testcontainers:1.20.1"
     testImplementation "org.slf4j:slf4j-api:2.0.16"
@@ -34,7 +34,7 @@ configurations {
 }
 
 dependencies {
-    intTestImplementation 'org.junit.jupiter:junit-jupiter:5.11.0'
+    intTestImplementation 'org.junit.jupiter:junit-jupiter:5.11.1'
     intTestRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     intTestImplementation "org.testcontainers:testcontainers:1.20.1"
 //    intTestRuntimeOnly "org.slf4j:slf4j-api:2.0.16"
