@@ -28,6 +28,8 @@ RUN apk add --no-cache composer php-tokenizer
 RUN composer require --dev phpstan/phpstan
 #RUN curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin v0.18.3
 
+RUN apk curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+
 COPY scanner/codety.sh /usr/bin/codety
 COPY scanner/tools/ /tools/
 COPY scanner/build/libs/app.jar /usr/app.jar
