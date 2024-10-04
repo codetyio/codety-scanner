@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.List;
 
@@ -22,7 +23,8 @@ public class GolangcilintCodeAnalyzerTest {
     @Test
     void testAnalyze(){
 
-        AnalyzerRequest analyzerRequest = AnalyzerRequest.processSystemVariablesToRequest(new HashMap<>(), new String[]{"./"});
+        String path = Paths.get("../","code-issue-examples", "go").toFile().getAbsoluteFile().getPath();
+        AnalyzerRequest analyzerRequest = AnalyzerRequest.processSystemVariablesToRequest(new HashMap<>(), new String[]{path});
         List<CodeAnalysisResultDto> codeAnalysisResultDtos = golangcilintCodeAnalyzer.analyzeCode(new AnalyzerConfigurationDetailDto(LanguageType.go, CodeAnalyzerType.golangcilint), analyzerRequest);
 
         Assertions.assertTrue(codeAnalysisResultDtos != null);
