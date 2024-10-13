@@ -1,7 +1,6 @@
 rootProject.name = "codety-scanner"
 
 include 'code-issue-examples'
-include 'image'
 include 'scanner-common'
 include 'scanner'
 include 'analyzer-codety'
