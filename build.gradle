@@ -25,7 +25,7 @@ subprojects {
 //        implementation 'com.fasterxml.jackson.core:jackson-core:2.18.0'
 //        implementation 'com.fasterxml.jackson.core:jackson-databind:2.18.0'
         implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.18.1'
-        implementation 'com.google.code.gson:gson:2.11.0'
+        implementation 'com.google.code.gson:gson:2.12.1'
         implementation 'com.contrastsecurity:java-sarif:2.0'
         testImplementation "org.mockito:mockito-core:5.+"
     }
