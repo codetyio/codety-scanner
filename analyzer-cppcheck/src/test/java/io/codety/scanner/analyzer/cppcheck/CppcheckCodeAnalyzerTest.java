@@ -63,7 +63,7 @@ public class CppcheckCodeAnalyzerTest {
     @Test
     void testDeserialize() throws Exception {
 
-        String s = Files.readString(Path.of(this.getClass().getResource("/cppcheck/error-result-example.txt").getFile()).toAbsolutePath());
+        String s = Files.readString(Path.of(this.getClass().getResource("/cppcheck/error-out.txt").getFile()).toAbsolutePath());
         List<CodeAnalysisIssueDto> recordDtos = CppcheckResultConverter.convertResult(s);
         Assertions.assertTrue(recordDtos.size() > 0);
 

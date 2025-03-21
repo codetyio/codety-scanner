@@ -1,0 +1,7 @@
+##@@_@@##arrayIndexOutOfBounds@@@@@@788@@@@@@/Users/user/git/codety-scanner/analyzer-cppcheck/build/resources/test/cppcheck/cpp-code-with-issues/cpp.cpp@@@@@@25@@@@@@error@@@@@@Array 'a[10]' accessed at index 10, which is out of bounds.
+|--@@/Users/user/git/codety-scanner/analyzer-cppcheck/build/resources/test/cppcheck/cpp-code-with-issues/cpp.cpp@@@@@@7@@@@@@10@@@@@@Assignment 'n=10', assigned value is 10
+|--@@/Users/user/git/codety-scanner/analyzer-cppcheck/build/resources/test/cppcheck/cpp-code-with-issues/cpp.cpp@@@@@@23@@@@@@27@@@@@@Assuming that condition 'i<n' is not redundant
+|--@@/Users/user/git/codety-scanner/analyzer-cppcheck/build/resources/test/cppcheck/cpp-code-with-issues/cpp.cpp@@@@@@25@@@@@@11@@@@@@Array index out of bounds
+##@@_@@##uninitvar@@@@@@457@@@@@@/Users/user/git/codety-scanner/analyzer-cppcheck/build/resources/test/cppcheck/cpp-code-with-issues/cpp.cpp@@@@@@23@@@@@@warning@@@@@@Uninitialized variable: position
+|--@@/Users/user/git/codety-scanner/analyzer-cppcheck/build/resources/test/cppcheck/cpp-code-with-issues/cpp.cpp@@@@@@20@@@@@@13@@@@@@Assuming condition is false
+|--@@/Users/user/git/codety-scanner/analyzer-cppcheck/build/resources/test/cppcheck/cpp-code-with-issues/cpp.cpp@@@@@@23@@@@@@15@@@@@@Uninitialized variable: position
