@@ -22,7 +22,7 @@ subprojects {
         developmentOnly 'org.springframework.boot:spring-boot-devtools'
 
         implementation 'org.kohsuke:github-api:1.327'
-        implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.18.1'
+        implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.18.3'
         implementation 'com.google.code.gson:gson:2.12.1'
         implementation 'com.contrastsecurity:java-sarif:2.0'
         testImplementation "org.mockito:mockito-core:5.+"
